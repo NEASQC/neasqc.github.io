@@ -43,13 +43,13 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#welcome-to-the-financialapplications-documentation">Welcome to the FinancialApplications documentation</a></li>
-<li><a class="reference internal" href="#qquantlib-dl">QQuantLib.DL</a></li>
-<li><a class="reference internal" href="#qquantlib-aa">QQuantLib.AA</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.DL.data_loading">QQuantLib.DL</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.AA.amplitude_amplification">QQuantLib.AA</a></li>
 <li><a class="reference internal" href="#qquantlib-ae">QQuantLib.AE</a></li>
 <li><a class="reference internal" href="#qquantlib-pe">QQuantLib.PE</a></li>
 <li><a class="reference internal" href="#qquantlib-utils-data-extracting">QQuantLib.utils.data_extracting</a></li>
-<li><a class="reference internal" href="#qquantlib-utils-utils">QQuantLib.utils.utils</a></li>
-<li><a class="reference internal" href="#qquantlib-utils-qlm-solver">QQuantLib.utils.qlm_solver</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.utils.utils">QQuantLib.utils.utils</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.utils.qlm_solver">QQuantLib.utils.qlm_solver</a></li>
 </ul>
 </div>
         </div>
@@ -103,11 +103,292 @@
 <h1>Welcome to the FinancialApplications documentation<a class="headerlink" href="#welcome-to-the-financialapplications-documentation" title="Permalink to this headline">¶</a></h1>
 <a class="reference internal image-reference" href="_images/logo-neasqc.svg"><img alt="NEASQC Project" class="align-center" src="_images/logo-neasqc.svg" /></a>
 </div>
-<div class="section" id="qquantlib-dl">
-<h1>QQuantLib.DL<a class="headerlink" href="#qquantlib-dl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.DL.data_loading">
+<span id="qquantlib-dl"></span><h1>QQuantLib.DL<a class="headerlink" href="#module-QQuantLib.DL.data_loading" title="Permalink to this headline">¶</a></h1>
+<p>Copyright 2022 CESGA
+License:</p>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains all the functions in order to load data into the
+quantum state.
+There are two implementations for the loading of a function:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>one based on brute force</p></li>
+<li><p>one based on multiplexors.</p></li>
+</ul>
+</div></blockquote>
+<p>The implementation of the multiplexors is a non-recursive version of:</p>
+<blockquote>
+<div><p>V.V. Shende, S.S. Bullock, and I.L. Markov.
+Synthesis of quantum-logic circuits.
+IEEE Transactions on Computer-Aided Design of Integrated Circuits
+and Systems, 25(6):1000–1010, Jun 2006
+arXiv:quant-ph/0406176v5</p>
+</div></blockquote>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angle">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angle</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em>, <em class="sig-param">index: int</em>, <em class="sig-param">angle: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auxiliary function that transforms the state <a href="#id1"><span class="problematic" id="id2">|</span></a>0&gt;|index&gt; into cos(angle)|0&gt;|index&gt;+sin(angle)|1&gt;|index&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the control register. The arity of the gate is number_qubits+1.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – Index of the state that we control.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) – Angle that we load.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angles">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auxiliary function</p>
+<p>Transforms the state:
+<a href="#id3"><span class="problematic" id="id4">|</span></a>0&gt;|0&gt;+ <a href="#id5"><span class="problematic" id="id6">|</span></a>0&gt;|1&gt;+ <a href="#id7"><span class="problematic" id="id8">|</span></a>0&gt;|2&gt;+…+ <a href="#id9"><span class="problematic" id="id10">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;
++sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.
+It serves as an interface for the two methods for loading the angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p></li>
+<li><p><strong>method</strong> (<em>string</em>) – Method used in the loading. Default method.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angles_brute_force">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles_brute_force</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles_brute_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate using multicontrolled rotations.</p>
+<p>Operator transforms the state:
+<a href="#id11"><span class="problematic" id="id12">|</span></a>0&gt;|0&gt;+ <a href="#id13"><span class="problematic" id="id14">|</span></a>0&gt;|1&gt;+ <a href="#id15"><span class="problematic" id="id16">|</span></a>0&gt;|2&gt;+…+ <a href="#id17"><span class="problematic" id="id18">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;</p>
+<p>+sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_array">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate for loading a normalised array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_array</strong> (<em>numpy array</em>) – Numpy array with the normalised array to load. The arity of
+of the gate is int(np.log2(len(probability_array)))+1.</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – <dl class="simple">
+<dt>type of loading method used:</dt><dd><p>multiplexor : with quantum Multiplexors
+brute_force : using multicontrolled rotations by state</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>f_gate</strong> – AbstractGate customized for loading a normalised array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_pf">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_pf</code><span class="sig-paren">(</span><em class="sig-param">p_gate</em>, <em class="sig-param">f_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_pf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create complete AbstractGate for applying Operators P and R
+The operator to implement is: p_gate*r_gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_gate</strong> (<em>QLM AbstractGate</em>) – Customized AbstractGate for loading probability distribution.</p></li>
+<li><p><strong>f_gate</strong> (<em>QLM AbstractGate</em>) – Customized AbstractGatel for loading integral of a function f(x)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pr_gate</strong> – Customized AbstractGate for loading the P and R operators</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_probability">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate for loading an input discretized
+Probability Distribution using Quantum Multiplexors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
+of the gate is int(np.log2(len(probability_array))).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>P_Gate</strong> – Customized Abstract Gate for Loading Probability array using
+Quantum Multiplexors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.multiplexor_RY">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">multiplexor_RY</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.multiplexor_RY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate using Quantum Multiplexors that transforms
+the state:
+<a href="#id19"><span class="problematic" id="id20">|</span></a>0&gt;|0&gt;+ <a href="#id21"><span class="problematic" id="id22">|</span></a>0&gt;|1&gt;+ <a href="#id23"><span class="problematic" id="id24">|</span></a>0&gt;|2&gt;+…+ <a href="#id25"><span class="problematic" id="id26">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;
++sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – <dl class="simple">
+<dt>Angles to load in the circuit. The arity of the gate is:</dt><dd><p>int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.uniform_distribution">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">uniform_distribution</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.uniform_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to load a uniform distribution in a quantum circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Arity of the output gate.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="qquantlib-aa">
-<h1>QQuantLib.AA<a class="headerlink" href="#qquantlib-aa" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.AA.amplitude_amplification">
+<span id="qquantlib-aa"></span><h1>QQuantLib.AA<a class="headerlink" href="#module-QQuantLib.AA.amplitude_amplification" title="Permalink to this headline">¶</a></h1>
+<p>Copyright 2022 CESGA</p>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains all functions needed for creating Grover-like
+operators mandatory for using Quantum Amplitude Amplification
+and Estimation as explained in the 2000 Brassard paper:</p>
+<blockquote>
+<div><p>Gilles Brassard, Peter Hoyer, Michele Mosca and Alain Tapp
+Quantum Amplitude Amplification and Estimation
+AMS Contemporary Mathematics Series, 305, 06-2000
+<a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
+</div></blockquote>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.U">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">U</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.U" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a QLM abstract gate that, given
+O|0&gt; = <a href="#id27"><span class="problematic" id="id28">|</span></a>Psi&gt; does the transformation:
+<a href="#id29"><span class="problematic" id="id30">|</span></a>Psi&gt;—&gt;-<a href="#id31"><span class="problematic" id="id32">|</span></a>Psi&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>U_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.U0">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">U0</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.U0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an oracle O|0&gt; = a|target&gt;+…
+this function returns a QLM gate that does
+a|target&gt;—&gt;-a|target&gt;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – oracle that created the state</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – target state</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>U0_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.grover">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a QLM abstract gate
+that returns the grover associated grover to oracle for a
+given target and index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grover_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.reflection">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">reflection</code><span class="sig-paren">(</span><em class="sig-param">lista: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>This function returns a QLM abstract gate</dt><dd><p>that does the following transformation
+<a href="#id33"><span class="problematic" id="id34">|</span></a>lista&gt;–&gt;-<a href="#id35"><span class="problematic" id="id36">|</span></a>lista&gt;</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lista</strong> (<em>list of ints</em>) – binary representation of the
+State that we want to rotate pi</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>reflection_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="qquantlib-ae">
 <h1>QQuantLib.AE<a class="headerlink" href="#qquantlib-ae" title="Permalink to this headline">¶</a></h1>
@@ -118,11 +399,296 @@
 <div class="section" id="qquantlib-utils-data-extracting">
 <h1>QQuantLib.utils.data_extracting<a class="headerlink" href="#qquantlib-utils-data-extracting" title="Permalink to this headline">¶</a></h1>
 </div>
-<div class="section" id="qquantlib-utils-utils">
-<h1>QQuantLib.utils.utils<a class="headerlink" href="#qquantlib-utils-utils" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.utils.utils">
+<span id="qquantlib-utils-utils"></span><h1>QQuantLib.utils.utils<a class="headerlink" href="#module-QQuantLib.utils.utils" title="Permalink to this headline">¶</a></h1>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains several auxiliar functions needed by other scripts
+of the library</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="QQuantLib.utils.utils.bitfield">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an int n to the corresponding bitfield of size size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – size of the bitfield</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>full</strong> – bitfield representation of n with size size</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.bitfield_to_int">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield_to_int</code><span class="sig-paren">(</span><em class="sig-param">lista</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield_to_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the bitfield lista to the corresponding int
+:param lista: bitfield
+:type lista: ist of ints</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>integer</strong> – integer obtained from it’s binay representation.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.check_list_type">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a list x is of type tipo
+:param x:
+:type x: list
+:param tipo: it has to be understandable by numpy
+:type tipo: data type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>y</strong> – numpy array of type tipo.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.fwht">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh Hadamard transform of array x
+Works as a wrapper for the different orderings
+of the Walsh-Hadamard transforms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy array</em>) – </p></li>
+<li><p><strong>ordering</strong> (<em>string</em>) – desired ordering of the transform</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>y</strong> – Fast Walsh Hadamard transform of array x
+in the corresponding ordering</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.fwht_dyadic">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_dyadic</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_dyadic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh-Hadamard Transform of array x in dyadic ordering
+The result is not normalised
+Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
+algorithm.
+His code is according to the K.G. Beauchamp’s book – Applications
+of Walsh and Related Functions.
+:param array:
+:type array: numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>x</strong> – Fast Walsh Hadamard transform of array x.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.fwht_natural">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_natural</code><span class="sig-paren">(</span><em class="sig-param">array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_natural" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh-Hadamard Transform of array x in natural ordering
+The result is not normalised
+:param array:
+:type array: numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>a</strong> – Fast Walsh Hadamard transform of array x.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.fwht_sequency">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh-Hadamard Transform of array x in sequency ordering
+The result is not normalised
+Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
+algorithm.
+His code is according to the K.G. Beauchamp’s book – Applications
+of Walsh and Related Functions.
+:param x:
+:type x: numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>x</strong> – Fast Walsh Hadamard transform of array x.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.get_histogram">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">get_histogram</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">nbin</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a function p, convert it into a histogram. The function must
+be positive, the normalization is automatic. Note that instead of
+having an analytical expression, p could just create an arbitrary
+vector of the right dimensions and positive amplitudes.
+This procedure could be used to initialize any quantum state
+with real amplitudes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>float</em>) – lower limit of the interval</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – upper limit of the interval</p></li>
+<li><p><strong>p</strong> (<em>function</em>) – function that we want to convert to a probability mass function
+It does not have to be normalized but must be positive
+in the interval</p></li>
+<li><p><strong>nbin</strong> (<em>int</em>) – number of bins in the interval</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>centers</strong> (<em>np.darray</em>) – numpy array with the centers of the bins of the histogtram</p></li>
+<li><p><strong>probs</strong> (<em>np.darray</em>) – numpy array with the probability at the centers of the bins
+of the histogtram</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.left_conditional_probability">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">left_conditional_probability</code><span class="sig-paren">(</span><em class="sig-param">initial_bins</em>, <em class="sig-param">probability</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.left_conditional_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function calculate f(i) according to the Lov Grover and Terry
+Rudolph 2008 papper:
+‘Creating superpositions that correspond to efficiently integrable
+probability distributions’
+<a class="reference external" href="http://arXiv.org/abs/quant-ph/0208112v1">http://arXiv.org/abs/quant-ph/0208112v1</a></p>
+<p>Given a discretized probability and an initial number of bins
+the function splits each initial region in 2 equally regions and
+calculates the condicional probabilities for x is located in the
+left part of the new regions when x is located in the region that
+contains the corresponding left region</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>initial_bins</strong> (<em>int</em>) – Number of initial bins for spliting the input probabilities</p></li>
+<li><p><strong>probability</strong> (<em>np.darray.</em>) – Numpy array with the probabilities to be load.
+initial_bins &lt;= len(Probability)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>left_cond_prob</strong> – conditional probabilities of the new initial_bins+1 splits</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.darray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.load_qn_gate">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">load_qn_gate</code><span class="sig-paren">(</span><em class="sig-param">qlm_gate</em>, <em class="sig-param">n_times</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.load_qn_gate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an AbstractGate by applying an input gate n times</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qlm_gate</strong> (<em>QLM gate</em>) – QLM gate that will be applied n times</p></li>
+<li><p><strong>n_times</strong> (<em>int</em>) – number of times the qlm_gate will be applied</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.mask">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the state <a href="#id37"><span class="problematic" id="id38">|</span></a>index&gt; into the state
+<a href="#id39"><span class="problematic" id="id40">|</span></a>11…1&gt; of size number qubits.
+:param number_qubits:
+:type number_qubits: int
+:param index:
+:type index: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mask</strong> – the gate that we have to apply in order to transform
+state <a href="#id41"><span class="problematic" id="id42">|</span></a>index&gt;. Note that it affects all states.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Qlm abstract gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.test_bins">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">test_bins</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">text='probability'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.test_bins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Testing condition for numpy arrays. The length of the array must
+be 2^n with n an int.
+:param array: Numpy Array whose dimensionality is going to test
+:type array: np.ndarray
+:param test: String for identification purpouses
+:type test: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If lengt of array is not 2^n with n an int.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>nqbits</strong> – Minimum number of qbits mandatory for storing input array in a
+quantum state</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
-<div class="section" id="qquantlib-utils-qlm-solver">
-<h1>QQuantLib.utils.qlm_solver<a class="headerlink" href="#qquantlib-utils-qlm-solver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.utils.qlm_solver">
+<span id="qquantlib-utils-qlm-solver"></span><h1>QQuantLib.utils.qlm_solver<a class="headerlink" href="#module-QQuantLib.utils.qlm_solver" title="Permalink to this headline">¶</a></h1>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains functions for calling QLM solver</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="QQuantLib.utils.qlm_solver.get_qpu">
+<code class="sig-prename descclassname">QQuantLib.utils.qlm_solver.</code><code class="sig-name descname">get_qpu</code><span class="sig-paren">(</span><em class="sig-param">qlmass=False</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.qlm_solver.get_qpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for selecting solver. User can chose between:
+* LinAlg: for submitting jobs to a QLM server
+* PyLinalg: for simulating jobs using myqlm lineal algebra.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qlmass</strong> (<em>bool</em>) – If True  try to use QLM as a Service connection to CESGA QLM
+If False PyLinalg simulator will be used</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>linal_qpu</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>solver for quantum jobs</p>
+</dd>
+</dl>
+</dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </div>
