@@ -45,9 +45,9 @@
 <li><a class="reference internal" href="#welcome-to-the-financialapplications-documentation">Welcome to the FinancialApplications documentation</a></li>
 <li><a class="reference internal" href="#module-QQuantLib.DL.data_loading">QQuantLib.DL</a></li>
 <li><a class="reference internal" href="#module-QQuantLib.AA.amplitude_amplification">QQuantLib.AA</a></li>
-<li><a class="reference internal" href="#qquantlib-ae">QQuantLib.AE</a></li>
-<li><a class="reference internal" href="#qquantlib-pe">QQuantLib.PE</a></li>
-<li><a class="reference internal" href="#qquantlib-utils-data-extracting">QQuantLib.utils.data_extracting</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.AE.maximum_likelihood_ae">QQuantLib.AE</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.PE.iterative_quantum_pe">QQuantLib.PE</a></li>
+<li><a class="reference internal" href="#module-QQuantLib.utils.data_extracting">QQuantLib.utils.data_extracting</a></li>
 <li><a class="reference internal" href="#module-QQuantLib.utils.utils">QQuantLib.utils.utils</a></li>
 <li><a class="reference internal" href="#module-QQuantLib.utils.qlm_solver">QQuantLib.utils.qlm_solver</a></li>
 </ul>
@@ -390,14 +390,341 @@ State that we want to rotate pi</p>
 </dd></dl>
 
 </div>
-<div class="section" id="qquantlib-ae">
-<h1>QQuantLib.AE<a class="headerlink" href="#qquantlib-ae" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.AE.maximum_likelihood_ae">
+<span id="qquantlib-ae"></span><h1>QQuantLib.AE<a class="headerlink" href="#module-QQuantLib.AE.maximum_likelihood_ae" title="Permalink to this headline">¶</a></h1>
+<p>Copyright 2022 CESGA
+License:</p>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains necesary functions and classes to implement
+Maximum Likelihood Amplitude Estimation based on the paper:</p>
+<blockquote>
+<div><p>Suzuki, Y., Uno, S., Raymond, R., Tanaka, T., Onodera, T., &amp; Yamamoto, N.
+Amplitude estimation without phase estimation
+Quantum Information Processing, 19(2), 2020
+arXiv: quant-ph/1904.10246v2</p>
+</div></blockquote>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
+<dl class="class">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.maximum_likelihood_ae.</code><code class="sig-name descname">MLAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for using Maximum Likelihood Quantum Amplitude Estimation (ML-AE)
+algorithm</p>
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function">
+<code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method calculates the -Likelihood of angle theta
+for a given schedule m_k,n_k</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – the hypothetical angle</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cost</strong> – the aggregation of the individual likelihoods</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood">
+<em class="property">static </em><code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates Likelihood from Suzuki papper. For h_k positive events
+of n_k total events, this function calculates the probability of
+this taking into account that the probability of a positive
+event is given by theta and by m_k
+The idea is use this function to minimize it for this reason it gives
+minus Likelihood</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gives the Likelihood p(h_k with m_k amplifications|theta)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood">
+<em class="property">static </em><code class="sig-name descname">log_likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates log of the likelihood from Suzuki papper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gives the log Likelihood p(h_k with m_k amplifications|theta)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.optimize">
+<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions optimizes the cost_function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the type of the result is the type of the result
+of the optimizer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>result</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.run_step">
+<code class="sig-name descname">run_step</code><span class="sig-paren">(</span><em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.run_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method executes on step of the MLAE algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_k</strong> (<em>int</em>) – number of times to apply the self.q_gate to the quantum circuit</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of shots</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>h_k</strong> – number of positive events</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="qquantlib-pe">
-<h1>QQuantLib.PE<a class="headerlink" href="#qquantlib-pe" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.PE.iterative_quantum_pe">
+<span id="qquantlib-pe"></span><h1>QQuantLib.PE<a class="headerlink" href="#module-QQuantLib.PE.iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains necesary functions and classes to implement
+Iterative Quantum Phase Estimation (IQPE). The implementation is based on
+following paper:</p>
+<blockquote>
+<div><p>Dobšíček, Miroslav and Johansson, Göran and Shumeiko, Vitaly and
+Wendin, Göran*.
+Arbitrary accuracy iterative quantum phase estimation algorithm
+using a single ancillary qubit: A two-qubit benchmark.
+Physical Review A 3(76), 2007.
+<a class="reference external" href="https://arxiv.org/abs/quant-ph/0610214">https://arxiv.org/abs/quant-ph/0610214</a></p>
+</div></blockquote>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
+<dl class="class">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.iterative_quantum_pe.</code><code class="sig-name descname">IterativeQuantumPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.apply_iqpe">
+<code class="sig-name descname">apply_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.apply_iqpe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a complete IQPE algorithm</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.init_iqpe">
+<code class="sig-name descname">init_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.init_iqpe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize several properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.iqpe">
+<code class="sig-name descname">iqpe</code><span class="sig-paren">(</span><em class="sig-param">number_of_cbits=None</em>, <em class="sig-param">shots=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.iqpe" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method apply a workflow for executing a complete IQPE
+algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_cbits</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of classical bits for storing the phase estimation</p></li>
+<li><p><strong>shots</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of shots for executing the QLM job</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.meas_classical_bits">
+<em class="property">static </em><code class="sig-name descname">meas_classical_bits</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.meas_classical_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Proccess intermediate measurements from a qlm result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>result</strong> (<em>list list with qlm results</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>)</p></li>
+<li><p><em>contains extracted information from intermediate_measurements</em></p></li>
+<li><p><em>from a qlm result. Columns</em></p></li>
+<li><p><strong>BitString</strong> (<em>str. String with the bits of the measurements done</em>)</p></li>
+<li><p><em>during simulation of the circuit</em></p></li>
+<li><p><strong>BitInt</strong> (<em>int. Integer representation of the BitString</em>)</p></li>
+<li><p><strong>Phi</strong> (<em>float. Angle representation of the BitString between [0,1].</em>)</p></li>
+<li><p><strong>Probability</strong> (<em>float. Probability of the measurement of the classsical bits.</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.post_proccess">
+<em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">InputPDF</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.post_proccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses the results property and add it additional
+columns that are useful for Amplitude Amplification procedure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.restart">
+<code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinitialize several properties for restart purpouses</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe">
+<em class="property">static </em><code class="sig-name descname">step_iqpe</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements a iterative step of the Iterative Phase Estimation (IPE)
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
+<li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
+the autovalue theta of this operator</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for IPE. This qbit will be the control
+for application of the unitary operator to the principal qbits
+of the program. Aditionally will be the target qbit for the
+classical bit controlled rotation. This qbit will be reset at
+the end of the step.</p></li>
+<li><p><strong>c_bits</strong> (<em>list</em>) – list with the classical bits allocated for phase estimation</p></li>
+<li><p><strong>l</strong> (<em>int</em>) – iteration step of the IPE algorithm</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe_zalo">
+<em class="property">static </em><code class="sig-name descname">step_iqpe_zalo</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe_zalo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implements a iterative step of the Iterative Phase Estimation (IPE)
+algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
+<li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
+the autovalue theta of this operator</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for IPE. This qbit will be the control
+for application of the unitary operator to the principal qbits
+of the program. Aditionally will be the target qbit for the
+classical bit controlled rotation. This qbit will be reset at
+the end of the step.</p></li>
+<li><p><strong>c_bits</strong> (<em>list</em>) – list with the classical bits allocated for phase estimation</p></li>
+<li><p><strong>l</strong> (<em>int</em>) – iteration step of the IPE algorithm</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="qquantlib-utils-data-extracting">
-<h1>QQuantLib.utils.data_extracting<a class="headerlink" href="#qquantlib-utils-data-extracting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-QQuantLib.utils.data_extracting">
+<span id="qquantlib-utils-data-extracting"></span><h1>QQuantLib.utils.data_extracting<a class="headerlink" href="#module-QQuantLib.utils.data_extracting" title="Permalink to this headline">¶</a></h1>
+<p>This project has received funding from the European Union’s Horizon 2020
+research and innovation programme under Grant Agreement No. 951821
+<a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
+<p>This module contains auxiliar functions for executing QLM programs based
+on QLM QRoutines or QLM gates and for postproccessing results from QLM
+qpu executions</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="QQuantLib.utils.data_extracting.create_qcircuit">
+<code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">create_qcircuit</code><span class="sig-paren">(</span><em class="sig-param">prog_q</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.create_qcircuit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a QLM program creates a QLM circuit</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.data_extracting.create_qjob">
+<code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">create_qjob</code><span class="sig-paren">(</span><em class="sig-param">circuit</em>, <em class="sig-param">shots=0</em>, <em class="sig-param">qubits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.create_qjob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a QLM circuit creates a QLM job</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.data_extracting.create_qprogram">
+<code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">create_qprogram</code><span class="sig-paren">(</span><em class="sig-param">quantum_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.create_qprogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Quantum Program from an input qlm gate or routine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>quantum_gate</strong> (<em>QLM gate</em><em> or </em><em>QLM routine</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_prog</strong> – Quantum Program from input QLM gate or routine</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM Program.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.data_extracting.get_results">
+<code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param">quantum_object</em>, <em class="sig-param">linalg_qpu</em>, <em class="sig-param">shots: int = 0</em>, <em class="sig-param">qubits: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for testing an input gate. This fucntion creates the
+quantum program for an input gate, the correspondent circuit
+and job. Execute the job and gets the results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quantum_object</strong> (<em>QLM Gate</em><em>, </em><em>Routine</em><em> or </em><em>Program</em>) – </p></li>
+<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for the generated job.
+if 0 True probabilities will be computed</p></li>
+<li><p><strong>qubits</strong> (<em>list</em>) – list with the qbits for doing the measurement when simulating
+if None measuremnt over all allocated qbits will be provided</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with the results of the simulation</p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
+<li><p><strong>q_prog</strong> (<em>QLM Program.</em>)</p></li>
+<li><p><strong>job</strong> (<em>QLM job</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.data_extracting.proccess_qresults">
+<code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">proccess_qresults</code><span class="sig-paren">(</span><em class="sig-param">result</em>, <em class="sig-param">qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.proccess_qresults" title="Permalink to this definition">¶</a></dt>
+<dd><p>PostProcces a QLM results for creating a pandas DataFrame</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-QQuantLib.utils.utils">
 <span id="qquantlib-utils-utils"></span><h1>QQuantLib.utils.utils<a class="headerlink" href="#module-QQuantLib.utils.utils" title="Permalink to this headline">¶</a></h1>
