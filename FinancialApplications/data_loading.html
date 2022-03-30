@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>data_loading &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QQuantLib.AA" href="aa.html" />
+    <link rel="prev" title="QQuantLib.DL" href="dl.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> NEASQC documentation<img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="dl.html">QQuantLib.DL</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">data_loading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="dl.html">QQuantLib.DL</a> &raquo;</li>
+      <li>data_loading</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-QQuantLib.DL.data_loading">
+<span id="data-loading"></span><h1>data_loading<a class="headerlink" href="#module-QQuantLib.DL.data_loading" title="Permalink to this headline">¶</a></h1>
+<p>This module contains all the functions in order to load data into the
+quantum state.
+There are two implementations for the loading of a function:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>one based on brute force</p></li>
+<li><p>one based on multiplexors.</p></li>
+</ul>
+</div></blockquote>
+<p>The implementation of the multiplexors is a non-recursive version of:</p>
+<blockquote>
+<div><p>V.V. Shende, S.S. Bullock, and I.L. Markov.
+Synthesis of quantum-logic circuits.
+IEEE Transactions on Computer-Aided Design of Integrated Circuits
+and Systems, 25(6):1000–1010, Jun 2006
+arXiv:quant-ph/0406176v5</p>
+</div></blockquote>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angle">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angle</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em>, <em class="sig-param">index: int</em>, <em class="sig-param">angle: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auxiliary function that transforms the state <a href="#id1"><span class="problematic" id="id2">|</span></a>0&gt;|index&gt; into cos(angle)|0&gt;|index&gt;+sin(angle)|1&gt;|index&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the control register. The arity of the gate is number_qubits+1.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – Index of the state that we control.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) – Angle that we load.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angles">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Auxiliary function</p>
+<p>Transforms the state:
+<a href="#id3"><span class="problematic" id="id4">|</span></a>0&gt;|0&gt;+ <a href="#id5"><span class="problematic" id="id6">|</span></a>0&gt;|1&gt;+ <a href="#id7"><span class="problematic" id="id8">|</span></a>0&gt;|2&gt;+…+ <a href="#id9"><span class="problematic" id="id10">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;
++sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.
+It serves as an interface for the two methods for loading the angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p></li>
+<li><p><strong>method</strong> (<em>string</em>) – Method used in the loading. Default method.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_angles_brute_force">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles_brute_force</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles_brute_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate using multicontrolled rotations.</p>
+<p>Operator transforms the state:
+<a href="#id11"><span class="problematic" id="id12">|</span></a>0&gt;|0&gt;+ <a href="#id13"><span class="problematic" id="id14">|</span></a>0&gt;|1&gt;+ <a href="#id15"><span class="problematic" id="id16">|</span></a>0&gt;|2&gt;+…+ <a href="#id17"><span class="problematic" id="id18">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;</p>
+<p>+sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_array">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate for loading a normalised array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_array</strong> (<em>numpy array</em>) – Numpy array with the normalised array to load. The arity of
+of the gate is int(np.log2(len(probability_array)))+1.</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – <dl class="simple">
+<dt>type of loading method used:</dt><dd><p>multiplexor : with quantum Multiplexors
+brute_force : using multicontrolled rotations by state</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>f_gate</strong> – AbstractGate customized for loading a normalised array</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_pf">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_pf</code><span class="sig-paren">(</span><em class="sig-param">p_gate</em>, <em class="sig-param">f_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_pf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create complete AbstractGate for applying Operators P and R
+The operator to implement is: p_gate*r_gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_gate</strong> (<em>QLM AbstractGate</em>) – Customized AbstractGate for loading probability distribution.</p></li>
+<li><p><strong>f_gate</strong> (<em>QLM AbstractGate</em>) – Customized AbstractGatel for loading integral of a function f(x)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pr_gate</strong> – Customized AbstractGate for loading the P and R operators</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.load_probability">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate for loading an input discretized
+Probability Distribution using Quantum Multiplexors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
+of the gate is int(np.log2(len(probability_array))).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>P_Gate</strong> – Customized Abstract Gate for Loading Probability array using
+Quantum Multiplexors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.multiplexor_RY">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">multiplexor_RY</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.multiplexor_RY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an Abstract gate using Quantum Multiplexors that transforms
+the state:
+<a href="#id19"><span class="problematic" id="id20">|</span></a>0&gt;|0&gt;+ <a href="#id21"><span class="problematic" id="id22">|</span></a>0&gt;|1&gt;+ <a href="#id23"><span class="problematic" id="id24">|</span></a>0&gt;|2&gt;+…+ <a href="#id25"><span class="problematic" id="id26">|</span></a>0&gt;|len(angle)-1&gt;,
+into:
+cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
++cos(angle)|0&gt;|len(angle)-1&gt;
++sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
++sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – <dl class="simple">
+<dt>Angles to load in the circuit. The arity of the gate is:</dt><dd><p>int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.DL.data_loading.uniform_distribution">
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">uniform_distribution</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.uniform_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to load a uniform distribution in a quantum circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Arity of the output gate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dl.html" class="btn btn-neutral float-left" title="QQuantLib.DL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aa.html" class="btn btn-neutral float-right" title="QQuantLib.AA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Atos 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
