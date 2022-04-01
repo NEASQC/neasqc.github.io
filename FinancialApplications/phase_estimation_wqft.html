@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>phase_estimation_wqft &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QQuantLib.utils" href="utils.html" />
+    <link rel="prev" title="iterative_quantum_pe" href="iterative_quantum_pe.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> NEASQC documentation<img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pe.html">QQuantLib.PE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="iterative_quantum_pe.html">iterative_quantum_pe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">phase_estimation_wqft</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="pe.html">QQuantLib.PE</a> &raquo;</li>
+      <li>phase_estimation_wqft</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-QQuantLib.PE.phase_estimation_wqft">
+<span id="phase-estimation-wqft"></span><h1>phase_estimation_wqft<a class="headerlink" href="#module-QQuantLib.PE.phase_estimation_wqft" title="Permalink to this headline">¶</a></h1>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
+<dl class="class">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.phase_estimation_wqft.</code><code class="sig-name descname">PhaseEstimationwQFT</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_controlled_operations">
+<em class="property">static </em><code class="sig-name descname">apply_controlled_operations</code><span class="sig-paren">(</span><em class="sig-param">q_prog_</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_controlled_operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions creates the first part of the Phase Estimation
+algorithm with QFT. Given a initial state, a unitary operator
+and group of auxiliar qbits following steps are done:
+1. Applies a Haddamard Gate to each auxiliar qbit.
+2. Each auxiliar qbit controlles an exponential application
+of the given operator on the principal quantum state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog_</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
+<li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
+the autovalue theta of this operator</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbits for PE. Each qbit will be the control for
+application of the unitary operator (powers of it in fact)
+to the initial state</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_prog</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM program</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_inv_qft">
+<em class="property">static </em><code class="sig-name descname">apply_inv_qft</code><span class="sig-paren">(</span><em class="sig-param">q_prog_</em>, <em class="sig-param">q_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_inv_qft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply an inverse of Quantum Fourier Transformation to the
+desired qbits of a QLM program</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – qbits where the inverse of the QFT will be applied</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_prog</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM program</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_pe_wqft">
+<em class="property">static </em><code class="sig-name descname">apply_pe_wqft</code><span class="sig-paren">(</span><em class="sig-param">q_prog_</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.apply_pe_wqft" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function apply a complete Phase Estimation with QFT algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog_</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
+<li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
+the autovalue theta of this operator</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbits for PE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_prog</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM program</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.init_pe">
+<code class="sig-name descname">init_pe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.init_pe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize several properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.meas_classical_bits">
+<em class="property">static </em><code class="sig-name descname">meas_classical_bits</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.meas_classical_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a QLM aggregated result generate a DataFrame with the
+information of the inputs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.pe_wqft">
+<code class="sig-name descname">pe_wqft</code><span class="sig-paren">(</span><em class="sig-param">number_of_cbits=None</em>, <em class="sig-param">shots=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.pe_wqft" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method apply a workflow for executing a complete IQPE
+algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_cbits</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of classical bits for storing the phase estimation</p></li>
+<li><p><strong>shots</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of shots for executing the QLM job</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.post_proccess">
+<em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">InputPDF</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.post_proccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses the results property and add it additional
+columns that are useful for Amplitude Amplification procedure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.restart">
+<code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinitialize several properties for restart purpouses</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.run">
+<em class="property">static </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.phase_estimation_wqft.PhaseEstimationwQFT.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a complete simulation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q_prog</strong> (<em>QLM Program</em>) – </p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for measuring during all ipe steps</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for simulation</p></li>
+<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>result</strong> (<em>QLM results</em>)</p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="iterative_quantum_pe.html" class="btn btn-neutral float-left" title="iterative_quantum_pe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="utils.html" class="btn btn-neutral float-right" title="QQuantLib.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
