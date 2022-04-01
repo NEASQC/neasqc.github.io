@@ -17,6 +17,8 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -122,6 +124,9 @@ algorithm</p>
 <code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method calculates the -Likelihood of angle theta
 for a given schedule m_k,n_k</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[L(\theta,\mathbf{h}) = -\sum_{k = 0}^M\log{l_k(\theta|h_k)}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – the hypothetical angle</p>
@@ -144,6 +149,10 @@ this taking into account that the probability of a positive
 event is given by theta and by m_k
 The idea is use this function to minimize it for this reason it gives
 minus Likelihood</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[l_k(\theta|h_k) = \sin^2\left((2m_k+1)\theta\right)^{h_k}\cos^2
+\left((2m_k+1)\theta\right)^{n_k-h_k}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -167,6 +176,10 @@ positive event.</p></li>
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood">
 <em class="property">static </em><code class="sig-name descname">log_likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates log of the likelihood from Suzuki papper.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\log{l_k(\theta|h_k)} = 2h_k\log\big[\sin\left((2m_k+1)\theta\right)\big]
++2(n_k-h_k)\log\big[\cos\left((2m_k+1)\theta\right)\big]\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -236,7 +249,7 @@ of the optimizer</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright Atos 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
   </div>
 
    

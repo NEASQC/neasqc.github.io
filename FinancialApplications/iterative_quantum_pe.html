@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>amplitude_amplification &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>iterative_quantum_pe &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -17,6 +17,8 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -47,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="pe.html">QQuantLib.PE</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">amplitude_amplification</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">iterative_quantum_pe</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
@@ -68,7 +70,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="pe.html">QQuantLib.PE</a> &raquo;</li>
-      <li>amplitude_amplification</li>
+      <li>iterative_quantum_pe</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -102,7 +104,7 @@
 }
 </style>
 <div class="section" id="module-QQuantLib.PE.iterative_quantum_pe">
-<span id="amplitude-amplification"></span><h1>amplitude_amplification<a class="headerlink" href="#module-QQuantLib.PE.iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
+<span id="iterative-quantum-pe"></span><h1>iterative_quantum_pe<a class="headerlink" href="#module-QQuantLib.PE.iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
 <p>This module contains necesary functions and classes to implement
 Iterative Quantum Phase Estimation (IQPE). The implementation is based on
 following paper:</p>
@@ -184,31 +186,24 @@ columns that are useful for Amplitude Amplification procedure</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe">
-<em class="property">static </em><code class="sig-name descname">step_iqpe</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe" title="Permalink to this definition">¶</a></dt>
-<dd><p>Implements a iterative step of the Iterative Phase Estimation (IPE)
-algorithm.</p>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.run">
+<em class="property">static </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes a complete simulation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
-<li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
-the autovalue theta of this operator</p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for IPE. This qbit will be the control
-for application of the unitary operator to the principal qbits
-of the program. Aditionally will be the target qbit for the
-classical bit controlled rotation. This qbit will be reset at
-the end of the step.</p></li>
-<li><p><strong>c_bits</strong> (<em>list</em>) – list with the classical bits allocated for phase estimation</p></li>
-<li><p><strong>l</strong> (<em>int</em>) – iteration step of the IPE algorithm</p></li>
+<li><p><strong>q_prog</strong> (<em>QLM Program</em>) – </p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for measuring during all ipe steps</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for simulation</p></li>
+<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe_zalo">
-<em class="property">static </em><code class="sig-name descname">step_iqpe_zalo</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe_zalo" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe">
+<em class="property">static </em><code class="sig-name descname">step_iqpe</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements a iterative step of the Iterative Phase Estimation (IPE)
 algorithm.</p>
 <dl class="field-list simple">
@@ -244,7 +239,7 @@ the end of the step.</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright Atos 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
   </div>
 
    

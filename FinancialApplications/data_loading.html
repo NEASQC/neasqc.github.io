@@ -17,6 +17,8 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -124,7 +126,15 @@ arXiv:quant-ph/0406176v5</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_angle">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angle</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em>, <em class="sig-param">index: int</em>, <em class="sig-param">angle: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Auxiliary function that transforms the state <a href="#id1"><span class="problematic" id="id2">|</span></a>0&gt;|index&gt; into cos(angle)|0&gt;|index&gt;+sin(angle)|1&gt;|index&gt;.</p>
+<dd><p>Creates an QLM Abstract Gate that apply a rotation of a given angle
+into a auxiliar qbit controlled by a given state of the measurement basis.
+Direct QLM multicontrolled rotations were used for the implementation.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle \\
+\mathcal{load\_angle}(\theta, |i\rangle)|\Psi\rangle=\sum_{j=0, j\ne i}
+^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle+\alpha_i|i\rangle\otimes
+\big(\cos(\theta)|0\rangle+\sin(\theta)|1\rangle\big)\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -139,15 +149,14 @@ arXiv:quant-ph/0406176v5</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_angles">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Auxiliary function</p>
-<p>Transforms the state:
-<a href="#id3"><span class="problematic" id="id4">|</span></a>0&gt;|0&gt;+ <a href="#id5"><span class="problematic" id="id6">|</span></a>0&gt;|1&gt;+ <a href="#id7"><span class="problematic" id="id8">|</span></a>0&gt;|2&gt;+…+ <a href="#id9"><span class="problematic" id="id10">|</span></a>0&gt;|len(angle)-1&gt;,
-into:
-cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
-+cos(angle)|0&gt;|len(angle)-1&gt;
-+sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
-+sin(angle)|0&gt;|len(angle)-1&gt;.
-It serves as an interface for the two methods for loading the angles.</p>
+<dd><p>This function serves as an interface for the two different implementations
+of multicontrolled rotations: load_angles_brute_force and multiplexor_RY.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle \\
+\mathcal{load\_angles}([\theta_j]_{j=0,1,2...2^n-1})|\Psi\rangle
+=\sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes
+\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -162,14 +171,16 @@ int(np.log2(len(angle)))+1.</p></li>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_angles_brute_force">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_angles_brute_force</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_angles_brute_force" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Abstract gate using multicontrolled rotations.</p>
-<p>Operator transforms the state:
-<a href="#id11"><span class="problematic" id="id12">|</span></a>0&gt;|0&gt;+ <a href="#id13"><span class="problematic" id="id14">|</span></a>0&gt;|1&gt;+ <a href="#id15"><span class="problematic" id="id16">|</span></a>0&gt;|2&gt;+…+ <a href="#id17"><span class="problematic" id="id18">|</span></a>0&gt;|len(angle)-1&gt;,
-into:
-cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
-+cos(angle)|0&gt;|len(angle)-1&gt;</p>
-<p>+sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
-+sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dd><p>Given a list of angles this function creates a QLM routine that applies
+rotations of each angle of the list, over an auxiliar qbit, controlled
+by the different states of the measurement basis.
+Direct QLM multicontrolled rotations were used for the implementation.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle \\
+\mathcal{load\_angles\_brute\_force}([\theta_j]_{j=0,1,2...2^n-1})
+|\Psi\rangle=\sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes
+\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
@@ -181,7 +192,8 @@ int(np.log2(len(angle)))+1.</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_array">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Abstract gate for loading a normalised array.</p>
+<dd><p>Creates a QLM AbstractGate for loading a normalised array into a quantum
+state.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -207,8 +219,8 @@ brute_force : using multicontrolled rotations by state</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_pf">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_pf</code><span class="sig-paren">(</span><em class="sig-param">p_gate</em>, <em class="sig-param">f_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_pf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create complete AbstractGate for applying Operators P and R
-The operator to implement is: p_gate*r_gate</p>
+<dd><p>Create a QLM AbstractGate for applying two given operators consecutively.
+The operator to implement is: p_gate*f_gate</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -217,7 +229,7 @@ The operator to implement is: p_gate*r_gate</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>pr_gate</strong> – Customized AbstractGate for loading the P and R operators</p>
+<dd class="field-even"><p><strong>pf_gate</strong></p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>AbstractGate</p>
@@ -228,8 +240,8 @@ The operator to implement is: p_gate*r_gate</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_probability">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Abstract gate for loading an input discretized
-Probability Distribution using Quantum Multiplexors.</p>
+<dd><p>Creates a QLM Abstract gate for loading a given discretized probability
+distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
@@ -248,14 +260,16 @@ Quantum Multiplexors</p>
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.multiplexor_RY">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">multiplexor_RY</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.multiplexor_RY" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Abstract gate using Quantum Multiplexors that transforms
-the state:
-<a href="#id19"><span class="problematic" id="id20">|</span></a>0&gt;|0&gt;+ <a href="#id21"><span class="problematic" id="id22">|</span></a>0&gt;|1&gt;+ <a href="#id23"><span class="problematic" id="id24">|</span></a>0&gt;|2&gt;+…+ <a href="#id25"><span class="problematic" id="id26">|</span></a>0&gt;|len(angle)-1&gt;,
-into:
-cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
-+cos(angle)|0&gt;|len(angle)-1&gt;
-+sin(angle)|0&gt;|0&gt;+sin(angle)|0&gt;|1&gt;+sin(angle)|0&gt;|2&gt;+…
-+sin(angle)|0&gt;|len(angle)-1&gt;.</p>
+<dd><p>Given a list of angles this functions creates a QLM routine that applies
+rotations of each angle of the list, over an auxiliar qbit, controlled
+by the different states of the measurement basis.
+The multi-controlled rotations were implemented using Quantum Multiplexors.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle \\
+\mathcal{multiplexor\_RY}([\theta_j]_{j=0,1,2...2^n-1})|\Psi\rangle
+=\sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes
+\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – <dl class="simple">
@@ -271,6 +285,9 @@ cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
 <dt id="QQuantLib.DL.data_loading.uniform_distribution">
 <code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">uniform_distribution</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.uniform_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to load a uniform distribution in a quantum circuit.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{H}^{\otimes n}|\Psi\rangle\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Arity of the output gate.</p>
@@ -291,7 +308,7 @@ cos(angle)|0&gt;|0&gt;+cos(angle)|0&gt;|1&gt;+cos(angle)|0&gt;|2&gt;+…
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright Atos 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
   </div>
 
    
