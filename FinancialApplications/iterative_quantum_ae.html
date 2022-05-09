@@ -125,7 +125,9 @@ algorithm</p>
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound">
 <em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">N: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the length of the confidence interval for a given number of samples
-N and an accuracy gamma.</p>
+N and an accuracy gamma:</p>
+<div class="math notranslate nohighlight">
+\[\epsilon = \dfrac{1}{\sqrt{2N}}\log\left(\dfrac{2}{\gamma}\right)\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
