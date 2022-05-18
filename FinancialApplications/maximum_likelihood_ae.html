@@ -123,7 +123,7 @@ arXiv: quant-ph/1904.10246v2</p>
 algorithm</p>
 <dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function">
-<code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em>, <em class="sig-param">m_k: list</em>, <em class="sig-param">n_k: list</em>, <em class="sig-param">h_k: list</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method calculates the -Likelihood of angle theta
 for a given schedule m_k,n_k</p>
 <p class="rubric">Notes</p>
@@ -131,7 +131,13 @@ for a given schedule m_k,n_k</p>
 \[L(\theta,\mathbf{h}) = -\sum_{k = 0}^M\log{l_k(\theta|h_k)}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – the hypothetical angle</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>list of ints</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>list of ints</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>list of ints</em>) – number of positive events measured for each m_k</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>cost</strong> – the aggregation of the individual likelihoods</p>
@@ -202,16 +208,65 @@ positive event.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.optimize">
-<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.optimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>This functions optimizes the cost_function</p>
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.mlae">
+<code class="sig-name descname">mlae</code><span class="sig-paren">(</span><em class="sig-param">schedule</em>, <em class="sig-param">optimizer</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.mlae" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method executes a complete Maximum Likelihood Algorithm,
+including executing schedule, defining the correspondient cost
+function and optimizing it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schedule</strong> (<em>list of two lists</em>) – the schedule for the algorithm</p></li>
+<li><p><strong>optimizer</strong> (<em>optimization routine.</em>) – the optimizer should receive a function of one variable
+the angle to be optimized. Using lambda functions is the
+recomended way.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>result</strong> (<em>optimizer results</em>) – the type of the result is the type of the result of the optimizer</p></li>
+<li><p><strong>h_k</strong> (<em>list</em>) – list with number of positive outcomes from quantum circuit
+for each pair element of the input schedule</p></li>
+<li><p><strong>cost_function_partial</strong> (<em>function</em>) – partial cost function with the m_k, n_k and h_k fixed to the
+obtained values of the different experiments.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run method for the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the type of the result is the type of the result
-of the optimizer</p>
+<dd class="field-odd"><p>list with the estimation of a</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>result</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[a^*  = \sin^2(\theta^*)
+\; where \; \theta^* = \arg \min_{\theta} L(\theta,\mathbf{h})\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.run_schedule">
+<code class="sig-name descname">run_schedule</code><span class="sig-paren">(</span><em class="sig-param">schedule</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.run_schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method execute the run_step method for each pair of values
+of a given schedule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>schedule</strong> (<em>list of two lists</em>) – the schedule for the algorithm</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>h_k</strong> – list with the h_k result of each pair of the input schedule</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
 </dd></dl>

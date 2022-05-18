@@ -52,6 +52,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">QQuantLib.utils</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_extracting.html">data_extracting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_finance.html">classical_finance</a></li>
 </ul>
 </li>
 </ul>
@@ -146,133 +147,6 @@ of the library</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="QQuantLib.utils.utils.bs_call_price">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bs_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">r: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bs_call_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a european call option.
-The formula is:</p>
-<div class="math notranslate nohighlight">
-\[C(S,T) = S\Phi(d_1)-Ke^{-rT}\Phi(d_2)\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
-<li><p><strong>r</strong> (<em>float</em>) – risk free rate</p></li>
-<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european call option</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.bs_density">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bs_density</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">r: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bs_density" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the Black-Scholes density function at s_t
-for a given set of parameters. The formula is:</p>
-<div class="math notranslate nohighlight">
-\[\dfrac{1}{S_T\sigma\sqrt{2\pi T}}\exp\left(-\dfrac{\left(\log(S_T)-\mu\right)}{2\sigma^2T}\right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mu = (r-0.5\sigma)T+\log(S_0)\)</span>.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_t</strong> (<em>float</em>) – point where we do the evaluation</p></li>
-<li><p><strong>s_0</strong> (<em>float</em>) – current price</p></li>
-<li><p><strong>r</strong> (<em>float</em>) – risk free rate</p></li>
-<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>density</strong> – value of the Black-Scholes denisty function
-in s_t</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.bs_probability">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bs_probability</code><span class="sig-paren">(</span><em class="sig-param">s_t: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">r: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bs_probability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes a discrete probability distribution from the  Black-Scholes
-density function for a given set of parameters. This is done by evaluating
-the Black-Scholes density function in s_t and the normlising this result.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_t</strong> (<em>numpy array</em>) – points where we define the discrete probability distribution</p></li>
-<li><p><strong>s_0</strong> (<em>float</em>) – current price</p></li>
-<li><p><strong>r</strong> (<em>float</em>) – risk free rate</p></li>
-<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>distribution</strong> – discrete probability distribution from Black-Scholes density</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>numpy array</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.bs_put_price">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bs_put_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">r: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bs_put_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a european put option.
-The formula is:</p>
-<div class="math notranslate nohighlight">
-\[C(S,T) = Ke^{-rT}\Phi(-d_2)-S\Phi(-d_1)\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
-<li><p><strong>r</strong> (<em>float</em>) – risk free rate</p></li>
-<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european put option</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.call_payoff">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">call_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.call_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff of a european call option.</p>
-<div class="math notranslate nohighlight">
-\[C(S_T,K) = \left(S_T-K,0\right)^+\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
 <dt id="QQuantLib.utils.utils.check_list_type">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if a list x is of type tipo
@@ -309,28 +183,6 @@ The formula is:</p>
 <li><p><strong>r</strong> (<em>int</em>) – remainder</p></li>
 </ul>
 </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.futures_payoff">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">futures_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.futures_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff of a futures contract.</p>
-<div class="math notranslate nohighlight">
-\[F(S_T,K) = \left(S_T-K,0\right)\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
@@ -508,28 +360,6 @@ state <a href="#id5"><span class="problematic" id="id6">|</span></a>index&gt;. N
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>Qlm abstract gate</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.put_payoff">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">put_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.put_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff of a european put option.</p>
-<div class="math notranslate nohighlight">
-\[P(S_T,K) = \left(K-S_T,0\right)^+\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>

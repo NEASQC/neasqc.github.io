@@ -119,24 +119,24 @@ Physical Review A 3(76), 2007.
 </div></blockquote>
 <p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
 <dl class="class">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE">
-<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.iterative_quantum_pe.</code><code class="sig-name descname">IterativeQuantumPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.iterative_quantum_pe.</code><code class="sig-name descname">IQPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.apply_iqpe">
-<code class="sig-name descname">apply_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.apply_iqpe" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe">
+<code class="sig-name descname">apply_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a complete IQPE algorithm</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.init_iqpe">
-<code class="sig-name descname">init_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.init_iqpe" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.init_iqpe">
+<code class="sig-name descname">init_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.init_iqpe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize several properties</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.iqpe">
-<code class="sig-name descname">iqpe</code><span class="sig-paren">(</span><em class="sig-param">number_of_cbits=None</em>, <em class="sig-param">shots=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.iqpe" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.iqpe">
+<code class="sig-name descname">iqpe</code><span class="sig-paren">(</span><em class="sig-param">number_of_cbits=None</em>, <em class="sig-param">shots=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.iqpe" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method apply a workflow for executing a complete IQPE
 algorithm</p>
 <dl class="field-list simple">
@@ -150,8 +150,8 @@ algorithm</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.meas_classical_bits">
-<em class="property">static </em><code class="sig-name descname">meas_classical_bits</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.meas_classical_bits" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.measure_classical_bits">
+<em class="property">static </em><code class="sig-name descname">measure_classical_bits</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.measure_classical_bits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Post Proccess intermediate measurements from a qlm result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -174,21 +174,21 @@ algorithm</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.post_proccess">
-<em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">InputPDF</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.post_proccess" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.post_proccess">
+<em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">input_pdf</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.post_proccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function uses the results property and add it additional
 columns that are useful for Amplitude Amplification procedure</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.restart">
-<code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.restart" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.restart">
+<code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reinitialize several properties for restart purpouses</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.run">
-<em class="property">static </em><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.run" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.run_qprogram">
+<em class="property">static </em><code class="sig-name descname">run_qprogram</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.run_qprogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a complete simulation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -203,8 +203,8 @@ columns that are useful for Amplitude Amplification procedure</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe">
-<em class="property">static </em><code class="sig-name descname">step_iqpe</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IterativeQuantumPE.step_iqpe" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.step_iqpe">
+<em class="property">static </em><code class="sig-name descname">step_iqpe</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">c_bits</em>, <em class="sig-param">l</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.step_iqpe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements a iterative step of the Iterative Phase Estimation (IPE)
 algorithm.</p>
 <dl class="field-list simple">
@@ -223,6 +223,33 @@ the end of the step.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE_AE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.iterative_quantum_pe.</code><code class="sig-name descname">IQPE_AE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE_AE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) class for
+doing Amplitude Estimation (AE)</p>
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE_AE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE_AE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run method for the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the estimation of a</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>result</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[a  = \cos^2(\theta)
+\; where \; \theta \; is \;
+\mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle
+\; and \; \mathcal{Q} \; the \; Grover \; Operator\]</div>
 </dd></dl>
 
 </dd></dl>

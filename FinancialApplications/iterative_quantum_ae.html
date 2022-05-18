@@ -146,8 +146,8 @@ N and an accuracy gamma:</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.display_information">
-<em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">N: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function displays information of the propoerties of the method for a given
+<code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = None</em>, <em class="sig-param">N: int = None</em>, <em class="sig-param">alpha: float = None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function displays information of the properties of the method for a given
 set of parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -215,8 +215,8 @@ upper or lower half pane</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">N: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.run" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.iqae">
+<code class="sig-name descname">iqae</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">N: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.iqae" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function implements Algorithm 1 from the IQAE paper. The result
 is an estimation of the desired probability with precision at least
 epsilon and accuracy at least alpha.</p>
@@ -232,6 +232,8 @@ epsilon and accuracy at least alpha.</p>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>a_l</strong> (<em>float</em>) – lower bound for the probability to be estimated</p></li>
 <li><p><strong>a_u</strong> (<em>float</em>) – upper bound for the probability to be estimated</p></li>
+<li><p><em>theta_l</em> – lower bound for the angle to be estimated</p></li>
+<li><p><em>theta_u</em> – upper bound for the angle to be estimated</p></li>
 </ul>
 </p>
 </dd>
