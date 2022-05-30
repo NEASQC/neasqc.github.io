@@ -146,7 +146,7 @@ N and an accuracy gamma:</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.display_information">
-<code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = None</em>, <em class="sig-param">N: int = None</em>, <em class="sig-param">alpha: float = None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">shots: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function displays information of the properties of the method for a given
 set of parameters</p>
 <dl class="field-list simple">
@@ -154,7 +154,7 @@ set of parameters</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>epsilon</strong> (<em>float</em>) – precision</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – accuracy</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – number of measurements on each iteration</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements on each iteration</p></li>
 </ul>
 </dd>
 </dl>
@@ -216,7 +216,7 @@ upper or lower half pane</p></li>
 
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.iqae">
-<code class="sig-name descname">iqae</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">N: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.iqae" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iqae</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">shots: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.iqae" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function implements Algorithm 1 from the IQAE paper. The result
 is an estimation of the desired probability with precision at least
 epsilon and accuracy at least alpha.</p>
@@ -225,7 +225,7 @@ epsilon and accuracy at least alpha.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>epsilon</strong> (<em>float</em>) – precision</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – accuracy</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – number of measurements on each iteration</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements on each iteration</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
