@@ -110,36 +110,6 @@
 classical finances
 Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <dl class="function">
-<dt id="QQuantLib.utils.classical_finance.bs_SDE_solution">
-<code class="sig-prename descclassname">QQuantLib.utils.classical_finance.</code><code class="sig-name descname">bs_SDE_solution</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.classical_finance.bs_SDE_solution" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a certain parametrization $x$ it returns a value of the underlying $S_T(x)$
-and the probability density of that value of the underlying.
-The formulas are:</p>
-<p class="rubric">Notes</p>
-<div class="math notranslate nohighlight">
-\[S_T = S_0e^{\sigma x+(risk_free_rate-\sigma^2/2)t}
-p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>numpy array</em>) – parametrization</p></li>
-<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
-<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
-<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>s_t</strong> (<em>numpy array</em>) – value of the underlying corresponding to parameter x</p></li>
-<li><p><strong>probability_density</strong> (<em>numpy array</em>) – probability density corresponding to s_t</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
 <dt id="QQuantLib.utils.classical_finance.bs_call_price">
 <code class="sig-prename descclassname">QQuantLib.utils.classical_finance.</code><code class="sig-name descname">bs_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.classical_finance.bs_call_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the price for a european call option.
@@ -368,6 +338,36 @@ The formula is:</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="QQuantLib.utils.classical_finance.bs_sde_solution">
+<code class="sig-prename descclassname">QQuantLib.utils.classical_finance.</code><code class="sig-name descname">bs_sde_solution</code><span class="sig-paren">(</span><em class="sig-param">x_: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.classical_finance.bs_sde_solution" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a certain parametrization $x$ it returns a value of the underlying $S_T(x)$
+and the probability density of that value of the underlying.
+The formulas are:</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[S_T = S_0e^{\sigma x+(risk_free_rate-\sigma^2/2)t}
+p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_</strong> (<em>numpy array</em>) – parametrization</p></li>
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>s_t</strong> (<em>numpy array</em>) – value of the underlying corresponding to parameter x</p></li>
+<li><p><strong>probability_density</strong> (<em>numpy array</em>) – probability density corresponding to s_t</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="QQuantLib.utils.classical_finance.bs_tree">
 <code class="sig-prename descclassname">QQuantLib.utils.classical_finance.</code><code class="sig-name descname">bs_tree</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">time_steps: int</em>, <em class="sig-param">discretization: int</em>, <em class="sig-param">bounds: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.classical_finance.bs_tree" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
@@ -498,6 +498,32 @@ the strike</p></li>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.classical_finance.geometric_sum">
+<code class="sig-prename descclassname">QQuantLib.utils.classical_finance.</code><code class="sig-name descname">geometric_sum</code><span class="sig-paren">(</span><em class="sig-param">base: float</em>, <em class="sig-param">exponent: int</em>, <em class="sig-param">coeficient: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.classical_finance.geometric_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a geometric sum</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base</strong> (<em>float</em>) – base of the geometric sum</p></li>
+<li><p><strong>exponent</strong> (<em>int</em>) – maximum exponet for the geomtric sum</p></li>
+<li><p><strong>coeficient</strong> (<em>float</em>) – coeficient for the geomtric sum</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>return</strong> – result of the geometric sum</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}s = a+a*base+a*base^2+a*base^3+...+a*base^exponent = \\
+= \sum_{k=0}^{exponent}a*base^k = \\
+= a\big(\frac{1-base^{exponent+1}}{1-base}\big)\end{split}\]</div>
 </dd></dl>
 
 <dl class="function">

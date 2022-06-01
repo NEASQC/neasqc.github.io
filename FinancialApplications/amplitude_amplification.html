@@ -116,29 +116,8 @@ AMS Contemporary Mathematics Series, 305, 06-2000
 </div></blockquote>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
 <dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.U">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">U</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.U" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function creates a QLM AbstractGate that implements a grover Diffusor
-from an input state.</p>
-<p class="rubric">Notes</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{U}(|\Psi\rangle) = \mathcal{I}-2|\Psi\rangle\langle\Psi|\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>U_gate</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>QLM gate</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.U0">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">U0</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.U0" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.AA.amplitude_amplification.create_u0_gate">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u0_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function creates a QLM AbstractGate that implements an oracle:
 a reflection around the perpendicular state to a given state.</p>
 <p class="rubric">Notes</p>
@@ -156,7 +135,28 @@ a reflection around the perpendicular state to a given state.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>U0_gate</strong></p>
+<dd class="field-even"><p><strong>u0_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.create_u_gate">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u_gate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a QLM AbstractGate that implements a grover Diffusor
+from an input state.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{U}(|\Psi\rangle) = \mathcal{I}-2|\Psi\rangle\langle\Psi|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>u_gate</strong></p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>QLM gate</p>

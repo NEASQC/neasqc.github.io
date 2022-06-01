@@ -122,13 +122,25 @@ Physical Review A 3(76), 2007.
 </div></blockquote>
 <p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
 <dl class="class">
-<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPE_AE">
-<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_iterative_quantum_pe.</code><code class="sig-name descname">IQPE_AE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPE_AE" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_iterative_quantum_pe.</code><code class="sig-name descname">IQPEAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) class for
 doing Amplitude Estimation (AE)</p>
 <dl class="method">
-<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPE_AE.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPE_AE.run" title="Permalink to this definition">¶</a></dt>
+<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index">
+<em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating index property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.oracle">
+<em class="property">property </em><code class="sig-name descname">oracle</code><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.oracle" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>run method for the class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -144,6 +156,12 @@ doing Amplitude Estimation (AE)</p>
 \; where \; \theta \; is \;
 \mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle
 \; and \; \mathcal{Q} \; the \; Grover \; Operator\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.target">
+<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating target property</p>
 </dd></dl>
 
 </dd></dl>

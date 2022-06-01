@@ -124,13 +124,13 @@ Preprint</p>
 algorithm</p>
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound">
-<em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">N: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">n_samples: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the length of the confidence interval for a given number of samples
-N and an accuracy gamma.</p>
+n_samples and an accuracy gamma.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>N</strong> (<em>int</em>) – number of samples</p></li>
+<li><p><strong>n_samples</strong> (<em>int</em>) – number of samples</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 </ul>
 </dd>
@@ -145,13 +145,13 @@ N and an accuracy gamma.</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.display_information">
-<em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">q: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.display_information" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">ratio: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.display_information" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function displays information of the propoerties of the method for a given
 set of parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>q</strong> (<em>float</em>) – amplification ratio/policy</p></li>
+<li><p><strong>ratio</strong> (<em>float</em>) – amplification ratio/policy</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em>) – precision</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 </ul>
@@ -161,14 +161,14 @@ set of parameters</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.first_step">
-<code class="sig-name descname">first_step</code><span class="sig-paren">(</span><em class="sig-param">shift: float</em>, <em class="sig-param">N: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.first_step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">first_step</code><span class="sig-paren">(</span><em class="sig-param">shift: float</em>, <em class="sig-param">shots: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.first_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function implements the first step of the RQAE paper. The result
 is a first estimation of the desired amplitude.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>shift</strong> (<em>float</em>) – shift for the first iteration</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – number of measurements</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 </ul>
 </dd>
@@ -183,15 +183,27 @@ is a first estimation of the desired amplitude.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="QQuantLib.AE.real_quantum_ae.RQAE.index">
+<em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating index property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.real_quantum_ae.RQAE.oracle">
+<em class="property">property </em><code class="sig-name descname">oracle</code><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.oracle" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.rqae">
-<code class="sig-name descname">rqae</code><span class="sig-paren">(</span><em class="sig-param">q: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.rqae" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rqae</code><span class="sig-paren">(</span><em class="sig-param">ratio: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.rqae" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function implements the first step of the RQAE paper. The result
 is an estimation of the desired amplitude with precision epsilon
 and accuracy gamma.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>q</strong> (<em>int</em>) – amplification ratio</p></li>
+<li><p><strong>ratio</strong> (<em>int</em>) – amplification ratio</p></li>
 <li><p><strong>epsilon</strong> (<em>int</em>) – precision</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 </ul>
@@ -207,15 +219,29 @@ and accuracy gamma.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="QQuantLib.AE.real_quantum_ae.RQAE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run method for the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>amplitude estimation parameter</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>self.ae</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.run_step">
-<code class="sig-name descname">run_step</code><span class="sig-paren">(</span><em class="sig-param">shift: float</em>, <em class="sig-param">N: int</em>, <em class="sig-param">gamma: float</em>, <em class="sig-param">k: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.run_step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run_step</code><span class="sig-paren">(</span><em class="sig-param">shift: float</em>, <em class="sig-param">shots: int</em>, <em class="sig-param">gamma: float</em>, <em class="sig-param">k: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.run_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function implements a step of the RQAE paper. The result
 is a refined estimation of the desired amplitude.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>shift</strong> (<em>float</em>) – shift for the first iteration</p></li>
-<li><p><strong>N</strong> (<em>int</em>) – number of measurements</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 <li><p><strong>k</strong> (<em>int</em>) – number of amplifications</p></li>
 </ul>
@@ -228,6 +254,18 @@ is a refined estimation of the desired amplitude.</p>
 </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.real_quantum_ae.RQAE.shifted_oracle">
+<em class="property">property </em><code class="sig-name descname">shifted_oracle</code><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.shifted_oracle" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating shifted_oracle property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.real_quantum_ae.RQAE.target">
+<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating target property</p>
 </dd></dl>
 
 </dd></dl>

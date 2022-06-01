@@ -151,6 +151,12 @@ positive event.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.index">
+<em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating index property</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood">
 <em class="property">static </em><code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates Likelihood from Suzuki papper. For h_k positive events
@@ -238,6 +244,12 @@ obtained values of the different experiments.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.oracle">
+<em class="property">property </em><code class="sig-name descname">oracle</code><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.oracle" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.run">
 <code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>run method for the class.</p>
@@ -291,6 +303,46 @@ of a given schedule.</p>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.schedule">
+<em class="property">property </em><code class="sig-name descname">schedule</code><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating schedule property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.set_exponential_schedule">
+<code class="sig-name descname">set_exponential_schedule</code><span class="sig-paren">(</span><em class="sig-param">n_t: int</em>, <em class="sig-param">n_s: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.set_exponential_schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a scheduler of exponential increasing of m_ks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_t</strong> (<em>int</em>) – number of maximum applications of the grover operator</p></li>
+<li><p><strong>n_s</strong> (<em>int</em>) – number of shots for each m_k grover applications</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.set_linear_schedule">
+<code class="sig-name descname">set_linear_schedule</code><span class="sig-paren">(</span><em class="sig-param">n_t: int</em>, <em class="sig-param">n_s: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.set_linear_schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a scheduler of linear increasing of m_ks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_t</strong> (<em>int</em>) – number of maximum applications of the grover operator</p></li>
+<li><p><strong>n_s</strong> (<em>int</em>) – number of shots for each m_k grover applications</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.target">
+<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating target property</p>
 </dd></dl>
 
 </dd></dl>

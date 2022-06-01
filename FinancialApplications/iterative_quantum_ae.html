@@ -125,15 +125,15 @@ npj Quantum Inf 7, 52 (2021).
 algorithm</p>
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound">
-<em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">N: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">n_samples: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the length of the confidence interval for a given number of samples
-N and an accuracy gamma:</p>
+n_samples and an accuracy gamma:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon = \dfrac{1}{\sqrt{2N}}\log\left(\dfrac{2}{\gamma}\right)\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>N</strong> (<em>int</em>) – number of samples</p></li>
+<li><p><strong>n_samples</strong> (<em>int</em>) – number of samples</p></li>
 <li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
 </ul>
 </dd>
@@ -148,7 +148,7 @@ N and an accuracy gamma:</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.display_information">
-<code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">shots: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">shots: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function displays information of the properties of the method for a given
 set of parameters</p>
 <dl class="field-list simple">
@@ -164,7 +164,7 @@ set of parameters</p>
 
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k">
-<em class="property">static </em><code class="sig-name descname">find_next_k</code><span class="sig-paren">(</span><em class="sig-param">k: int</em>, <em class="sig-param">theta_lower: float</em>, <em class="sig-param">theta_upper: float</em>, <em class="sig-param">flag: bool</em>, <em class="sig-param">r: float = 2</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">find_next_k</code><span class="sig-paren">(</span><em class="sig-param">k: int</em>, <em class="sig-param">theta_lower: float</em>, <em class="sig-param">theta_upper: float</em>, <em class="sig-param">flag: bool</em>, <em class="sig-param">ratio: float = 2</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is an implementation of Algorithm 2 from the IQAE paper. This function computes
 the next suitable k.</p>
 <dl class="field-list simple">
@@ -175,7 +175,7 @@ the next suitable k.</p>
 <li><p><strong>theta_upper</strong> (<em>float</em>) – upper bound for the estimation of the angle</p></li>
 <li><p><strong>flag</strong> (<em>bool</em>) – flag to keep track of weather we are in the
 upper or lower half pane</p></li>
-<li><p><strong>r</strong> (<em>float</em>) – ratio of amplifications between consecutive iterations</p></li>
+<li><p><strong>ratio</strong> (<em>float</em>) – ratio of amplifications between consecutive iterations</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -187,6 +187,12 @@ upper or lower half pane</p></li>
 </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.index">
+<em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating index property</p>
 </dd></dl>
 
 <dl class="method">
@@ -240,6 +246,32 @@ epsilon and accuracy at least alpha.</p>
 </p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.oracle">
+<em class="property">property </em><code class="sig-name descname">oracle</code><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.oracle" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>run method for the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>amplitude estimation parameter</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>self.ae</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.target">
+<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating target property</p>
 </dd></dl>
 
 </dd></dl>

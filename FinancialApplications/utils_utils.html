@@ -112,17 +112,17 @@ of the library</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <dl class="function">
 <dt id="QQuantLib.utils.utils.bitfield">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transforms an int n to the corresponding bitfield of size size</p>
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n_int: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an int n_int to the corresponding bitfield of size size</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
+<li><p><strong>n_int</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – size of the bitfield</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>full</strong> – bitfield representation of n with size size</p>
+<dd class="field-even"><p><strong>full</strong> – bitfield representation of n_int with size size</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list of ints</p>
@@ -148,15 +148,15 @@ of the library</p>
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.check_list_type">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a list x is of type tipo
-:param x:
-:type x: list
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x_input</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a list x_input is of type tipo
+:param x_input:
+:type x_input: list
 :param tipo: it has to be understandable by numpy
 :type tipo: data type</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>y</strong> – numpy array of type tipo.</p>
+<dd class="field-odd"><p><strong>y_output</strong> – numpy array of type tipo.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>np.array</p>
@@ -166,21 +166,21 @@ of the library</p>
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.expmod">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">expmod</code><span class="sig-paren">(</span><em class="sig-param">n: int</em>, <em class="sig-param">b: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.expmod" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">expmod</code><span class="sig-paren">(</span><em class="sig-param">n_input: int</em>, <em class="sig-param">base: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.expmod" title="Permalink to this definition">¶</a></dt>
 <dd><p>For a pair of integer numbers, performs the decomposition:</p>
 <div class="math notranslate nohighlight">
-\[n = b^p+r\]</div>
+\[n_input = base^power+remainder\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n</strong> (<em>int</em>) – number to decompose</p></li>
-<li><p><strong>b</strong> (<em>int</em>) – basis</p></li>
+<li><p><strong>n_input</strong> (<em>int</em>) – number to decompose</p></li>
+<li><p><strong>base</strong> (<em>int</em>) – basis</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>p</strong> (<em>int</em>) – power</p></li>
-<li><p><strong>r</strong> (<em>int</em>) – remainder</p></li>
+<li><p><strong>power</strong> (<em>int</em>) – power</p></li>
+<li><p><strong>remainder</strong> (<em>int</em>) – remainder</p></li>
 </ul>
 </p>
 </dd>
@@ -189,19 +189,19 @@ of the library</p>
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.fwht">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast Walsh Hadamard transform of array x
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh Hadamard transform of array x_input
 Works as a wrapper for the different orderings
 of the Walsh-Hadamard transforms.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>numpy array</em>) – </p></li>
+<li><p><strong>x_input</strong> (<em>numpy array</em>) – </p></li>
 <li><p><strong>ordering</strong> (<em>string</em>) – desired ordering of the transform</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>y</strong> – Fast Walsh Hadamard transform of array x
+<dd class="field-even"><p><strong>y_output</strong> – Fast Walsh Hadamard transform of array x_input
 in the corresponding ordering</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -212,8 +212,8 @@ in the corresponding ordering</p>
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.fwht_dyadic">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_dyadic</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_dyadic" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast Walsh-Hadamard Transform of array x in dyadic ordering
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_dyadic</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_dyadic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh-Hadamard Transform of array x_input in dyadic ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
 algorithm.
@@ -223,7 +223,7 @@ of Walsh and Related Functions.
 :type array: numpy array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>x</strong> – Fast Walsh Hadamard transform of array x.</p>
+<dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>numpy array</p>
@@ -240,7 +240,7 @@ The result is not normalised
 :type array: numpy array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>a</strong> – Fast Walsh Hadamard transform of array x.</p>
+<dd class="field-odd"><p><strong>fast_wh_transform</strong> – Fast Walsh Hadamard transform of array x.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>numpy array</p>
@@ -250,18 +250,18 @@ The result is not normalised
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.fwht_sequency">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast Walsh-Hadamard Transform of array x in sequency ordering
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fast Walsh-Hadamard Transform of array x_input in sequency ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
 algorithm.
 His code is according to the K.G. Beauchamp’s book – Applications
 of Walsh and Related Functions.
-:param x:
-:type x: numpy array</p>
+:param x_input:
+:type x_input: numpy array</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>x</strong> – Fast Walsh Hadamard transform of array x.</p>
+<dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>numpy array</p>
@@ -271,19 +271,19 @@ of Walsh and Related Functions.
 
 <dl class="function">
 <dt id="QQuantLib.utils.utils.get_histogram">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">get_histogram</code><span class="sig-paren">(</span><em class="sig-param">p</em>, <em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">nbin</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a function p, convert it into a histogram. The function must
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">get_histogram</code><span class="sig-paren">(</span><em class="sig-param">probability</em>, <em class="sig-param">low_limit</em>, <em class="sig-param">high_limit</em>, <em class="sig-param">nbin</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a function probability, convert it into a histogram. The function must
 be positive, the normalization is automatic. Note that instead of
-having an analytical expression, p could just create an arbitrary
+having an analytical expression, probability could just create an arbitrary
 vector of the right dimensions and positive amplitudes.
 This procedure could be used to initialize any quantum state
 with real amplitudes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>a</strong> (<em>float</em>) – lower limit of the interval</p></li>
-<li><p><strong>b</strong> (<em>float</em>) – upper limit of the interval</p></li>
-<li><p><strong>p</strong> (<em>function</em>) – function that we want to convert to a probability mass function
+<li><p><strong>low_limit</strong> (<em>float</em>) – lower limit of the interval</p></li>
+<li><p><strong>high_limit</strong> (<em>float</em>) – upper limit of the interval</p></li>
+<li><p><strong>probability</strong> (<em>function</em>) – function that we want to convert to a probability mass function
 It does not have to be normalized but must be positive
 in the interval</p></li>
 <li><p><strong>nbin</strong> (<em>int</em>) – number of bins in the interval</p></li>
