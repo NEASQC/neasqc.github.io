@@ -191,7 +191,7 @@ int(np.log2(len(angle)))+1.</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_array">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1654172769564316968'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM AbstractGate for loading a normalised array into a quantum
 state.</p>
 <dl class="field-list simple">
@@ -205,6 +205,7 @@ brute_force : using multicontrolled rotations by state</p>
 </dd>
 </dl>
 </p></li>
+<li><p><strong>id_name</strong> (<em>str</em>) – name for the Abstract Gate</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -239,13 +240,16 @@ The operator to implement is: p_gate*f_gate</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_probability">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">id_name: str = '1654172769564329968'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM Abstract gate for loading a given discretized probability
 distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
-of the gate is int(np.log2(len(probability_array))).</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
+of the gate is int(np.log2(len(probability_array))).</p></li>
+<li><p><strong>id_name</strong> (<em>str</em>) – name for the Abstract Gate</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>P_Gate</strong> – Customized Abstract Gate for Loading Probability array using
