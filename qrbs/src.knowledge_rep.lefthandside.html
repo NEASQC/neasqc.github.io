@@ -48,9 +48,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="src.html#packages">Packages</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="src.knowledge_rep.html">Knowledge Representation package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="src.knowledge_rep.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#buildable">Buildable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#rule">Rule</a></li>
-<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#knowledge-island">Knowledge island</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#module-src.knowledge_rep.buildable">Buildable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#module-src.knowledge_rep.rule">Rule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#module-src.knowledge_rep.knowledgeisland">Knowledge island</a></li>
 <li class="toctree-l4"><a class="reference internal" href="src.knowledge_rep.html#module-src.knowledge_rep">Module contents</a></li>
 </ul>
 </li>
@@ -123,17 +123,157 @@
 </dd></dl>
 
 </div>
-<div class="section" id="fact">
-<h2>Fact<a class="headerlink" href="#fact" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.knowledge_rep.lefthandside.fact">
+<span id="fact"></span><h2>Fact<a class="headerlink" href="#module-src.knowledge_rep.lefthandside.fact" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.knowledge_rep.lefthandside.fact.Fact">
+<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.lefthandside.fact.</code><code class="sig-name descname">Fact</code><span class="sig-paren">(</span><em class="sig-param">attribute</em>, <em class="sig-param">value</em>, <em class="sig-param">imprecission=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.lefthandside.fact.Fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.lefthandside.lefthandside.LeftHandSide" title="src.knowledge_rep.lefthandside.lefthandside.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.lefthandside.lefthandside.LeftHandSide</span></code></a>, <a class="reference internal" href="src.knowledge_rep.html#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<p>Class representing a Fact.</p>
+<p>A Fact is the smallest unit of knowledge that can be represented. This class is used to model the Composite design pattern, acting as the Leaf class.</p>
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.fact.Fact.attribute">
+<code class="sig-name descname">attribute</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.fact.Fact.attribute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attribute that the fact is representing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.fact.Fact.value">
+<code class="sig-name descname">value</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.fact.Fact.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Value of the attribute that the fact is representing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.fact.Fact.imprecission">
+<code class="sig-name descname">imprecission</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.fact.Fact.imprecission" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imprecission of the fact; the certainty of the attribute having said value (0 if not specified).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.knowledge_rep.lefthandside.fact.Fact.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.lefthandside.fact.Fact.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="notoperator">
-<h2>NotOperator<a class="headerlink" href="#notoperator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.knowledge_rep.lefthandside.notoperator">
+<span id="notoperator"></span><h2>NotOperator<a class="headerlink" href="#module-src.knowledge_rep.lefthandside.notoperator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.knowledge_rep.lefthandside.notoperator.NotOperator">
+<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.lefthandside.notoperator.</code><code class="sig-name descname">NotOperator</code><span class="sig-paren">(</span><em class="sig-param">child</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.lefthandside.notoperator.NotOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.lefthandside.lefthandside.LeftHandSide" title="src.knowledge_rep.lefthandside.lefthandside.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.lefthandside.lefthandside.LeftHandSide</span></code></a>, <a class="reference internal" href="src.knowledge_rep.html#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<p>Class representing a NotOperator.</p>
+<p>A NotOperator negates the statement of its child. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.notoperator.NotOperator.child">
+<code class="sig-name descname">child</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.notoperator.NotOperator.child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Child which statement is negating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.knowledge_rep.lefthandside.notoperator.NotOperator.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.lefthandside.notoperator.NotOperator.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="andoperator">
-<h2>AndOperator<a class="headerlink" href="#andoperator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.knowledge_rep.lefthandside.andoperator">
+<span id="andoperator"></span><h2>AndOperator<a class="headerlink" href="#module-src.knowledge_rep.lefthandside.andoperator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.knowledge_rep.lefthandside.andoperator.AndOperator">
+<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.lefthandside.andoperator.</code><code class="sig-name descname">AndOperator</code><span class="sig-paren">(</span><em class="sig-param">leftChild</em>, <em class="sig-param">rightChild</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.lefthandside.andoperator.AndOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.lefthandside.lefthandside.LeftHandSide" title="src.knowledge_rep.lefthandside.lefthandside.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.lefthandside.lefthandside.LeftHandSide</span></code></a>, <a class="reference internal" href="src.knowledge_rep.html#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<p>Class representing an AndOperator.</p>
+<p>An AndOperator relates the statements of its children with an AND relationship. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.andoperator.AndOperator.leftChild">
+<code class="sig-name descname">leftChild</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.andoperator.AndOperator.leftChild" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.andoperator.AndOperator.rightChild">
+<code class="sig-name descname">rightChild</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.andoperator.AndOperator.rightChild" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.knowledge_rep.lefthandside.andoperator.AndOperator.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.lefthandside.andoperator.AndOperator.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="oroperator">
-<h2>OrOperator<a class="headerlink" href="#oroperator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.knowledge_rep.lefthandside.oroperator">
+<span id="oroperator"></span><h2>OrOperator<a class="headerlink" href="#module-src.knowledge_rep.lefthandside.oroperator" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.knowledge_rep.lefthandside.oroperator.OrOperator">
+<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.lefthandside.oroperator.</code><code class="sig-name descname">OrOperator</code><span class="sig-paren">(</span><em class="sig-param">leftChild</em>, <em class="sig-param">rightChild</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.lefthandside.oroperator.OrOperator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.lefthandside.lefthandside.LeftHandSide" title="src.knowledge_rep.lefthandside.lefthandside.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.lefthandside.lefthandside.LeftHandSide</span></code></a>, <a class="reference internal" href="src.knowledge_rep.html#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<p>Class representing an OrOperator.</p>
+<p>An OrOperator relates the statements of its children with an OR relationship. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.oroperator.OrOperator.leftChild">
+<code class="sig-name descname">leftChild</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.oroperator.OrOperator.leftChild" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.knowledge_rep.lefthandside.oroperator.OrOperator.rightChild">
+<code class="sig-name descname">rightChild</code><a class="headerlink" href="#src.knowledge_rep.lefthandside.oroperator.OrOperator.rightChild" title="Permalink to this definition">¶</a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.knowledge_rep.lefthandside.oroperator.OrOperator.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.lefthandside.oroperator.OrOperator.build" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-src.knowledge_rep.lefthandside">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.knowledge_rep.lefthandside" title="Permalink to this headline">¶</a></h2>

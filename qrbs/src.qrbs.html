@@ -47,9 +47,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="src.html#packages">Packages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="src.knowledge_rep.html">Knowledge Representation package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">QRBS package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#inferenceengine">InferenceEngine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#workingmemory">WorkingMemory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#qrbs">QRBS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.qrbs.inferenceengine">InferenceEngine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.qrbs.workingmemory">WorkingMemory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.qrbs.qrbs">QRBS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-src.qrbs.qrbshandler">QRBSHandler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-src.qrbs">Module contents</a></li>
 </ul>
@@ -111,14 +111,269 @@
 </style>
 <div class="section" id="qrbs-package">
 <h1>QRBS package<a class="headerlink" href="#qrbs-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="inferenceengine">
-<h2>InferenceEngine<a class="headerlink" href="#inferenceengine" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.qrbs.inferenceengine">
+<span id="inferenceengine"></span><h2>InferenceEngine<a class="headerlink" href="#module-src.qrbs.inferenceengine" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.qrbs.inferenceengine.InferenceEngine">
+<em class="property">class </em><code class="sig-prename descclassname">src.qrbs.inferenceengine.</code><code class="sig-name descname">InferenceEngine</code><span class="sig-paren">(</span><em class="sig-param">rules=[]</em>, <em class="sig-param">islands=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing an Inference Engine.</p>
+<p>An Inference Engine is an element of a Rule-Based System that manages its rules and knowledge islands, providing the tools to evaluate them in order.</p>
+<dl class="attribute">
+<dt id="src.qrbs.inferenceengine.InferenceEngine._rules">
+<code class="sig-name descname">_rules</code><a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine._rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of rules established for the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code>], optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.qrbs.inferenceengine.InferenceEngine._islands">
+<code class="sig-name descname">_islands</code><a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine._islands" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of knowledge island established for the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>], optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.inferenceengine.InferenceEngine.assert_island">
+<code class="sig-name descname">assert_island</code><span class="sig-paren">(</span><em class="sig-param">island</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.knowledgeisland.KnowledgeIsland<a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine.assert_island" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts a knowledge island into the engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>island</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>) – The knowledge island to be asserted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted knowledge island.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.inferenceengine.InferenceEngine.assert_rule">
+<code class="sig-name descname">assert_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.rule.Rule<a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine.assert_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts a rule into the engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rule</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code>) – The rule to be asserted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted rule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.inferenceengine.InferenceEngine.retract_island">
+<code class="sig-name descname">retract_island</code><span class="sig-paren">(</span><em class="sig-param">island</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine.retract_island" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a knowledge island from the engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>island</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>) – The knowledge island to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.inferenceengine.InferenceEngine.retract_rule">
+<code class="sig-name descname">retract_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.inferenceengine.InferenceEngine.retract_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a rule from the engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rule</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code>) – The rule to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="workingmemory">
-<h2>WorkingMemory<a class="headerlink" href="#workingmemory" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.qrbs.workingmemory">
+<span id="workingmemory"></span><h2>WorkingMemory<a class="headerlink" href="#module-src.qrbs.workingmemory" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.qrbs.workingmemory.WorkingMemory">
+<em class="property">class </em><code class="sig-prename descclassname">src.qrbs.workingmemory.</code><code class="sig-name descname">WorkingMemory</code><span class="sig-paren">(</span><em class="sig-param">facts=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#src.qrbs.workingmemory.WorkingMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a Working Memory.</p>
+<p>A Working Memory is an element of a Rule-Based System that manages its facts, keeping trace of their state.</p>
+<dl class="attribute">
+<dt id="src.qrbs.workingmemory.WorkingMemory._facts">
+<code class="sig-name descname">_facts</code><a class="headerlink" href="#src.qrbs.workingmemory.WorkingMemory._facts" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of facts asserted into the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code>], optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.workingmemory.WorkingMemory.assert_fact">
+<code class="sig-name descname">assert_fact</code><span class="sig-paren">(</span><em class="sig-param">fact</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.lefthandside.fact.Fact<a class="headerlink" href="#src.qrbs.workingmemory.WorkingMemory.assert_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asserts a fact into the memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fact</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code>) – The fact to be asserted.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted fact.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.workingmemory.WorkingMemory.retract_fact">
+<code class="sig-name descname">retract_fact</code><span class="sig-paren">(</span><em class="sig-param">fact</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.workingmemory.WorkingMemory.retract_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a fact from the memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fact</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code>) – The fact to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="qrbs">
-<h2>QRBS<a class="headerlink" href="#qrbs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-src.qrbs.qrbs">
+<span id="qrbs"></span><h2>QRBS<a class="headerlink" href="#module-src.qrbs.qrbs" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="src.qrbs.qrbs.QRBS">
+<em class="property">class </em><code class="sig-prename descclassname">src.qrbs.qrbs.</code><code class="sig-name descname">QRBS</code><a class="headerlink" href="#src.qrbs.qrbs.QRBS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing a Quantum Rule-Based System.</p>
+<p>A Quantum Rule-Based System (QRBS) is a Rule-Based System implemented in a quantum computer, taking advatange of some of its capabilities, like quantum superposition, to represent certain aspects such as imprecission and uncertainty.</p>
+<dl class="attribute">
+<dt id="src.qrbs.qrbs.QRBS._memory">
+<code class="sig-name descname">_memory</code><a class="headerlink" href="#src.qrbs.qrbs.QRBS._memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Working Memory of the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkingMemory</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="src.qrbs.qrbs.QRBS._engine">
+<code class="sig-name descname">_engine</code><a class="headerlink" href="#src.qrbs.qrbs.QRBS._engine" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Inference Engine of the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">InferenceEngine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.assert_fact">
+<code class="sig-name descname">assert_fact</code><span class="sig-paren">(</span><em class="sig-param">attribute</em>, <em class="sig-param">value</em>, <em class="sig-param">imprecission=0.0</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.lefthandside.fact.Fact<a class="headerlink" href="#src.qrbs.qrbs.QRBS.assert_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a fact and asserts it into the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attribute</strong> (<em>str</em>) – The attribute of the fact.</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – The value of the fact.</p></li>
+<li><p><strong>imprecission</strong> (<em>float</em><em>, </em><em>optional</em>) – The imprecission of the rule.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted rule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.assert_island">
+<code class="sig-name descname">assert_island</code><span class="sig-paren">(</span><em class="sig-param">rules</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.knowledgeisland.KnowledgeIsland<a class="headerlink" href="#src.qrbs.qrbs.QRBS.assert_island" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a knowledge island and asserts it into the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rules</strong> (List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code>]) – The rules of the knowledge island.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted knowledge island.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.assert_rule">
+<code class="sig-name descname">assert_rule</code><span class="sig-paren">(</span><em class="sig-param">lefthandside</em>, <em class="sig-param">righthandside</em>, <em class="sig-param">uncertainty=0.0</em><span class="sig-paren">)</span> &#x2192; src.knowledge_rep.rule.Rule<a class="headerlink" href="#src.qrbs.qrbs.QRBS.assert_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a rule and asserts it into the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lefthandside</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code>) – The left hand side of the rule.</p></li>
+<li><p><strong>righthandside</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code>) – The right hand side of the rule.</p></li>
+<li><p><strong>uncertainty</strong> (<em>float</em><em>, </em><em>optional</em>) – The uncertainty of the rule.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asserted rule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.retract_fact">
+<code class="sig-name descname">retract_fact</code><span class="sig-paren">(</span><em class="sig-param">fact</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.qrbs.QRBS.retract_fact" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a fact from the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fact</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code>) – The fact to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.retract_island">
+<code class="sig-name descname">retract_island</code><span class="sig-paren">(</span><em class="sig-param">island</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.qrbs.QRBS.retract_island" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a knowledge island from the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>island</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>) – The knowledge island to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="src.qrbs.qrbs.QRBS.retract_rule">
+<code class="sig-name descname">retract_rule</code><span class="sig-paren">(</span><em class="sig-param">rule</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#src.qrbs.qrbs.QRBS.retract_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retracts a rule from the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rule</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code>) – The rule to be retracted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-src.qrbs.qrbshandler">
 <span id="qrbshandler"></span><h2>QRBSHandler<a class="headerlink" href="#module-src.qrbs.qrbshandler" title="Permalink to this headline">¶</a></h2>
