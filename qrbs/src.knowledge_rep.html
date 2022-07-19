@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Knowledge Representation package &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>Knowledge Representation package &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -29,7 +32,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> NEASQC documentation<img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+            <a href="index.html" class="icon icon-home"> NEASQC documentation
+            <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 0.0.1
@@ -42,16 +46,16 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">Source code documentation</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Source code documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="src.html">Source code</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="src.html#packages">Packages</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Knowledge Representation package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.knowledge_rep">Module contents</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-src.knowledge_rep.buildable">Buildable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-src.knowledge_rep.rule">Rule</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-src.knowledge_rep.knowledgeisland">Knowledge island</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-src.knowledge_rep">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="src.qrbs.html">QRBS package</a></li>
@@ -111,41 +115,50 @@
 }
 </style>
 <div class="section" id="knowledge-representation-package">
-<h1>Knowledge Representation package<a class="headerlink" href="#knowledge-representation-package" title="Permalink to this headline">¶</a></h1>
+<h1>Knowledge Representation package<a class="headerlink" href="#knowledge-representation-package" title="Permalink to this heading"></a></h1>
 <div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="src.knowledge_rep.lefthandside.html">Left Hand Side package</a></li>
 </ul>
 </div>
 </div>
+<div class="section" id="module-src.knowledge_rep">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.knowledge_rep" title="Permalink to this heading"></a></h2>
+<p>Knowledge Representation module</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#buildable">Buildable</a></p></li>
+<li><p><a class="reference internal" href="#rule">Rule</a></p></li>
+<li><p><a class="reference internal" href="#knowledge-island">Knowledge island</a></p></li>
+</ul>
+</div>
 <div class="section" id="module-src.knowledge_rep.buildable">
-<span id="buildable"></span><h2>Buildable<a class="headerlink" href="#module-src.knowledge_rep.buildable" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="src.knowledge_rep.buildable.Buildable">
-<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.buildable.</code><code class="sig-name descname">Buildable</code><a class="headerlink" href="#src.knowledge_rep.buildable.Buildable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<span id="buildable"></span><h2>Buildable<a class="headerlink" href="#module-src.knowledge_rep.buildable" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.knowledge_rep.buildable.Buildable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.knowledge_rep.buildable.</span></span><span class="sig-name descname"><span class="pre">Buildable</span></span><a class="headerlink" href="#src.knowledge_rep.buildable.Buildable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <p>Interface for knowledge elements that can be built into quantum circuits.</p>
-<dl class="method">
-<dt id="src.knowledge_rep.buildable.Buildable.build">
-<em class="property">abstract </em><code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.buildable.Buildable.build" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.knowledge_rep.buildable.Buildable.build">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.routines.QRoutine</span></span></span><a class="headerlink" href="#src.knowledge_rep.buildable.Buildable.build" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="module-src.knowledge_rep.rule">
-<span id="rule"></span><h2>Rule<a class="headerlink" href="#module-src.knowledge_rep.rule" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="src.knowledge_rep.rule.Rule">
-<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.rule.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">lefthandside</em>, <em class="sig-param">righthandside</em>, <em class="sig-param">uncertainty=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.rule.Rule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<span id="rule"></span><h2>Rule<a class="headerlink" href="#module-src.knowledge_rep.rule" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.knowledge_rep.rule.Rule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.knowledge_rep.rule.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lefthandside</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">righthandside</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uncertainty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.rule.Rule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
 <p>Class representing a Rule.</p>
 <p>A Rule which establishes a relationship (to some level of uncertainty) between a left hand side element and a right hand side, which in this context is a Fact.</p>
-<dl class="attribute">
-<dt id="src.knowledge_rep.rule.Rule.leftHandSide">
-<code class="sig-name descname">leftHandSide</code><a class="headerlink" href="#src.knowledge_rep.rule.Rule.leftHandSide" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.knowledge_rep.rule.Rule.leftHandSide">
+<span class="sig-name descname"><span class="pre">leftHandSide</span></span><a class="headerlink" href="#src.knowledge_rep.rule.Rule.leftHandSide" title="Permalink to this definition"></a></dt>
 <dd><p>Left hand side element of the rule (also known as precedent).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -154,9 +167,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="src.knowledge_rep.rule.Rule.rightHandSide">
-<code class="sig-name descname">rightHandSide</code><a class="headerlink" href="#src.knowledge_rep.rule.Rule.rightHandSide" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.knowledge_rep.rule.Rule.rightHandSide">
+<span class="sig-name descname"><span class="pre">rightHandSide</span></span><a class="headerlink" href="#src.knowledge_rep.rule.Rule.rightHandSide" title="Permalink to this definition"></a></dt>
 <dd><p>Right hand side element of the rule (also known as consecuent).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -165,9 +178,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="src.knowledge_rep.rule.Rule.uncertainty">
-<code class="sig-name descname">uncertainty</code><a class="headerlink" href="#src.knowledge_rep.rule.Rule.uncertainty" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.knowledge_rep.rule.Rule.uncertainty">
+<span class="sig-name descname"><span class="pre">uncertainty</span></span><a class="headerlink" href="#src.knowledge_rep.rule.Rule.uncertainty" title="Permalink to this definition"></a></dt>
 <dd><p>Uncertainty of the relationship between precedent and consecuent (0 if not specified).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -176,25 +189,25 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="src.knowledge_rep.rule.Rule.build">
-<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.rule.Rule.build" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.knowledge_rep.rule.Rule.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.routines.QRoutine</span></span></span><a class="headerlink" href="#src.knowledge_rep.rule.Rule.build" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="module-src.knowledge_rep.knowledgeisland">
-<span id="knowledge-island"></span><h2>Knowledge island<a class="headerlink" href="#module-src.knowledge_rep.knowledgeisland" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="src.knowledge_rep.knowledgeisland.KnowledgeIsland">
-<em class="property">class </em><code class="sig-prename descclassname">src.knowledge_rep.knowledgeisland.</code><code class="sig-name descname">KnowledgeIsland</code><span class="sig-paren">(</span><em class="sig-param">rules</em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.knowledge_rep.buildable.Buildable</span></code></a></p>
+<span id="knowledge-island"></span><h2>Knowledge island<a class="headerlink" href="#module-src.knowledge_rep.knowledgeisland" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.knowledge_rep.knowledgeisland.KnowledgeIsland">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.knowledge_rep.knowledgeisland.</span></span><span class="sig-name descname"><span class="pre">KnowledgeIsland</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.knowledge_rep.buildable.Buildable" title="src.knowledge_rep.buildable.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
 <p>Class representing a Knowledge Island.</p>
 <p>A Knowledge Island is a set of rules that conform the inferential reasoning towards a hypothesis.</p>
-<dl class="attribute">
-<dt id="src.knowledge_rep.knowledgeisland.KnowledgeIsland.rules">
-<code class="sig-name descname">rules</code><a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland.rules" title="Permalink to this definition">¶</a></dt>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src.knowledge_rep.knowledgeisland.KnowledgeIsland.rules">
+<span class="sig-name descname"><span class="pre">rules</span></span><a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland.rules" title="Permalink to this definition"></a></dt>
 <dd><p>Set of rules that conform the knowledge island.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
@@ -203,17 +216,13 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="src.knowledge_rep.knowledgeisland.KnowledgeIsland.build">
-<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; qat.lang.AQASM.routines.QRoutine<a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland.build" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.knowledge_rep.knowledgeisland.KnowledgeIsland.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.routines.QRoutine</span></span></span><a class="headerlink" href="#src.knowledge_rep.knowledgeisland.KnowledgeIsland.build" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-src.knowledge_rep">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.knowledge_rep" title="Permalink to this headline">¶</a></h2>
-<p>Knowledge Representation module</p>
 </div>
 </div>
 
