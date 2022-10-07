@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QQuantLib.AE &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>encoding_protocols &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="maximum_likelihood_ae" href="maximum_likelihood_ae.html" />
-    <link rel="prev" title="amplitude_amplification" href="amplitude_amplification.html" /> 
+    <link rel="next" title="QQuantLib.AA" href="aa.html" />
+    <link rel="prev" title="data_loading" href="data_loading.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,17 +45,13 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
-<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.AE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iterative_quantum_ae.html">iterative_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_class.html">ae_class</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="dl.html">QQuantLib.DL</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="data_loading.html">data_loading</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">encoding_protocols</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
@@ -74,7 +70,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>QQuantLib.AE</li>
+          <li><a href="dl.html">QQuantLib.DL</a> &raquo;</li>
+      <li>encoding_protocols</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -107,27 +104,58 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="qquantlib-ae">
-<h1>QQuantLib.AE<a class="headerlink" href="#qquantlib-ae" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>AE</strong> or <em>Amplitude Estimation</em> package groups the python modules from <strong>QQuantLib</strong> that deals with amplitude amplification algorithms. Following modules are presented in this package.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iterative_quantum_ae.html">iterative_quantum_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_class.html">ae_class</a></li>
-</ul>
-</div>
+<div class="section" id="module-QQuantLib.DL.encoding_protocols">
+<span id="encoding-protocols"></span><h1>encoding_protocols<a class="headerlink" href="#module-QQuantLib.DL.encoding_protocols" title="Permalink to this headline">¶</a></h1>
+<p>This module contains a class for selecting data encoding protocols</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="class">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.DL.encoding_protocols.</code><code class="sig-name descname">Encoding</code><span class="sig-paren">(</span><em class="sig-param">array_function</em>, <em class="sig-param">array_probability=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for data encoding into the quantum circuit.</p>
+<dl class="method">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding.encoding">
+<em class="property">property </em><code class="sig-name descname">encoding</code><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating the ecoding property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0">
+<code class="sig-name descname">oracle_encoding_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for creating the oracle. The probability density will be
+loaded with proability density gate and the
+function will be loaded as function array.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1">
+<code class="sig-name descname">oracle_encoding_1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for creating the oracle. The probability density and the
+payoff functions will be loaded as function arrays.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2">
+<code class="sig-name descname">oracle_encoding_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for creating the oracle. The probability density and the
+payoff functions will be loaded as function arrays.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.DL.encoding_protocols.Encoding.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for resetting atributes</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="amplitude_amplification.html" class="btn btn-neutral float-left" title="amplitude_amplification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="maximum_likelihood_ae.html" class="btn btn-neutral float-right" title="maximum_likelihood_ae" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="data_loading.html" class="btn btn-neutral float-left" title="data_loading" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="aa.html" class="btn btn-neutral float-right" title="QQuantLib.AA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -117,7 +117,7 @@ AMS Contemporary Mathematics Series, 305, 06-2000
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
 <dl class="function">
 <dt id="QQuantLib.AA.amplitude_amplification.create_u0_gate">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u0_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u0_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function creates a QLM AbstractGate that implements an oracle:
 a reflection around the perpendicular state to a given state.</p>
 <p class="rubric">Notes</p>
@@ -132,6 +132,7 @@ a reflection around the perpendicular state to a given state.</p>
 <li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – oracle that created the state</p></li>
 <li><p><strong>target</strong> (<em>list of ints</em>) – target state</p></li>
 <li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -145,7 +146,7 @@ a reflection around the perpendicular state to a given state.</p>
 
 <dl class="function">
 <dt id="QQuantLib.AA.amplitude_amplification.create_u_gate">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u_gate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u_gate" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function creates a QLM AbstractGate that implements a grover Diffusor
 from an input state.</p>
 <p class="rubric">Notes</p>
@@ -153,7 +154,10 @@ from an input state.</p>
 \[\mathcal{U}(|\Psi\rangle) = \mathcal{I}-2|\Psi\rangle\langle\Psi|\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>u_gate</strong></p>
@@ -166,7 +170,7 @@ from an input state.</p>
 
 <dl class="function">
 <dt id="QQuantLib.AA.amplitude_amplification.grover">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function creates a QLM AbstractGate that returns the grover
 operator associated to a given oracle. This function is a composition
 of QLM AbstractGates generate by functions U and U0.</p>
@@ -179,6 +183,7 @@ of QLM AbstractGates generate by functions U and U0.</p>
 <li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
 <li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
 <li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -191,8 +196,82 @@ of QLM AbstractGates generate by functions U and U0.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_ph</code><span class="sig-paren">(</span><em class="sig-param">angle</em>, <em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplexor implementation for a Multi-Controlled-phase gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) – Desired angle for Controlled-Phase application</p></li>
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qbits for the multi-controlled phase gate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine wiht the implementation of a multi-controlled phase gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_z</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplexor implementation for a multi-controlled-Z gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Number of qbits for the multi-controlled phase gate gate</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine wiht the implementation of a multi-controlled Z gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.phase_multiplexor_base">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">phase_multiplexor_base</code><span class="sig-paren">(</span><em class="sig-param">theta</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.phase_multiplexor_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement an initial multiplexor for a controlled phase gate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Phase angle to apply</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine wiht the implementation of the basis multiplexor
+for the controlled phase gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AA.amplitude_amplification.recursive_multiplexor">
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">recursive_multiplexor</code><span class="sig-paren">(</span><em class="sig-param">input_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.recursive_multiplexor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new multiplexor from an input gate.
+In this case takes the input gate adds a new qbit and creates a new
+multiplexor by applying the input gate, a cnot and the input gate again</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_gate</strong> (<em>QLM routine</em>) – QLM routine with the gate we want for multiplexion</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine with a multiplexion of the input_gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="QQuantLib.AA.amplitude_amplification.reflection">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">reflection</code><span class="sig-paren">(</span><em class="sig-param">lista: numpy.ndarray</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.reflection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">reflection</code><span class="sig-paren">(</span><em class="sig-param">lista: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.reflection" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function returns a QLM AbstractGate that implement a reflection
 around the perpendicular state of a given state.</p>
 <p class="rubric">Notes</p>
@@ -202,8 +281,11 @@ around the perpendicular state of a given state.</p>
 -|\Psi_0\rangle+|\Psi_1\rangle\\\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>lista</strong> (<em>list of ints</em>) – binary representation of the
-State that we want to rotate pi</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lista</strong> (<em>list of ints</em>) – binary representation of the
+State that we want to rotate pi</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>reflection_gate</strong></p>

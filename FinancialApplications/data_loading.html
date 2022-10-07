@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="QQuantLib.AA" href="aa.html" />
+    <link rel="next" title="encoding_protocols" href="encoding_protocols.html" />
     <link rel="prev" title="QQuantLib.DL" href="dl.html" /> 
 </head>
 
@@ -47,6 +47,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="dl.html">QQuantLib.DL</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">data_loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="encoding_protocols.html">encoding_protocols</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
@@ -191,7 +192,7 @@ int(np.log2(len(angle)))+1.</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_array">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1654596305028138963'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1665146023948080133'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM AbstractGate for loading a normalised array into a quantum
 state.</p>
 <dl class="field-list simple">
@@ -240,7 +241,7 @@ The operator to implement is: p_gate*f_gate</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_probability">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">id_name: str = '1654596305028152063'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1665146023948092234'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM Abstract gate for loading a given discretized probability
 distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
@@ -248,6 +249,12 @@ distribution using Quantum Multiplexors.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
 of the gate is int(np.log2(len(probability_array))).</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – <dl class="simple">
+<dt>type of loading method used:</dt><dd><p>multiplexor : with quantum Multiplexors
+brute_force : using multicontrolled rotations by state</p>
+</dd>
+</dl>
+</p></li>
 <li><p><strong>id_name</strong> (<em>str</em>) – name for the Abstract Gate</p></li>
 </ul>
 </dd>
@@ -330,7 +337,7 @@ the arity is: np.log2(size)+1</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dl.html" class="btn btn-neutral float-left" title="QQuantLib.DL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="aa.html" class="btn btn-neutral float-right" title="QQuantLib.AA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="encoding_protocols.html" class="btn btn-neutral float-right" title="encoding_protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

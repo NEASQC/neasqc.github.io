@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QQuantLib.AE &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>ae_price_estimation &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -21,9 +21,7 @@
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="maximum_likelihood_ae" href="maximum_likelihood_ae.html" />
-    <link rel="prev" title="amplitude_amplification" href="amplitude_amplification.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,18 +42,10 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.AE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="iterative_quantum_ae.html">iterative_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_class.html">ae_class</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
@@ -74,7 +64,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>QQuantLib.AE</li>
+      <li>ae_price_estimation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -107,28 +97,34 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="qquantlib-ae">
-<h1>QQuantLib.AE<a class="headerlink" href="#qquantlib-ae" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>AE</strong> or <em>Amplitude Estimation</em> package groups the python modules from <strong>QQuantLib</strong> that deals with amplitude amplification algorithms. Following modules are presented in this package.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="iterative_quantum_ae.html">iterative_quantum_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae_class.html">ae_class</a></li>
-</ul>
-</div>
+<div class="section" id="module-QQuantLib.finance.ae_price_estimation">
+<span id="ae-price-estimation"></span><h1>ae_price_estimation<a class="headerlink" href="#module-QQuantLib.finance.ae_price_estimation" title="Permalink to this headline">¶</a></h1>
+<p>Functions for automatization of different option price estimation using
+Amplitude Estimation algorithms.</p>
+<dl class="function">
+<dt id="QQuantLib.finance.ae_price_estimation.ae_price_estimation">
+<code class="sig-prename descclassname">QQuantLib.finance.ae_price_estimation.</code><code class="sig-name descname">ae_price_estimation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.ae_price_estimation.ae_price_estimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures an option price estimation problem and solving it using
+AE integration techniques</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>python configuration dictionary</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pdf</strong> – DataFrame with the configuration of the AE problem and the solution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="amplitude_amplification.html" class="btn btn-neutral float-left" title="amplitude_amplification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="maximum_likelihood_ae.html" class="btn btn-neutral float-right" title="maximum_likelihood_ae" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

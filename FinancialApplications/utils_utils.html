@@ -52,7 +52,6 @@
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">QQuantLib.utils</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_extracting.html">data_extracting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classical_finance.html">classical_finance</a></li>
 </ul>
 </li>
 </ul>
@@ -365,6 +364,27 @@ state <a href="#id5"><span class="problematic" id="id6">|</span></a>index&gt;. N
 </dd></dl>
 
 <dl class="function">
+<dt id="QQuantLib.utils.utils.oracle_shots_calculation">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">oracle_shots_calculation</code><span class="sig-paren">(</span><em class="sig-param">m_k</em>, <em class="sig-param">n_k</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.oracle_shots_calculation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for computing the total number of oracle shots.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_k</strong> (<em>list</em>) – list with integers. Applications of the Grover-like amplification
+operator.</p></li>
+<li><p><strong>n_k</strong> (<em>list</em>) – list with integers. Number of shots for each value of m_k.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>oracle_shots</strong> – Number of total oracle calls for the input schedule</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="QQuantLib.utils.utils.test_bins">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">test_bins</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">text='probability'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.test_bins" title="Permalink to this definition">¶</a></dt>
 <dd><p>Testing condition for numpy arrays. The length of the array must
@@ -385,6 +405,12 @@ quantum state</p>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.utils.text_is_none">
+<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">text_is_none</code><span class="sig-paren">(</span><em class="sig-param">variable</em>, <em class="sig-param">variable_name</em>, <em class="sig-param">variable_type=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.text_is_none" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raise an exception if variable is None</p>
 </dd></dl>
 
 </div>
