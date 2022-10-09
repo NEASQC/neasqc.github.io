@@ -110,7 +110,12 @@
 </style>
 <div class="section" id="module-QQuantLib.finance.quantum_integration">
 <span id="quantum-integration"></span><h1>quantum_integration<a class="headerlink" href="#module-QQuantLib.finance.quantum_integration" title="Permalink to this headline">¶</a></h1>
-<p>This module contains a class for selecting data encoding protocols</p>
+<p>This module contains a function for solving integrals using Amplitude
+Estimation techniques. The function uses the Encoding class for loading
+data into the quantum circut by creating an oracle and the AE class for
+getting the amplitude of a selected state using AE techniques. The function
+deals with all the normalisations needed for transform this amplitde into
+the desired integral.</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
 <dl class="function">
 <dt id="QQuantLib.finance.quantum_integration.q_solve_integral">
@@ -132,9 +137,8 @@ MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p></li>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>ae_estimation</strong> (<em>pandas DataFrame with the desired integral computation.</em>)</p></li>
-<li><p><strong>solver_ae</strong> (<em>object</em>)</p></li>
-<li><p><em>encode_class</em></p></li>
+<li><p><strong>ae_estimation</strong> (<em>pandas DataFrame</em>) – DataFrame with the desired integral computation.</p></li>
+<li><p><strong>solver_ae</strong> (<em>objet based on the AE class</em>)</p></li>
 </ul>
 </p>
 </dd>

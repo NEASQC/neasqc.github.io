@@ -123,22 +123,26 @@
 <dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0">
 <code class="sig-name descname">oracle_encoding_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for creating the oracle. The probability density will be
-loaded with proability density gate and the
-function will be loaded as function array.</p>
+loaded as a probability density using the dl.load_probability
+function and the function array will be loaded with dl.load_array
+dunction. The SQUARE ROOT of the function array will be loaded!.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1">
 <code class="sig-name descname">oracle_encoding_1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method for creating the oracle. The probability density and the
-payoff functions will be loaded as function arrays.</p>
+payoff functions will be loaded with the dl.load_array function.
+In this method a uniform distribution is used for creating the
+initial supeprosition of basis states.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2">
 <code class="sig-name descname">oracle_encoding_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Method for creating the oracle. The probability density and the
-payoff functions will be loaded as function arrays.</p>
+<dd><p>Method for encoding where the probability density will be encoding
+as probability density using dl.load_probability (or a uniform
+distribution) and the function with the dl.load_array.</p>
 </dd></dl>
 
 <dl class="method">
