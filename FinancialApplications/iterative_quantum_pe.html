@@ -107,7 +107,7 @@
 </style>
 <div class="section" id="module-QQuantLib.PE.iterative_quantum_pe">
 <span id="iterative-quantum-pe"></span><h1>iterative_quantum_pe<a class="headerlink" href="#module-QQuantLib.PE.iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement
+<p>This module contains necessary functions and classes to implement
 Iterative Quantum Phase Estimation (IQPE). The implementation is based on
 following paper:</p>
 <blockquote>
@@ -123,6 +123,34 @@ Physical Review A 3(76), 2007.
 <dt id="QQuantLib.PE.iterative_quantum_pe.IQPE">
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.iterative_quantum_pe.</code><code class="sig-name descname">IQPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the ML-QPE algorithm:</p></li>
+<li><p><strong>keys</strong> (<em>Implemented</em>) – <dl class="simple">
+<dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program withe the initial Psi state over the
+Grover-like operator will be applied
+Only used if oracle is None</p>
+</dd>
+<dt>unitary_operator<span class="classifier">QLM gate or routine</span></dt><dd><p>Grover-like operator whose autovalues want to be calculated
+Only used if oracle is None</p>
+</dd>
+<dt>cbits_number<span class="classifier">int</span></dt><dd><p>number of classical bits for phase estimation</p>
+</dd>
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of shots for quantum job. If 0 exact probabilities
+will be computed.</p>
+</dd>
+<dt>easy<span class="classifier">bool</span></dt><dd><p>If True step_iqpe_easy will be used for each step of the
+algorithm
+If False step_iqpe will be used for each step.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe">
 <code class="sig-name descname">apply_iqpe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe" title="Permalink to this definition">¶</a></dt>
@@ -149,8 +177,8 @@ algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>number_of_cbits</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of classical bits for storing the phase estimation</p></li>
-<li><p><strong>shots</strong> (<em>int</em><em> (</em><em>overwrite correspondient property</em><em>)</em>) – Number of shots for executing the QLM job</p></li>
+<li><p><strong>number_of_cbits</strong> (<em>int</em><em> (</em><em>overwrite correspondent property</em><em>)</em>) – Number of classical bits for storing the phase estimation</p></li>
+<li><p><strong>shots</strong> (<em>int</em><em> (</em><em>overwrite correspondent property</em><em>)</em>) – Number of shots for executing the QLM job</p></li>
 </ul>
 </dd>
 </dl>
@@ -159,21 +187,20 @@ algorithm</p>
 <dl class="method">
 <dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.measure_classical_bits">
 <em class="property">static </em><code class="sig-name descname">measure_classical_bits</code><span class="sig-paren">(</span><em class="sig-param">result</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.measure_classical_bits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Post Proccess intermediate measurements from a qlm result.</p>
+<dd><p>Post-process intermediate measurements from a QLM result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>result</strong> (<em>list list with qlm results</em>) – </p>
+<dd class="field-odd"><p><strong>result</strong> (<em>list list with QLM results</em>) – </p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>)</p></li>
-<li><p><em>contains extracted information from intermediate_measurements</em></p></li>
-<li><p><em>from a qlm result. Columns</em></p></li>
-<li><p><strong>BitString</strong> (<em>str. String with the bits of the measurements done</em>)</p></li>
-<li><p><em>during simulation of the circuit</em></p></li>
-<li><p><strong>BitInt</strong> (<em>int. Integer representation of the BitString</em>)</p></li>
-<li><p><strong>Phi</strong> (<em>float. Angle representation of the BitString between [0,1].</em>)</p></li>
-<li><p><strong>Probability</strong> (<em>float. Probability of the measurement of the classsical bits.</em>)</p></li>
+<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – contains extracted information from intermediate_measurements
+from a qlm result. Columns:</p></li>
+<li><p><strong>BitString</strong> (<em>str.</em>) – String with the bits of the measurements done during
+simulation of the circuit</p></li>
+<li><p><strong>BitInt</strong> (<em>int.</em>) – Integer representation of the BitString</p></li>
+<li><p><strong>Phi</strong> (<em>float.</em>) – Angle representation of the BitString between [0,1].</p></li>
+<li><p><strong>Probability</strong> (<em>float.</em>) – Probability of the measurement of the classical bits.</p></li>
 </ul>
 </p>
 </dd>
@@ -185,12 +212,23 @@ algorithm</p>
 <em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">input_pdf</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.post_proccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function uses the results property and add it additional
 columns that are useful for Amplitude Amplification procedure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_pdf</strong> (<em>Pandas DataFrame.</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>final_results</strong> – DataFrame with complete information about the results</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.restart">
 <code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reinitialize several properties for restart purpouses</p>
+<dd><p>Reinitialize several properties for restart purposes</p>
 </dd></dl>
 
 <dl class="method">
@@ -201,7 +239,7 @@ columns that are useful for Amplitude Amplification procedure</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q_prog</strong> (<em>QLM Program</em>) – </p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for measuring during all ipe steps</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliary qubit for measuring during all ipe steps</p></li>
 <li><p><strong>shots</strong> (<em>int</em>) – number of shots for simulation</p></li>
 <li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
 </ul>
@@ -228,14 +266,34 @@ algorithm.</p>
 <li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
 <li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
 the autovalue theta of this operator</p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for IPE. This qbit will be the control
-for application of the unitary operator to the principal qbits
-of the program. Aditionally will be the target qbit for the
-classical bit controlled rotation. This qbit will be reset at
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliary qubit for IPE. This qbit will be the control
+for application of the unitary operator to the principal bits
+of the program. Additionally will be the target qubit for the
+classical bit controlled rotation. This qubit will be reset at
 the end of the step.</p></li>
 <li><p><strong>c_bits</strong> (<em>list</em>) – list with the classical bits allocated for phase estimation</p></li>
 <li><p><strong>l</strong> (<em>int</em>) – iteration step of the IPE algorithm</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="QQuantLib.PE.iterative_quantum_pe.IQPE.sumarize">
+<em class="property">static </em><code class="sig-name descname">sumarize</code><span class="sig-paren">(</span><em class="sig-param">input_pdf</em>, <em class="sig-param">columns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.iterative_quantum_pe.IQPE.sumarize" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method summarize the results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_pdf</strong> (<em>Pandas DataFrame.</em>) – </p></li>
+<li><p><strong>columns</strong> (<em>list</em>) – list with the names of the input DataFrame for summarize</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>final_results</strong> – DataFrame with summary results</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas DataFrame</p>
 </dd>
 </dl>
 </dd></dl>

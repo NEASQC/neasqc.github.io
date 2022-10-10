@@ -118,6 +118,22 @@ Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
 <dt id="QQuantLib.AE.ae_class.AE">
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_class.</code><code class="sig-name descname">AE</code><span class="sig-paren">(</span><em class="sig-param">oracle=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">index=None</em>, <em class="sig-param">ae_type=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_class.AE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for creating and solving an AE problem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>ae_type</strong> (<em>string</em>) – string with the desired AE algorithm:
+MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the AE algorithm:
+Implemented keys: different keys from the different AE algorithms
+can be provided.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.ae_class.AE.ae_type">
 <em class="property">property </em><code class="sig-name descname">ae_type</code><a class="headerlink" href="#QQuantLib.AE.ae_class.AE.ae_type" title="Permalink to this definition">¶</a></dt>

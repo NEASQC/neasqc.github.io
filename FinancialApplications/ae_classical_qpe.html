@@ -111,7 +111,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.ae_classical_qpe">
 <span id="ae-classical-qpe"></span><h1>ae_classical_qpe<a class="headerlink" href="#module-QQuantLib.AE.ae_classical_qpe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains a wraper class of the PE_QFT class from
+<p>This module contains a wrapper class of the PE_QFT class from
 QQuantLib/PE/phase_estimation_wqft module for adapting classical
 phase estimation algorithm to solve amplitude estimation problems.
 Following references were used:</p>
@@ -129,6 +129,20 @@ and Computation of VaR</p>
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_classical_qpe.</code><code class="sig-name descname">CQPEAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for doing Amplitude Estimation (AE) using classical Quantum
 Amplitude Estimation (with QFT) algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the CQPEAE algorithm:
+Implemented keys:</p></li>
+<li><p><strong>qpu</strong> (<em>QLM solver</em>) – solver for simulating the resulting circuits</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE.index">
 <em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.index" title="Permalink to this definition">¶</a></dt>
@@ -155,10 +169,11 @@ Amplitude Estimation (with QFT) algorithm</p>
 </dl>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[a = \cos^2(\theta)
-\; where \; \theta \; is \;
-\mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle
-\; and \; \mathcal{Q} \; the \; Grover \; Operator\]</div>
+\[a = \cos^2(\theta)\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\theta\)</span>  is:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle\]</div>
+<p>And <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> the Grover Operator</p>
 </dd></dl>
 
 <dl class="method">

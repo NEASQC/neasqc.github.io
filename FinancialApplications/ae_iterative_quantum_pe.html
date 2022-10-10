@@ -111,7 +111,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.ae_iterative_quantum_pe">
 <span id="ae-iterative-quantum-pe"></span><h1>ae_iterative_quantum_pe<a class="headerlink" href="#module-QQuantLib.AE.ae_iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement amplitude
+<p>This module contains necessary functions and classes to implement amplitude
 estimation algorithm using Iterative Quantum Phase Estimation (IQPE).
 The implementation is based on following paper:</p>
 <blockquote>
@@ -128,6 +128,20 @@ Physical Review A 3(76), 2007.
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_iterative_quantum_pe.</code><code class="sig-name descname">IQPEAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) class for
 doing Amplitude Estimation (AE)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the IQPEAE algorithm:
+Implemented keys:</p></li>
+<li><p><strong>qpu</strong> (<em>QLM solver</em>) – solver for simulating the resulting circutis</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index">
 <em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index" title="Permalink to this definition">¶</a></dt>
