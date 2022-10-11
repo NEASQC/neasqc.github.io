@@ -115,36 +115,73 @@
 <dl class="class">
 <dt id="QQuantLib.finance.probability_class.DensityProbability">
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.finance.probability_class.</code><code class="sig-name descname">DensityProbability</code><span class="sig-paren">(</span><em class="sig-param">probability_type: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.probability_class.DensityProbability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class for selectin pay off functions
+<dd><p>Class for selecting pay off functions
 algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the asset and the probability used for simulating its behaviour.Implemented keys:</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated.</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.finance.probability_class.DensityProbability.get_density">
-<code class="sig-name descname">get_density</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.probability_class.DensityProbability.get_density" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get_density</code><span class="sig-paren">(</span><em class="sig-param">probability_type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.probability_class.DensityProbability.get_density" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the probability function</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary</em>) – with necesary information for connfiguring the probability
-density.
-* s_0: initial value of the asset
-* risk_free_rate: risk free ratio
-* maturity: time where the probability wants to be calculated.
-* volatiliy: volatility of the asset.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
+</dd>
+</dl>
+</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.finance.probability_class.DensityProbability.get_density_prob">
-<code class="sig-name descname">get_density_prob</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.probability_class.DensityProbability.get_density_prob" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configures a probabiliy density</p>
+<em class="property">static </em><code class="sig-name descname">get_density_prob</code><span class="sig-paren">(</span><em class="sig-param">probability_type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.probability_class.DensityProbability.get_density_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures a probability density</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary</em>) – with necesary information for connfiguring the probability
-density.
-* s_0: initial value of the asset
-* risk_free_rate: risk free ratio
-* maturity: time where the probability wants to be calculated.
-* volatiliy: volatility of the asset.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density.</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
+</dd>
+</dl>
+</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

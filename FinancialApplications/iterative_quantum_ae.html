@@ -111,7 +111,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.iterative_quantum_ae">
 <span id="iterative-quantum-ae"></span><h1>iterative_quantum_ae<a class="headerlink" href="#module-QQuantLib.AE.iterative_quantum_ae" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement
+<p>This module contains necessary functions and classes to implement
 Iterative Quantum Amplitude Estimation based on the paper:</p>
 <blockquote>
 <div><p>Grinko, D., Gacon, J., Zoufal, C. et al.
@@ -125,13 +125,40 @@ npj Quantum Inf 7, 52 (2021).
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.iterative_quantum_ae.</code><code class="sig-name descname">IQAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for Iterative Quantum Amplitude Estimation (IQAE)
 algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the IQAE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>epsilon<span class="classifier">float</span></dt><dd><p>precision</p>
+</dd>
+<dt>alpha<span class="classifier">float</span></dt><dd><p>accuracy</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of measurements on each iteration</p>
+</dd>
+<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
+gate</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound">
 <em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">n_samples: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the length of the confidence interval for a given number of samples
-n_samples and an accuracy gamma:</p>
+<dd><p>Computes the length of the confidence interval for a given
+number of samples n_samples and an accuracy gamma:</p>
 <div class="math notranslate nohighlight">
-\[\epsilon = \dfrac{1}{\sqrt{2N}}\log\left(\dfrac{2}{\gamma}\right)\]</div>
+\[\epsilon = \dfrac{1}{\sqrt{2N}}\log\left(\dfrac{2}{\gamma} \
+\right)\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -140,10 +167,10 @@ n_samples and an accuracy gamma:</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p><strong>length of the confidence interval</strong></p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>length of the confidence interval</p>
+<dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
@@ -151,8 +178,8 @@ n_samples and an accuracy gamma:</p>
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.display_information">
 <em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">shots: int = 100</em>, <em class="sig-param">alpha: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.display_information" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function displays information of the properties of the method for a given
-set of parameters</p>
+<dd><p>This function displays information of the properties of the
+method for a given set of parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -167,8 +194,8 @@ set of parameters</p>
 <dl class="method">
 <dt id="QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k">
 <em class="property">static </em><code class="sig-name descname">find_next_k</code><span class="sig-paren">(</span><em class="sig-param">k: int</em>, <em class="sig-param">theta_lower: float</em>, <em class="sig-param">theta_upper: float</em>, <em class="sig-param">flag: bool</em>, <em class="sig-param">ratio: float = 2</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is an implementation of Algorithm 2 from the IQAE paper. This function computes
-the next suitable k.</p>
+<dd><p>This is an implementation of Algorithm 2 from the IQAE paper.
+This function computes the next suitable k.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -242,8 +269,6 @@ epsilon and accuracy at least alpha.</p>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>a_l</strong> (<em>float</em>) – lower bound for the probability to be estimated</p></li>
 <li><p><strong>a_u</strong> (<em>float</em>) – upper bound for the probability to be estimated</p></li>
-<li><p><em>theta_l</em> – lower bound for the angle to be estimated</p></li>
-<li><p><em>theta_u</em> – upper bound for the angle to be estimated</p></li>
 </ul>
 </p>
 </dd>

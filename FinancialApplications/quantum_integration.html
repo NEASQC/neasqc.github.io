@@ -112,31 +112,38 @@
 <span id="quantum-integration"></span><h1>quantum_integration<a class="headerlink" href="#module-QQuantLib.finance.quantum_integration" title="Permalink to this headline">¶</a></h1>
 <p>This module contains a function for solving integrals using Amplitude
 Estimation techniques. The function uses the Encoding class for loading
-data into the quantum circut by creating an oracle and the AE class for
+data into the quantum circuit by creating an oracle and the AE class for
 getting the amplitude of a selected state using AE techniques. The function
-deals with all the normalisations needed for transform this amplitde into
+deals with all the normalisations needed for transform this amplitude into
 the desired integral.</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
 <dl class="function">
 <dt id="QQuantLib.finance.quantum_integration.q_solve_integral">
 <code class="sig-prename descclassname">QQuantLib.finance.quantum_integration.</code><code class="sig-name descname">q_solve_integral</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.quantum_integration.q_solve_integral" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function for solving an integral using quantum amplitude estimationtechniques.</p>
+<dd><p>Function for solving an integral using quantum amplitude estimation techniques.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>keys of the input kwargs will be</strong> (<em>Mandatory</em>) – </p></li>
-<li><p><strong>array_function</strong> (<em>numpy array</em>) – numpy array wiht the desired function for encoding into the Quantum Circuit.</p></li>
-<li><p><strong>encoding</strong> (<em>int</em>) – Selecting the encode protocol</p></li>
-<li><p><strong>array_probability</strong> (<em>numpy array</em>) – numpy array wiht the desired probability for encoding into the
-Quantum Cirucit. It can be None (uniform distribution will be used)</p></li>
-<li><p><strong>ae_type</strong> (<em>string</em>) – string with the desired AE algorithm:
-MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p></li>
-<li><p><strong>keys will be realted with circuit implementations of the encoding procedure</strong> (<em>Other</em>) – </p></li>
-<li><p><strong>AE algorithm configuration</strong><strong> (</strong><strong>see QQQuantLib.AE.ae_class</strong><strong>)</strong> (<em>or/and</em>) – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the integration to compute and the AE technique used for getting the solution.</p>
+<dl class="simple">
+<dt>array_function<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired function for encoding into the Quantum Circuit.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
+<dt>encoding<span class="classifier">int</span></dt><dd><p>Selecting the encode protocol</p>
+</dd>
+<dt>array_probability<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired probability for encoding into the Quantum Circuit. It can be None (uniform distribution will be used)</p>
+</dd>
+<dt>ae_type<span class="classifier">string</span></dt><dd><p>string with the desired AE algorithm: MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other kwargs input dictionary keys will be related with the encoding of the integral into the quantum circuit (see QQuantLib.DL.encoding_protocols) and for the configuration of the AE algorithm used (see QQuantLib.AE.ae_class)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
 <li><p><strong>ae_estimation</strong> (<em>pandas DataFrame</em>) – DataFrame with the desired integral computation.</p></li>
 <li><p><strong>solver_ae</strong> (<em>objet based on the AE class</em>)</p></li>
 </ul>

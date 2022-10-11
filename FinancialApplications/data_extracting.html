@@ -106,8 +106,8 @@
 </style>
 <div class="section" id="module-QQuantLib.utils.data_extracting">
 <span id="data-extracting"></span><h1>data_extracting<a class="headerlink" href="#module-QQuantLib.utils.data_extracting" title="Permalink to this headline">¶</a></h1>
-<p>This module contains auxiliar functions for executing QLM programs based
-on QLM QRoutines or QLM gates and for postproccessing results from QLM
+<p>This module contains auxiliary functions for executing QLM programs based
+on QLM Routines or QLM gates and for post processing results from QLM
 qpu executions</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <dl class="function">
@@ -142,7 +142,7 @@ qpu executions</p>
 <dl class="function">
 <dt id="QQuantLib.utils.data_extracting.get_results">
 <code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param">quantum_object</em>, <em class="sig-param">linalg_qpu</em>, <em class="sig-param">shots: int = 0</em>, <em class="sig-param">qubits: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.get_results" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function for testing an input gate. This fucntion creates the
+<dd><p>Function for testing an input gate. This function creates the
 quantum program for an input gate, the correspondent circuit
 and job. Execute the job and gets the results</p>
 <dl class="field-list simple">
@@ -152,8 +152,8 @@ and job. Execute the job and gets the results</p>
 <li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
 <li><p><strong>shots</strong> (<em>int</em>) – number of shots for the generated job.
 if 0 True probabilities will be computed</p></li>
-<li><p><strong>qubits</strong> (<em>list</em>) – list with the qbits for doing the measurement when simulating
-if None measuremnt over all allocated qbits will be provided</p></li>
+<li><p><strong>qubits</strong> (<em>list</em>) – list with the qubits for doing the measurement when simulating
+if None measurement over all allocated qubits will be provided</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -162,7 +162,7 @@ if None measuremnt over all allocated qbits will be provided</p></li>
 <li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
 <li><p><strong>q_prog</strong> (<em>QLM Program.</em>)</p></li>
 <li><p><strong>job</strong> (<em>QLM job</em>)</p></li>
-<li><p><strong>pdf_time</strong> (<em>pandas DataFrame</em>) – DataFrame with different times of the simulation proccess</p></li>
+<li><p><strong>pdf_time</strong> (<em>pandas DataFrame</em>) – DataFrame with different times of the simulation process</p></li>
 </ul>
 </p>
 </dd>
@@ -172,7 +172,7 @@ if None measuremnt over all allocated qbits will be provided</p></li>
 <dl class="function">
 <dt id="QQuantLib.utils.data_extracting.proccess_qresults">
 <code class="sig-prename descclassname">QQuantLib.utils.data_extracting.</code><code class="sig-name descname">proccess_qresults</code><span class="sig-paren">(</span><em class="sig-param">result</em>, <em class="sig-param">qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.data_extracting.proccess_qresults" title="Permalink to this definition">¶</a></dt>
-<dd><p>PostProcces a QLM results for creating a pandas DataFrame</p>
+<dd><p>Post Process a QLM results for creating a pandas DataFrame</p>
 </dd></dl>
 
 </div>

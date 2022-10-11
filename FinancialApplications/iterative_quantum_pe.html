@@ -125,9 +125,8 @@ Physical Review A 3(76), 2007.
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the ML-QPE algorithm:</p></li>
-<li><p><strong>keys</strong> (<em>Implemented</em>) – <dl class="simple">
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the ML-QPE algorithm. Implemented keys:</p>
+<dl class="simple">
 <dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program withe the initial Psi state over the
 Grover-like operator will be applied
 Only used if oracle is None</p>
@@ -147,8 +146,7 @@ algorithm
 If False step_iqpe will be used for each step.</p>
 </dd>
 </dl>
-</p></li>
-</ul>
+</p>
 </dd>
 </dl>
 <dl class="method">
@@ -193,16 +191,22 @@ algorithm</p>
 <dd class="field-odd"><p><strong>result</strong> (<em>list list with QLM results</em>) – </p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – contains extracted information from intermediate_measurements
-from a qlm result. Columns:</p></li>
-<li><p><strong>BitString</strong> (<em>str.</em>) – String with the bits of the measurements done during
-simulation of the circuit</p></li>
-<li><p><strong>BitInt</strong> (<em>int.</em>) – Integer representation of the BitString</p></li>
-<li><p><strong>Phi</strong> (<em>float.</em>) – Angle representation of the BitString between [0,1].</p></li>
-<li><p><strong>Probability</strong> (<em>float.</em>) – Probability of the measurement of the classical bits.</p></li>
-</ul>
+<dd class="field-even"><p><p><strong>pdf</strong> – contains extracted information from intermediate_measurements from a qlm result. Columns:</p>
+<dl class="simple">
+<dt>BitString<span class="classifier">str.</span></dt><dd><p>String with the bits of the measurements done during
+simulation of the circuit</p>
+</dd>
+<dt>BitInt<span class="classifier">int.</span></dt><dd><p>Integer representation of the BitString</p>
+</dd>
+<dt>Phi<span class="classifier">float.</span></dt><dd><p>Angle representation of the BitString between [0,1].</p>
+</dd>
+<dt>Probability<span class="classifier">float.</span></dt><dd><p>Probability of the measurement of the classical bits.</p>
+</dd>
+</dl>
 </p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
 </dd>
 </dl>
 </dd></dl>

@@ -110,14 +110,15 @@
 </style>
 <div class="section" id="module-QQuantLib.finance.classical_finance">
 <span id="classical-finance"></span><h1>classical_finance<a class="headerlink" href="#module-QQuantLib.finance.classical_finance" title="Permalink to this headline">¶</a></h1>
-<p>This module contains several auxiliar functions used in quantitative classical finances</p>
+<p>This module contains several auxiliary functions used in quantitative
+classical finances</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_call_price">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_call_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a european call option.
-The formula is:</p>
+<dd><p>Computes the price for a European call option.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[C(S, T) = S\Phi(d_1)-Ke^{-rT}\Phi(d_2)\]</div>
 <dl class="field-list simple">
@@ -131,7 +132,7 @@ The formula is:</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european call option</p>
+<dd class="field-even"><p><strong>price</strong> – price of the European call option</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -142,12 +143,13 @@ The formula is:</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_density">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_density</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_density" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates the Black-Scholes density function at s_t
-for a given set of parameters. The formula is:</p>
+<dd><p>Evaluates the Black-Scholes density function at s_t for a given set
+of parameters. The formula is:</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{1}{S_T\sigma\sqrt{2\pi T}}\exp\left(-\dfrac{\left(\log(S_T)-\mu\right)}{2\sigma^2T}\right)\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mu = (risk_free_rate-0.5\sigma)T+\log(S_0)\)</span>.</p>
+\[\dfrac{1}{S_T\sigma\sqrt{2\pi T}}\exp\left(-\dfrac{ \
+\left(\log(S_T)-\mu\right)}{2\sigma^2T}\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu = (risk\_free\_rate-0.5\sigma)T+\log(S_0)\)</span>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -159,8 +161,7 @@ for a given set of parameters. The formula is:</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>density</strong> – value of the Black-Scholes denisty function
-in s_t</p>
+<dd class="field-even"><p><strong>density</strong> – value of the Black-Scholes density function in s_t</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -171,9 +172,9 @@ in s_t</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_digital_call_price">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_digital_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_digital_call_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a digital(binary) call option.
-The formula is:</p>
+<dd><p>Computes the price for a digital(binary) call option.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[DC(S, T) = e^{-rT}Coupon N(d_2)\]</div>
 <dl class="field-list simple">
@@ -184,13 +185,12 @@ The formula is:</p>
 <li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
 <li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
 <li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case
-that the underlying pring exceeds
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case that the underlying pring exceeds
 the strike</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european digital call option</p>
+<dd class="field-even"><p><strong>price</strong> – price of the digital call option</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -201,9 +201,9 @@ the strike</p></li>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_digital_put_price">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_digital_put_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_digital_put_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a digital (binary) put option.
-The formula is:</p>
+<dd><p>Computes the price for a digital (binary) put option.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[DC(S, T) = e^{-rT}Coupon N(-d_2)\]</div>
 <dl class="field-list simple">
@@ -214,13 +214,12 @@ The formula is:</p>
 <li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
 <li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
 <li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case
-that the underlying pring exceeds
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case that the underlying pring exceeds
 the strike</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european digital call option</p>
+<dd class="field-even"><p><strong>price</strong> – price of the digital call option</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -231,12 +230,10 @@ the strike</p></li>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_em_samples">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_em_samples</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">time_steps: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_em_samples" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Computes samples from the approximated solution of the Black-Scholes SDE</dt><dd><p>using the Euler-Maruyama discretization.</p>
-</dd>
-</dl>
-<p>The formula is:</p>
+<dd><p>Computes samples from the approximated solution of the Black-Scholes
+SDE using the Euler-Maruyama discrimination.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[S_{t+\Delta t} = S_t+rS_tdt+\sigma S_t N(0, 1)\sqrt{dt}\]</div>
 <dl class="field-list simple">
@@ -263,9 +260,9 @@ the strike</p></li>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_exact_samples">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_exact_samples</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_exact_samples" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes samples from the exact solution of the Black-Scholes SDE.
-The formula is:</p>
+<dd><p>Computes samples from the exact solution of the Black-Scholes SDE.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[S_T = S_0e^{\sigma*W_t+(risk_free_rate-\sigma^2/2)t}\]</div>
 <dl class="field-list simple">
@@ -291,11 +288,10 @@ The formula is:</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_forward_price">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_forward_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_forward_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a forward contract.
-Note that it doesn’t assume that we are
-at the begining of the lifetime of the contract
-The formula is:
-.. rubric:: Notes</p>
+<dd><p>Computes the price for a forward contract.  Note that it doesn’t
+assume that we are at the begining of the lifetime of the contract</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[V(S, T) = S-Ke^{-r(T-t)}\]</div>
 <dl class="field-list simple">
@@ -344,9 +340,9 @@ the Black-Scholes density function in s_t and the normlising this result.</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_put_price">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_put_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_put_price" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the price for a european put option.
-The formula is:</p>
+<dd><p>Computes the price for a European put option.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[C(S, T) = Ke^{-rT}\Phi(-d_2)-S\Phi(-d_1)\]</div>
 <dl class="field-list simple">
@@ -360,7 +356,7 @@ The formula is:</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>price</strong> – price of the european put option</p>
+<dd class="field-even"><p><strong>price</strong> – price of the European put option</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>float</p>
@@ -371,10 +367,11 @@ The formula is:</p>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_sde_solution">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_sde_solution</code><span class="sig-paren">(</span><em class="sig-param">x_: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_sde_solution" title="Permalink to this definition">¶</a></dt>
-<dd><p>For a certain parametrization $x$ it returns a value of the underlying $S_T(x)$
-and the probability density of that value of the underlying.
-The formulas are:</p>
+<dd><p>For a certain parametrization <span class="math notranslate nohighlight">\(x\)</span> it returns a value of the
+underlying <span class="math notranslate nohighlight">\(S_T(x)\)</span> and the probability density of that
+value of the underlying.</p>
 <p class="rubric">Notes</p>
+<p>The formulas are:</p>
 <div class="math notranslate nohighlight">
 \[S_T = S_0e^{\sigma x+(risk_free_rate-\sigma^2/2)t}
 p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
@@ -401,12 +398,10 @@ p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.bs_tree">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_tree</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">time_steps: int</em>, <em class="sig-param">discretization: int</em>, <em class="sig-param">bounds: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_tree" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Computes the probabilities of all possible pahts</dt><dd><p>from the approximated solution of the Black-Scholes SDE
-using the Euler-Maruyama discretization
-for a given discretization of the brownian motion.</p>
-</dd>
-</dl>
+<dd><p>Computes the probabilities of all possible pahts from the
+approximated solution of the Black-Scholes SDE using the
+Euler-Maruyama discretization for a given discretization of the
+Brownian motion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -419,7 +414,7 @@ for a given discretization of the brownian motion.</p>
 <li><p><strong>steps</strong> (<em>time</em>) – number of time steps</p></li>
 <li><p><strong>discretization</strong> (<em>float</em>) – number of points to build the discrete version
 of the gaussian density</p></li>
-<li><p><strong>bounds</strong> (<em>float</em>) – bounds of the gaussian density</p></li>
+<li><p><strong>bounds</strong> (<em>float</em>) – bounds of the Gaussian density</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -434,7 +429,7 @@ of the gaussian density</p></li>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.call_payoff">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">call_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.call_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff of a european call option.</p>
+<dd><p>Computes the payoff of a European call option.</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
 \[C(S_T, K) = \left(S_T-K, 0\right)^+\]</div>
@@ -484,9 +479,9 @@ the strike</p></li>
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.digital_put_payoff">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">digital_put_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.digital_put_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff for a digital(binary) put option.
-The formula is:</p>
+<dd><p>Computes the payoff for a digital(binary) put option.</p>
 <p class="rubric">Notes</p>
+<p>The formula is:</p>
 <div class="math notranslate nohighlight">
 \[DC(S_T, K, Coupon) = Coupon\mathbb{1}_{\{K-S_T\}}\]</div>
 <dl class="field-list simple">
@@ -535,12 +530,17 @@ the strike</p></li>
 <dt id="QQuantLib.finance.classical_finance.geometric_sum">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">geometric_sum</code><span class="sig-paren">(</span><em class="sig-param">base: float</em>, <em class="sig-param">exponent: int</em>, <em class="sig-param">coeficient: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.geometric_sum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes a geometric sum</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}s = a+a*base+a*base^2+a*base^3+...+a*base^{exponent} = \\
+= \sum_{k=0}^{exponent}a*base^k = \
+a\big(\frac{1-base^{exponent+1}}{1-base}\big)\end{split}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>base</strong> (<em>float</em>) – base of the geometric sum</p></li>
-<li><p><strong>exponent</strong> (<em>int</em>) – maximum exponet for the geomtric sum</p></li>
-<li><p><strong>coeficient</strong> (<em>float</em>) – coeficient for the geomtric sum</p></li>
+<li><p><strong>exponent</strong> (<em>int</em>) – maximum exponent for the geometric sum</p></li>
+<li><p><strong>coeficient</strong> (<em>float</em>) – coefficient for the geometric sum</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -550,17 +550,12 @@ the strike</p></li>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}s = a+a*base+a*base^2+a*base^3+...+a*base^exponent = \\
-= \sum_{k=0}^{exponent}a*base^k = \\
-= a\big(\frac{1-base^{exponent+1}}{1-base}\big)\end{split}\]</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="QQuantLib.finance.classical_finance.put_payoff">
 <code class="sig-prename descclassname">QQuantLib.finance.classical_finance.</code><code class="sig-name descname">put_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.put_payoff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the payoff of a european put option.</p>
+<dd><p>Computes the payoff of a European put option.</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
 \[P(S_T, K) = \left(K-S_T, 0\right)^+\]</div>
