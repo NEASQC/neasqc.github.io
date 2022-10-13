@@ -53,9 +53,11 @@
 <li class="toctree-l2"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae_class.html">ae_class</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -109,7 +111,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.maximum_likelihood_ae">
 <span id="maximum-likelihood-ae"></span><h1>maximum_likelihood_ae<a class="headerlink" href="#module-QQuantLib.AE.maximum_likelihood_ae" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement
+<p>This module contains necessary functions and classes to implement
 Maximum Likelihood Amplitude Estimation based on the paper:</p>
 <blockquote>
 <div><p>Suzuki, Y., Uno, S., Raymond, R., Tanaka, T., Onodera, T., &amp; Yamamoto, N.
@@ -121,8 +123,37 @@ arXiv: quant-ph/1904.10246v2</p>
 <dl class="class">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE">
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.maximum_likelihood_ae.</code><code class="sig-name descname">MLAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class for using Maximum Likelihood Quantum Amplitude Estimation (ML-AE)
-algorithm</p>
+<dd><p>Class for using Maximum Likelihood Quantum Amplitude Estimation
+(MLAE) algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator:
+init_q_prog and q_gate will be interpreted as None</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the MLAE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>schedule<span class="classifier">list of two lists</span></dt><dd><p>the schedule for the algorithm</p>
+</dd>
+<dt>optimizer :</dt><dd><p>an optimizer with just one possible entry</p>
+</dd>
+<dt>delta<span class="classifier">float</span></dt><dd><p>tolerance to avoid division by zero warnings</p>
+</dd>
+<dt>ns<span class="classifier">int</span></dt><dd><p>number of grid points for brute scipy optimizer</p>
+</dd>
+<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
+gate</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function">
 <em class="property">static </em><code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em>, <em class="sig-param">m_k: list</em>, <em class="sig-param">n_k: list</em>, <em class="sig-param">h_k: list</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function" title="Permalink to this definition">¶</a></dt>
@@ -159,7 +190,7 @@ positive event.</p></li>
 <dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood">
 <em class="property">static </em><code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates Likelihood from Suzuki papper. For h_k positive events
+<dd><p>Calculates Likelihood from Suzuki paper. For h_k positive events
 of n_k total events, this function calculates the probability of
 this taking into account that the probability of a positive
 event is given by theta and by m_k
@@ -167,8 +198,8 @@ The idea is use this function to minimize it for this reason it gives
 minus Likelihood</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[l_k(\theta|h_k) = \sin^2\left((2m_k+1)\theta\right)^{h_k}\cos^2
-\left((2m_k+1)\theta\right)^{n_k-h_k}\]</div>
+\[l_k(\theta|h_k) = \sin^2\left((2m_k+1)\theta\right)^{h_k} \
+\cos^2 \left((2m_k+1)\theta\right)^{n_k-h_k}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -191,11 +222,12 @@ positive event.</p></li>
 <dl class="method">
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood">
 <em class="property">static </em><code class="sig-name descname">log_likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates log of the likelihood from Suzuki papper.</p>
+<dd><p>Calculates log of the likelihood from Suzuki paper.</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[\log{l_k(\theta|h_k)} = 2h_k\log\big[\sin\left((2m_k+1)\theta\right)\big]
-+2(n_k-h_k)\log\big[\cos\left((2m_k+1)\theta\right)\big]\]</div>
+\[\log{l_k(\theta|h_k)} = 2h_k\log\big[\sin\left((2m_k+1) \
+\theta\right)\big] +2(n_k-h_k)\log\big[\cos\left((2m_k+1) \
+\theta\right)\big]\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -219,7 +251,7 @@ positive event.</p></li>
 <dt id="QQuantLib.AE.maximum_likelihood_ae.MLAE.mlae">
 <code class="sig-name descname">mlae</code><span class="sig-paren">(</span><em class="sig-param">schedule</em>, <em class="sig-param">optimizer</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.maximum_likelihood_ae.MLAE.mlae" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method executes a complete Maximum Likelihood Algorithm,
-including executing schedule, defining the correspondient cost
+including executing schedule, defining the correspondent cost
 function and optimizing it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -227,7 +259,7 @@ function and optimizing it.</p>
 <li><p><strong>schedule</strong> (<em>list of two lists</em>) – the schedule for the algorithm</p></li>
 <li><p><strong>optimizer</strong> (<em>optimization routine.</em>) – the optimizer should receive a function of one variable
 the angle to be optimized. Using lambda functions is the
-recomended way.</p></li>
+recommended way.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -263,8 +295,8 @@ obtained values of the different experiments.</p></li>
 </dl>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[a^*  = \sin^2(\theta^*)
-\; where \; \theta^* = \arg \min_{\theta} L(\theta,\mathbf{h})\]</div>
+\[a^*  = \sin^2(\theta^*) \; where \; \theta^* = \arg \
+\min_{\theta} L(\theta,\mathbf{h})\]</div>
 </dd></dl>
 
 <dl class="method">
@@ -294,7 +326,6 @@ of a given schedule.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>m_k</strong> (<em>int</em>) – number of times to apply the self.q_gate to the quantum circuit</p></li>
 <li><p><strong>n_k</strong> (<em>int</em>) – number of shots</p></li>
-<li><p><strong>time_pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with different times of the simulation</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>

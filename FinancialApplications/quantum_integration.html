@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QQuantLib.AA &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>quantum_integration &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="amplitude_amplification" href="amplitude_amplification.html" />
-    <link rel="prev" title="encoding_protocols" href="encoding_protocols.html" /> 
+    <link rel="next" title="QQuantLib.utils" href="utils.html" />
+    <link rel="prev" title="probability_class" href="probability_class.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,13 +46,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.AA</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="amplitude_amplification.html">amplitude_amplification</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="finance.html">QQuantLib.finance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="classical_finance.html">classical_finance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae_price_estimation.html">ae_price_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="payoff_class.html">payoff_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="probability_class.html">probability_class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">quantum_integration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -70,7 +74,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>QQuantLib.AA</li>
+          <li><a href="finance.html">QQuantLib.finance</a> &raquo;</li>
+      <li>quantum_integration</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -103,22 +108,58 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="qquantlib-aa">
-<h1>QQuantLib.AA<a class="headerlink" href="#qquantlib-aa" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>AA</strong> or <em>Amplitude Amplification</em> package groups the python modules from <strong>QQuantLib</strong> that deals with the creation of the operators needed for amplitude amplification procedures. Following modules are presented in this package.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="amplitude_amplification.html">amplitude_amplification</a></li>
-</ul>
+<div class="section" id="module-QQuantLib.finance.quantum_integration">
+<span id="quantum-integration"></span><h1>quantum_integration<a class="headerlink" href="#module-QQuantLib.finance.quantum_integration" title="Permalink to this headline">¶</a></h1>
+<p>This module contains a function for solving integrals using Amplitude
+Estimation techniques. The function uses the Encoding class for loading
+data into the quantum circuit by creating an oracle and the AE class for
+getting the amplitude of a selected state using AE techniques. The function
+deals with all the normalisations needed for transform this amplitude into
+the desired integral.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="QQuantLib.finance.quantum_integration.q_solve_integral">
+<code class="sig-prename descclassname">QQuantLib.finance.quantum_integration.</code><code class="sig-name descname">q_solve_integral</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.quantum_integration.q_solve_integral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for solving an integral using quantum amplitude estimation techniques.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the integration to compute and the AE technique used for getting the solution.</p>
+<dl class="simple">
+<dt>array_function<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired function for encoding into the Quantum Circuit.</p>
+</dd>
+<dt>encoding<span class="classifier">int</span></dt><dd><p>Selecting the encode protocol</p>
+</dd>
+<dt>array_probability<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired probability for encoding into the Quantum Circuit. It can be None (uniform distribution will be used)</p>
+</dd>
+<dt>ae_type<span class="classifier">string</span></dt><dd><p>string with the desired AE algorithm: MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other kwargs input dictionary keys will be related with the encoding of the integral into the quantum circuit (see QQuantLib.DL.encoding_protocols) and for the configuration of the AE algorithm used (see QQuantLib.AE.ae_class)</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>ae_estimation</strong> (<em>pandas DataFrame</em>) – DataFrame with the desired integral computation.</p></li>
+<li><p><strong>solver_ae</strong> (<em>objet based on the AE class</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="encoding_protocols.html" class="btn btn-neutral float-left" title="encoding_protocols" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="amplitude_amplification.html" class="btn btn-neutral float-right" title="amplitude_amplification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="probability_class.html" class="btn btn-neutral float-left" title="probability_class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="utils.html" class="btn btn-neutral float-right" title="QQuantLib.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

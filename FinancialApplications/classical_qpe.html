@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="QQuantLib.utils" href="utils.html" />
+    <link rel="next" title="QQuantLib.finance" href="finance.html" />
     <link rel="prev" title="iterative_quantum_pe" href="iterative_quantum_pe.html" /> 
 </head>
 
@@ -53,6 +53,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">classical_qpe</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -106,8 +107,8 @@
 </style>
 <div class="section" id="module-QQuantLib.PE.classical_qpe">
 <span id="classical-qpe"></span><h1>classical_qpe<a class="headerlink" href="#module-QQuantLib.PE.classical_qpe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement
-the clasical Quantum Phase Estimation with inverse of the
+<p>This module contains necessary functions and classes to implement
+the classical Quantum Phase Estimation with inverse of the
 Quantum Fourier Transform. Following references were used:</p>
 <blockquote>
 <div><p>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
@@ -123,14 +124,36 @@ and Computation of VaR</p>
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.classical_qpe.</code><code class="sig-name descname">CQPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using classical Quantum Phase Estimation, with inverse of
 Quantum Fourier Transformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the CQPE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program with the initial Psi state over the
+Grover-like operator will be applied
+Only used if oracle is None</p>
+</dd>
+<dt>unitary_operator<span class="classifier">QLM gate or routine</span></dt><dd><p>Grover-like operator which autovalues want to be calculated
+Only used if oracle is None</p>
+</dd>
+<dt>cbits_number<span class="classifier">int</span></dt><dd><p>number of classical bits for phase estimation</p>
+</dd>
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of shots for quantum job. If 0 exact probabilities
+will be computed.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.PE.classical_qpe.CQPE.apply_controlled_operations">
 <em class="property">static </em><code class="sig-name descname">apply_controlled_operations</code><span class="sig-paren">(</span><em class="sig-param">q_prog_</em>, <em class="sig-param">q_gate</em>, <em class="sig-param">q_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.apply_controlled_operations" title="Permalink to this definition">¶</a></dt>
 <dd><p>This functions creates the first part of the Phase Estimation
 algorithm with QFT. Given a initial state, a unitary operator
-and group of auxiliar qbits following steps are done:
-1. Applies a Haddamard Gate to each auxiliar qbit.
-2. Each auxiliar qbit controlles an exponential application
+and group of auxiliary bits following steps are done:
+1. Applies a Haddamard Gate to each auxiliary qubit.
+2. Each auxiliary qubit controlls an exponential application
 of the given operator on the principal quantum state.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -138,7 +161,7 @@ of the given operator on the principal quantum state.</p>
 <li><p><strong>q_prog_</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
 <li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
 the autovalue theta of this operator</p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbits for PE. Each qbit will be the control for
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliary bits for PE. Each qubit will be the control for
 application of the unitary operator (powers of it in fact)
 to the initial state</p></li>
 </ul>
@@ -156,12 +179,12 @@ to the initial state</p></li>
 <dt id="QQuantLib.PE.classical_qpe.CQPE.apply_inv_qft">
 <em class="property">static </em><code class="sig-name descname">apply_inv_qft</code><span class="sig-paren">(</span><em class="sig-param">q_prog_</em>, <em class="sig-param">q_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.apply_inv_qft" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply an inverse of Quantum Fourier Transformation to the
-desired qbits of a QLM program</p>
+desired bits of a QLM program</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q_prog</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – qbits where the inverse of the QFT will be applied</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qubit</em>) – bits where the inverse of the QFT will be applied</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -183,7 +206,7 @@ desired qbits of a QLM program</p>
 <li><p><strong>q_prog_</strong> (<em>QLM program</em>) – QLM Program where the unitary operator will be applied</p></li>
 <li><p><strong>q_gate</strong> (<em>QLM AbstractGate</em>) – QLM implementation of the unitary operator. We want estimate
 the autovalue theta of this operator</p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbits for PE.</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliary bits for PE.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -213,32 +236,41 @@ algorithm</p>
 <em class="property">static </em><code class="sig-name descname">post_proccess</code><span class="sig-paren">(</span><em class="sig-param">input_pdf</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.post_proccess" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function uses the results property and add it additional
 columns that are useful for Amplitude Amplification procedure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>final_result</strong> (<em>pandas DataFrame</em>) – DataFrame with the final results</p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.PE.classical_qpe.CQPE.restart">
 <code class="sig-name descname">restart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reinitialize several properties for restart purpouses</p>
+<dd><p>Reinitialize several properties for restart purposes</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="QQuantLib.PE.classical_qpe.CQPE.run_qprogram">
-<em class="property">static </em><code class="sig-name descname">run_qprogram</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.run_qprogram" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">run_qprogram</code><span class="sig-paren">(</span><em class="sig-param">q_prog</em>, <em class="sig-param">q_aux</em>, <em class="sig-param">shots</em>, <em class="sig-param">linalg_qpu</em>, <em class="sig-param">complete=False</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.run_qprogram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a complete simulation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q_prog</strong> (<em>QLM Program</em>) – </p></li>
-<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliar qbit for measuring during all ipe steps</p></li>
+<li><p><strong>q_aux</strong> (<em>QLM qbit</em>) – auxiliary qubit for measuring during all ipe steps</p></li>
 <li><p><strong>shots</strong> (<em>int</em>) – number of shots for simulation</p></li>
 <li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
+<li><p><strong>complete</strong> (<em>bool</em>) – For returning the complete state space in the results file</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>result</strong> (<em>pandas DataFrame</em>) – DataFrame with the results</p></li>
 <li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
-<li><p><strong>time_pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with time of different procces of the simulation</p></li>
 </ul>
 </p>
 </dd>
@@ -254,7 +286,7 @@ columns that are useful for Amplitude Amplification procedure</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="iterative_quantum_pe.html" class="btn btn-neutral float-left" title="iterative_quantum_pe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="utils.html" class="btn btn-neutral float-right" title="QQuantLib.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="finance.html" class="btn btn-neutral float-right" title="QQuantLib.finance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

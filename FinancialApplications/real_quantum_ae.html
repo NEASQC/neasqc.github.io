@@ -53,9 +53,11 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">real_quantum_ae</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae_class.html">ae_class</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -109,7 +111,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.real_quantum_ae">
 <span id="real-quantum-ae"></span><h1>real_quantum_ae<a class="headerlink" href="#module-QQuantLib.AE.real_quantum_ae" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necesary functions and classes to implement
+<p>This module contains necessary functions and classes to implement
 Real Quantum Amplitude Estimation based on the paper:</p>
 <blockquote>
 <div><p>Manzano, A., Musso, D., Leitao, A. et al.
@@ -122,11 +124,37 @@ Preprint</p>
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.real_quantum_ae.</code><code class="sig-name descname">RQAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for Real Quantum Amplitude Estimation (RQAE)
 algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the IQAE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>q<span class="classifier">int</span></dt><dd><p>amplification ratio</p>
+</dd>
+<dt>epsilon<span class="classifier">int</span></dt><dd><p>precision</p>
+</dd>
+<dt>gamma<span class="classifier">float</span></dt><dd><p>accuracy</p>
+</dd>
+<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
+gate</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound">
 <em class="property">static </em><code class="sig-name descname">chebysev_bound</code><span class="sig-paren">(</span><em class="sig-param">n_samples: int</em>, <em class="sig-param">gamma: float</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the length of the confidence interval for a given number of samples
-n_samples and an accuracy gamma.</p>
+<dd><p>Computes the length of the confidence interval for a given number
+of samples n_samples and an accuracy gamma.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -146,8 +174,8 @@ n_samples and an accuracy gamma.</p>
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.display_information">
 <em class="property">static </em><code class="sig-name descname">display_information</code><span class="sig-paren">(</span><em class="sig-param">ratio: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.display_information" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function displays information of the propoerties of the method for a given
-set of parameters</p>
+<dd><p>This function displays information of the properties of the
+method for a given set of parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -176,7 +204,6 @@ is a first estimation of the desired amplitude.</p>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>amplitude_min</strong> (<em>float</em>) – lower bound for the amplitude to be estimated</p></li>
 <li><p><strong>amplitude_max</strong> (<em>float</em>) – upper bound for the amplitude to be estimated</p></li>
-<li><p><strong>time_pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with time information of the proccess</p></li>
 </ul>
 </p>
 </dd>
@@ -198,9 +225,9 @@ is a first estimation of the desired amplitude.</p>
 <dl class="method">
 <dt id="QQuantLib.AE.real_quantum_ae.RQAE.rqae">
 <code class="sig-name descname">rqae</code><span class="sig-paren">(</span><em class="sig-param">ratio: float = 2</em>, <em class="sig-param">epsilon: float = 0.01</em>, <em class="sig-param">gamma: float = 0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.real_quantum_ae.RQAE.rqae" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function implements the first step of the RQAE paper. The result
-is an estimation of the desired amplitude with precision epsilon
-and accuracy gamma.</p>
+<dd><p>This function implements the first step of the RQAE paper. The
+result is an estimation of the desired amplitude with precision
+epsilon and accuracy gamma.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -251,7 +278,6 @@ is a refined estimation of the desired amplitude.</p>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>amplitude_min</strong> (<em>float</em>) – lower bound for the amplitude to be estimated</p></li>
 <li><p><strong>amplitude_max</strong> (<em>float</em>) – upper bound for the amplitude to be estimated</p></li>
-<li><p><strong>time_pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with time information of the proccess</p></li>
 </ul>
 </p>
 </dd>
