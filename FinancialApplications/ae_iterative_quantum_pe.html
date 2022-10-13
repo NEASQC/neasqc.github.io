@@ -22,7 +22,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ae_class" href="ae_class.html" />
+    <link rel="next" title="QQuantLib.PE" href="pe.html" />
     <link rel="prev" title="ae_classical_qpe" href="ae_classical_qpe.html" /> 
 </head>
 
@@ -53,11 +53,9 @@
 <li class="toctree-l2"><a class="reference internal" href="real_quantum_ae.html">real_quantum_ae</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae_classical_qpe.html">ae_classical_qpe</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ae_iterative_quantum_pe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_class.html">ae_class</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -111,7 +109,7 @@
 </style>
 <div class="section" id="module-QQuantLib.AE.ae_iterative_quantum_pe">
 <span id="ae-iterative-quantum-pe"></span><h1>ae_iterative_quantum_pe<a class="headerlink" href="#module-QQuantLib.AE.ae_iterative_quantum_pe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necessary functions and classes to implement amplitude
+<p>This module contains necesary functions and classes to implement amplitude
 estimation algorithm using Iterative Quantum Phase Estimation (IQPE).
 The implementation is based on following paper:</p>
 <blockquote>
@@ -128,28 +126,6 @@ Physical Review A 3(76), 2007.
 <em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_iterative_quantum_pe.</code><code class="sig-name descname">IQPEAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) class for
 doing Amplitude Estimation (AE)</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
-Grover operator</p></li>
-<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
-<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
-estimation</p></li>
-<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the IQPEAE algorithm: Implemented keys:</p>
-<dl class="simple">
-<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circutis</p>
-</dd>
-<dt>shots<span class="classifier">int</span></dt><dd><p>number of measurements</p>
-</dd>
-<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
-gate</p>
-</dd>
-</dl>
-</p></li>
-</ul>
-</dd>
-</dl>
 <dl class="method">
 <dt id="QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index">
 <em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index" title="Permalink to this definition">¶</a></dt>
@@ -176,11 +152,10 @@ gate</p>
 </dl>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
-\[a = \cos^2(\theta)\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\theta\)</span>  is:</p>
-<div class="math notranslate nohighlight">
-\[\mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle\]</div>
-<p>And <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> the Grover Operator</p>
+\[a  = \cos^2(\theta)
+\; where \; \theta \; is \;
+\mathcal{Q}|\Psi\rangle = e^{2i\theta}|\Psi\rangle
+\; and \; \mathcal{Q} \; the \; Grover \; Operator\]</div>
 </dd></dl>
 
 <dl class="method">
@@ -198,7 +173,7 @@ gate</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="ae_classical_qpe.html" class="btn btn-neutral float-left" title="ae_classical_qpe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ae_class.html" class="btn btn-neutral float-right" title="ae_class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pe.html" class="btn btn-neutral float-right" title="QQuantLib.PE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

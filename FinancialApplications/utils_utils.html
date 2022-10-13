@@ -49,10 +49,10 @@
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">QQuantLib.utils</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="data_extracting.html">data_extracting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classical_finance.html">classical_finance</a></li>
 </ul>
 </li>
 </ul>
@@ -107,7 +107,7 @@
 </style>
 <div class="section" id="module-QQuantLib.utils.utils">
 <span id="utils"></span><h1>utils<a class="headerlink" href="#module-QQuantLib.utils.utils" title="Permalink to this headline">¶</a></h1>
-<p>This module contains several auxiliary functions needed by other scripts
+<p>This module contains several auxiliar functions needed by other scripts
 of the library</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <dl class="function">
@@ -133,12 +133,12 @@ of the library</p>
 <dl class="function">
 <dt id="QQuantLib.utils.utils.bitfield_to_int">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield_to_int</code><span class="sig-paren">(</span><em class="sig-param">lista</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield_to_int" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transforms the bitfield list to the corresponding int
+<dd><p>Transforms the bitfield lista to the corresponding int
 :param lista: bitfield
 :type lista: ist of ints</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>integer</strong> – integer obtained from it’s binary representation.</p>
+<dd class="field-odd"><p><strong>integer</strong> – integer obtained from it’s binay representation.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
@@ -251,7 +251,7 @@ The result is not normalised
 <dl class="function">
 <dt id="QQuantLib.utils.utils.fwht_sequency">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast Walsh-Hadamard Transform of array x_input in sequence ordering
+<dd><p>Fast Walsh-Hadamard Transform of array x_input in sequency ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
 algorithm.
@@ -272,12 +272,12 @@ of Walsh and Related Functions.
 <dl class="function">
 <dt id="QQuantLib.utils.utils.get_histogram">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">get_histogram</code><span class="sig-paren">(</span><em class="sig-param">probability</em>, <em class="sig-param">low_limit</em>, <em class="sig-param">high_limit</em>, <em class="sig-param">nbin</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a function probability, convert it into a histogram. The
-function must be positive, the normalization is automatic. Note
-that instead of having an analytical expression, probability could
-just create an arbitrary vector of the right dimensions and positive
-amplitudes.  This procedure could be used to initialize any quantum
-state with real amplitudes</p>
+<dd><p>Given a function probability, convert it into a histogram. The function must
+be positive, the normalization is automatic. Note that instead of
+having an analytical expression, probability could just create an arbitrary
+vector of the right dimensions and positive amplitudes.
+This procedure could be used to initialize any quantum state
+with real amplitudes</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -291,9 +291,9 @@ in the interval</p></li>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>centers</strong> (<em>np.darray</em>) – numpy array with the centers of the bins of the histogram</p></li>
+<li><p><strong>centers</strong> (<em>np.darray</em>) – numpy array with the centers of the bins of the histogtram</p></li>
 <li><p><strong>probs</strong> (<em>np.darray</em>) – numpy array with the probability at the centers of the bins
-of the histogram</p></li>
+of the histogtram</p></li>
 </ul>
 </p>
 </dd>
@@ -305,18 +305,18 @@ of the histogram</p></li>
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">left_conditional_probability</code><span class="sig-paren">(</span><em class="sig-param">initial_bins</em>, <em class="sig-param">probability</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.left_conditional_probability" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function calculate f(i) according to the Lov Grover and Terry
 Rudolph 2008 papper:
-‘Creating superposition that correspond to efficiently integrable
+‘Creating superpositions that correspond to efficiently integrable
 probability distributions’
 <a class="reference external" href="http://arXiv.org/abs/quant-ph/0208112v1">http://arXiv.org/abs/quant-ph/0208112v1</a></p>
 <p>Given a discretized probability and an initial number of bins
 the function splits each initial region in 2 equally regions and
-calculates the conditional probabilities for x is located in the
+calculates the condicional probabilities for x is located in the
 left part of the new regions when x is located in the region that
 contains the corresponding left region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>initial_bins</strong> (<em>int</em>) – Number of initial bins for splitting the input probabilities</p></li>
+<li><p><strong>initial_bins</strong> (<em>int</em>) – Number of initial bins for spliting the input probabilities</p></li>
 <li><p><strong>probability</strong> (<em>np.darray.</em>) – Numpy array with the probabilities to be load.
 initial_bins &lt;= len(Probability)</p></li>
 </ul>
@@ -347,42 +347,19 @@ initial_bins &lt;= len(Probability)</p></li>
 <dl class="function">
 <dt id="QQuantLib.utils.utils.mask">
 <code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.mask" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transforms the state <span class="math notranslate nohighlight">\(|index\rangle\)</span> into the state
-<span class="math notranslate nohighlight">\(|11...1\rangle\)</span> of size number qubits.</p>
+<dd><p>Transforms the state <a href="#id1"><span class="problematic" id="id2">|</span></a>index&gt; into the state
+<a href="#id3"><span class="problematic" id="id4">|</span></a>11…1&gt; of size number qubits.
+:param number_qubits:
+:type number_qubits: int
+:param index:
+:type index: int</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>number_qubits</strong> (<em>int</em>) – </p></li>
-<li><p><strong>index</strong> (<em>int</em>) – </p></li>
-</ul>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mask</strong> – the gate that we have to apply in order to transform
+state <a href="#id5"><span class="problematic" id="id6">|</span></a>index&gt;. Note that it affects all states.</p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>mask</strong> – the gate that we have to apply in order to transform
-state <span class="math notranslate nohighlight">\(|index\rangle\)</span>. Note that it affects all states.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Qlm abstract gate</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.oracle_shots_calculation">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">oracle_shots_calculation</code><span class="sig-paren">(</span><em class="sig-param">m_k</em>, <em class="sig-param">n_k</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.oracle_shots_calculation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function for computing the total number of oracle shots.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>m_k</strong> (<em>list</em>) – list with integers. Applications of the Grover-like
-amplification operator.</p></li>
-<li><p><strong>n_k</strong> (<em>list</em>) – list with integers. Number of shots for each value of m_k.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>oracle_shots</strong> – Number of total oracle calls for the input schedule</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Qlm abstract gate</p>
 </dd>
 </dl>
 </dd></dl>
@@ -394,7 +371,7 @@ amplification operator.</p></li>
 be 2^n with n an int.
 :param array: Numpy Array whose dimensionality is going to test
 :type array: np.ndarray
-:param test: String for identification purposes
+:param test: String for identification purpouses
 :type test: str</p>
 <dl class="field-list simple">
 <dt class="field-odd">Raises</dt>
@@ -408,12 +385,6 @@ quantum state</p>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="QQuantLib.utils.utils.text_is_none">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">text_is_none</code><span class="sig-paren">(</span><em class="sig-param">variable</em>, <em class="sig-param">variable_name</em>, <em class="sig-param">variable_type=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.text_is_none" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raise an exception if variable is None</p>
 </dd></dl>
 
 </div>
