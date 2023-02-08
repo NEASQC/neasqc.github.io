@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>templates &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="AmplitudeEstimation" href="tnbs.amplitudeestimation.html" />
+    <link rel="prev" title="NEASQC Project" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.neasqc_benchmark">neasqc_benchmark</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.amplitudeestimation.html">AmplitudeEstimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.probabilityloading.html">ProbabilityLoading</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">templates</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="templates">
+<h1>templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h1>
+<p>In this folder several templates scripts for helping in the implementation development of a Benchmark Test Case are provided.</p>
+<div class="section" id="module-tnbs.templates.my_benchmark_execution">
+<span id="my-benchmark-execution"></span><h2>my_benchmark_execution<a class="headerlink" href="#module-tnbs.templates.my_benchmark_execution" title="Permalink to this headline">¶</a></h2>
+<p>Template for generic Benchmark Test Case Workflow</p>
+<dl class="class">
+<dt id="tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">KERNEL_BENCHMARK</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for execute a Kernerl benchmark</p>
+<dl class="method">
+<dt id="tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.exe">
+<code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute complete Benchmark WorkFlow</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">save</em>, <em class="sig-param">save_name</em>, <em class="sig-param">input_pdf</em>, <em class="sig-param">save_mode</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>For saving panda DataFrames to csvs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>save</strong> (<em>bool</em>) – For saving or not</p></li>
+<li><p><strong>save_nam</strong> (<em>str</em>) – name for file</p></li>
+<li><p><strong>input_pdf</strong> (<em>pandas DataFrame</em>) – </p></li>
+<li><p><strong>save_mode</strong> (<em>str</em>) – saving mode: overwrite (w) or append (a)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_execution.compute_samples">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">compute_samples</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.compute_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions computes the number of executions of the benchmark
+for assure an error r with a confidence of alpha</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>keyword arguments</em>) – For configuring the sampling computation</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>samples</strong> – DataFrame with the number of executions for each integration interval</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_execution.run_code">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">run_code</code><span class="sig-paren">(</span><em class="sig-param">n_qbits</em>, <em class="sig-param">repetitions</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.run_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>For configuration and execution of the benchmark kernel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_qbits</strong> (<em>int</em>) – number of qubits used for domain discretization</p></li>
+<li><p><strong>repetitions</strong> (<em>list</em>) – number of repetitions for the integral</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – for configuration of the benchmark kernel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>metrics</strong> – DataFrame with the desired metrics obtained for the integral computation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_execution.summarize_results">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">summarize_results</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.summarize_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create summary with statistics</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.templates.my_benchmark_info">
+<span id="my-benchmark-info"></span><h2>my_benchmark_info<a class="headerlink" href="#module-tnbs.templates.my_benchmark_info" title="Permalink to this headline">¶</a></h2>
+<p>Template for gathering the mandatory info for Benchmarks field of NEASQC
+report</p>
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_api">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_api</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collect the information about the used APIs</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_benchmark_info">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_benchmark_info</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_benchmark_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete WorkFlow for getting all the benchmar informated related info</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_benchmark_kernel">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_benchmark_kernel</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_benchmark_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name for the benchmark Kernel</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_classical_compilation">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_classical_compilation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_classical_compilation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about the classical compilation part of the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_endtime">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_endtime</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_endtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Providing the end time of the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_metadata_info">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_metadata_info</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_metadata_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Other important info user want to store in the final json.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_programlanguage">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_programlanguage</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_programlanguage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getting the programing language used for benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_programlanguage_vendor">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_programlanguage_vendor</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_programlanguage_vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getting the version of the programing language used for benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_programlanguage_version">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_programlanguage_version</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_programlanguage_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getting the version of the programing language used for benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_quantum_compilation">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_quantum_compilation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_quantum_compilation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about the quantum compilation part of the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_starttime">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_starttime</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_starttime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Providing the start time of the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_info.my_timemethod">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_info.</code><code class="sig-name descname">my_timemethod</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_info.my_timemethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Providing the method for getting the times</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.templates.my_benchmark_summary">
+<span id="my-benchmark-summary"></span><h2>my_benchmark_summary<a class="headerlink" href="#module-tnbs.templates.my_benchmark_summary" title="Permalink to this headline">¶</a></h2>
+<p>Template for properly formating the results of a benchamark kernel for
+filling Results sub-field of Benchmarks field</p>
+<dl class="function">
+<dt id="tnbs.templates.my_benchmark_summary.summarize_results">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_summary.</code><code class="sig-name descname">summarize_results</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_summary.summarize_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mandatory code for properly present the benchmark results following
+the NEASQC jsonschema</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.templates.my_environment_info">
+<span id="my-environment-info"></span><h2>my_environment_info<a class="headerlink" href="#module-tnbs.templates.my_environment_info" title="Permalink to this headline">¶</a></h2>
+<p>Template for gathering different hardware information for main fields of
+NEASQC report generation</p>
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_QPUCPUConnection">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_QPUCPUConnection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_QPUCPUConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connection between the QPU and the CPU used in the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_cpu_model">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_cpu_model</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_cpu_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>model of the cpu used in the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_frecuency">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_frecuency</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_frecuency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frcuency of the used CPU</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_machine_name">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_machine_name</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_machine_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the machine where the benchmark was performed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_network">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_network</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Network connections if several QPUs are used</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_organisation">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_organisation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_organisation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given information about the organisation how uploads the benchmark</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_qpu">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_qpu</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_qpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete info about the used QPU</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.templates.my_environment_info.my_qpu_model">
+<code class="sig-prename descclassname">tnbs.templates.my_environment_info.</code><code class="sig-name descname">my_qpu_model</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_environment_info.my_qpu_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the model of the QPU</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.templates.neasqc_benchmark">
+<span id="neasqc-benchmark"></span><h2>neasqc_benchmark<a class="headerlink" href="#module-tnbs.templates.neasqc_benchmark" title="Permalink to this headline">¶</a></h2>
+<p>Template for complete generation of NEASQC Benhmark Test Case report</p>
+<dl class="class">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.templates.neasqc_benchmark.</code><code class="sig-name descname">BENCHMARK</code><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic class for benchmark applications in NEASQC</p>
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.exe">
+<code class="sig-name descname">exe</code><span class="sig-paren">(</span><em class="sig-param">info</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling the report.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>info</strong> (<em>dictionary</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for saving the generated benchmark report</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>string</em>) – pathf for storing the benchmark report</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_benchmark_info">
+<code class="sig-name descname">set_benchmark_info</code><span class="sig-paren">(</span><em class="sig-param">benchmark_info</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_benchmark_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling Benchmarks field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>benchmark_info</strong> (<em>OrderedDict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_cpu_model">
+<code class="sig-name descname">set_cpu_model</code><span class="sig-paren">(</span><em class="sig-param">cpu_model</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_cpu_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling CPUModel field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cpu_model</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_frecuency">
+<code class="sig-name descname">set_frecuency</code><span class="sig-paren">(</span><em class="sig-param">frecuency</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_frecuency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling Frequency field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>frecuency</strong> (<em>int</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_machine_name">
+<code class="sig-name descname">set_machine_name</code><span class="sig-paren">(</span><em class="sig-param">node_name</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_machine_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling MachineName field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<em>string</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_network">
+<code class="sig-name descname">set_network</code><span class="sig-paren">(</span><em class="sig-param">network</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling Network field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>OrderedDict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_organisation">
+<code class="sig-name descname">set_organisation</code><span class="sig-paren">(</span><em class="sig-param">organisation</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_organisation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling ReportOrganization field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>organisation</strong> (<em>string</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_cpu_connection">
+<code class="sig-name descname">set_qpu_cpu_connection</code><span class="sig-paren">(</span><em class="sig-param">qpu_cpu_connection</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_cpu_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling QPUCPUConnection field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qpu_cpu_connection</strong> (<em>OrderedDict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_description">
+<code class="sig-name descname">set_qpu_description</code><span class="sig-paren">(</span><em class="sig-param">qpu_description</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling QPUDescription field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qpu_description</strong> (<em>OrderedDict</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_model">
+<code class="sig-name descname">set_qpu_model</code><span class="sig-paren">(</span><em class="sig-param">qpu_model</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.set_qpu_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for filling QPUModel field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qpu_model</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for validating the generated benchmark report.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="NEASQC Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.amplitudeestimation.html" class="btn btn-neutral float-right" title="AmplitudeEstimation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Atos 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
