@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mlae_utils &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">mlae_utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-QQuantLib.AE.mlae_utils">
+<span id="mlae-utils"></span><h1>mlae_utils<a class="headerlink" href="#module-QQuantLib.AE.mlae_utils" title="Permalink to this headline">¶</a></h1>
+<p>This module contains necessary functions fro MLAE class</p>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
+<dl class="function">
+<dt id="QQuantLib.AE.mlae_utils.cost_function">
+<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em>, <em class="sig-param">m_k: list</em>, <em class="sig-param">n_k: list</em>, <em class="sig-param">h_k: list</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.cost_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method calculates the -Likelihood of angle theta
+for a given schedule m_k,n_k</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[L(\theta,\mathbf{h}) = -\sum_{k = 0}^M\log{l_k(\theta|h_k)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>list of ints</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>list of ints</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>list of ints</em>) – number of positive events measured for each m_k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>cost</strong> – the aggregation of the individual likelihoods</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AE.mlae_utils.likelihood">
+<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates Likelihood from Suzuki paper. For h_k positive events
+of n_k total events, this function calculates the probability of
+this taking into account that the probability of a positive
+event is given by theta and by m_k
+The idea is use this function to minimize it for this reason it gives
+minus Likelihood</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[l_k(\theta|h_k) = \sin^2\left((2m_k+1)\theta\right)^{h_k} \
+\cos^2 \left((2m_k+1)\theta\right)^{n_k-h_k}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gives the Likelihood p(h_k with m_k amplifications|theta)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.AE.mlae_utils.log_likelihood">
+<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">log_likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.log_likelihood" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates log of the likelihood from Suzuki paper.
+Notes</p>
+<div class="math notranslate nohighlight">
+\[\log{l_k(\theta|h_k)} = 2h_k\log\big[\sin\left((2m_k+1) \
+\theta\right)\big] +2(n_k-h_k)\log\big[\cos\left((2m_k+1) \
+\theta\right)\big]\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
+positive event.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Gives the log Likelihood p(h_k with m_k amplifications|theta)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

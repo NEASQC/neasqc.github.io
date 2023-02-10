@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>benchmark_utils &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="data_extracting" href="utils.data_extracting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="utils.html">QQuantLib.utils</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="utils.utils_utils.html">utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.data_extracting.html">data_extracting</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">benchmark_utils</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="utils.html">QQuantLib.utils</a></li>
+      <li class="breadcrumb-item active">benchmark_utils</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-QQuantLib.utils.benchmark_utils">
+<span id="benchmark-utils"></span><h1>benchmark_utils<a class="headerlink" href="#module-QQuantLib.utils.benchmark_utils" title="Permalink to this headline">¶</a></h1>
+<p>Utils functions from benchmark purpouses.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="QQuantLib.utils.benchmark_utils.combination_for_dictionary">
+<code class="sig-prename descclassname">QQuantLib.utils.benchmark_utils.</code><code class="sig-name descname">combination_for_dictionary</code><span class="sig-paren">(</span><em class="sig-param">input_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.benchmark_utils.combination_for_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of dictionaries with all the posible combination of
+the input dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_dict</strong> (<em>python dictionary</em>) – python dictionary where each key value MUST be a list. For each
+value of a list a new dictioanry will be created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>list_of_dictionaries</strong> – A list with all posible combination of dictionaries from the
+input dictionary</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of python dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.benchmark_utils.combination_for_list">
+<code class="sig-prename descclassname">QQuantLib.utils.benchmark_utils.</code><code class="sig-name descname">combination_for_list</code><span class="sig-paren">(</span><em class="sig-param">input_list</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.benchmark_utils.combination_for_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each dictionary of the list the function creates all posible
+combinations. All the posible combinations are concatenated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_list</strong> (<em>list of python dictionary</em>) – The values of each key of the each python dictionary MUST BE lists.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>list_of_combinations</strong> – A list with  the concatenation of all posible combinations for
+each dictionary of the input_list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of python dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.benchmark_utils.create_ae_pe_solution">
+<code class="sig-prename descclassname">QQuantLib.utils.benchmark_utils.</code><code class="sig-name descname">create_ae_pe_solution</code><span class="sig-paren">(</span><em class="sig-param">ae_list</em>, <em class="sig-param">problem_list</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.benchmark_utils.create_ae_pe_solution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of price estimation problems for solving with amplitude
+estimation (AE) techniques. Each element will have the complete
+information for generating a price estimation problem and the
+configuration for solving it using an AE algorithm. This is each element
+is a python dictionary that allows define a price estimation problem
+and solving it using a properly configure AE algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ae_list</strong> (<em>list</em>) – List with properly configured AE solvers.</p></li>
+<li><p><strong>problem_list</strong> (<em>list</em>) – List with different price estimation problems.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>solve_ae_pe_list</strong> – List where each element is a ae_pricep dictionary
+The list will have the combination of each posible amplitude
+estimation solver with all posible price problem list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.benchmark_utils.create_pe_problem">
+<code class="sig-prename descclassname">QQuantLib.utils.benchmark_utils.</code><code class="sig-name descname">create_pe_problem</code><span class="sig-paren">(</span><em class="sig-param">domain_cfg</em>, <em class="sig-param">payoff_cfg</em>, <em class="sig-param">density_cfg</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.benchmark_utils.create_pe_problem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a list of price estimation problems. Each element is a python
+dictionary with a complete option price estimation problem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_cfg</strong> (<em>list of dictionaries</em>) – Each dictionary has a domain configuration for a price estimation problem.</p></li>
+<li><p><strong>payoffs_cfg</strong> (<em>list of dictionaries</em>) – Each dictionary has an option configuration for a price estimation problem.</p></li>
+<li><p><strong>density_cfg</strong> (<em>list of dictionaries</em>) – Each dictionary has probability density configuration for a price estimation problem.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pe_problem_list</strong> – list with different price estimation problems.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="QQuantLib.utils.benchmark_utils.list_of_dicts_from_jsons">
+<code class="sig-prename descclassname">QQuantLib.utils.benchmark_utils.</code><code class="sig-name descname">list_of_dicts_from_jsons</code><span class="sig-paren">(</span><em class="sig-param">ae_json_list</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.benchmark_utils.list_of_dicts_from_jsons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a list of dictionaries from inputs jsons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ae_list</strong> (<em>list of json.</em>) – List with name of json files with a complete configuration of an
+amplitude estimation method</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ae_pricep_list</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of python dictionaries</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="utils.data_extracting.html" class="btn btn-neutral float-left" title="data_extracting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
