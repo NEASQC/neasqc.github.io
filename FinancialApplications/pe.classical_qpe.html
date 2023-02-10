@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>payoff_class &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>classical_qpe &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -22,8 +23,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="probability_class" href="probability_class.html" />
-    <link rel="prev" title="ae_price_estimation" href="ae_price_estimation.html" /> 
+    <link rel="next" title="QQuantLib.finance" href="finance.html" />
+    <link rel="prev" title="iterative_quantum_pe" href="pe.iterative_quantum_pe.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,14 +32,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> NEASQC documentation<img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 0.0.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -48,15 +54,12 @@
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="finance.html">QQuantLib.finance</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="classical_finance.html">classical_finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae_price_estimation.html">ae_price_estimation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">payoff_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="probability_class.html">probability_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quantum_integration.html">quantum_integration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pe.html">QQuantLib.PE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pe.iterative_quantum_pe.html">iterative_quantum_pe</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">classical_qpe</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -73,9 +76,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="finance.html">QQuantLib.finance</a> &raquo;</li>
-      <li>payoff_class</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="pe.html">QQuantLib.PE</a></li>
+      <li class="breadcrumb-item active">classical_qpe</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -108,42 +111,51 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="module-QQuantLib.finance.payoff_class">
-<span id="payoff-class"></span><h1>payoff_class<a class="headerlink" href="#module-QQuantLib.finance.payoff_class" title="Permalink to this headline">¶</a></h1>
-<p>Class definition for the PayOff</p>
-<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<div class="section" id="module-QQuantLib.PE.classical_qpe">
+<span id="classical-qpe"></span><h1>classical_qpe<a class="headerlink" href="#module-QQuantLib.PE.classical_qpe" title="Permalink to this headline">¶</a></h1>
+<p>This module contains necessary functions and classes to implement
+the classical Quantum Phase Estimation with inverse of the
+Quantum Fourier Transform. Following references were used:</p>
+<blockquote>
+<div><p>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
+Quantum amplitude amplification and estimation.
+AMS Contemporary Mathematics Series, 305.
+<a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
+<p>NEASQC deliverable: D5.1: Review of state-of-the-art for Pricing
+and Computation of VaR</p>
+</div></blockquote>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
 <dl class="class">
-<dt id="QQuantLib.finance.payoff_class.PayOff">
-<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.finance.payoff_class.</code><code class="sig-name descname">PayOff</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.payoff_class.PayOff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class for selecting derivative options and configuring them.</p>
+<dt id="QQuantLib.PE.classical_qpe.CQPE">
+<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.PE.classical_qpe.</code><code class="sig-name descname">CQPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for using classical Quantum Phase Estimation, with inverse of
+Quantum Fourier Transformation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>Dictionary for selecting and configuring the derivative option. ç
-Implemented keys:</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>strike: float</dt><dd><p>strike of the option.</p>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the CQPE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program with the initial Psi state over the
+Grover-like operator will be applied
+Only used if oracle is None</p>
+</dd>
+<dt>unitary_operator<span class="classifier">QLM gate or routine</span></dt><dd><p>Grover-like operator which autovalues want to be calculated
+Only used if oracle is None</p>
+</dd>
+<dt>cbits_number<span class="classifier">int</span></dt><dd><p>number of classical bits for phase estimation</p>
+</dd>
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of shots for quantum job. If 0 exact probabilities
+will be computed.</p>
 </dd>
 </dl>
-</li>
-<li><dl class="simple">
-<dt>coupon: float</dt><dd><p>only valid for Digital Options</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>pay_off<span class="classifier">string</span></dt><dd><p>type of pay_off function to load</p>
-</dd>
-</dl>
-</li>
-</ul>
 </p>
 </dd>
 </dl>
 <dl class="method">
-<dt id="QQuantLib.finance.payoff_class.PayOff.get_pay_off">
-<code class="sig-name descname">get_pay_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.payoff_class.PayOff.get_pay_off" title="Permalink to this definition">¶</a></dt>
-<dd><p>Select of a PayOff</p>
+<dt id="QQuantLib.PE.classical_qpe.CQPE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.PE.classical_qpe.CQPE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the quantum phase estimation routine</p>
 </dd></dl>
 
 </dd></dl>
@@ -154,8 +166,8 @@ Implemented keys:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ae_price_estimation.html" class="btn btn-neutral float-left" title="ae_price_estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="probability_class.html" class="btn btn-neutral float-right" title="probability_class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pe.iterative_quantum_pe.html" class="btn btn-neutral float-left" title="iterative_quantum_pe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="finance.html" class="btn btn-neutral float-right" title="QQuantLib.finance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

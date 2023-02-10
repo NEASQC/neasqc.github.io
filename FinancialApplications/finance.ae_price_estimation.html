@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QQuantLib.PE &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>ae_price_estimation &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="iterative_quantum_pe" href="pe.iterative_quantum_pe.html" />
-    <link rel="prev" title="ae_class" href="ae.ae_class.html" /> 
+    <link rel="next" title="payoff_class" href="finance.payoff_class.html" />
+    <link rel="prev" title="classical_finance" href="finance.classical_finance.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,12 +54,15 @@
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.PE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pe.iterative_quantum_pe.html">iterative_quantum_pe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pe.classical_qpe.html">classical_qpe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="finance.html">QQuantLib.finance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="finance.classical_finance.html">classical_finance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ae_price_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.payoff_class.html">payoff_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.probability_class.html">probability_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -77,7 +80,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">QQuantLib.PE</li>
+          <li class="breadcrumb-item"><a href="finance.html">QQuantLib.finance</a></li>
+      <li class="breadcrumb-item active">ae_price_estimation</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -110,23 +114,51 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="qquantlib-pe">
-<h1>QQuantLib.PE<a class="headerlink" href="#qquantlib-pe" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>PE</strong> or <em>Phase Estimation</em> package groups the python modules from <strong>QQuantLib</strong> that deals with phase estimation algorithms applied to amplitude estimation problem. Following modules are presented in this package.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="pe.iterative_quantum_pe.html">iterative_quantum_pe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pe.classical_qpe.html">classical_qpe</a></li>
-</ul>
+<div class="section" id="module-QQuantLib.finance.ae_price_estimation">
+<span id="ae-price-estimation"></span><h1>ae_price_estimation<a class="headerlink" href="#module-QQuantLib.finance.ae_price_estimation" title="Permalink to this headline">¶</a></h1>
+<p>Function for automation of different option price estimation using
+Amplitude Estimation algorithms.</p>
+<p>The function uses the DensityProbability and the PayOff classes for
+defining the option price estimation problem. Then q_solve_integral
+function is used for computing the expected value integral. The function
+deals with all the mandatory normalisations for returned the desired price
+estimation.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="QQuantLib.finance.ae_price_estimation.ae_price_estimation">
+<code class="sig-prename descclassname">QQuantLib.finance.ae_price_estimation.</code><code class="sig-name descname">ae_price_estimation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.ae_price_estimation.ae_price_estimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures an option price estimation problem and solving it using
+AE integration techniques</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary.</em>) – Dictionary for configuring the price estimation problem, the
+encoding of the price estimation data into the quantum circuit
+and the AE integration technique for solving it.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The keys for the input kwargs dictionary will be the necessary keys
+for configuring the DensityProbability class (see QQuantLib.finance.probability_class), the PayOff class (see QQuantLib.finance.payoff_class) and the q_solve_integral function (see QQuantLib.finance.quantum_integration).</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pdf</strong> – DataFrame with the configuration of the AE problem and the solution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ae.ae_class.html" class="btn btn-neutral float-left" title="ae_class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pe.iterative_quantum_pe.html" class="btn btn-neutral float-right" title="iterative_quantum_pe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="finance.classical_finance.html" class="btn btn-neutral float-left" title="classical_finance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="finance.payoff_class.html" class="btn btn-neutral float-right" title="payoff_class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

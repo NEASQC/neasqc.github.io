@@ -6,7 +6,8 @@
   <title>data_loading &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -22,7 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="encoding_protocols" href="encoding_protocols.html" />
+    <link rel="next" title="encoding_protocols" href="dl.encoding_protocols.html" />
     <link rel="prev" title="QQuantLib.DL" href="dl.html" /> 
 </head>
 
@@ -31,14 +32,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> NEASQC documentation<img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 0.0.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -47,7 +53,7 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="dl.html">QQuantLib.DL</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">data_loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="encoding_protocols.html">encoding_protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dl.encoding_protocols.html">encoding_protocols</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
@@ -70,9 +76,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="dl.html">QQuantLib.DL</a> &raquo;</li>
-      <li>data_loading</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="dl.html">QQuantLib.DL</a></li>
+      <li class="breadcrumb-item active">data_loading</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -198,7 +204,7 @@ int(np.log2(len(angle)))+1.</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_array">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1665681524350765101'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_array</code><span class="sig-paren">(</span><em class="sig-param">function_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1676022201152991165'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM AbstractGate for loading a normalised array into a quantum
 state.</p>
 <dl class="field-list simple">
@@ -247,7 +253,7 @@ The operator to implement is: p_gate*f_gate</p>
 
 <dl class="function">
 <dt id="QQuantLib.DL.data_loading.load_probability">
-<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1665681524350776201'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">QQuantLib.DL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1676022201153003665'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a QLM Abstract gate for loading a given discretized probability
 distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
@@ -344,7 +350,7 @@ the arity is: np.log2(size)+1</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dl.html" class="btn btn-neutral float-left" title="QQuantLib.DL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="encoding_protocols.html" class="btn btn-neutral float-right" title="encoding_protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dl.encoding_protocols.html" class="btn btn-neutral float-right" title="encoding_protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
