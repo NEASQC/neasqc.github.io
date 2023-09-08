@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QQuantLib.AA &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QQuantLib.AE" href="tnbs.BTC_02_AE.QQuantLib.AE.html" />
+    <link rel="prev" title="BTC_02_AE.QQuantLib" href="tnbs.BTC_02_AE.QQuantLib.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.ae_sine_integral">ae_sine_integral</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.html">BTC_02_AE.QQuantLib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.QQuantLib.html">BTC_02_AE.QQuantLib</a></li>
+      <li class="breadcrumb-item active">QQuantLib.AA</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="qquantlib-aa">
+<h1>QQuantLib.AA<a class="headerlink" href="#qquantlib-aa" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">
+<span id="qquantlib-aa-amplitude-amplification"></span><h2>QQuantLib.AA.amplitude_amplification<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all functions needed for creating Grover-like
+operators mandatory for using Quantum Amplitude Amplification
+and Estimation as explained in the 2000 Brassard paper:</p>
+<blockquote>
+<div><p>Gilles Brassard, Peter Hoyer, Michele Mosca and Alain Tapp
+Quantum Amplitude Amplification and Estimation
+AMS Contemporary Mathematics Series, 305, 06-2000
+<a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
+</div></blockquote>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u0_gate">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u0_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a QLM AbstractGate that implements an oracle:
+a reflection around the perpendicular state to a given state.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[If \hspace{1em} |\Psi\rangle=\alpha_0|\Psi_0\rangle+ \
+\alpha_1|\Psi_1\rangle \hspace{1em} where \hspace{1em} \
+|\Psi_0\rangle \perp |\Psi_1\rangle \hspace{1em} then \
+\hspace{1em} \mathcal{U0}(|\Psi_0\rangle)=\mathcal{I}-2 \
+|\Psi_0\rangle\langle\Psi_0|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – oracle that created the state</p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – target state</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>u0_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u_gate">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u_gate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a QLM AbstractGate that implements a grover
+diffusion operator from an input state.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{U}(|\Psi\rangle) = \mathcal{I}-2|\Psi\rangle\langle\Psi|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>u_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a QLM AbstractGate that returns the grover
+operator associated to a given oracle. This function is a composition
+of QLM AbstractGates generate by functions U and U0.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{G} = \mathcal{U}(|\Psi\rangle)\mathcal{U0}(|\Psi_0\rangle)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grover_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover_extended">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover_extended</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover_extended" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a QLM AbstractGate that returns the grover
+extended operator associated to a given oracle.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{G} = \mathcal{U}(|\Psi\rangle)\mathcal{U0}(|\Psi_0\rangle)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
+<li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
+<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>grover_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_ph</code><span class="sig-paren">(</span><em class="sig-param">angle</em>, <em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplexor implementation for a Multi-Controlled-phase gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>float</em>) – Desired angle for Controlled-Phase application</p></li>
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the multi-controlled phase gate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of a multi-controlled phase gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_z</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiplexor implementation for a multi-controlled-Z gate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the multi-controlled phase gate gate</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of a multi-controlled Z gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.phase_multiplexor_base">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">phase_multiplexor_base</code><span class="sig-paren">(</span><em class="sig-param">theta</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.phase_multiplexor_base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement an initial multiplexor for a controlled phase gate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Phase angle to apply</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of the basis multiplexor
+for the controlled phase gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.recursive_multiplexor">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">recursive_multiplexor</code><span class="sig-paren">(</span><em class="sig-param">input_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.recursive_multiplexor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new multiplexor from an input gate.
+In this case takes the input gate adds a new qubit and creates a new
+multiplexor by applying the input gate, a c-NOT and the input gate again</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_gate</strong> (<em>QLM routine</em>) – QLM routine with the gate we want for multiplexor</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>routine</strong> – QLM routine with a multiplexor of the input_gate</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM routine</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.reflection">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">reflection</code><span class="sig-paren">(</span><em class="sig-param">lista: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.reflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function returns a QLM AbstractGate that implement a reflection
+around the perpendicular state of a given state.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[|\Psi\rangle=|\Psi_0\rangle+|\Psi_1\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathcal{reflection}(|\Psi_0\rangle)|\Psi\rangle=
+-|\Psi_0\rangle+|\Psi_1\rangle\\\end{split}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lista</strong> (<em>list of ints</em>) – binary representation of the
+State that we want to rotate pi</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>reflection_gate</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_02_AE.QQuantLib.html" class="btn btn-neutral float-left" title="BTC_02_AE.QQuantLib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_02_AE.QQuantLib.AE.html" class="btn btn-neutral float-right" title="QQuantLib.AE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QQuantLib.finance &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QQuantLib.utils" href="tnbs.BTC_02_AE.QQuantLib.utils.html" />
+    <link rel="prev" title="QQuantLib.PE" href="tnbs.BTC_02_AE.QQuantLib.PE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.ae_sine_integral">ae_sine_integral</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.html">BTC_02_AE.QQuantLib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.QQuantLib.html">BTC_02_AE.QQuantLib</a></li>
+      <li class="breadcrumb-item active">QQuantLib.finance</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="qquantlib-finance">
+<h1>QQuantLib.finance<a class="headerlink" href="#qquantlib-finance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation">
+<span id="qquantlib-finance-ae-price-estimation"></span><h2>QQuantLib.finance.ae_price_estimation<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation" title="Permalink to this headline">¶</a></h2>
+<p>Function for automation of different option price estimation using
+Amplitude Estimation algorithms.</p>
+<p>The function uses the DensityProbability and the PayOff classes for
+defining the option price estimation problem. Then q_solve_integral
+function is used for computing the expected value integral. The function
+deals with all the mandatory normalisations for returned the desired price
+estimation.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation.ae_price_estimation">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation.</code><code class="sig-name descname">ae_price_estimation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation.ae_price_estimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures an option price estimation problem and solving it using
+AE integration techniques</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary.</em>) – Dictionary for configuring the price estimation problem, the
+encoding of the price estimation data into the quantum circuit
+and the AE integration technique for solving it.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The keys for the input kwargs dictionary will be the necessary keys
+for configuring the DensityProbability class (see QQuantLib.finance.probability_class), the PayOff class (see QQuantLib.finance.payoff_class) and the q_solve_integral function (see QQuantLib.finance.quantum_integration).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pdf</strong> – DataFrame with the configuration of the AE problem and the solution</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.finance.classical_finance">
+<span id="qquantlib-finance-classical-finance"></span><h2>QQuantLib.finance.classical_finance<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.finance.classical_finance" title="Permalink to this headline">¶</a></h2>
+<p>This module contains several auxiliary functions used in quantitative
+classical finances</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_call_price">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_call_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the price for a European call option.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[C(S, T) = S\Phi(d_1)-Ke^{-rT}\Phi(d_2)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>price</strong> – price of the European call option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_density">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_density</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the Black-Scholes density function at s_t for a given set
+of parameters. The formula is:</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\dfrac{1}{S_T\sigma\sqrt{2\pi T}}\exp\left(-\dfrac{ \
+\left(\log(S_T)-\mu\right)}{2\sigma^2T}\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu = (risk\_free\_rate-0.5\sigma)T+\log(S_0)\)</span>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – point where we do the evaluation</p></li>
+<li><p><strong>s_0</strong> (<em>float</em>) – current price</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>density</strong> – value of the Black-Scholes density function in s_t</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_digital_call_price">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_digital_call_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_digital_call_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the price for a digital(binary) call option.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[DC(S, T) = e^{-rT}Coupon N(d_2)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case that the underlying pring exceeds
+the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>price</strong> – price of the digital call option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_digital_put_price">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_digital_put_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_digital_put_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the price for a digital (binary) put option.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[DC(S, T) = e^{-rT}Coupon N(-d_2)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case that the underlying pring exceeds
+the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>price</strong> – price of the digital call option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_em_samples">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_em_samples</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">time_steps: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_em_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes samples from the approximated solution of the Black-Scholes
+SDE using the Euler-Maruyama discrimination.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[S_{t+\Delta t} = S_t+rS_tdt+\sigma S_t N(0, 1)\sqrt{dt}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>number_samples</strong> (<em>int</em>) – number of samples</p></li>
+<li><p><strong>steps</strong> (<em>time</em>) – number of time steps</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>s_t</strong> – array of samples from the SDE.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_exact_samples">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_exact_samples</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_exact_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes samples from the exact solution of the Black-Scholes SDE.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[S_T = S_0e^{\sigma*W_t+(risk_free_rate-\sigma^2/2)t}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>number_samples</strong> (<em>int</em>) – number of samples</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>s_t</strong> – array of samples from the SDE.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_forward_price">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_forward_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_forward_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the price for a forward contract.  Note that it doesn’t
+assume that we are at the begining of the lifetime of the contract</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[V(S, T) = S-Ke^{-r(T-t)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – time to expiration of the contract</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>price</strong> – price of the forward</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_probability">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_probability</code><span class="sig-paren">(</span><em class="sig-param">s_t: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a discrete probability distribution from the  Black-Scholes
+density function for a given set of parameters. This is done by evaluating
+the Black-Scholes density function in s_t and the normlising this result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>numpy array</em>) – points where we define the discrete probability distribution</p></li>
+<li><p><strong>s_0</strong> (<em>float</em>) – current price</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>distribution</strong> – discrete probability distribution from Black-Scholes density</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_put_price">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_put_price</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_put_price" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the price for a European put option.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[C(S, T) = Ke^{-rT}\Phi(-d_2)-S\Phi(-d_1)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>price</strong> – price of the European put option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_sde_solution">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_sde_solution</code><span class="sig-paren">(</span><em class="sig-param">x_: numpy.array</em>, <em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_sde_solution" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a certain parametrization <span class="math notranslate nohighlight">\(x\)</span> it returns a value of the
+underlying <span class="math notranslate nohighlight">\(S_T(x)\)</span> and the probability density of that
+value of the underlying.</p>
+<p class="rubric">Notes</p>
+<p>The formulas are:</p>
+<div class="math notranslate nohighlight">
+\[S_T = S_0e^{\sigma x+(risk_free_rate-\sigma^2/2)t}
+p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_</strong> (<em>numpy array</em>) – parametrization</p></li>
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>s_t</strong> (<em>numpy array</em>) – value of the underlying corresponding to parameter x</p></li>
+<li><p><strong>probability_density</strong> (<em>numpy array</em>) – probability density corresponding to s_t</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_tree">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">bs_tree</code><span class="sig-paren">(</span><em class="sig-param">s_0: float</em>, <em class="sig-param">risk_free_rate: float</em>, <em class="sig-param">volatility: float</em>, <em class="sig-param">maturity: float</em>, <em class="sig-param">number_samples: int</em>, <em class="sig-param">time_steps: int</em>, <em class="sig-param">discretization: int</em>, <em class="sig-param">bounds: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.bs_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the probabilities of all possible pahts from the
+approximated solution of the Black-Scholes SDE using the
+Euler-Maruyama discretization for a given discretization of the
+Brownian motion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
+<li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
+<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>number_samples</strong> (<em>int</em>) – number of samples</p></li>
+<li><p><strong>steps</strong> (<em>time</em>) – number of time steps</p></li>
+<li><p><strong>discretization</strong> (<em>float</em>) – number of points to build the discrete version
+of the gaussian density</p></li>
+<li><p><strong>bounds</strong> (<em>float</em>) – bounds of the Gaussian density</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>s_t</strong> – array of samples from the SDE.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array of floats</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.call_payoff">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">call_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.call_payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the payoff of a European call option.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[C(S_T, K) = \left(S_T-K, 0\right)^+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.digital_call_payoff">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">digital_call_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.digital_call_payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the payoff for a digital(binary) call option.
+The formula is:</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[DC(S_T, K, Coupon) = Coupon\mathbb{1}_{\{S_T-K\}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case
+that the underlying pring exceeds
+the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>payoff</strong> – payoff of the european digital call option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.digital_put_payoff">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">digital_put_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">coupon: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.digital_put_payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the payoff for a digital(binary) put option.</p>
+<p class="rubric">Notes</p>
+<p>The formula is:</p>
+<div class="math notranslate nohighlight">
+\[DC(S_T, K, Coupon) = Coupon\mathbb{1}_{\{K-S_T\}}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – current price of the underlying</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+<li><p><strong>coupon</strong> (<em>float</em>) – the amount received in case
+that the underlying pring exceeds
+the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>payoff</strong> – payoff of the european digital call option</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.futures_payoff">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">futures_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.futures_payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the payoff of a futures contract.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[F(S_T, K) = \left(S_T-K, 0\right)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.geometric_sum">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">geometric_sum</code><span class="sig-paren">(</span><em class="sig-param">base: float</em>, <em class="sig-param">exponent: int</em>, <em class="sig-param">coeficient: float = 1.0</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.geometric_sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes a geometric sum</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}s = a+a*base+a*base^2+a*base^3+...+a*base^{exponent} = \\
+= \sum_{k=0}^{exponent}a*base^k = \
+a\big(\frac{1-base^{exponent+1}}{1-base}\big)\end{split}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base</strong> (<em>float</em>) – base of the geometric sum</p></li>
+<li><p><strong>exponent</strong> (<em>int</em>) – maximum exponent for the geometric sum</p></li>
+<li><p><strong>coeficient</strong> (<em>float</em>) – coefficient for the geometric sum</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>return</strong> – result of the geometric sum</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.put_payoff">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.</code><code class="sig-name descname">put_payoff</code><span class="sig-paren">(</span><em class="sig-param">s_t: float</em>, <em class="sig-param">strike: float</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.classical_finance.put_payoff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the payoff of a European put option.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[P(S_T, K) = \left(K-S_T, 0\right)^+\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_t</strong> (<em>float</em>) – price</p></li>
+<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>payoff</strong> – the payoff</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.finance.payoff_class">
+<span id="qquantlib-finance-payoff-class"></span><h2>QQuantLib.finance.payoff_class<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.finance.payoff_class" title="Permalink to this headline">¶</a></h2>
+<p>Class definition for the PayOff</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="class">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.payoff_class.PayOff">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.payoff_class.</code><code class="sig-name descname">PayOff</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.payoff_class.PayOff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for selecting derivative options and configuring them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>Dictionary for selecting and configuring the derivative option. ç
+Implemented keys:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>strike: float</dt><dd><p>strike of the option.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>coupon: float</dt><dd><p>only valid for Digital Options</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>pay_off<span class="classifier">string</span></dt><dd><p>type of pay_off function to load</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.payoff_class.PayOff.get_pay_off">
+<code class="sig-name descname">get_pay_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.payoff_class.PayOff.get_pay_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select of a PayOff</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.finance.probability_class">
+<span id="qquantlib-finance-probability-class"></span><h2>QQuantLib.finance.probability_class<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.finance.probability_class" title="Permalink to this headline">¶</a></h2>
+<p>Definition for DensityProbability Class.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="class">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.probability_class.</code><code class="sig-name descname">DensityProbability</code><span class="sig-paren">(</span><em class="sig-param">probability_type: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for selecting pay off functions
+algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the asset and the probability used for simulating its behaviour.Implemented keys:</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated.</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset.</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability.get_density">
+<em class="property">static </em><code class="sig-name descname">get_density</code><span class="sig-paren">(</span><em class="sig-param">probability_type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability.get_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the probability function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability.get_density_prob">
+<em class="property">static </em><code class="sig-name descname">get_density_prob</code><span class="sig-paren">(</span><em class="sig-param">probability_type</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.probability_class.DensityProbability.get_density_prob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures a probability density</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density.</p>
+<dl class="simple">
+<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
+</dd>
+<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
+</dd>
+<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
+</dd>
+<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">
+<span id="qquantlib-finance-quantum-integration"></span><h2>QQuantLib.finance.quantum_integration<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration" title="Permalink to this headline">¶</a></h2>
+<p>This module contains a function for solving integrals using Amplitude
+Estimation techniques. The function uses the Encoding class for loading
+data into the quantum circuit by creating an oracle and the AE class for
+getting the amplitude of a selected state using AE techniques. The function
+deals with all the normalisations needed for transform this amplitude into
+the desired integral.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration.q_solve_integral">
+<code class="sig-prename descclassname">tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration.</code><code class="sig-name descname">q_solve_integral</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration.q_solve_integral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for solving an integral using quantum amplitude estimation techniques.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the integration to compute and the AE technique used for getting the solution.</p>
+<dl class="simple">
+<dt>array_function<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired function for encoding into the Quantum Circuit.</p>
+</dd>
+<dt>encoding<span class="classifier">int</span></dt><dd><p>Selecting the encode protocol</p>
+</dd>
+<dt>array_probability<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired probability for encoding into the Quantum Circuit. It can be None (uniform distribution will be used)</p>
+</dd>
+<dt>ae_type<span class="classifier">string</span></dt><dd><p>string with the desired AE algorithm: MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other kwargs input dictionary keys will be related with the encoding of the integral into the quantum circuit (see QQuantLib.DL.encoding_protocols) and for the configuration of the AE algorithm used (see QQuantLib.AE.ae_class)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>ae_estimation</strong> (<em>pandas DataFrame</em>) – DataFrame with the desired integral computation.</p></li>
+<li><p><strong>solver_ae</strong> (<em>objet based on the AE class</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_02_AE.QQuantLib.PE.html" class="btn btn-neutral float-left" title="QQuantLib.PE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_02_AE.QQuantLib.utils.html" class="btn btn-neutral float-right" title="QQuantLib.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC_02_AE.QQuantLib &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QQuantLib.AA" href="tnbs.BTC_02_AE.QQuantLib.AA.html" />
+    <link rel="prev" title="BTC_02_AE Amplitude Estimation" href="tnbs.BTC_02_AE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.ae_sine_integral">ae_sine_integral</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_02_AE.QQuantLib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+      <li class="breadcrumb-item active">BTC_02_AE.QQuantLib</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="btc-02-ae-qquantlib">
+<h1>BTC_02_AE.QQuantLib<a class="headerlink" href="#btc-02-ae-qquantlib" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html">QQuantLib.AA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">QQuantLib.AA.amplitude_amplification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html">QQuantLib.AE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_class">QQuantLib.AE.ae_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe">QQuantLib.AE.ae_classical_qpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe">QQuantLib.AE.ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae">QQuantLib.AE.iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae">QQuantLib.AE.maximum_likelihood_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae">QQuantLib.AE.montecarlo_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae">QQuantLib.AE.real_quantum_ae</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html">QQuantLib.DL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.data_loading">QQuantLib.DL.data_loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols">QQuantLib.DL.encoding_protocols</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html">QQuantLib.PE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">QQuantLib.PE.classical_qpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe">QQuantLib.PE.iterative_quantum_pe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html">QQuantLib.finance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.ae_price_estimation">QQuantLib.finance.ae_price_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.classical_finance">QQuantLib.finance.classical_finance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.payoff_class">QQuantLib.finance.payoff_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.probability_class">QQuantLib.finance.probability_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">QQuantLib.finance.quantum_integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html">QQuantLib.utils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils">QQuantLib.utils.benchmark_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.data_extracting">QQuantLib.utils.data_extracting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.qlm_solver">QQuantLib.utils.qlm_solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.utils">QQuantLib.utils.utils</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_02_AE.html" class="btn btn-neutral float-left" title="BTC_02_AE Amplitude Estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_02_AE.QQuantLib.AA.html" class="btn btn-neutral float-right" title="QQuantLib.AA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

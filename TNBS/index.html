@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NEASQC Project &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>The NEASQC BENCHMARK SUITE (TNBS) &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
@@ -18,10 +18,12 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="templates" href="tnbs.templates.html" /> 
+    <link rel="next" title="Benchmark Test Cases" href="tnbs.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,9 +50,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.templates.html">templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.amplitudeestimation.html">AmplitudeEstimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.probabilityloading.html">ProbabilityLoading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a></li>
 </ul>
 
         </div>
@@ -67,7 +67,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">NEASQC Project</li>
+      <li class="breadcrumb-item active">The NEASQC BENCHMARK SUITE (TNBS)</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -76,56 +76,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="welcome-to-the-the-neasqc-benchmark-suite-tnbs-documentation">
-<h1>Welcome to the The NEASQC Benchmark Suite (TNBS) documentation<a class="headerlink" href="#welcome-to-the-the-neasqc-benchmark-suite-tnbs-documentation" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="_images/logo-neasqc.svg"><img alt="NEASQC Project" class="align-center" src="_images/logo-neasqc.svg" /></a>
-<p>Documentation of the TNBS repository associated to the Work Package 3 of the NEASQC european project.</p>
-<p>The different <strong>Benchmark Test Case</strong> implementations are stored in the <strong>tnbs</strong> folder:</p>
-<ol class="arabic simple">
-<li><p><strong>tnbs/templates</strong>. Several python scripts that can be used for helping in the development of the software implementation of a <strong>Benchmark Test Case</strong> for a particular <strong>kernel</strong></p></li>
-<li><p><strong>tnbs/ProbabilityLoading</strong>. Implementation of the <strong>Benchmark Test Case</strong> for the <strong>Probability Loading kernel</strong>.</p></li>
-<li><p><strong>tnbs/AmplitudeEstimation</strong>. Implementation of the <strong>Benchmark Test Case</strong> for the <strong>Amplitude Estimation kernel</strong>.</p></li>
-</ol>
-<p>NEASQC project has received funding from the European Union’s Horizon 2020 research and innovation programme under Grant Agreement No. 951821. <a class="reference external" href="https://www.neasqc.eu/">https://www.neasqc.eu/</a></p>
-</div>
+  <div class="section" id="the-neasqc-benchmark-suite-tnbs">
+<h1>The NEASQC BENCHMARK SUITE (TNBS)<a class="headerlink" href="#the-neasqc-benchmark-suite-tnbs" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#subpackage-pl">Subpackage PL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_01_PL.PL.html">BTC_01_PL.PL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.ae_sine_integral">ae_sine_integral</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.html">BTC_02_AE.QQuantLib</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#subpackage-qpe">Subpackage QPE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html">BTC_03_QPE.QPE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#subpackage-ph">Subpackage PH</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html">BTC_04_PH.PH</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="tnbs.templates.html" class="btn btn-neutral float-right" title="templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tnbs.html" class="btn btn-neutral float-right" title="Benchmark Test Cases" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright Atos 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
   </div>
 
    

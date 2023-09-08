@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC_03_QPE.QPE &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="QPE.utils.data_extracting" href="tnbs.BTC_03_QPE.QPE.utils.html" />
+    <link rel="prev" title="BTC_03_QPE: Quantum Phase Estimation" href="tnbs.BTC_03_QPE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.html#module-tnbs.BTC_03_QPE.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_03_QPE.html#subpackage-qpe">Subpackage QPE</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_03_QPE.QPE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+      <li class="breadcrumb-item active">BTC_03_QPE.QPE</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="btc-03-qpe-qpe">
+<h1>BTC_03_QPE.QPE<a class="headerlink" href="#btc-03-qpe-qpe" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-tnbs.BTC_03_QPE.QPE.qpe_rz">
+<span id="qpe-qpe-rz"></span><h2>QPE.qpe_rz<a class="headerlink" href="#module-tnbs.BTC_03_QPE.QPE.qpe_rz" title="Permalink to this headline">¶</a></h2>
+<p>Class for executing QPE on a R_z^n operator</p>
+<p>Author: Gonzalo Ferro</p>
+<dl class="class">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe_rz.</code><code class="sig-name descname">QPE_RZ</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Probability Loading</p>
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.exe">
+<code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execution of workflow</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.get_metrics">
+<code class="sig-name descname">get_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.get_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing Metrics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.quantum_distribution">
+<code class="sig-name descname">quantum_distribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.quantum_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the quantum distribution of Rz eigenvalues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.summary">
+<code class="sig-name descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pandas summary</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.theoretical_distribution">
+<code class="sig-name descname">theoretical_distribution</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe_rz.QPE_RZ.theoretical_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the theoretical distribution of Rz eigenvalues</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_03_QPE.QPE.rz_lib">
+<span id="qpe-rz-lib"></span><h2>QPE.rz_lib<a class="headerlink" href="#module-tnbs.BTC_03_QPE.QPE.rz_lib" title="Permalink to this headline">¶</a></h2>
+<p>All mandatory functions for executing theoretical and atos qlm
+simulation for computing eigenvalues of a R_z^n operator</p>
+<p>Author: Gonzalo Ferro</p>
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.bitfield">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n_int: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.bitfield" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an int n_int to the corresponding bitfield of size size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_int</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – size of the bitfield</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>full</strong> – bitfield representation of n_int with size size</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of ints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.computing_shots">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">computing_shots</code><span class="sig-paren">(</span><em class="sig-param">pdf</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.computing_shots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the number of shots. The main idea is that the samples for
+the lowest degeneracy eigenvalues will be enough. In this case
+enough is that that we measured an eigenvalue that will have an
+error from respect to the theoretical one lower than the
+discretization precision at least 100 times</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with the theoretical eigenvalues</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>shots</strong> – number of shots for QPE algorithm</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.get_qpu">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">get_qpu</code><span class="sig-paren">(</span><em class="sig-param">qpu=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.get_qpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for selecting solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qpu</strong> (<em>str</em>) – <ul class="simple">
+<li><p>qlmass: for trying to use QLM as a Service connection to CESGA QLM</p></li>
+<li><p>python: for using PyLinalg simulator.</p></li>
+<li><p>c: for using CLinalg simulator</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>linal_qpu</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>solver for quantum jobs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.make_histogram">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">make_histogram</code><span class="sig-paren">(</span><em class="sig-param">eigenvalues</em>, <em class="sig-param">discretization</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.make_histogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an input list of eigenvalues compute the correspondent
+histogram using a bins = 2^discretization</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eigenvalues</strong> (<em>list</em>) – List with the eigenvalues</p></li>
+<li><p><strong>discretization</strong> (<em>int</em>) – Histogram discretization parameter: The number of bins for the
+histogram will be: 2^discretization</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pdf</strong> – Pandas Dataframe with the 2^m bin frequency histogram for the
+input list of eigenvalues. Columns
+* lambda : bin discretization for eigenvalues based on the
+discretization input
+* Probability: probability of finding any eigenvalue inside
+of the correspoondent lambda bin</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.qpe_rz_qlm">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">qpe_rz_qlm</code><span class="sig-paren">(</span><em class="sig-param">angles</em>, <em class="sig-param">auxiliar_qbits_number</em>, <em class="sig-param">shots=0</em>, <em class="sig-param">qpu=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.qpe_rz_qlm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the Quantum Phase Estimation for a Rz Kronecker product</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>list</em>) – list with the angles that are applied to each qubit of the circuit</p></li>
+<li><p><strong>auxiliar_qbits_number</strong> (<em>int</em>) – number of auxiliary qubits for doing QPE</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for getting the results. 0 for exact solution</p></li>
+<li><p><strong>qpu</strong> (<em>Atos QLM QPU object</em>) – QLM QPU for solving the circuit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>results</strong> (<em>pandas DataFrame</em>) – pandas DataFrame with the distribution of the eigenvalues with
+a bin discretization of 2^auxiliar_qbits_number
+* lambda : bin discretization for eigenvalues based on the
+discretization input (auxiliar_qbits_number input)
+* Probability: probability of finding any eigenvalue inside
+of the correspoondent lambda bin</p></li>
+<li><p><strong>qft_pe</strong> (<em>CQPE object</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.rz_angles">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">rz_angles</code><span class="sig-paren">(</span><em class="sig-param">thetas</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.rz_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a QLM abstract Gate with a R_z^n operator of an input array of angles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>thetas</strong> (<em>array</em>) – Array with the angles of the R_z^n operator</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>r_z_n</strong> – AbstractGate with the implementation of R_z_^n of the input angles</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.rz_eigenv_from_state">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">rz_eigenv_from_state</code><span class="sig-paren">(</span><em class="sig-param">state</em>, <em class="sig-param">angles</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.rz_eigenv_from_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a fixed input state and the angles of the R_z^n operator compute
+the correspondent eigenvalue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>np.array</em>) – Array with the binary representation of the input state</p></li>
+<li><p><strong>angles</strong> (<em>np.array</em>) – Array with the angles for the R_z^n operator.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>lambda_</strong> – The eigenvalue for the input state of the R_z^n operator with
+the input angles</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_lib.rz_eigv">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_lib.</code><code class="sig-name descname">rz_eigv</code><span class="sig-paren">(</span><em class="sig-param">angles</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_lib.rz_eigv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the complete list of eigenvalues for a R_z^n operator
+for an input list of angles
+Provides the histogram between [0,1] with a bin of 2**discretization
+for the distribution of eigenvalues of a R_z^n operator for a given
+list of angles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>np.array</em>) – Array with the angles for the R_z^n operator.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>pdf</strong> – DataFrame with all the eigenvalues of the R_z^n operator for
+the input list angles. Columns
+* States : Eigenstates of the Rz^n operator (least
+significant bit is leftmost)
+* Int_lsb_left : Integer conversion of the state
+(leftmost lsb)
+* Int_lsb_rightt : Integer conversion of the state
+(rightmost lsb)
+* Eigenvalues : correspondent eigenvalue</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="qpe-utils">
+<h2>QPE.utils<a class="headerlink" href="#qpe-utils" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html">QPE.utils.data_extracting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#module-tnbs.BTC_03_QPE.QPE.utils.qpe">QPE.utils.qpe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#qpe-utils-rz-qlm">QPE.utils.rz_qlm</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_03_QPE.html" class="btn btn-neutral float-left" title="BTC_03_QPE: Quantum Phase Estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_03_QPE.QPE.utils.html" class="btn btn-neutral float-right" title="QPE.utils.data_extracting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

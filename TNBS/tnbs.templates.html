@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>templates &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>tnbs.templates package &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
       <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
@@ -18,11 +18,11 @@
         <script src="_static/language_data.js"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="AmplitudeEstimation" href="tnbs.amplitudeestimation.html" />
-    <link rel="prev" title="NEASQC Project" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,17 +48,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">templates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_execution">my_benchmark_execution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_info">my_benchmark_info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_benchmark_summary">my_benchmark_summary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.my_environment_info">my_environment_info</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-tnbs.templates.neasqc_benchmark">neasqc_benchmark</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.amplitudeestimation.html">AmplitudeEstimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.probabilityloading.html">ProbabilityLoading</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a></li>
 </ul>
 
         </div>
@@ -75,7 +66,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">templates</li>
+      <li class="breadcrumb-item active">tnbs.templates package</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -84,42 +75,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="toctree-wrapper compound">
+  <div class="section" id="tnbs-templates-package">
+<h1>tnbs.templates package<a class="headerlink" href="#tnbs-templates-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="templates">
-<h1>templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h1>
-<p>In this folder several templates scripts for helping in the implementation development of a Benchmark Test Case are provided.</p>
 <div class="section" id="module-tnbs.templates.my_benchmark_execution">
-<span id="my-benchmark-execution"></span><h2>my_benchmark_execution<a class="headerlink" href="#module-tnbs.templates.my_benchmark_execution" title="Permalink to this headline">¶</a></h2>
+<span id="tnbs-templates-my-benchmark-execution-module"></span><h2>tnbs.templates.my_benchmark_execution module<a class="headerlink" href="#module-tnbs.templates.my_benchmark_execution" title="Permalink to this headline">¶</a></h2>
 <p>Template for generic Benchmark Test Case Workflow</p>
 <dl class="class">
 <dt id="tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">KERNEL_BENCHMARK</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class for execute a Kernerl benchmark</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for execute a Kernerl benchmark</p>
 <dl class="method">
 <dt id="tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.exe">
 <code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.KERNEL_BENCHMARK.exe" title="Permalink to this definition">¶</a></dt>
@@ -145,6 +113,12 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="tnbs.templates.my_benchmark_execution.build_iterator">
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">build_iterator</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.build_iterator" title="Permalink to this definition">¶</a></dt>
+<dd><p>For building the iterator of the benchmark</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="tnbs.templates.my_benchmark_execution.compute_samples">
 <code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">compute_samples</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.compute_samples" title="Permalink to this definition">¶</a></dt>
 <dd><p>This functions computes the number of executions of the benchmark
@@ -164,21 +138,23 @@ for assure an error r with a confidence of alpha</p>
 
 <dl class="function">
 <dt id="tnbs.templates.my_benchmark_execution.run_code">
-<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">run_code</code><span class="sig-paren">(</span><em class="sig-param">n_qbits</em>, <em class="sig-param">repetitions</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.run_code" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">tnbs.templates.my_benchmark_execution.</code><code class="sig-name descname">run_code</code><span class="sig-paren">(</span><em class="sig-param">iterator_step</em>, <em class="sig-param">repetitions</em>, <em class="sig-param">stage_bench</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.my_benchmark_execution.run_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>For configuration and execution of the benchmark kernel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>n_qbits</strong> (<em>int</em>) – number of qubits used for domain discretization</p></li>
-<li><p><strong>repetitions</strong> (<em>list</em>) – number of repetitions for the integral</p></li>
+<li><p><strong>iterator_step</strong> (<em>tuple</em>) – tuple with elements from iterator built from build_iterator.</p></li>
+<li><p><strong>repetitions</strong> (<em>list</em>) – number of repetitions for each execution</p></li>
+<li><p><strong>stage_bench</strong> (<em>str</em>) – benchmark stage. Only: benchmark, pre-benchamrk</p></li>
 <li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – for configuration of the benchmark kernel</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>metrics</strong> – DataFrame with the desired metrics obtained for the integral computation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>pandas DataFrame</p>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>metrics</strong> (<em>pandas DataFrame</em>) – DataFrame with the desired metrics obtained for the integral computation</p></li>
+<li><p><strong>save_name</strong> (<em>string</em>) – Desired name for saving the results of the execution</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -191,7 +167,7 @@ for assure an error r with a confidence of alpha</p>
 
 </div>
 <div class="section" id="module-tnbs.templates.my_benchmark_info">
-<span id="my-benchmark-info"></span><h2>my_benchmark_info<a class="headerlink" href="#module-tnbs.templates.my_benchmark_info" title="Permalink to this headline">¶</a></h2>
+<span id="tnbs-templates-my-benchmark-info-module"></span><h2>tnbs.templates.my_benchmark_info module<a class="headerlink" href="#module-tnbs.templates.my_benchmark_info" title="Permalink to this headline">¶</a></h2>
 <p>Template for gathering the mandatory info for Benchmarks field of NEASQC
 report</p>
 <dl class="function">
@@ -268,7 +244,7 @@ report</p>
 
 </div>
 <div class="section" id="module-tnbs.templates.my_benchmark_summary">
-<span id="my-benchmark-summary"></span><h2>my_benchmark_summary<a class="headerlink" href="#module-tnbs.templates.my_benchmark_summary" title="Permalink to this headline">¶</a></h2>
+<span id="tnbs-templates-my-benchmark-summary-module"></span><h2>tnbs.templates.my_benchmark_summary module<a class="headerlink" href="#module-tnbs.templates.my_benchmark_summary" title="Permalink to this headline">¶</a></h2>
 <p>Template for properly formating the results of a benchamark kernel for
 filling Results sub-field of Benchmarks field</p>
 <dl class="function">
@@ -280,7 +256,7 @@ the NEASQC jsonschema</p>
 
 </div>
 <div class="section" id="module-tnbs.templates.my_environment_info">
-<span id="my-environment-info"></span><h2>my_environment_info<a class="headerlink" href="#module-tnbs.templates.my_environment_info" title="Permalink to this headline">¶</a></h2>
+<span id="tnbs-templates-my-environment-info-module"></span><h2>tnbs.templates.my_environment_info module<a class="headerlink" href="#module-tnbs.templates.my_environment_info" title="Permalink to this headline">¶</a></h2>
 <p>Template for gathering different hardware information for main fields of
 NEASQC report generation</p>
 <dl class="function">
@@ -333,12 +309,13 @@ NEASQC report generation</p>
 
 </div>
 <div class="section" id="module-tnbs.templates.neasqc_benchmark">
-<span id="neasqc-benchmark"></span><h2>neasqc_benchmark<a class="headerlink" href="#module-tnbs.templates.neasqc_benchmark" title="Permalink to this headline">¶</a></h2>
+<span id="tnbs-templates-neasqc-benchmark-module"></span><h2>tnbs.templates.neasqc_benchmark module<a class="headerlink" href="#module-tnbs.templates.neasqc_benchmark" title="Permalink to this headline">¶</a></h2>
 <p>Template for complete generation of NEASQC Benhmark Test Case report</p>
 <dl class="class">
 <dt id="tnbs.templates.neasqc_benchmark.BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.templates.neasqc_benchmark.</code><code class="sig-name descname">BENCHMARK</code><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generic class for benchmark applications in NEASQC</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generic class for benchmark applications in NEASQC</p>
 <dl class="method">
 <dt id="tnbs.templates.neasqc_benchmark.BENCHMARK.exe">
 <code class="sig-name descname">exe</code><span class="sig-paren">(</span><em class="sig-param">info</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.templates.neasqc_benchmark.BENCHMARK.exe" title="Permalink to this definition">¶</a></dt>
@@ -469,20 +446,20 @@ NEASQC report generation</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-tnbs.templates">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tnbs.templates" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="NEASQC Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="tnbs.amplitudeestimation.html" class="btn btn-neutral float-right" title="AmplitudeEstimation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright Atos 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
   </div>
 
    

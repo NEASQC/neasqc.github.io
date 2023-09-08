@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC_01_PL.PL &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PL.utils.data_extracting" href="tnbs.BTC_01_PL.PL.utils.html" />
+    <link rel="prev" title="BTC_01_PL: Probability Loading" href="tnbs.BTC_01_PL.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_01_PL.html#subpackage-pl">Subpackage PL</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_01_PL.PL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+      <li class="breadcrumb-item active">BTC_01_PL.PL</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="btc-01-pl-pl">
+<h1>BTC_01_PL.PL<a class="headerlink" href="#btc-01-pl-pl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-tnbs.BTC_01_PL.PL.data_loading">
+<span id="pl-data-loading"></span><h2>PL.data_loading<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_loading" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all the functions in order to load data into the
+quantum state.
+There are two implementations for the loading of a function:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>one based on brute force</p></li>
+<li><p>one based on multiplexors.</p></li>
+</ul>
+</div></blockquote>
+<p>The implementation of the multiplexors is a non-recursive version of:</p>
+<blockquote>
+<div><p>V.V. Shende, S.S. Bullock, and I.L. Markov.
+Synthesis of quantum-logic circuits.
+IEEE Transactions on Computer-Aided Design of Integrated Circuits
+and Systems, 25(6):1000–1010, Jun 2006
+arXiv:quant-ph/0406176v5</p>
+</div></blockquote>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_qlm_probability</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">load_method</em>, <em class="sig-param">shots</em>, <em class="sig-param">qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>executing quantum stuff</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.get_qpu">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_qpu</code><span class="sig-paren">(</span><em class="sig-param">qpu=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_qpu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for selecting solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qpu</strong> (<em>str</em>) – <ul class="simple">
+<li><p>qlmass: for trying to use QLM as a Service connection to CESGA QLM</p></li>
+<li><p>python: for using PyLinalg simulator.</p></li>
+<li><p>c: for using CLinalg simulator</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>linal_qpu</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>solver for quantum jobs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_theoric_probability</code><span class="sig-paren">(</span><em class="sig-param">n_qbits: int) -&gt; (numpy.ndarray</em>, <em class="sig-param">numpy.ndarray</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'int'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the discretization of the PDF for N qubits</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angle">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angle</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em>, <em class="sig-param">index: int</em>, <em class="sig-param">angle: float</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an QLM Abstract Gate that apply a rotation of a given angle
+into a auxiliary qubit controlled by a given state of the measurement basis.
+Direct QLM multi controlled rotations were used for the implementation.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\mathcal{load\_angle}(\theta, |i\rangle)|\Psi\rangle \
+=\sum_{j=0, j\ne i}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle+ \
+\alpha_i|i\rangle\otimes\big(\cos(\theta)|0\rangle+\sin(\theta) \
+|1\rangle\big)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the control register. The arity of the gate is number_qubits+1.</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – Index of the state that we control.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>) – Angle that we load.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angles">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angles</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function serves as an interface for the two different implementations
+of multi controlled rotations: load_angles_brute_force and multiplexor_RY.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\mathcal{load\_angles}([\theta_j]_{j=0,1,2...2^n-1})|\Psi\rangle \
+=\sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes \
+\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p></li>
+<li><p><strong>method</strong> (<em>string</em>) – Method used in the loading. Default method.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angles_brute_force</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of angles this function creates a QLM routine that applies
+rotations of each angle of the list, over an auxiliary qubit, controlled
+by the different states of the measurement basis.
+Direct QLM multi controlled rotations were used for the implementation.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\mathcal{load\_angles\_brute\_force} \
+([\theta_j]_{j=0,1,2...2^n-1}) |\Psi\rangle=\sum_{j=0}^{2^n-1} \
+\alpha_j|j\rangle\otimes\big(\cos(\theta_j)|0\rangle+ \
+\sin(\theta_j)|1\rangle\big)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
+int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.load_probability">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1694181419092716219'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a QLM Abstract gate for loading a given discretized probability
+distribution using Quantum Multiplexors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
+of the gate is int(np.log2(len(probability_array))).</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – <dl class="simple">
+<dt>type of loading method used:</dt><dd><p>multiplexor : with quantum Multiplexors
+brute_force : using multicontrolled rotations by state</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>id_name</strong> (<em>str</em>) – name for the Abstract Gate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>P_Gate</strong> – Customized Abstract Gate for Loading Probability array using
+Quantum Multiplexors</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.mask">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the state <span class="math notranslate nohighlight">\(|index\rangle\)</span> into the state
+<span class="math notranslate nohighlight">\(|11...1\rangle\)</span> of size number qubits.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) – </p></li>
+<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mask</strong> – the gate that we have to apply in order to transform
+state <span class="math notranslate nohighlight">\(|index\rangle\)</span>. Note that it affects all states.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Qlm abstract gate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry">
+<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">multiplexor_ry</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of angles this functions creates a QLM routine that applies
+rotations of each angle of the list, over an auxiliary qubit, controlled
+by the different states of the measurement basis.
+The multi-controlled rotations were implemented using Quantum Multiplexors.</p>
+<p class="rubric">Notes</p>
+<div class="math notranslate nohighlight">
+\[|\Psi\rangle = \sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes|0\rangle\]</div>
+<div class="math notranslate nohighlight">
+\[\mathcal{multiplexor\_RY} \
+([\theta_j]_{j=0,1,2...2^n-1})|\Psi\rangle = \sum_{j=0}^{2^n-1} \
+\alpha_j|j\rangle\otimes\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – <dl class="simple">
+<dt>Angles to load in the circuit. The arity of the gate is:</dt><dd><p>int(np.log2(len(angle)))+1.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tnbs.BTC_01_PL.PL.load_probabilities">
+<span id="pl-load-probabilities"></span><h2>PL.load_probabilities<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.load_probabilities" title="Permalink to this headline">¶</a></h2>
+<p>Mandatory code for softaware implemetation of the Benchmark Test Case
+of PL kernel</p>
+<dl class="class">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.load_probabilities.</code><code class="sig-name descname">LoadProbabilityDensity</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Probability Loading</p>
+<dl class="method">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe">
+<code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execution of workflow</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics">
+<code class="sig-name descname">get_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing Metrics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf">
+<code class="sig-name descname">get_quantum_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing quantum probability density function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf">
+<code class="sig-name descname">get_theoric_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computing theoretical probability densitiy function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary">
+<code class="sig-name descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pandas summary</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="pl-utils">
+<h2>PL.utils<a class="headerlink" href="#pl-utils" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_01_PL.PL.utils.html">PL.utils.data_extracting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_01_PL.PL.utils.html#module-tnbs.BTC_01_PL.PL.utils.utils">PL.utils.utils</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_01_PL.html" class="btn btn-neutral float-left" title="BTC_01_PL: Probability Loading" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_01_PL.PL.utils.html" class="btn btn-neutral float-right" title="PL.utils.data_extracting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
