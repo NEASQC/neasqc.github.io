@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BTC_04_PH.PH" href="tnbs.BTC_04_PH.PH.html" />
-    <link rel="prev" title="QPE.utils.data_extracting" href="tnbs.BTC_03_QPE.QPE.utils.html" /> 
+    <link rel="prev" title="BTC_03_QPE.QPE" href="tnbs.BTC_03_QPE.QPE.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -97,9 +97,10 @@
              
   <div class="section" id="btc-04-ph-parent-hamiltonian">
 <h1>BTC_04_PH: Parent Hamiltonian<a class="headerlink" href="#btc-04-ph-parent-hamiltonian" title="Permalink to this headline">¶</a></h1>
+<p>Implementation of the <strong>BTC</strong> for the <strong>PH kernel</strong> of <strong>TNBS</strong>.</p>
 <div class="section" id="module-tnbs.BTC_04_PH.my_benchmark_execution">
 <span id="my-benchmark-execution"></span><h2>my_benchmark_execution<a class="headerlink" href="#module-tnbs.BTC_04_PH.my_benchmark_execution" title="Permalink to this headline">¶</a></h2>
-<p>Template for generic Benchmark Test Case Workflow</p>
+<p>This module execute a complete BTC of the PH kernel</p>
 <dl class="class">
 <dt id="tnbs.BTC_04_PH.my_benchmark_execution.KERNEL_BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_04_PH.my_benchmark_execution.</code><code class="sig-name descname">KERNEL_BENCHMARK</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.my_benchmark_execution.KERNEL_BENCHMARK" title="Permalink to this definition">¶</a></dt>
@@ -185,8 +186,8 @@ for ensuring an error r with a confidence level of alpha</p>
 </div>
 <div class="section" id="module-tnbs.BTC_04_PH.my_benchmark_info">
 <span id="my-benchmark-info"></span><h2>my_benchmark_info<a class="headerlink" href="#module-tnbs.BTC_04_PH.my_benchmark_info" title="Permalink to this headline">¶</a></h2>
-<p>Template for gathering the mandatory info for Benchmarks field of NEASQC
-report</p>
+<p>This module gathers all mandatory information for Benchmarks field
+of NEASQC JSON report for a BTC PH kernel execution.</p>
 <dl class="function">
 <dt id="tnbs.BTC_04_PH.my_benchmark_info.my_api">
 <code class="sig-prename descclassname">tnbs.BTC_04_PH.my_benchmark_info.</code><code class="sig-name descname">my_api</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.my_benchmark_info.my_api" title="Permalink to this definition">¶</a></dt>
@@ -262,8 +263,9 @@ report</p>
 </div>
 <div class="section" id="module-tnbs.BTC_04_PH.my_benchmark_summary">
 <span id="my-benchmark-summary"></span><h2>my_benchmark_summary<a class="headerlink" href="#module-tnbs.BTC_04_PH.my_benchmark_summary" title="Permalink to this headline">¶</a></h2>
-<p>Template for properly formating the results of a benchamark kernel for
-filling Results sub-field of Benchmarks field</p>
+<p>This module is for properly formating the Results sub-field of
+Benchmarks field of the NEASQC JSON report by gathering the results of
+a complete BTC of the PH kernel.</p>
 <dl class="function">
 <dt id="tnbs.BTC_04_PH.my_benchmark_summary.summarize_results">
 <code class="sig-prename descclassname">tnbs.BTC_04_PH.my_benchmark_summary.</code><code class="sig-name descname">summarize_results</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.my_benchmark_summary.summarize_results" title="Permalink to this definition">¶</a></dt>
@@ -274,8 +276,8 @@ the NEASQC jsonschema</p>
 </div>
 <div class="section" id="module-tnbs.BTC_04_PH.my_environment_info">
 <span id="my-environment-info"></span><h2>my_environment_info<a class="headerlink" href="#module-tnbs.BTC_04_PH.my_environment_info" title="Permalink to this headline">¶</a></h2>
-<p>Template for gathering different hardware information for main fields of
-NEASQC report generation</p>
+<p>Module for gathering different hardware information for main fields of
+NEASQC report generation for reporting BTC of a PH kernel</p>
 <dl class="function">
 <dt id="tnbs.BTC_04_PH.my_environment_info.my_QPUCPUConnection">
 <code class="sig-prename descclassname">tnbs.BTC_04_PH.my_environment_info.</code><code class="sig-name descname">my_QPUCPUConnection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.my_environment_info.my_QPUCPUConnection" title="Permalink to this definition">¶</a></dt>
@@ -327,7 +329,8 @@ NEASQC report generation</p>
 </div>
 <div class="section" id="module-tnbs.BTC_04_PH.neasqc_benchmark">
 <span id="neasqc-benchmark"></span><h2>neasqc_benchmark<a class="headerlink" href="#module-tnbs.BTC_04_PH.neasqc_benchmark" title="Permalink to this headline">¶</a></h2>
-<p>Template for complete generation of NEASQC Benhmark Test Case report</p>
+<p>Module for complete generation of NEASQC Benhmark Test Case report
+for a BTC PH kernel</p>
 <dl class="class">
 <dt id="tnbs.BTC_04_PH.neasqc_benchmark.BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_04_PH.neasqc_benchmark.</code><code class="sig-name descname">BENCHMARK</code><a class="headerlink" href="#tnbs.BTC_04_PH.neasqc_benchmark.BENCHMARK" title="Permalink to this definition">¶</a></dt>
@@ -469,11 +472,12 @@ NEASQC report generation</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html">BTC_04_PH.PH</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.ansatzes">PH.ansatzes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.btc_ph">PH.btc_ph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.contractions">PH.contractions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.naive">PH.naive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.parent_hamiltonian">PH.parent_hamiltonian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.execution_ph">PH.execution_ph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.workflow">PH.workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.contractions">PH.contractions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.pauli">PH.pauli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_04_PH.PH.html#module-tnbs.BTC_04_PH.PH.utils_ph">PH.utils_ph</a></li>
 </ul>
 </li>
 </ul>
@@ -485,7 +489,7 @@ NEASQC report generation</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="tnbs.BTC_03_QPE.QPE.utils.html" class="btn btn-neutral float-left" title="QPE.utils.data_extracting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_03_QPE.QPE.html" class="btn btn-neutral float-left" title="BTC_03_QPE.QPE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="tnbs.BTC_04_PH.PH.html" class="btn btn-neutral float-right" title="BTC_04_PH.PH" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

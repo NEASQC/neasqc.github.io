@@ -23,7 +23,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="QPE.utils.data_extracting" href="tnbs.BTC_03_QPE.QPE.utils.html" />
+    <link rel="next" title="BTC_04_PH: Parent Hamiltonian" href="tnbs.BTC_04_PH.html" />
     <link rel="prev" title="BTC_03_QPE: Quantum Phase Estimation" href="tnbs.BTC_03_QPE.html" /> 
 </head>
 
@@ -192,12 +192,12 @@ discretization precision at least 100 times</p>
 <dd><p>Function for selecting solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>qpu</strong> (<em>str</em>) – <ul class="simple">
-<li><p>qlmass: for trying to use QLM as a Service connection to CESGA QLM</p></li>
-<li><p>python: for using PyLinalg simulator.</p></li>
-<li><p>c: for using CLinalg simulator</p></li>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qpu</strong> (<em>str</em>) – </p></li>
+<li><p><strong>qlmass</strong> (<em>*</em>) – </p></li>
+<li><p><strong>python</strong> (<em>*</em>) – </p></li>
+<li><p><strong>c</strong> (<em>*</em>) – </p></li>
 </ul>
-</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>linal_qpu</strong></p>
@@ -332,15 +332,228 @@ significant bit is leftmost)
 </dd></dl>
 
 </div>
-<div class="section" id="qpe-utils">
-<h2>QPE.utils<a class="headerlink" href="#qpe-utils" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html">QPE.utils.data_extracting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#module-tnbs.BTC_03_QPE.QPE.utils.qpe">QPE.utils.qpe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#qpe-utils-rz-qlm">QPE.utils.rz_qlm</a></li>
+<div class="section" id="module-tnbs.BTC_03_QPE.QPE.rz_qlm">
+<span id="qpe-rz-qlm"></span><h2>QPE.rz_qlm<a class="headerlink" href="#module-tnbs.BTC_03_QPE.QPE.rz_qlm" title="Permalink to this headline">¶</a></h2>
+<p>Author: Gonzal Ferro</p>
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_qlm.qpe_rz_qlm">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_qlm.</code><code class="sig-name descname">qpe_rz_qlm</code><span class="sig-paren">(</span><em class="sig-param">angles</em>, <em class="sig-param">auxiliar_qbits_number</em>, <em class="sig-param">shots=0</em>, <em class="sig-param">qpu=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_qlm.qpe_rz_qlm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the Quantum Phase Estimation for a Rz Kroneckr product</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>list</em>) – list with the angles that are applied to each qubit of the circuit</p></li>
+<li><p><strong>auxiliar_qbits_number</strong> (<em>int</em>) – number of auxiliar qubits for doing QPE</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for gettiong the results. 0 for exact solution</p></li>
+<li><p><strong>qpu</strong> (<em>Atos QLM QPU object</em>) – QLM QPU for solving the circuit</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>results</strong> (<em>pandas DataFrame</em>) – pandas DataFrame with the distribution of the eigenvalues with
+a bin discretization of 2^auxiliar_qbits_number
+* lambda : bin discretization for eigenvalues based on the
+discretization input (auxiliar_qbits_number input)
+* Probability: probability of finding any eigenvalue inside
+of the correspoondent lambda bin</p></li>
+<li><p><strong>qft_pe</strong> (<em>CQPE object</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.rz_qlm.rz_angles">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.rz_qlm.</code><code class="sig-name descname">rz_angles</code><span class="sig-paren">(</span><em class="sig-param">thetas</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.rz_qlm.rz_angles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a QLM abstract Gate with a R_z^n operator of an input array of angles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>thetas</strong> (<em>array</em>) – Array with the angles of the R_z^n operator</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>r_z_n</strong> – AbstractGate with the implementation of R_z_^n of the input angles</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
+<div class="section" id="module-tnbs.BTC_03_QPE.QPE.qpe">
+<span id="qpe-qpe"></span><h2>QPE.qpe<a class="headerlink" href="#module-tnbs.BTC_03_QPE.QPE.qpe" title="Permalink to this headline">¶</a></h2>
+<p>Mandatory functions for performing classical QPE
+Author: Gonzal Ferro</p>
+<dl class="class">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.CQPE">
+<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">CQPE</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.CQPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for using classical Quantum Phase Estimation, with inverse of
+Quantum Fourier Transformation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the CQPE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program with the initial Psi state over the
+Grover-like operator will be applied
+Only used if oracle is None</p>
+</dd>
+<dt>unitary_operator<span class="classifier">QLM gate or routine</span></dt><dd><p>Grover-like operator which autovalues want to be calculated
+Only used if oracle is None</p>
+</dd>
+<dt>cbits_number<span class="classifier">int</span></dt><dd><p>number of classical bits for phase estimation</p>
+</dd>
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of shots for quantum job. If 0 exact probabilities
+will be computed.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.CQPE.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.CQPE.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the quantum phase estimation routine</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.check_list_type">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x_input</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.check_list_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a list x_input is of type tipo
+:param x_input:
+:type x_input: list
+:param tipo: it has to be understandable by numpy
+:type tipo: data type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>y_output</strong> – numpy array of type tipo.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.create_qcircuit">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">create_qcircuit</code><span class="sig-paren">(</span><em class="sig-param">prog_q</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.create_qcircuit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a QLM program creates a QLM circuit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prog_q</strong> (<em>QLM QProgram</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>circuit</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM circuit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.create_qjob">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">create_qjob</code><span class="sig-paren">(</span><em class="sig-param">circuit</em>, <em class="sig-param">shots=0</em>, <em class="sig-param">qubits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.create_qjob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a QLM circuit creates a QLM job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>) – </p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurmentes</p></li>
+<li><p><strong>qubits</strong> (<em>list</em>) – with the qubits to be measured</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>job</strong> – job for submit to QLM QPU</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM job</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.create_qprogram">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">create_qprogram</code><span class="sig-paren">(</span><em class="sig-param">quantum_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.create_qprogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Quantum Program from an input qlm gate or routine</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>quantum_gate</strong> (<em>QLM gate</em><em> or </em><em>QLM routine</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>q_prog</strong> – Quantum Program from input QLM gate or routine</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QLM Program.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.get_results">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param">quantum_object</em>, <em class="sig-param">linalg_qpu</em>, <em class="sig-param">shots: int = 0</em>, <em class="sig-param">qubits: list = None</em>, <em class="sig-param">complete: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for testing an input gate. This function creates the
+quantum program for an input gate, the correspondent circuit
+and job. Execute the job and gets the results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>quantum_object</strong> (<em>QLM Gate</em><em>, </em><em>Routine</em><em> or </em><em>Program</em>) – </p></li>
+<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of shots for the generated job.
+if 0 True probabilities will be computed</p></li>
+<li><p><strong>qubits</strong> (<em>list</em>) – list with the qubits for doing the measurement when simulating
+if None measurement over all allocated qubits will be provided</p></li>
+<li><p><strong>complete</strong> (<em>bool</em>) – for return the complete basis state. Useful when shots is not 0
+and all the posible basis states are necessary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with the results of the simulation</p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
+<li><p><strong>q_prog</strong> (<em>QLM Program.</em>)</p></li>
+<li><p><strong>job</strong> (<em>QLM job</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.load_qn_gate">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">load_qn_gate</code><span class="sig-paren">(</span><em class="sig-param">qlm_gate</em>, <em class="sig-param">n_times</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.load_qn_gate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an AbstractGate by applying an input gate n times</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qlm_gate</strong> (<em>QLM gate</em>) – QLM gate that will be applied n times</p></li>
+<li><p><strong>n_times</strong> (<em>int</em>) – number of times the qlm_gate will be applied</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="tnbs.BTC_03_QPE.QPE.qpe.proccess_qresults">
+<code class="sig-prename descclassname">tnbs.BTC_03_QPE.QPE.qpe.</code><code class="sig-name descname">proccess_qresults</code><span class="sig-paren">(</span><em class="sig-param">result</em>, <em class="sig-param">qubits</em>, <em class="sig-param">complete=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.QPE.qpe.proccess_qresults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Process a QLM results for creating a pandas DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>QLM results from a QLM qpu.</em>) – returned object from a qpu submit</p></li>
+<li><p><strong>qubits</strong> (<em>int</em>) – number of qubits</p></li>
+<li><p><strong>complete</strong> (<em>bool</em>) – for return the complete basis state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
@@ -349,7 +562,7 @@ significant bit is leftmost)
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="tnbs.BTC_03_QPE.html" class="btn btn-neutral float-left" title="BTC_03_QPE: Quantum Phase Estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="tnbs.BTC_03_QPE.QPE.utils.html" class="btn btn-neutral float-right" title="QPE.utils.data_extracting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tnbs.BTC_04_PH.html" class="btn btn-neutral float-right" title="BTC_04_PH: Parent Hamiltonian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

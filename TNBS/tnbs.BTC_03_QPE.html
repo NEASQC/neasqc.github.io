@@ -99,7 +99,7 @@
 <h1>BTC_03_QPE: Quantum Phase Estimation<a class="headerlink" href="#btc-03-qpe-quantum-phase-estimation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-tnbs.BTC_03_QPE.my_benchmark_execution">
 <span id="my-benchmark-execution"></span><h2>my_benchmark_execution<a class="headerlink" href="#module-tnbs.BTC_03_QPE.my_benchmark_execution" title="Permalink to this headline">¶</a></h2>
-<p>Template for generic Benchmark Test Case Workflow</p>
+<p>This module execute a complete BTC of the QPE kernel</p>
 <dl class="class">
 <dt id="tnbs.BTC_03_QPE.my_benchmark_execution.KERNEL_BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_03_QPE.my_benchmark_execution.</code><code class="sig-name descname">KERNEL_BENCHMARK</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.my_benchmark_execution.KERNEL_BENCHMARK" title="Permalink to this definition">¶</a></dt>
@@ -185,8 +185,8 @@ for ensuring an error r with a confidence level of alpha</p>
 </div>
 <div class="section" id="module-tnbs.BTC_03_QPE.my_benchmark_info">
 <span id="my-benchmark-info"></span><h2>my_benchmark_info<a class="headerlink" href="#module-tnbs.BTC_03_QPE.my_benchmark_info" title="Permalink to this headline">¶</a></h2>
-<p>Template for gathering the mandatory info for Benchmarks field of NEASQC
-report</p>
+<p>This module gathers all mandatory information for Benchmarks field
+of NEASQC JSON report for a BTC QPE kernel execution.</p>
 <dl class="function">
 <dt id="tnbs.BTC_03_QPE.my_benchmark_info.my_api">
 <code class="sig-prename descclassname">tnbs.BTC_03_QPE.my_benchmark_info.</code><code class="sig-name descname">my_api</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.my_benchmark_info.my_api" title="Permalink to this definition">¶</a></dt>
@@ -262,8 +262,9 @@ report</p>
 </div>
 <div class="section" id="module-tnbs.BTC_03_QPE.my_benchmark_summary">
 <span id="my-benchmark-summary"></span><h2>my_benchmark_summary<a class="headerlink" href="#module-tnbs.BTC_03_QPE.my_benchmark_summary" title="Permalink to this headline">¶</a></h2>
-<p>Template for properly formating the results of a benchamark kernel for
-filling Results sub-field of Benchmarks field</p>
+<p>This module is for properly formating the Results sub-field of
+Benchmarks field of the NEASQC JSON report by gathering the results of
+a complete BTC of the QPE kernel.</p>
 <dl class="function">
 <dt id="tnbs.BTC_03_QPE.my_benchmark_summary.summarize_results">
 <code class="sig-prename descclassname">tnbs.BTC_03_QPE.my_benchmark_summary.</code><code class="sig-name descname">summarize_results</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.my_benchmark_summary.summarize_results" title="Permalink to this definition">¶</a></dt>
@@ -274,8 +275,8 @@ the NEASQC jsonschema</p>
 </div>
 <div class="section" id="module-tnbs.BTC_03_QPE.my_environment_info">
 <span id="my-environment-info"></span><h2>my_environment_info<a class="headerlink" href="#module-tnbs.BTC_03_QPE.my_environment_info" title="Permalink to this headline">¶</a></h2>
-<p>Template for gathering different hardware information for main fields of
-NEASQC report generation</p>
+<p>Module for gathering different hardware information for main fields of
+NEASQC report generation for reporting BTC of a QPE kernel</p>
 <dl class="function">
 <dt id="tnbs.BTC_03_QPE.my_environment_info.my_QPUCPUConnection">
 <code class="sig-prename descclassname">tnbs.BTC_03_QPE.my_environment_info.</code><code class="sig-name descname">my_QPUCPUConnection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_03_QPE.my_environment_info.my_QPUCPUConnection" title="Permalink to this definition">¶</a></dt>
@@ -327,7 +328,8 @@ NEASQC report generation</p>
 </div>
 <div class="section" id="module-tnbs.BTC_03_QPE.neasqc_benchmark">
 <span id="neasqc-benchmark"></span><h2>neasqc_benchmark<a class="headerlink" href="#module-tnbs.BTC_03_QPE.neasqc_benchmark" title="Permalink to this headline">¶</a></h2>
-<p>Template for complete generation of NEASQC Benhmark Test Case report</p>
+<p>Module for complete generation of NEASQC Benhmark Test Case report
+for a BTC QPE kernel</p>
 <dl class="class">
 <dt id="tnbs.BTC_03_QPE.neasqc_benchmark.BENCHMARK">
 <em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_03_QPE.neasqc_benchmark.</code><code class="sig-name descname">BENCHMARK</code><a class="headerlink" href="#tnbs.BTC_03_QPE.neasqc_benchmark.BENCHMARK" title="Permalink to this definition">¶</a></dt>
@@ -470,12 +472,8 @@ NEASQC report generation</p>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html">BTC_03_QPE.QPE</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html#module-tnbs.BTC_03_QPE.QPE.qpe_rz">QPE.qpe_rz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html#module-tnbs.BTC_03_QPE.QPE.rz_lib">QPE.rz_lib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html#qpe-utils">QPE.utils</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html">QPE.utils.data_extracting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#module-tnbs.BTC_03_QPE.QPE.utils.qpe">QPE.utils.qpe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.utils.html#qpe-utils-rz-qlm">QPE.utils.rz_qlm</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html#module-tnbs.BTC_03_QPE.QPE.rz_qlm">QPE.rz_qlm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.QPE.html#module-tnbs.BTC_03_QPE.QPE.qpe">QPE.qpe</a></li>
 </ul>
 </li>
 </ul>
