@@ -14,11 +14,11 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -40,7 +40,7 @@
               <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                0.1.0
+                0.1.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -59,6 +59,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.AndOperator"><code class="docutils literal notranslate"><span class="pre">AndOperator</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable"><code class="docutils literal notranslate"><span class="pre">Buildable</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder"><code class="docutils literal notranslate"><span class="pre">Builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl"><code class="docutils literal notranslate"><span class="pre">BuilderImpl</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact"><code class="docutils literal notranslate"><span class="pre">Fact</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a></li>
@@ -245,6 +246,106 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_rule">
 <em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_rule" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rule</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>) – The Rule whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">BuilderFuzzy</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder" title="neasqc_qrbs.knowledge_rep.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a></p>
+<p>Implementation of Builder interface for the fuzzy logic model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_and">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_and</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_and" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an and operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_fact">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_fact" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a fact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fact</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a>) – The Fact whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_island">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_island</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">island</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">qat.lang.AQASM.QRoutine</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><span class="pre">LeftHandSide</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_island" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>island</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a>) – The KnowledgeIsland whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the corresponding quantum routine and the index of which qubit corresponds to each LeftHandSide element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code>, Dict[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a>, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_not">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_not</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_not" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a not operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_or">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_or</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_or" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an or operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_rule">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_rule" title="Permalink to this definition"></a></dt>
 <dd><p>Builds the quantum routine of a rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -670,7 +771,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.MyQlmQPU.evaluate">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.evaluate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.evaluate" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates whether a QRBS can be executed on this QPU.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -687,7 +788,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.MyQlmQPU.execute">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.execute" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.execute" title="Permalink to this definition"></a></dt>
 <dd><p>Executes the QRBS on this QPU.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
