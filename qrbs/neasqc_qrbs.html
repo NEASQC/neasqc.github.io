@@ -575,7 +575,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imprecission</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
 <p>Class representing a Fact.</p>
 <p>A Fact is the smallest unit of knowledge that can be represented. This class is used to model the Composite design pattern, acting as the Leaf class.</p>
@@ -602,9 +602,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.imprecission">
-<span class="sig-name descname"><span class="pre">imprecission</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.imprecission" title="Permalink to this definition"></a></dt>
-<dd><p>Imprecission of the fact; the certainty of the attribute having said value (0 if not specified). Must be in range [0,1].</p>
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.precision">
+<span class="sig-name descname"><span class="pre">precision</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.precision" title="Permalink to this definition"></a></dt>
+<dd><p>Precision of the fact; the certainty of the attribute having said value (0 if not specified). Must be in range [0,1].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float, optional</p>
@@ -619,7 +619,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="id0">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">imprecission</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precision</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -655,7 +655,7 @@
 <p>Interface for elements that can be part of the left hand side of a rule. This class is used to model the Composite design pattern, acting as the Component interface.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.LeftHandSide.build">
-<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.LeftHandSide.build" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.LeftHandSide.build" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -721,13 +721,13 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lefthandside</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">righthandside</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uncertainty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_hand_side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_hand_side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certainty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable" title="neasqc_qrbs.knowledge_rep.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
 <p>Class representing a Rule.</p>
 <p>A Rule which establishes a relationship (to some level of uncertainty) between a left hand side element and a right hand side, which in this context is a Fact.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.leftHandSide">
-<span class="sig-name descname"><span class="pre">leftHandSide</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.leftHandSide" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.left_hand_side">
+<span class="sig-name descname"><span class="pre">left_hand_side</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.left_hand_side" title="Permalink to this definition"></a></dt>
 <dd><p>Left hand side element of the rule (also known as precedent).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -737,9 +737,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.rightHandSide">
-<span class="sig-name descname"><span class="pre">rightHandSide</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.rightHandSide" title="Permalink to this definition"></a></dt>
-<dd><p>Right hand side element of the rule (also known as consecuent).</p>
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.right_hand_side">
+<span class="sig-name descname"><span class="pre">right_hand_side</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.right_hand_side" title="Permalink to this definition"></a></dt>
+<dd><p>Right hand side element of the rule (also known as consequent).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a></p>
@@ -748,9 +748,9 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.uncertainty">
-<span class="sig-name descname"><span class="pre">uncertainty</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.uncertainty" title="Permalink to this definition"></a></dt>
-<dd><p>Uncertainty of the relationship between precedent and consecuent (0 if not specified). Must be in range [0,1].</p>
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.certainty">
+<span class="sig-name descname"><span class="pre">certainty</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.certainty" title="Permalink to this definition"></a></dt>
+<dd><p>Certainty of the relationship between precedent and consequent (0 if not specified). Must be in range [0,1].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float, optional</p>
@@ -765,7 +765,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="id1">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">uncertainty</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certainty</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -775,7 +775,7 @@
 <span id="neasqc-qrbs-qrbs-module"></span><h2>neasqc_qrbs.qrbs module<a class="headerlink" href="#module-neasqc_qrbs.qrbs" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.InferenceEngine">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.qrbs.</span></span><span class="sig-name descname"><span class="pre">InferenceEngine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.qrbs.InferenceEngine" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.qrbs.</span></span><span class="sig-name descname"><span class="pre">InferenceEngine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.qrbs.InferenceEngine" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing an Inference Engine.</p>
 <p>An Inference Engine is an element of a Rule-Based System that manages its rules and knowledge islands, providing the tools to evaluate them in order.</p>
@@ -882,30 +882,32 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.MyQlmQPU.evaluate">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.evaluate" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eval_islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.evaluate" title="Permalink to this definition"></a></dt>
 <dd><p>Evaluates whether a QRBS can be executed on this QPU.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>qrbs</strong> (<a class="reference internal" href="#neasqc_qrbs.qrbs.QRBS" title="neasqc_qrbs.qrbs.QRBS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRBS</span></code></a>) – The QRBS to be evaluated.</p></li>
 <li><p><strong>eval_islands</strong> (List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>], optional) – A list of specific KnowledgeIsland to be evaluated.</p></li>
+<li><p><strong>model</strong> (<em>str</em><em>, </em><em>optional</em>) – The code of the model indicated.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>ValueError</strong> – In case an specified knowledge island is not part of the QRBS or an evaluated knowledge island requires more qubits than supported.</p>
+<dd class="field-even"><p><strong>ValueError</strong> – In case a specified knowledge island is not part of the QRBS or an evaluated knowledge island requires more qubits than supported.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.MyQlmQPU.execute">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.execute" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qrbs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">islands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#neasqc_qrbs.qrbs.MyQlmQPU.execute" title="Permalink to this definition"></a></dt>
 <dd><p>Executes the QRBS on this QPU.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>qrbs</strong> (<a class="reference internal" href="#neasqc_qrbs.qrbs.QRBS" title="neasqc_qrbs.qrbs.QRBS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRBS</span></code></a>) – The QRBS to be executed.</p></li>
 <li><p><strong>islands</strong> (List[<code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code>], optional) – A list of specific KnowledgeIsland to be executed.</p></li>
+<li><p><strong>model</strong> (<em>str</em><em>, </em><em>optional</em>) – The code of the model indicated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1066,7 +1068,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="neasqc_qrbs.qrbs.WorkingMemory">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.qrbs.</span></span><span class="sig-name descname"><span class="pre">WorkingMemory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.qrbs.WorkingMemory" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.qrbs.</span></span><span class="sig-name descname"><span class="pre">WorkingMemory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">facts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.qrbs.WorkingMemory" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class representing a Working Memory.</p>
 <p>A Working Memory is an element of a Rule-Based System that manages its facts, keeping trace of their state.</p>
