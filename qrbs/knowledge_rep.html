@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module knowledge_rep &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module qrbs" href="qrbs.html" />
+    <link rel="prev" title="Package neasqc_qrbs" href="neasqc_qrbs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+          </a>
+              <div class="version">
+                0.3.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source code documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="neasqc_qrbs.html">Package neasqc_qrbs</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Module knowledge_rep</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable"><code class="docutils literal notranslate"><span class="pre">Buildable</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable.build"><code class="docutils literal notranslate"><span class="pre">Buildable.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide.build"><code class="docutils literal notranslate"><span class="pre">LeftHandSide.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact"><code class="docutils literal notranslate"><span class="pre">Fact</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact.attribute"><code class="docutils literal notranslate"><span class="pre">Fact.attribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact.value"><code class="docutils literal notranslate"><span class="pre">Fact.value</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact.precision"><code class="docutils literal notranslate"><span class="pre">Fact.precision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">Fact.precision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact.build"><code class="docutils literal notranslate"><span class="pre">Fact.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.AndOperator"><code class="docutils literal notranslate"><span class="pre">AndOperator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.AndOperator.left_child"><code class="docutils literal notranslate"><span class="pre">AndOperator.left_child</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.AndOperator.right_child"><code class="docutils literal notranslate"><span class="pre">AndOperator.right_child</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.AndOperator.build"><code class="docutils literal notranslate"><span class="pre">AndOperator.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.OrOperator"><code class="docutils literal notranslate"><span class="pre">OrOperator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.OrOperator.left_child"><code class="docutils literal notranslate"><span class="pre">OrOperator.left_child</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.OrOperator.right_child"><code class="docutils literal notranslate"><span class="pre">OrOperator.right_child</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.OrOperator.build"><code class="docutils literal notranslate"><span class="pre">OrOperator.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.NotOperator"><code class="docutils literal notranslate"><span class="pre">NotOperator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.NotOperator.child"><code class="docutils literal notranslate"><span class="pre">NotOperator.child</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.NotOperator.build"><code class="docutils literal notranslate"><span class="pre">NotOperator.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule"><code class="docutils literal notranslate"><span class="pre">Rule</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule.left_hand_side"><code class="docutils literal notranslate"><span class="pre">Rule.left_hand_side</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule.right_hand_side"><code class="docutils literal notranslate"><span class="pre">Rule.right_hand_side</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule.certainty"><code class="docutils literal notranslate"><span class="pre">Rule.certainty</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">Rule.certainty</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule.build"><code class="docutils literal notranslate"><span class="pre">Rule.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland.rules"><code class="docutils literal notranslate"><span class="pre">KnowledgeIsland.rules</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland.build"><code class="docutils literal notranslate"><span class="pre">KnowledgeIsland.build()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder"><code class="docutils literal notranslate"><span class="pre">Builder</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_fact"><code class="docutils literal notranslate"><span class="pre">Builder.build_fact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_and"><code class="docutils literal notranslate"><span class="pre">Builder.build_and()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_or"><code class="docutils literal notranslate"><span class="pre">Builder.build_or()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_not"><code class="docutils literal notranslate"><span class="pre">Builder.build_not()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_rule"><code class="docutils literal notranslate"><span class="pre">Builder.build_rule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder.build_island"><code class="docutils literal notranslate"><span class="pre">Builder.build_island()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl"><code class="docutils literal notranslate"><span class="pre">BuilderImpl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.M"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.M</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_fact"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_fact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_and"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_and()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_or"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_or()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_not"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_not()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_rule"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_rule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_island"><code class="docutils literal notranslate"><span class="pre">BuilderImpl.build_island()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_fact"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_fact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_and"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_and()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_or"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_or()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_not"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_not()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_rule"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_rule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_island"><code class="docutils literal notranslate"><span class="pre">BuilderFuzzy.build_island()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes"><code class="docutils literal notranslate"><span class="pre">BuilderBayes</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.CRY"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.CRY</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_fact"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_fact()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_and"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_and()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_or"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_or()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_not"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_not()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_rule"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_rule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_island"><code class="docutils literal notranslate"><span class="pre">BuilderBayes.build_island()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qrbs.html">Module qrbs</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="neasqc_qrbs.html">Package neasqc_qrbs</a></li>
+      <li class="breadcrumb-item active">Module knowledge_rep</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-neasqc_qrbs.knowledge_rep">
+<span id="module-knowledge-rep"></span><h1>Module knowledge_rep<a class="headerlink" href="#module-neasqc_qrbs.knowledge_rep" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Buildable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Buildable</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Buildable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Interface for knowledge elements that can be built into quantum routines.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Buildable.build">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Buildable.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.LeftHandSide">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">LeftHandSide</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable" title="neasqc_qrbs.knowledge_rep.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
+<p>Interface for elements that can be part of the left hand side of a rule. This class is used to model the Composite design pattern, acting as the Component interface.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.LeftHandSide.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.LeftHandSide.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+<p>Class representing a Fact.</p>
+<p>A Fact is the smallest unit of knowledge that can be represented. This class is used to model the Composite design pattern, acting as the Leaf class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.attribute">
+<span class="sig-name descname"><span class="pre">attribute</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.attribute" title="Permalink to this definition"></a></dt>
+<dd><p>Attribute that the fact is representing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.value" title="Permalink to this definition"></a></dt>
+<dd><p>Value of the attribute that the fact is representing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.precision">
+<span class="sig-name descname"><span class="pre">precision</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.precision" title="Permalink to this definition"></a></dt>
+<dd><p>Precision of the fact; the certainty of the attribute having said value (0 if not specified). Must be in range [0,1].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id0">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precision</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Fact.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Fact.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.AndOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">AndOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.AndOperator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+<p>Class representing an AndOperator.</p>
+<p>An AndOperator relates the statements of its children with an AND relationship. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.AndOperator.left_child">
+<span class="sig-name descname"><span class="pre">left_child</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.AndOperator.left_child" title="Permalink to this definition"></a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.AndOperator.right_child">
+<span class="sig-name descname"><span class="pre">right_child</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.AndOperator.right_child" title="Permalink to this definition"></a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.AndOperator.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.AndOperator.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.OrOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">OrOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_child</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.OrOperator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+<p>Class representing an OrOperator.</p>
+<p>An OrOperator relates the statements of its children with an OR relationship. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.OrOperator.left_child">
+<span class="sig-name descname"><span class="pre">left_child</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.OrOperator.left_child" title="Permalink to this definition"></a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.OrOperator.right_child">
+<span class="sig-name descname"><span class="pre">right_child</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.OrOperator.right_child" title="Permalink to this definition"></a></dt>
+<dd><p>One of the children which is relating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.OrOperator.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.OrOperator.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.NotOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">NotOperator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">child</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.NotOperator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-class docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+<p>Class representing a NotOperator.</p>
+<p>A NotOperator negates the statement of its child. This class is used to model the Composite design pattern, acting as (one of) the Composite class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.NotOperator.child">
+<span class="sig-name descname"><span class="pre">child</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.NotOperator.child" title="Permalink to this definition"></a></dt>
+<dd><p>Child which statement is negating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.NotOperator.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.NotOperator.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_hand_side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_hand_side</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">certainty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable" title="neasqc_qrbs.knowledge_rep.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
+<p>Class representing a Rule.</p>
+<p>A Rule which establishes a relationship (to some level of uncertainty) between a left hand side element and a right hand side, which in this context is a Fact.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.left_hand_side">
+<span class="sig-name descname"><span class="pre">left_hand_side</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.left_hand_side" title="Permalink to this definition"></a></dt>
+<dd><p>Left hand side element of the rule (also known as precedent).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.right_hand_side">
+<span class="sig-name descname"><span class="pre">right_hand_side</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.right_hand_side" title="Permalink to this definition"></a></dt>
+<dd><p>Right hand side element of the rule (also known as consequent).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.certainty">
+<span class="sig-name descname"><span class="pre">certainty</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.certainty" title="Permalink to this definition"></a></dt>
+<dd><p>Certainty of the relationship between precedent and consequent (0 if not specified). Must be in range [0,1].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="id1">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">certainty</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Rule.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Rule.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.KnowledgeIsland">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">KnowledgeIsland</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rules</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Buildable" title="neasqc_qrbs.knowledge_rep.Buildable"><code class="xref py py-class docutils literal notranslate"><span class="pre">Buildable</span></code></a></p>
+<p>Class representing a Knowledge Island.</p>
+<p>A Knowledge Island is a set of rules that conform the inferential reasoning towards a hypothesis.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.KnowledgeIsland.rules">
+<span class="sig-name descname"><span class="pre">rules</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland.rules" title="Permalink to this definition"></a></dt>
+<dd><p>Set of rules that conform the knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.KnowledgeIsland.build">
+<span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland.build" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">Builder</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Interface for building the corresponding quantum routine from a Buildable element.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_fact">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_fact" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a fact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fact</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a>) – The Fact whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_and">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_and</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_and" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an and operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_or">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_or</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_or" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an or operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_not">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_not</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_not" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a not operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_rule">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_rule" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rule</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>) – The Rule whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.Builder.build_island">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_island</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">island</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">qat.lang.AQASM.QRoutine</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><span class="pre">LeftHandSide</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.Builder.build_island" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>island</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a>) – The KnowledgeIsland whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the corresponding quantum routine and the index of which qubit corresponds to each LeftHandSide element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code>, Dict[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a>, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">BuilderImpl</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder" title="neasqc_qrbs.knowledge_rep.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a></p>
+<p>Implementation of Builder interface.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.M">
+<span class="sig-name descname"><span class="pre">M</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'M'</span></em><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.M" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_fact">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_fact" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a fact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fact</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a>) – The Fact whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_and">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_and</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_and" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an and operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_or">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_or</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_or" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an or operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_not">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_not</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_not" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a not operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_rule">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_rule" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rule</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>) – The Rule whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderImpl.build_island">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_island</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">island</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">qat.lang.AQASM.QRoutine</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><span class="pre">LeftHandSide</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderImpl.build_island" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>island</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a>) – The KnowledgeIsland whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the corresponding quantum routine and the index of which qubit corresponds to each LeftHandSide element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code>, Dict[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a>, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">BuilderFuzzy</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder" title="neasqc_qrbs.knowledge_rep.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a></p>
+<p>Implementation of Builder interface for the fuzzy logic model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_fact">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_fact" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a fact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fact</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a>) – The Fact whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_and">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_and</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_and" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an and operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_or">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_or</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_or" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an or operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_not">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_not</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_not" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a not operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_rule">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_rule" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rule</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>) – The Rule whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_island">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_island</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">island</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">qat.lang.AQASM.QRoutine</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><span class="pre">LeftHandSide</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderFuzzy.build_island" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>island</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a>) – The KnowledgeIsland whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the corresponding quantum routine and the index of which qubit corresponds to each LeftHandSide element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code>, Dict[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a>, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">neasqc_qrbs.knowledge_rep.</span></span><span class="sig-name descname"><span class="pre">BuilderBayes</span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Builder" title="neasqc_qrbs.knowledge_rep.Builder"><code class="xref py py-class docutils literal notranslate"><span class="pre">Builder</span></code></a></p>
+<p>Implementation of Builder interface for the bayesian model.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.CRY">
+<span class="sig-name descname"><span class="pre">CRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CRY'</span></em><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.CRY" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_fact">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fact</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_fact" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a fact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fact</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Fact" title="neasqc_qrbs.knowledge_rep.Fact"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Fact</span></code></a>) – The Fact whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_and">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_and</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_and" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an and operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_or">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_or</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_or" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of an or operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_not">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_not</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_not" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a not operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_rule">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qat.lang.AQASM.QRoutine</span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_rule" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rule</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.Rule" title="neasqc_qrbs.knowledge_rep.Rule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Rule</span></code></a>) – The Rule whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The corresponding quantum routine.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="neasqc_qrbs.knowledge_rep.BuilderBayes.build_island">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build_island</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">island</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">qat.lang.AQASM.QRoutine</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><span class="pre">LeftHandSide</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#neasqc_qrbs.knowledge_rep.BuilderBayes.build_island" title="Permalink to this definition"></a></dt>
+<dd><p>Builds the quantum routine of a knowledge island.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>island</strong> (<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.KnowledgeIsland" title="neasqc_qrbs.knowledge_rep.KnowledgeIsland"><code class="xref py py-obj docutils literal notranslate"><span class="pre">KnowledgeIsland</span></code></a>) – The KnowledgeIsland whose quantum routine is being built.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the corresponding quantum routine and the index of which qubit corresponds to each LeftHandSide element.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<code class="xref py py-obj docutils literal notranslate"><span class="pre">QRoutine</span></code>, Dict[<a class="reference internal" href="#neasqc_qrbs.knowledge_rep.LeftHandSide" title="neasqc_qrbs.knowledge_rep.LeftHandSide"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LeftHandSide</span></code></a>, int]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="neasqc_qrbs.html" class="btn btn-neutral float-left" title="Package neasqc_qrbs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qrbs.html" class="btn btn-neutral float-right" title="Module qrbs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC 2021-2023.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
