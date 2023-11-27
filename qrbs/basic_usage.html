@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic usage &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced usage" href="advanced_usage.html" />
+    <link rel="prev" title="Install" href="install.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#your-first-qrbs">Your first QRBS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-uncertainty">Managing uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#executing-the-system">Executing the system</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced usage</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source code documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="neasqc_qrbs.html">Package neasqc_qrbs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Basic usage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-usage">
+<h1>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h1>
+<p>In this section we provide some examples of how to use the basic functions of this library. Each of the examples continues where the prior one left, so we recommend to read this page in order for the first time.</p>
+<section id="your-first-qrbs">
+<h2>Your first QRBS<a class="headerlink" href="#your-first-qrbs" title="Permalink to this heading"></a></h2>
+<p>We begin these examples by creating and populating a QRBS. We use the inferential circuit below as the structure for our system. This ciricuit is made from the following rules:</p>
+<ol class="arabic simple">
+<li><p>IF <em>A</em> AND <em>B</em> THEN <em>X</em></p></li>
+<li><p>IF <em>X</em> OR <em>C</em> THEN <em>Y</em></p></li>
+<li><p>IF (<em>D</em> OR <em>E</em>) AND <em>Y</em> THEN <em>R</em></p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/inferential_circuit.svg"><img alt="Inferential circuit" src="_images/inferential_circuit.svg" width="400" /></a>
+<p>We recommend using the following approach to build any QRBS:</p>
+<ol class="arabic simple">
+<li><p>Assert all the facts from the left hand side of the rules.</p></li>
+<li><p>Assert all the facts from the right hand side of the rules.</p></li>
+<li><p>Assert all the rules that relate the facts.</p></li>
+<li><p>Assert the knowledge islands with their corresponding rules.</p></li>
+</ol>
+<p>In this case, we can obtain the corresponding QRBS with the code below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">QRBS</span><span class="p">()</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact A&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact B&#39;</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact C&#39;</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact D&#39;</span><span class="p">)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact E&#39;</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact X&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact Y&#39;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;Fact R&#39;</span><span class="p">)</span>
+
+<span class="n">rule_1</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_rule</span><span class="p">(</span><span class="n">AndOperator</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">rule_2</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_rule</span><span class="p">(</span><span class="n">OrOperator</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">c</span><span class="p">),</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">rule_3</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_rule</span><span class="p">(</span><span class="n">AndOperator</span><span class="p">(</span><span class="n">OrOperator</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">),</span><span class="n">y</span><span class="p">),</span> <span class="n">r</span><span class="p">)</span>
+
+<span class="n">island</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_island</span><span class="p">([</span><span class="n">rule_1</span><span class="p">,</span> <span class="n">rule_2</span><span class="p">,</span> <span class="n">rule_3</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>With this code, we have the QRBS corresponding to the initial inferential circuit encoded into the variable <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
+<p>During the process of asserting elements you may run into some errors, all of which include a message explaining what went wrong.</p>
+</section>
+<section id="managing-uncertainty">
+<h2>Managing uncertainty<a class="headerlink" href="#managing-uncertainty" title="Permalink to this heading"></a></h2>
+<p>Once we have declared a QRBS and have it populated with declarative and procedural knowledge, we can manage the uncertain knowledge through the precision of facts and the certainty or rules. For example, let’s say we want all of our facts to be equally true and false. Therefore</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">fact</span> <span class="ow">in</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">]:</span>
+    <span class="n">fact</span><span class="o">.</span><span class="n">precision</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+<p>Notice how we only modify the precision value for the facts that are part of a left hand side of a rule, since the facts that belong to the right hand sides will have their precision calculated when executing the system.</p>
+<p>We can follow the same approach for the rules. In this case, we want to give them different values of certainty to each of them.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rule_1</span><span class="o">.</span><span class="n">certainty</span> <span class="o">=</span> <span class="mf">0.1618</span>
+<span class="n">rule_2</span><span class="o">.</span><span class="n">certainty</span> <span class="o">=</span> <span class="mf">0.42</span>
+<span class="n">rule_3</span><span class="o">.</span><span class="n">certainty</span> <span class="o">=</span> <span class="mf">0.3141592</span>
+</pre></div>
+</div>
+<p>By managing uncertainty like this, the system already keeps track of them.</p>
+</section>
+<section id="executing-the-system">
+<h2>Executing the system<a class="headerlink" href="#executing-the-system" title="Permalink to this heading"></a></h2>
+<p>To execute a populated QRBS, we simply call the <code class="docutils literal notranslate"><span class="pre">execute</span></code> method of any of the available implementations of the class <code class="docutils literal notranslate"><span class="pre">QPU</span></code>. We provide the <code class="docutils literal notranslate"><span class="pre">MyQlmQPU</span></code> implementation, and to use it we would do as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyQlmQPU</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once the system has been executed, we can check the precision values of the right hand sides to see how they have changed, according to the rules of the system. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">QRBS</span><span class="p">()</span>
+
+<span class="n">precedent</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="s1">&#39;Precedent&#39;</span><span class="p">)</span>
+<span class="n">precedent</span><span class="o">.</span><span class="n">precision</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">consequent</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;Consequent&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">consequent</span><span class="o">.</span><span class="n">precision</span><span class="p">)</span> <span class="c1"># 0.0</span>
+
+<span class="n">rule</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_rule</span><span class="p">(</span><span class="n">precedent</span><span class="p">,</span> <span class="n">consequent</span><span class="p">)</span>
+<span class="n">rule</span><span class="o">.</span><span class="n">certainty</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">island</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_island</span><span class="p">([</span><span class="n">rule</span><span class="p">])</span>
+
+<span class="n">MyQlmQPU</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">consequent</span><span class="o">.</span><span class="n">precision</span><span class="p">)</span> <span class="c1"># 1.0</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="install.html" class="btn btn-neutral float-left" title="Install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="advanced_usage.html" class="btn btn-neutral float-right" title="Advanced usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC 2021-2023.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

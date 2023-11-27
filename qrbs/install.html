@@ -24,7 +24,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Usage" href="usage.html" />
+    <link rel="next" title="Basic usage" href="basic_usage.html" />
     <link rel="prev" title="NEASQC Project" href="index.html" /> 
 </head>
 
@@ -38,6 +38,7 @@
           
           <a href="index.html" class="icon icon-home">
             NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 0.3.1
@@ -52,13 +53,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Install</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Install</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#method-1-use-setup-py">Method 1: use setup.py</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#method-2-build-the-package">Method 2: build the package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#method-1-use-setup-py">Method 1: use setup.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#method-2-build-the-package">Method 2: build the package</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_usage.html">Advanced usage</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source code documentation</span></p>
 <ul>
@@ -96,9 +100,8 @@
 </pre></div>
 </div>
 <p>Once you have cloned the project, go to its directory and make sure your Python virtual environment is activated. Here we present two methods to install the package, choose the one that suits you best:</p>
-</section>
 <section id="method-1-use-setup-py">
-<h1>Method 1: use setup.py<a class="headerlink" href="#method-1-use-setup-py" title="Permalink to this heading"></a></h1>
+<h2>Method 1: use setup.py<a class="headerlink" href="#method-1-use-setup-py" title="Permalink to this heading"></a></h2>
 <p>Inside the directory, run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
@@ -106,17 +109,18 @@
 <p>Follow the installation script, and you are done!</p>
 </section>
 <section id="method-2-build-the-package">
-<h1>Method 2: build the package<a class="headerlink" href="#method-2-build-the-package" title="Permalink to this heading"></a></h1>
+<h2>Method 2: build the package<a class="headerlink" href="#method-2-build-the-package" title="Permalink to this heading"></a></h2>
 <p>By using this method, you will build the package from the source code and then install it. You may require to install some packages like <a class="reference external" href="https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives">build</a> if you do not have them already.</p>
 <p>To build the package, run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">build</span>
 </pre></div>
 </div>
-<p>After the building process has finished, you will find a dist directory with different files. Go inside this directory and run the following command:</p>
+<p>After the building process has finished, you will find the <code class="docutils literal notranslate"><span class="pre">dist</span></code> directory with different files. Go inside this directory and run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">neasqc</span><span class="o">-</span><span class="n">qrbs</span>
 </pre></div>
 </div>
 <p>Once the installation process is done, you have finished!</p>
+</section>
 </section>
 
 
@@ -124,7 +128,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="NEASQC Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="usage.html" class="btn btn-neutral float-right" title="Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="basic_usage.html" class="btn btn-neutral float-right" title="Basic usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

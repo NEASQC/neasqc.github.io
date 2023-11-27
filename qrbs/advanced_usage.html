@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced usage &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Package neasqc_qrbs" href="neasqc_qrbs.html" />
+    <link rel="prev" title="Basic usage" href="basic_usage.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.3.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Install</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#building-dynamic-systems">Building dynamic systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparing-models">Comparing models</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source code documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="neasqc_qrbs.html">Package neasqc_qrbs</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Advanced usage</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="advanced-usage">
+<h1>Advanced usage<a class="headerlink" href="#advanced-usage" title="Permalink to this heading"></a></h1>
+<p>In this section we provide some examples of more advanced usages of the library.</p>
+<section id="building-dynamic-systems">
+<h2>Building dynamic systems<a class="headerlink" href="#building-dynamic-systems" title="Permalink to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">QPU</span></code> interface provides a method called <code class="docutils literal notranslate"><span class="pre">evaluate</span></code>. This method builds the quantum circuit corresponding to a given QRBS, in order to see if the QPU used can run the given system. While this method is mainly intended to be used inside the <code class="docutils literal notranslate"><span class="pre">execute</span></code>, it can also be used to build dynamic systems.</p>
+<p>For example, let’s build a QRBS by concatenating rules one after the other:</p>
+<ol class="arabic simple">
+<li><p>IF <em>X0</em> THEN <em>X1</em></p></li>
+<li><p>IF <em>X1</em> THEN <em>X2</em></p></li>
+</ol>
+<p>Up until:</p>
+<ol class="upperalpha simple" start="14">
+<li><p>IF <em>X(N-1)</em> then <em>XN</em></p></li>
+</ol>
+<p>It is possible that such a system cannot be executed in a given <code class="docutils literal notranslate"><span class="pre">QPU</span></code> if it surpases the amount of qubits available. Therefore, to build a system like this but satisfying the limits of the <code class="docutils literal notranslate"><span class="pre">QPU</span></code> we can do something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system</span> <span class="o">=</span> <span class="n">QRBS</span><span class="p">()</span>
+<span class="n">facts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">rules</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">island</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">facts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s1">&#39;Fact </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">facts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># add both facts in the case of the first rule</span>
+        <span class="n">facts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">assert_fact</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;Fact </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">))</span>
+    <span class="n">rules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">system</span><span class="o">.</span><span class="n">assert_rule</span><span class="p">(</span><span class="n">facts</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">facts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mf">1.0</span><span class="p">))</span> <span class="c1"># use the last facts to make a rule</span>
+    <span class="n">island</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_island</span><span class="p">(</span><span class="n">rules</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">MyQlmQPU</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">system</span><span class="o">.</span><span class="n">retract_island</span><span class="p">(</span><span class="n">island</span><span class="p">)</span> <span class="c1"># remove the island once it has been checked, a new one will be added in the next loop</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">system</span><span class="o">.</span><span class="n">retract_island</span><span class="p">(</span><span class="n">island</span><span class="p">)</span>
+        <span class="n">system</span><span class="o">.</span><span class="n">retract_rule</span><span class="p">(</span><span class="n">rules</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">system</span><span class="o">.</span><span class="n">retract_fact</span><span class="p">(</span><span class="n">facts</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">island</span> <span class="o">=</span> <span class="n">system</span><span class="o">.</span><span class="n">assert_island</span><span class="p">(</span><span class="n">rules</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we add the rules one by one and check the evaluation result with each addition. When the knowledge island composed by the rules is too large for <code class="docutils literal notranslate"><span class="pre">MyQlmQPU</span></code> to execute it, we retract the last rule of the set (we do the same with the last fact) and assert the previous ones.</p>
+</section>
+<section id="comparing-models">
+<h2>Comparing models<a class="headerlink" href="#comparing-models" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">MyQlmQPU</span></code> offers three different models to implement the quantum circuit of a given QRBS. These models, based on classical models of rule based systems, are:</p>
+<ul class="simple">
+<li><p>Certainty factors (<code class="docutils literal notranslate"><span class="pre">cf</span></code>)</p></li>
+<li><p>Fuzzy logic (<code class="docutils literal notranslate"><span class="pre">fuzzy</span></code>)</p></li>
+<li><p>Bayesian networks (<code class="docutils literal notranslate"><span class="pre">bayes</span></code>)</p></li>
+</ul>
+<p>The certainty factors model is used by default, to use any of the other one simply indicate it in the methods <code class="docutils literal notranslate"><span class="pre">evaluate</span></code> and <code class="docutils literal notranslate"><span class="pre">execute</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyQlmQPU</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;fuzzy&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>While at their core all models work the same (relate precedent with consequents through rules), it can be interesting to compare the results obtained with each of them:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cf&#39;</span><span class="p">,</span> <span class="s1">&#39;fuzzy&#39;</span><span class="p">,</span> <span class="s1">&#39;bayes&#39;</span><span class="p">]</span>
+<span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+    <span class="n">MyQlmQPU</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">consequent</span><span class="o">.</span><span class="n">precision</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">results</span><span class="p">))</span> <span class="c1"># [(&#39;cf&#39;, 0.978), (&#39;fuzzy&#39;, 0.963), (&#39;bayes&#39;, 0.989)]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="basic_usage.html" class="btn btn-neutral float-left" title="Basic usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="neasqc_qrbs.html" class="btn btn-neutral float-right" title="Package neasqc_qrbs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC 2021-2023.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
