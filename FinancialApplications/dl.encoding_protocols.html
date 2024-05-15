@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>encoding_protocols &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>encoding_protocols &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -53,13 +58,36 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="dl.html">QQuantLib.DL</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dl.data_loading.html">data_loading</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">encoding_protocols</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">encoding_protocols</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding"><code class="docutils literal notranslate"><span class="pre">Encoding</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding.encoding"><code class="docutils literal notranslate"><span class="pre">Encoding.encoding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.DL.encoding_protocols.Encoding.reset"><code class="docutils literal notranslate"><span class="pre">Encoding.reset()</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -87,47 +115,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.DL.encoding_protocols">
-<span id="encoding-protocols"></span><h1>encoding_protocols<a class="headerlink" href="#module-QQuantLib.DL.encoding_protocols" title="Permalink to this headline">¶</a></h1>
-<p>This module contains a class for selecting data encoding protocols</p>
+  <section id="module-QQuantLib.DL.encoding_protocols">
+<span id="encoding-protocols"></span><h1>encoding_protocols<a class="headerlink" href="#module-QQuantLib.DL.encoding_protocols" title="Link to this heading"></a></h1>
+<p>This module contains the Python class Encoding for loading input data
+(as NumPy arrays) in the amplitudes of a quantum state using
+different encoding protocols. Given a probability density and a
+function arrays discretized over n qubits the following encodings can be
+used by setting the <em>encoding</em> variable properly:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Square encoding (encoding=0)</strong>.</dt><dd><p>The procedure loads the scalar product of
+the density and the function arrays into the <strong>probability</strong> of
+a fixed state. Uses n+1 qubits. Only can load positive-defined
+functions</p>
+</dd>
+<dt><strong>Square encoding with 2 additional qubits (encoding=1)</strong>.</dt><dd><p>The procedure loads the scalar product of the density and the
+function arrays into the <strong>amplitude</strong> of a fixed state.
+Uses n+2 qubits. Can load negative-defined functions</p>
+</dd>
+<dt><strong>Direct encoding (encoding=2)</strong>.</dt><dd><p>The procedure loads the scalar product of the density and the
+function arrays into the <strong>amplitude</strong> of a fixed state.
+Can load negative-defined functions</p>
+</dd>
+</dl>
+</div></blockquote>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
-<dl class="class">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding">
-<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.DL.encoding_protocols.</code><code class="sig-name descname">Encoding</code><span class="sig-paren">(</span><em class="sig-param">array_function</em>, <em class="sig-param">array_probability=None</em>, <em class="sig-param">encoding=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.DL.encoding_protocols.</span></span><span class="sig-name descname"><span class="pre">Encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding" title="Link to this definition"></a></dt>
 <dd><p>Class for data encoding into the quantum circuit.</p>
-<dl class="method">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding.encoding">
-<em class="property">property </em><code class="sig-name descname">encoding</code><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.encoding" title="Permalink to this definition">¶</a></dt>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array_function</strong> (<em>numpy array</em>) – numpy array with the desired function for encoding into the
+Quantum Circuit. The following conditions must be satisfied:
+len(array_function) = 2^n and max(array_function) &lt;= 1.0.</p></li>
+<li><p><strong>array_probability</strong> (<em>numpy array</em>) – numpy array with the desired probability for encoding into
+the Quantum Circuit. If None is provided uniform distribution
+will be used. The following conditions must be satisfied:
+len(array_probability)= 2^n. sum(array_probability)&lt;= 1.0.
+len(array_function) == len(array_probability)</p></li>
+<li><p><strong>encoding</strong> (<em>int</em>) – Selecting the encode protocol: 0 for square encoding, 1 for
+square encoding with 2 additional qubits and 2 for Direct encoding.</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding.encoding">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">encoding</span></span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.encoding" title="Link to this definition"></a></dt>
 <dd><p>creating the encoding property</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0">
-<code class="sig-name descname">oracle_encoding_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0">
+<span class="sig-name descname"><span class="pre">oracle_encoding_0</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0" title="Link to this definition"></a></dt>
 <dd><p>Method for creating the oracle. The probability density will be
 loaded as a probability density using the DL.load_probability
 function and the function array will be loaded with DL.load_array
@@ -147,9 +189,9 @@ encode probability density <span class="math notranslate nohighlight">\(p(x)\)</
 \sqrt{p(x_i)f(x_i)}|0\rangle \; + \; ...\]</div>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1">
-<code class="sig-name descname">oracle_encoding_1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1">
+<span class="sig-name descname"><span class="pre">oracle_encoding_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1" title="Link to this definition"></a></dt>
 <dd><p>Method for creating the oracle. The probability density and the
 payoff functions will be loaded with the DL.load_array function.
 In this method a uniform distribution is used for creating the
@@ -173,9 +215,9 @@ p(x_i)f(x_i) |0\rangle \otimes |0\rangle \otimes \
 |0\rangle_n \; + \; ...\]</div>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2">
-<code class="sig-name descname">oracle_encoding_2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2">
+<span class="sig-name descname"><span class="pre">oracle_encoding_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2" title="Link to this definition"></a></dt>
 <dd><p>Method for encoding where the probability density will be encoding
 as probability density using DL.load_probability (or a uniform
 distribution) and the function with the DL.load_array.</p>
@@ -194,15 +236,15 @@ density (DL.load_probability will be used)</p>
 |0\rangle \otimes |0\rangle_{n} \; + \; ...\]</div>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.DL.encoding_protocols.Encoding.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.reset" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.DL.encoding_protocols.Encoding.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.DL.encoding_protocols.Encoding.reset" title="Link to this definition"></a></dt>
 <dd><p>Method for resetting attributes</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

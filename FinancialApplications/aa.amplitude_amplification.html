@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>amplitude_amplification &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>amplitude_amplification &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -50,15 +55,39 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="aa.html">QQuantLib.AA</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">amplitude_amplification</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">amplitude_amplification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate"><code class="docutils literal notranslate"><span class="pre">create_u0_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.create_u_gate"><code class="docutils literal notranslate"><span class="pre">create_u_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.grover"><code class="docutils literal notranslate"><span class="pre">grover()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.grover_extended"><code class="docutils literal notranslate"><span class="pre">grover_extended()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph"><code class="docutils literal notranslate"><span class="pre">multiplexor_controlled_ph()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z"><code class="docutils literal notranslate"><span class="pre">multiplexor_controlled_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.phase_multiplexor_base"><code class="docutils literal notranslate"><span class="pre">phase_multiplexor_base()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.recursive_multiplexor"><code class="docutils literal notranslate"><span class="pre">recursive_multiplexor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AA.amplitude_amplification.reflection"><code class="docutils literal notranslate"><span class="pre">reflection()</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -86,35 +115,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.AA.amplitude_amplification">
-<span id="amplitude-amplification"></span><h1>amplitude_amplification<a class="headerlink" href="#module-QQuantLib.AA.amplitude_amplification" title="Permalink to this headline">¶</a></h1>
+  <section id="module-QQuantLib.AA.amplitude_amplification">
+<span id="amplitude-amplification"></span><h1>amplitude_amplification<a class="headerlink" href="#module-QQuantLib.AA.amplitude_amplification" title="Link to this heading"></a></h1>
 <p>This module contains all functions needed for creating Grover-like
 operators mandatory for using Quantum Amplitude Amplification
-and Estimation as explained in the 2000 Brassard paper:</p>
+and Estimation as explained in the following paper:</p>
 <blockquote>
 <div><p>Gilles Brassard, Peter Hoyer, Michele Mosca and Alain Tapp
 Quantum Amplitude Amplification and Estimation
@@ -122,9 +127,9 @@ AMS Contemporary Mathematics Series, 305, 06-2000
 <a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
 </div></blockquote>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.create_u0_gate">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u0_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.create_u0_gate">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">create_u0_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcz_qlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u0_gate" title="Link to this definition"></a></dt>
 <dd><p>This function creates a QLM AbstractGate that implements an oracle:
 a reflection around the perpendicular state to a given state.</p>
 <p class="rubric">Notes</p>
@@ -135,50 +140,50 @@ a reflection around the perpendicular state to a given state.</p>
 \hspace{1em} \mathcal{U0}(|\Psi_0\rangle)=\mathcal{I}-2 \
 |\Psi_0\rangle\langle\Psi_0|\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – oracle that created the state</p></li>
-<li><p><strong>target</strong> (<em>list of ints</em>) – target state</p></li>
-<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – target state</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – index for the qubits that define the register</p></li>
 <li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>u0_gate</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.create_u_gate">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">create_u_gate</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u_gate" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.create_u_gate">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">create_u_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcz_qlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.create_u_gate" title="Link to this definition"></a></dt>
 <dd><p>This function creates a QLM AbstractGate that implements a grover
 diffusion operator from an input state.</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{U}(|\Psi\rangle) = \mathcal{I}-2|\Psi\rangle\langle\Psi|\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – operator O</p></li>
 <li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>u_gate</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.grover">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.grover">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">grover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcz_qlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover" title="Link to this definition"></a></dt>
 <dd><p>This function creates a QLM AbstractGate that returns the grover
 operator associated to a given oracle. This function is a composition
 of QLM AbstractGates generate by functions U and U0.</p>
@@ -186,126 +191,126 @@ of QLM AbstractGates generate by functions U and U0.</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{G} = \mathcal{U}(|\Psi\rangle)\mathcal{U0}(|\Psi_0\rangle)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
-<li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
-<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>)</p></li>
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – the state that we want to amplify</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – index for the qubits that define the register</p></li>
 <li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>grover_gate</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.grover_extended">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">grover_extended</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: numpy.ndarray</em>, <em class="sig-param">index: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover_extended" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.grover_extended">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">grover_extended</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcz_qlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.grover_extended" title="Link to this definition"></a></dt>
 <dd><p>This function creates a QLM AbstractGate that returns the grover
 extended operator associated to a given oracle.</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{G} = \mathcal{U}(|\Psi\rangle)\mathcal{U0}(|\Psi_0\rangle)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>) – </p></li>
-<li><p><strong>target</strong> (<em>list of ints</em>) – the state that we want to amplify</p></li>
-<li><p><strong>index</strong> (<em>list of ints</em>) – index for the qubits that define the register</p></li>
+<li><p><strong>oracle</strong> (<em>QLM routine/gate</em>)</p></li>
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – the state that we want to amplify</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – index for the qubits that define the register</p></li>
 <li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>grover_gate</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_ph</code><span class="sig-paren">(</span><em class="sig-param">angle</em>, <em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">multiplexor_controlled_ph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph" title="Link to this definition"></a></dt>
 <dd><p>Multiplexor implementation for a Multi-Controlled-phase gate</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>angle</strong> (<em>float</em>) – Desired angle for Controlled-Phase application</p></li>
 <li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the multi-controlled phase gate</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of a multi-controlled phase gate</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM routine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">multiplexor_controlled_z</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">multiplexor_controlled_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z" title="Link to this definition"></a></dt>
 <dd><p>Multiplexor implementation for a multi-controlled-Z gate</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the multi-controlled phase gate gate</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of a multi-controlled Z gate</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM routine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.phase_multiplexor_base">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">phase_multiplexor_base</code><span class="sig-paren">(</span><em class="sig-param">theta</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.phase_multiplexor_base" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.phase_multiplexor_base">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">phase_multiplexor_base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.phase_multiplexor_base" title="Link to this definition"></a></dt>
 <dd><p>Implement an initial multiplexor for a controlled phase gate.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – Phase angle to apply</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>routine</strong> – QLM routine with the implementation of the basis multiplexor
 for the controlled phase gate</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM routine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.recursive_multiplexor">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">recursive_multiplexor</code><span class="sig-paren">(</span><em class="sig-param">input_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.recursive_multiplexor" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.recursive_multiplexor">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">recursive_multiplexor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.recursive_multiplexor" title="Link to this definition"></a></dt>
 <dd><p>Create a new multiplexor from an input gate.
 In this case takes the input gate adds a new qubit and creates a new
 multiplexor by applying the input gate, a c-NOT and the input gate again</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>input_gate</strong> (<em>QLM routine</em>) – QLM routine with the gate we want for multiplexor</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>routine</strong> – QLM routine with a multiplexor of the input_gate</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM routine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AA.amplitude_amplification.reflection">
-<code class="sig-prename descclassname">QQuantLib.AA.amplitude_amplification.</code><code class="sig-name descname">reflection</code><span class="sig-paren">(</span><em class="sig-param">lista: numpy.ndarray</em>, <em class="sig-param">mcz_qlm=True</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.reflection" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AA.amplitude_amplification.reflection">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AA.amplitude_amplification.</span></span><span class="sig-name descname"><span class="pre">reflection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mcz_qlm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AA.amplitude_amplification.reflection" title="Link to this definition"></a></dt>
 <dd><p>This function returns a QLM AbstractGate that implement a reflection
 around the perpendicular state of a given state.</p>
 <p class="rubric">Notes</p>
@@ -315,23 +320,23 @@ around the perpendicular state of a given state.</p>
 \[\begin{split}\mathcal{reflection}(|\Psi_0\rangle)|\Psi\rangle=
 -|\Psi_0\rangle+|\Psi_1\rangle\\\end{split}\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>lista</strong> (<em>list of ints</em>) – binary representation of the
+<li><p><strong>lista</strong> (<em>list</em><em> of </em><em>ints</em>) – binary representation of the
 State that we want to rotate pi</p></li>
 <li><p><strong>mcz_qlm</strong> (<em>bool</em>) – If True QLM construction for multi-controlled Z will be used.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>reflection_gate</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

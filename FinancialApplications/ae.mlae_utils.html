@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mlae_utils &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>mlae_utils &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="iterative_quantum_ae" href="ae.iterative_quantum_ae.html" />
+    <link rel="prev" title="maximum_likelihood_ae" href="ae.maximum_likelihood_ae.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,10 +57,42 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ae.html">QQuantLib.AE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ae.montecarlo_ae.html">montecarlo_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_classical_qpe.html">ae_classical_qpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mlae_utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.mlae_utils.cost_function"><code class="docutils literal notranslate"><span class="pre">cost_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.mlae_utils.likelihood"><code class="docutils literal notranslate"><span class="pre">likelihood()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.mlae_utils.log_likelihood"><code class="docutils literal notranslate"><span class="pre">log_likelihood()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ae.iterative_quantum_ae.html">iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.miterative_quantum_ae.html">modified_iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.real_quantum_ae.html">real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mreal_quantum_ae.html">modified_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.sreal_quantum_ae.html">shots_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ereal_quantum_ae.html">extended_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_class.html">ae_class</a></li>
+</ul>
+</li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -71,6 +110,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="ae.html">QQuantLib.AE</a></li>
       <li class="breadcrumb-item active">mlae_utils</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -80,64 +120,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.AE.mlae_utils">
-<span id="mlae-utils"></span><h1>mlae_utils<a class="headerlink" href="#module-QQuantLib.AE.mlae_utils" title="Permalink to this headline">¶</a></h1>
-<p>This module contains necessary functions fro MLAE class</p>
+  <section id="module-QQuantLib.AE.mlae_utils">
+<span id="mlae-utils"></span><h1>mlae_utils<a class="headerlink" href="#module-QQuantLib.AE.mlae_utils" title="Link to this heading"></a></h1>
+<p>This module contains mandatory functions used by the MLAE class</p>
 <p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
-<dl class="function">
-<dt id="QQuantLib.AE.mlae_utils.cost_function">
-<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">cost_function</code><span class="sig-paren">(</span><em class="sig-param">angle: float</em>, <em class="sig-param">m_k: list</em>, <em class="sig-param">n_k: list</em>, <em class="sig-param">h_k: list</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.cost_function" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.mlae_utils.cost_function">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.mlae_utils.</span></span><span class="sig-name descname"><span class="pre">cost_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#QQuantLib.AE.mlae_utils.cost_function" title="Link to this definition"></a></dt>
 <dd><p>This method calculates the -Likelihood of angle theta
 for a given schedule m_k,n_k</p>
 <p class="rubric">Notes</p>
 <div class="math notranslate nohighlight">
 \[L(\theta,\mathbf{h}) = -\sum_{k = 0}^M\log{l_k(\theta|h_k)}\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>angle</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
 positive event.</p></li>
-<li><p><strong>m_k</strong> (<em>list of ints</em>) – number of times the grover operator was applied.</p></li>
-<li><p><strong>n_k</strong> (<em>list of ints</em>) – number of total events measured for the specific  m_k</p></li>
-<li><p><strong>h_k</strong> (<em>list of ints</em>) – number of positive events measured for each m_k</p></li>
+<li><p><strong>m_k</strong> (<em>list</em><em> of </em><em>ints</em>) – number of times the grover operator was applied.</p></li>
+<li><p><strong>n_k</strong> (<em>list</em><em> of </em><em>ints</em>) – number of total events measured for the specific  m_k</p></li>
+<li><p><strong>h_k</strong> (<em>list</em><em> of </em><em>ints</em>) – number of positive events measured for each m_k</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>cost</strong> – the aggregation of the individual likelihoods</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AE.mlae_utils.likelihood">
-<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.likelihood" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.mlae_utils.likelihood">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.mlae_utils.</span></span><span class="sig-name descname"><span class="pre">likelihood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#QQuantLib.AE.mlae_utils.likelihood" title="Link to this definition"></a></dt>
 <dd><p>Calculates Likelihood from Suzuki paper. For h_k positive events
 of n_k total events, this function calculates the probability of
 this taking into account that the probability of a positive
@@ -149,7 +165,7 @@ minus Likelihood</p>
 \[l_k(\theta|h_k) = \sin^2\left((2m_k+1)\theta\right)^{h_k} \
 \cos^2 \left((2m_k+1)\theta\right)^{n_k-h_k}\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
 positive event.</p></li>
@@ -158,26 +174,25 @@ positive event.</p></li>
 <li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Gives the Likelihood p(h_k with m_k amplifications|theta)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.AE.mlae_utils.log_likelihood">
-<code class="sig-prename descclassname">QQuantLib.AE.mlae_utils.</code><code class="sig-name descname">log_likelihood</code><span class="sig-paren">(</span><em class="sig-param">theta: float</em>, <em class="sig-param">m_k: int</em>, <em class="sig-param">n_k: int</em>, <em class="sig-param">h_k: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#QQuantLib.AE.mlae_utils.log_likelihood" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.mlae_utils.log_likelihood">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.mlae_utils.</span></span><span class="sig-name descname"><span class="pre">log_likelihood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#QQuantLib.AE.mlae_utils.log_likelihood" title="Link to this definition"></a></dt>
 <dd><p>Calculates log of the likelihood from Suzuki paper.
 Notes</p>
-<div class="math notranslate nohighlight">
-\[\log{l_k(\theta|h_k)} = 2h_k\log\big[\sin\left((2m_k+1) \
-\theta\right)\big] +2(n_k-h_k)\log\big[\cos\left((2m_k+1) \
-\theta\right)\big]\]</div>
+<blockquote>
+<div><p>thetaright)big] +2(n_k-h_k)logbig[cosleft((2m_k+1) thetaright)big]</p>
+</div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>theta</strong> (<em>float</em>) – Angle (radians) for calculating the probability of measure a
 positive event.</p></li>
@@ -186,21 +201,24 @@ positive event.</p></li>
 <li><p><strong>h_k</strong> (<em>int</em>) – number of positive events measured for each m_k</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Gives the log Likelihood p(h_k with m_k amplifications|theta)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ae.maximum_likelihood_ae.html" class="btn btn-neutral float-left" title="maximum_likelihood_ae" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ae.iterative_quantum_ae.html" class="btn btn-neutral float-right" title="iterative_quantum_ae" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

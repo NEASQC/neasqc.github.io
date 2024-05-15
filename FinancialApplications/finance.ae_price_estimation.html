@@ -1,30 +1,33 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ae_price_estimation &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>ae_price_estimation &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="payoff_class" href="finance.payoff_class.html" />
-    <link rel="prev" title="classical_finance" href="finance.classical_finance.html" /> 
+    <link rel="next" title="ae_price_estimation_step_payoff" href="finance.ae_price_estimation_step_payoff.html" />
+    <link rel="prev" title="quantum_integration" href="finance.quantum_integration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,19 +53,36 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="finance.html">QQuantLib.finance</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="finance.classical_finance.html">classical_finance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ae_price_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="finance.payoff_class.html">payoff_class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.probability_class.html">probability_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.payoff_class.html">payoff_class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ae_price_estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.ae_price_estimation.ae_price_estimation"><code class="docutils literal notranslate"><span class="pre">ae_price_estimation()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -90,47 +110,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.finance.ae_price_estimation">
-<span id="ae-price-estimation"></span><h1>ae_price_estimation<a class="headerlink" href="#module-QQuantLib.finance.ae_price_estimation" title="Permalink to this headline">¶</a></h1>
-<p>Function for automation of different option price estimation using
-Amplitude Estimation algorithms.</p>
-<p>The function uses the DensityProbability and the PayOff classes for
-defining the option price estimation problem. Then q_solve_integral
-function is used for computing the expected value integral. The function
-deals with all the mandatory normalisations for returned the desired price
-estimation.</p>
+  <section id="module-QQuantLib.finance.ae_price_estimation">
+<span id="ae-price-estimation"></span><h1>ae_price_estimation<a class="headerlink" href="#module-QQuantLib.finance.ae_price_estimation" title="Link to this heading"></a></h1>
+<p>This module implements the <em>ae_price_estimation</em> function that allows to
+the user configure a price estimation problem using financial parameters,
+encode the expected value integral to compute in a quantum state and
+estimate it using the different <strong>AE</strong> algorithms implemented in the
+<strong>QQuantLib.AE</strong> package.</p>
+<p>This function uses the DensityProbability and the PayOff classes (from
+<em>finance.probability_class</em> and <em>finance.payoff_class</em> modules
+respectively) for defining the option price estimation problem.
+Then the q_solve_integral function (from <em>finance.quantum_integration</em>
+module) is used for computing the expected value integral.</p>
+<p>The function deals with all the mandatory normalisations for returning
+the desired price estimation.</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
-<dl class="function">
-<dt id="QQuantLib.finance.ae_price_estimation.ae_price_estimation">
-<code class="sig-prename descclassname">QQuantLib.finance.ae_price_estimation.</code><code class="sig-name descname">ae_price_estimation</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.ae_price_estimation.ae_price_estimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.finance.ae_price_estimation.ae_price_estimation">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.ae_price_estimation.</span></span><span class="sig-name descname"><span class="pre">ae_price_estimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.ae_price_estimation.ae_price_estimation" title="Link to this definition"></a></dt>
 <dd><p>Configures an option price estimation problem and solving it using
 AE integration techniques</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary.</em>) – Dictionary for configuring the price estimation problem, the
 encoding of the price estimation data into the quantum circuit
 and the AE integration technique for solving it.</p>
@@ -142,23 +143,23 @@ and the AE integration technique for solving it.</p>
 for configuring the DensityProbability class (see QQuantLib.finance.probability_class), the PayOff class (see QQuantLib.finance.payoff_class) and the q_solve_integral function (see QQuantLib.finance.quantum_integration).</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>pdf</strong> – DataFrame with the configuration of the AE problem and the solution</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pandas DataFrame</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="finance.classical_finance.html" class="btn btn-neutral float-left" title="classical_finance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="finance.payoff_class.html" class="btn btn-neutral float-right" title="payoff_class" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="finance.quantum_integration.html" class="btn btn-neutral float-left" title="quantum_integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="finance.ae_price_estimation_step_payoff.html" class="btn btn-neutral float-right" title="ae_price_estimation_step_payoff" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

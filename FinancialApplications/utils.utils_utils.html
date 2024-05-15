@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>utils &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>utils &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -50,14 +55,45 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="utils.html">QQuantLib.utils</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.bitfield"><code class="docutils literal notranslate"><span class="pre">bitfield()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.bitfield_to_int"><code class="docutils literal notranslate"><span class="pre">bitfield_to_int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.check_list_type"><code class="docutils literal notranslate"><span class="pre">check_list_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.expmod"><code class="docutils literal notranslate"><span class="pre">expmod()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.fwht"><code class="docutils literal notranslate"><span class="pre">fwht()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.fwht_dyadic"><code class="docutils literal notranslate"><span class="pre">fwht_dyadic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.fwht_natural"><code class="docutils literal notranslate"><span class="pre">fwht_natural()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.fwht_sequency"><code class="docutils literal notranslate"><span class="pre">fwht_sequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.get_histogram"><code class="docutils literal notranslate"><span class="pre">get_histogram()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.left_conditional_probability"><code class="docutils literal notranslate"><span class="pre">left_conditional_probability()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.load_qn_gate"><code class="docutils literal notranslate"><span class="pre">load_qn_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.mask"><code class="docutils literal notranslate"><span class="pre">mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.measure_state_probability"><code class="docutils literal notranslate"><span class="pre">measure_state_probability()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.oracle_shots_calculation"><code class="docutils literal notranslate"><span class="pre">oracle_shots_calculation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.test_bins"><code class="docutils literal notranslate"><span class="pre">test_bins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.utils.utils.text_is_none"><code class="docutils literal notranslate"><span class="pre">text_is_none()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="utils.data_extracting.html">data_extracting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.benchmark_utils.html">benchmark_utils</a></li>
 </ul>
@@ -88,108 +124,84 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.utils.utils">
-<span id="utils"></span><h1>utils<a class="headerlink" href="#module-QQuantLib.utils.utils" title="Permalink to this headline">¶</a></h1>
+  <section id="module-QQuantLib.utils.utils">
+<span id="utils"></span><h1>utils<a class="headerlink" href="#module-QQuantLib.utils.utils" title="Link to this heading"></a></h1>
 <p>This module contains several auxiliary functions needed by other scripts
 of the library</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
-<p>Fast Walsh-Hadamard Transform is based on mex function written
-by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3 algorithm:</p>
 <blockquote>
-<div><p><a class="reference external" href="https://github.com/dingluo/fwht/blob/master/FWHT.py">https://github.com/dingluo/fwht/blob/master/FWHT.py</a></p>
+<div><p>Fast Walsh-Hadamard Transform is based on mex function written
+by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3 algorithm:
+<a class="reference external" href="https://github.com/dingluo/fwht/blob/master/FWHT.py">https://github.com/dingluo/fwht/blob/master/FWHT.py</a></p>
 </div></blockquote>
-<dl class="function">
-<dt id="QQuantLib.utils.utils.bitfield">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n_int: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.bitfield">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">bitfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_int</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield" title="Link to this definition"></a></dt>
 <dd><p>Transforms an int n_int to the corresponding bitfield of size size</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n_int</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – size of the bitfield</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>full</strong> – bitfield representation of n_int with size size</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of ints</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.bitfield_to_int">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">bitfield_to_int</code><span class="sig-paren">(</span><em class="sig-param">lista</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield_to_int" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.bitfield_to_int">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">bitfield_to_int</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.bitfield_to_int" title="Link to this definition"></a></dt>
 <dd><p>Transforms the bitfield list to the corresponding int
 :param lista: bitfield
 :type lista: ist of ints</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>integer</strong> – integer obtained from it’s binary representation.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.check_list_type">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x_input</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.check_list_type">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">check_list_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.check_list_type" title="Link to this definition"></a></dt>
 <dd><p>Check if a list x_input is of type tipo
 :param x_input:
 :type x_input: list
 :param tipo: it has to be understandable by numpy
 :type tipo: data type</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>y_output</strong> – numpy array of type tipo.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>np.array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.expmod">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">expmod</code><span class="sig-paren">(</span><em class="sig-param">n_input: int</em>, <em class="sig-param">base: int</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.expmod" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.expmod">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">expmod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.expmod" title="Link to this definition"></a></dt>
 <dd><p>For a pair of integer numbers, performs the decomposition:</p>
 <div class="math notranslate nohighlight">
 \[n_input = base^power+remainder\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n_input</strong> (<em>int</em>) – number to decompose</p></li>
 <li><p><strong>base</strong> (<em>int</em>) – basis</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>power</strong> (<em>int</em>) – power</p></li>
 <li><p><strong>remainder</strong> (<em>int</em>) – remainder</p></li>
@@ -199,32 +211,32 @@ by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.fwht">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.fwht">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordering</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sequency'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh Hadamard transform of array x_input
 Works as a wrapper for the different orderings
 of the Walsh-Hadamard transforms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_input</strong> (<em>numpy array</em>) – </p></li>
+<li><p><strong>x_input</strong> (<em>numpy array</em>)</p></li>
 <li><p><strong>ordering</strong> (<em>string</em>) – desired ordering of the transform</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>y_output</strong> – Fast Walsh Hadamard transform of array x_input
 in the corresponding ordering</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.fwht_dyadic">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_dyadic</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_dyadic" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.fwht_dyadic">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_dyadic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_dyadic" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x_input in dyadic ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
@@ -234,35 +246,35 @@ of Walsh and Related Functions.
 :param array:
 :type array: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.fwht_natural">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_natural</code><span class="sig-paren">(</span><em class="sig-param">array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_natural" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.fwht_natural">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_natural</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_natural" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x in natural ordering
 The result is not normalised
 :param array:
 :type array: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>fast_wh_transform</strong> – Fast Walsh Hadamard transform of array x.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.fwht_sequency">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.fwht_sequency">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_sequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.fwht_sequency" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x_input in sequence ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
@@ -272,18 +284,18 @@ of Walsh and Related Functions.
 :param x_input:
 :type x_input: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.get_histogram">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">get_histogram</code><span class="sig-paren">(</span><em class="sig-param">probability</em>, <em class="sig-param">low_limit</em>, <em class="sig-param">high_limit</em>, <em class="sig-param">nbin</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.get_histogram">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">get_histogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">low_limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">high_limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nbin</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.get_histogram" title="Link to this definition"></a></dt>
 <dd><p>Given a function probability, convert it into a histogram. The
 function must be positive, the normalization is automatic. Note
 that instead of having an analytical expression, probability could
@@ -291,7 +303,7 @@ just create an arbitrary vector of the right dimensions and positive
 amplitudes.  This procedure could be used to initialize any quantum
 state with real amplitudes</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>low_limit</strong> (<em>float</em>) – lower limit of the interval</p></li>
 <li><p><strong>high_limit</strong> (<em>float</em>) – upper limit of the interval</p></li>
@@ -301,7 +313,7 @@ in the interval</p></li>
 <li><p><strong>nbin</strong> (<em>int</em>) – number of bins in the interval</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>centers</strong> (<em>np.darray</em>) – numpy array with the centers of the bins of the histogram</p></li>
 <li><p><strong>probs</strong> (<em>np.darray</em>) – numpy array with the probability at the centers of the bins
@@ -312,9 +324,9 @@ of the histogram</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.left_conditional_probability">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">left_conditional_probability</code><span class="sig-paren">(</span><em class="sig-param">initial_bins</em>, <em class="sig-param">probability</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.left_conditional_probability" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.left_conditional_probability">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">left_conditional_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.left_conditional_probability" title="Link to this definition"></a></dt>
 <dd><p>This function calculate f(i) according to the Lov Grover and Terry
 Rudolph 2008 papper:
 ‘Creating superposition that correspond to efficiently integrable
@@ -326,28 +338,28 @@ calculates the conditional probabilities for x is located in the
 left part of the new regions when x is located in the region that
 contains the corresponding left region</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>initial_bins</strong> (<em>int</em>) – Number of initial bins for splitting the input probabilities</p></li>
 <li><p><strong>probability</strong> (<em>np.darray.</em>) – Numpy array with the probabilities to be load.
 initial_bins &lt;= len(Probability)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>left_cond_prob</strong> – conditional probabilities of the new initial_bins+1 splits</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>np.darray</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.load_qn_gate">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">load_qn_gate</code><span class="sig-paren">(</span><em class="sig-param">qlm_gate</em>, <em class="sig-param">n_times</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.load_qn_gate" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.load_qn_gate">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">load_qn_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlm_gate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_times</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.load_qn_gate" title="Link to this definition"></a></dt>
 <dd><p>Create an AbstractGate by applying an input gate n times</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>qlm_gate</strong> (<em>QLM gate</em>) – QLM gate that will be applied n times</p></li>
 <li><p><strong>n_times</strong> (<em>int</em>) – number of times the qlm_gate will be applied</p></li>
@@ -356,74 +368,74 @@ initial_bins &lt;= len(Probability)</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.mask">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.mask" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.mask">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.mask" title="Link to this definition"></a></dt>
 <dd><p>Transforms the state <span class="math notranslate nohighlight">\(|index\rangle\)</span> into the state
 <span class="math notranslate nohighlight">\(|11...1\rangle\)</span> of size number qubits.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>number_qubits</strong> (<em>int</em>) – </p></li>
-<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>number_qubits</strong> (<em>int</em>)</p></li>
+<li><p><strong>index</strong> (<em>int</em>)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>mask</strong> – the gate that we have to apply in order to transform
 state <span class="math notranslate nohighlight">\(|index\rangle\)</span>. Note that it affects all states.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Qlm abstract gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.measure_state_probability">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">measure_state_probability</code><span class="sig-paren">(</span><em class="sig-param">input_result</em>, <em class="sig-param">target</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.measure_state_probability" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.measure_state_probability">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">measure_state_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.measure_state_probability" title="Link to this definition"></a></dt>
 <dd><p>From an input result DataFrame gets the probability of target state</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>input_result</strong> (<em>Pandas DataFrame</em>) – DataFrame with measurement results like obtained in the
 get_results function (from QQuantLib.utils.data_extracting)</p></li>
 <li><p><strong>target</strong> (<em>list</em>) – python list with the state we want to extract</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>output_probability</strong> – Probability of the desired target state. If the state it is not
 found then 0.0 is returned.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.oracle_shots_calculation">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">oracle_shots_calculation</code><span class="sig-paren">(</span><em class="sig-param">m_k</em>, <em class="sig-param">n_k</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.oracle_shots_calculation" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.oracle_shots_calculation">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">oracle_shots_calculation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.oracle_shots_calculation" title="Link to this definition"></a></dt>
 <dd><p>Function for computing the total number of oracle shots.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>m_k</strong> (<em>list</em>) – list with integers. Applications of the Grover-like
 amplification operator.</p></li>
 <li><p><strong>n_k</strong> (<em>list</em>) – list with integers. Number of shots for each value of m_k.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>oracle_shots</strong> – Number of total oracle calls for the input schedule</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.test_bins">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">test_bins</code><span class="sig-paren">(</span><em class="sig-param">array</em>, <em class="sig-param">text='probability'</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.test_bins" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.test_bins">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">test_bins</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'probability'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.test_bins" title="Link to this definition"></a></dt>
 <dd><p>Testing condition for numpy arrays. The length of the array must
 be 2^n with n an int.
 :param array: Numpy Array whose dimensionality is going to test
@@ -431,26 +443,26 @@ be 2^n with n an int.
 :param test: String for identification purposes
 :type test: str</p>
 <dl class="field-list simple">
-<dt class="field-odd">Raises</dt>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>AssertionError</strong> – If lengt of array is not 2^n with n an int.</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>nqbits</strong> – Minimum number of qbits mandatory for storing input array in a
 quantum state</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="QQuantLib.utils.utils.text_is_none">
-<code class="sig-prename descclassname">QQuantLib.utils.utils.</code><code class="sig-name descname">text_is_none</code><span class="sig-paren">(</span><em class="sig-param">variable</em>, <em class="sig-param">variable_name</em>, <em class="sig-param">variable_type=&lt;class 'float'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.text_is_none" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.utils.utils.text_is_none">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.utils.utils.</span></span><span class="sig-name descname"><span class="pre">text_is_none</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable_type=&lt;class</span> <span class="pre">'float'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.utils.utils.text_is_none" title="Link to this definition"></a></dt>
 <dd><p>Raise an exception if variable is None</p>
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>

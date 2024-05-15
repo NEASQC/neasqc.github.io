@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ae_classical_qpe &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>ae_classical_qpe &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="ae_iterative_quantum_pe" href="ae.ae_iterative_quantum_pe.html" />
-    <link rel="prev" title="real_quantum_ae" href="ae.real_quantum_ae.html" /> 
+    <link rel="prev" title="montecarlo_ae" href="ae.montecarlo_ae.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,21 +55,48 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="ae.html">QQuantLib.AE</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ae.maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae.iterative_quantum_ae.html">iterative_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae.real_quantum_ae.html">real_quantum_ae</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ae_classical_qpe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ae.ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae.montecarlo_ae.html">montecarlo_ae</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ae_classical_qpe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE"><code class="docutils literal notranslate"><span class="pre">CQPEAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.index"><code class="docutils literal notranslate"><span class="pre">CQPEAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle"><code class="docutils literal notranslate"><span class="pre">CQPEAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.run"><code class="docutils literal notranslate"><span class="pre">CQPEAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.target"><code class="docutils literal notranslate"><span class="pre">CQPEAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mlae_utils.html">mlae_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.iterative_quantum_ae.html">iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.miterative_quantum_ae.html">modified_iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.real_quantum_ae.html">real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mreal_quantum_ae.html">modified_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.sreal_quantum_ae.html">shots_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ereal_quantum_ae.html">extended_real_quantum_ae</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ae.ae_class.html">ae_class</a></li>
 </ul>
 </li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
 </ul>
 
@@ -92,57 +124,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="module-QQuantLib.AE.ae_classical_qpe">
-<span id="ae-classical-qpe"></span><h1>ae_classical_qpe<a class="headerlink" href="#module-QQuantLib.AE.ae_classical_qpe" title="Permalink to this headline">¶</a></h1>
-<p>This module contains a wrapper class of the PE_QFT class from
-QQuantLib/PE/phase_estimation_wqft module for adapting classical
-phase estimation algorithm to solve amplitude estimation problems.
-Following references were used:</p>
+  <section id="module-QQuantLib.AE.ae_classical_qpe">
+<span id="ae-classical-qpe"></span><h1>ae_classical_qpe<a class="headerlink" href="#module-QQuantLib.AE.ae_classical_qpe" title="Link to this heading"></a></h1>
+<p>This module contains the CQPEAE class. Given a quantum oracle operator,
+this class estimates the amplitude of a given target state using the
+classical QPE algorithm (with QFT). This module uses the
+QQuantLib.PE.classical_qpe one.</p>
+<p>The following references were used:</p>
 <blockquote>
-<div><p>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
+<div><p><em>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
 Quantum amplitude amplification and estimation.
 AMS Contemporary Mathematics Series, 305.
-<a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
-<p>NEASQC deliverable: D5.1: Review of state-of-the-art for Pricing
-and Computation of VaR</p>
+https://arxiv.org/abs/quant-ph/0005055v1</em></p>
+<p><em>NEASQC deliverable: D5.1: Review of state-of-the-art for Pricing
+and Computation of VaR</em></p>
 </div></blockquote>
 <p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
-<dl class="class">
-<dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE">
-<em class="property">class </em><code class="sig-prename descclassname">QQuantLib.AE.ae_classical_qpe.</code><code class="sig-name descname">CQPEAE</code><span class="sig-paren">(</span><em class="sig-param">oracle: qat.lang.AQASM.QRoutine</em>, <em class="sig-param">target: list</em>, <em class="sig-param">index: list</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.AE.ae_classical_qpe.CQPEAE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.ae_classical_qpe.</span></span><span class="sig-name descname"><span class="pre">CQPEAE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE" title="Link to this definition"></a></dt>
 <dd><p>Class for doing Amplitude Estimation (AE) using classical Quantum
 Amplitude Estimation (with QFT) algorithm</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
 Grover operator</p></li>
-<li><p><strong>target</strong> (<em>list of ints</em>) – python list with the target for the amplitude estimation</p></li>
-<li><p><strong>index</strong> (<em>list of ints</em>) – qubits which mark the register to do the amplitude
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – qubits which mark the register to do the amplitude
 estimation</p></li>
 <li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the CQPEAE algorithm: Implemented keys:</p>
 <dl class="simple">
@@ -158,27 +167,27 @@ gate</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
-<dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE.index">
-<em class="property">property </em><code class="sig-name descname">index</code><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.index" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.ae_classical_qpe.CQPEAE.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.index" title="Link to this definition"></a></dt>
 <dd><p>creating index property</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle">
-<em class="property">property </em><code class="sig-name descname">oracle</code><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">oracle</span></span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle" title="Link to this definition"></a></dt>
 <dd><p>creating oracle property</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.run" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.ae_classical_qpe.CQPEAE.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.run" title="Link to this definition"></a></dt>
 <dd><p>run method for the class.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the estimation of a</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>result</p>
 </dd>
 </dl>
@@ -191,21 +200,21 @@ gate</p>
 <p>And <span class="math notranslate nohighlight">\(\mathcal{Q}\)</span> the Grover Operator</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="QQuantLib.AE.ae_classical_qpe.CQPEAE.target">
-<em class="property">property </em><code class="sig-name descname">target</code><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.target" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.ae_classical_qpe.CQPEAE.target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#QQuantLib.AE.ae_classical_qpe.CQPEAE.target" title="Link to this definition"></a></dt>
 <dd><p>creating target property</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ae.real_quantum_ae.html" class="btn btn-neutral float-left" title="real_quantum_ae" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ae.montecarlo_ae.html" class="btn btn-neutral float-left" title="montecarlo_ae" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="ae.ae_iterative_quantum_pe.html" class="btn btn-neutral float-right" title="ae_iterative_quantum_pe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QQuantLib.utils &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>QQuantLib.utils &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/contentui.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="utils" href="utils.utils_utils.html" />
-    <link rel="prev" title="quantum_integration" href="finance.quantum_integration.html" /> 
+    <link rel="prev" title="noise_test_bank_functions" href="qpu.noise_test_bank_functions.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,12 +55,25 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.utils</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="utils.utils_utils.html">utils</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.data_extracting.html">data_extracting</a></li>
@@ -87,47 +105,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<div class="section" id="qquantlib-utils">
-<h1>QQuantLib.utils<a class="headerlink" href="#qquantlib-utils" title="Permalink to this headline">¶</a></h1>
-<p>The <strong>utils</strong> package groups python auxiliary modules used by the other packages of <strong>QQuantLib</strong>. Following modules are presented in this package.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="utils.utils_utils.html">utils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.data_extracting.html">data_extracting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="utils.benchmark_utils.html">benchmark_utils</a></li>
+  <section id="qquantlib-utils">
+<h1>QQuantLib.utils<a class="headerlink" href="#qquantlib-utils" title="Link to this heading"></a></h1>
+<p>The <strong>utils</strong> package implements several modules with auxiliary functions used across other packages of the QQuantLib library.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="utils.utils_utils.html"><span class="doc">utils</span></a>: Several auxiliary functions used across other packages of QQuantLib are stored in this module.</p></li>
+<li><p><a class="reference internal" href="utils.data_extracting.html"><span class="doc">data_extracting</span></a>: This module implements several  functions that allow the execution of quantum routines (or programs) and formatting the obtained results properly (in general by returning pandas DataFrames)</p></li>
+<li><p><a class="reference internal" href="utils.benchmark_utils.html"><span class="doc">benchmark_utils</span></a>: This module holds several auxiliary functions that allow to creation of combinations of several Python dictionaries. These functions are used for the modules of the benchmark folder of the FinancialApplications repository for creating easy input configurations for benchmark tests.</p></li>
 </ul>
+<div class="toctree-wrapper compound">
 </div>
+<div class="toctree-wrapper compound">
 </div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="finance.quantum_integration.html" class="btn btn-neutral float-left" title="quantum_integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qpu.noise_test_bank_functions.html" class="btn btn-neutral float-left" title="noise_test_bank_functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="utils.utils_utils.html" class="btn btn-neutral float-right" title="utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

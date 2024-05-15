@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>select_qpu &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="model_noise" href="qpu.model_noise.html" />
+    <link rel="prev" title="get_qpu" href="qpu.get_qpu.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qpu.get_qpu.html">get_qpu</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">select_qpu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qpu.select_qpu.select_qpu"><code class="docutils literal notranslate"><span class="pre">select_qpu()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qpu.model_noise.html">model_noise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qpu.noise_test_bank_functions.html">noise_test_bank_functions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="qpu.html">QQuantLib.qpu</a></li>
+      <li class="breadcrumb-item active">select_qpu</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-QQuantLib.qpu.select_qpu">
+<span id="select-qpu"></span><h1>select_qpu<a class="headerlink" href="#module-QQuantLib.qpu.select_qpu" title="Link to this heading"></a></h1>
+<p>This module implements the select_qpu function that allows to the user
+select a complete QPU. The input of this function is a Python dictionary
+with the following keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>qpu_type</strong></dt><dd><p>The value is a Python string for selecting the type of QPU. The
+values can be: <em>c, python, linalg, mps, qlmass_linalg, qlmass_mps</em>
+for using with pure ideal QPU (the get_qpu function  from
+QQuantLib.qpu.get_qpu module is used for getting the QPU).
+Additionally, the values can be: <em>ideal</em> for using an ideal qpu
+with a Toffoli rewritter pluging or <em>noisy</em> for configuring and
+using a noisy QPU. In both cases the create_qpu function  from
+QQuantLib.qpu.model_noise module is used for creating the QPU.</p>
+</dd>
+<dt><strong>t_gate_1qb</strong></dt><dd><p>For setting the time for the 1-qubit gates (in ns). Only valid
+if <em>qpu_type</em> is noisy.</p>
+</dd>
+<dt><strong>t_gate_2qbs</strong></dt><dd><p>For setting the time for the 2-qubit gates (in ns). Only valid
+if <em>qpu_type</em> is noisy.</p>
+</dd>
+<dt><strong>t_readout</strong></dt><dd><p>For setting the time for the measuring operations (in ns). Only
+valid if <em>qpu_type</em> is noisy.</p>
+</dd>
+<dt><strong>depol_channel</strong></dt><dd><p>For setting the parameters for a depolarizing channel. The value
+is a complete dictionary with the following keys: <strong>active</strong>
+the boolean key for activating or not the channel. <strong>error_gate_1qb</strong>
+error for 1-qubit gates. <strong>error_gate_2qbs</strong> error for 2-qubits
+gates.</p>
+</dd>
+<dt><strong>idle</strong></dt><dd><p>For setting the parameters for idle qubits. The value is a
+complete dictionary with the following keys: <strong>amplitude_damping</strong>
+the boolean key for activating or not an Amplitude Damping channel.
+<strong>dephasing_channel</strong> boolean key for activating or not a
+Dephasing channel. <strong>t1</strong> time T1 of the qubits (in ns)
+<strong>t2</strong> time T2 of the qubits (in nsa).</p>
+</dd>
+<dt><strong>meas</strong></dt><dd><p>For setting the parameters for a measuring error. The value is a
+complete dictionary with the following keys: <strong>active</strong> boolean
+key for activating or not this error. <strong>readout_error</strong> measuring
+error.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.qpu.select_qpu.select_qpu">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.qpu.select_qpu.</span></span><span class="sig-name descname"><span class="pre">select_qpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hw_cfg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qpu.select_qpu.select_qpu" title="Link to this definition"></a></dt>
+<dd><p>This function allows to select a QPU (a ideal or a noisy one).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>hw_cfg</strong> (<em>dict</em>) – Python dictionary for configuring a complete (ideal or noisy)
+QPU. When an “ideal” QPU is selected the get_qpu from get_qpu
+module is used. If a “noisy” QPU is selected then the differents
+keys of the dictionary are used for configruing a noisy hardware
+model using functions from model_noise module.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qpu.get_qpu.html" class="btn btn-neutral float-left" title="get_qpu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qpu.model_noise.html" class="btn btn-neutral float-right" title="model_noise" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shots_real_quantum_ae &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/contentui.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="extended_real_quantum_ae" href="ae.ereal_quantum_ae.html" />
+    <link rel="prev" title="modified_real_quantum_ae" href="ae.mreal_quantum_ae.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                0.0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ae.html">QQuantLib.AE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ae.montecarlo_ae.html">montecarlo_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_classical_qpe.html">ae_classical_qpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mlae_utils.html">mlae_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.iterative_quantum_ae.html">iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.miterative_quantum_ae.html">modified_iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.real_quantum_ae.html">real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mreal_quantum_ae.html">modified_real_quantum_ae</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">shots_real_quantum_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE"><code class="docutils literal notranslate"><span class="pre">sRQAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.chebysev_bound"><code class="docutils literal notranslate"><span class="pre">sRQAE.chebysev_bound()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.compute_info"><code class="docutils literal notranslate"><span class="pre">sRQAE.compute_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.display_information"><code class="docutils literal notranslate"><span class="pre">sRQAE.display_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.first_step"><code class="docutils literal notranslate"><span class="pre">sRQAE.first_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.index"><code class="docutils literal notranslate"><span class="pre">sRQAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.oracle"><code class="docutils literal notranslate"><span class="pre">sRQAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.run"><code class="docutils literal notranslate"><span class="pre">sRQAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.run_step"><code class="docutils literal notranslate"><span class="pre">sRQAE.run_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.shifted_oracle"><code class="docutils literal notranslate"><span class="pre">sRQAE.shifted_oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.srqae"><code class="docutils literal notranslate"><span class="pre">sRQAE.srqae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.target"><code class="docutils literal notranslate"><span class="pre">sRQAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ereal_quantum_ae.html">extended_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_class.html">ae_class</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="ae.html">QQuantLib.AE</a></li>
+      <li class="breadcrumb-item active">shots_real_quantum_ae</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-QQuantLib.AE.shots_real_quantum_ae">
+<span id="shots-real-quantum-ae"></span><h1>shots_real_quantum_ae<a class="headerlink" href="#module-QQuantLib.AE.shots_real_quantum_ae" title="Link to this heading"></a></h1>
+<p>This module contains the sRQAE class. Given a quantum oracle operator,
+this class estimates the <strong>amplitude</strong> of a given target state using
+a modification of the RQAE algorithm where the user can provide the
+number of shots for the generated quantum circuits. Usually
+the experimental performance of this modification is better than the
+original RQAE one.</p>
+<p>Original RQAE papper:</p>
+<blockquote>
+<div><p><em>Manzano, A., Musso, D., Leitao, A.
+Real Quantum Amplitude Estimation
+EPJ Quantum Technol. 10, 2 (2023)
+https://doi.org/10.1140/epjqt/s40507-023-00159-0</em></p>
+</div></blockquote>
+<p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.shots_real_quantum_ae.</span></span><span class="sig-name descname"><span class="pre">sRQAE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE" title="Link to this definition"></a></dt>
+<dd><p>Class for Real Quantum Amplitude Estimation (RQAE)
+algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the IQAE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>q<span class="classifier">int</span></dt><dd><p>amplification ratio</p>
+</dd>
+<dt>epsilon<span class="classifier">int</span></dt><dd><p>precision</p>
+</dd>
+<dt>gamma<span class="classifier">float</span></dt><dd><p>accuracy</p>
+</dd>
+<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
+gate</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.chebysev_bound">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chebysev_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.chebysev_bound" title="Link to this definition"></a></dt>
+<dd><p>Computes the length of the confidence interval for a given number
+of samples n_samples and an accuracy gamma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_samples</strong> (<em>int</em>) – number of samples</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>length of the confidence interval</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.compute_info">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">compute_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.compute_info" title="Link to this definition"></a></dt>
+<dd><p>This function computes theoretical values of the IQAE algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ratio</strong> (<em>float</em>) – amplification ratio/policy</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – precision</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>info</strong> – python dictionary with the computed information</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.display_information">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">display_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.display_information" title="Link to this definition"></a></dt>
+<dd><p>This function displays information of the properties of the
+method for a given set of parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ratio</strong> (<em>float</em>) – amplification ratio/policy</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – precision</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.first_step">
+<span class="sig-name descname"><span class="pre">first_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.first_step" title="Link to this definition"></a></dt>
+<dd><p>This function implements the first step of the RQAE paper. The result
+is a first estimation of the desired amplitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shift</strong> (<em>float</em>) – shift for the first iteration</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>amplitude_min</strong> (<em>float</em>) – lower bound for the amplitude to be estimated</p></li>
+<li><p><strong>amplitude_max</strong> (<em>float</em>) – upper bound for the amplitude to be estimated</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.index" title="Link to this definition"></a></dt>
+<dd><p>creating index property</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.oracle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">oracle</span></span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.oracle" title="Link to this definition"></a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.run" title="Link to this definition"></a></dt>
+<dd><p>run method for the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>amplitude estimation parameter</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>self.ae</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.run_step">
+<span class="sig-name descname"><span class="pre">run_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.run_step" title="Link to this definition"></a></dt>
+<dd><p>This function implements a step of the RQAE paper. The result
+is a refined estimation of the desired amplitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shift</strong> (<em>float</em>) – shift for the first iteration</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – number of measurements</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – number of amplifications</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>amplitude_min</strong> (<em>float</em>) – lower bound for the amplitude to be estimated</p></li>
+<li><p><strong>amplitude_max</strong> (<em>float</em>) – upper bound for the amplitude to be estimated</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.shifted_oracle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shifted_oracle</span></span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.shifted_oracle" title="Link to this definition"></a></dt>
+<dd><p>creating shifted_oracle property</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.srqae">
+<span class="sig-name descname"><span class="pre">srqae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsilon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.srqae" title="Link to this definition"></a></dt>
+<dd><p>This function implements the first step of the RQAE paper. The
+result is an estimation of the desired amplitude with precision
+epsilon and accuracy gamma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ratio</strong> (<em>int</em>) – amplification ratio</p></li>
+<li><p><strong>epsilon</strong> (<em>int</em>) – precision</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – accuracy</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – shots</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>amplitude_min</strong> (<em>float</em>) – lower bound for the amplitude to be estimated</p></li>
+<li><p><strong>amplitude_max</strong> (<em>float</em>) – upper bound for the amplitude to be estimated</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.shots_real_quantum_ae.sRQAE.target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#QQuantLib.AE.shots_real_quantum_ae.sRQAE.target" title="Link to this definition"></a></dt>
+<dd><p>creating target property</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ae.mreal_quantum_ae.html" class="btn btn-neutral float-left" title="modified_real_quantum_ae" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ae.ereal_quantum_ae.html" class="btn btn-neutral float-right" title="extended_real_quantum_ae" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
