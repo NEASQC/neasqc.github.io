@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QQuantLib.qml4var &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="data_utils" href="qml4var.data_utils.html" />
+    <link rel="prev" title="ae_price_estimation_step_payoff" href="finance.ae_price_estimation_step_payoff.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ae.html">QQuantLib.AE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">QQuantLib.qml4var</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.data_utils.html">data_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.plugins.html">plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.myqlm_workflows.html">myqlm_workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.losses.html">losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.adam.html">adam</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">QQuantLib.qml4var</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qquantlib-qml4var">
+<h1>QQuantLib.qml4var<a class="headerlink" href="#qquantlib-qml4var" title="Link to this heading"></a></h1>
+<p>This package implements the mandatory modules and functions to train a <strong>Parametric Quantum Circuit (PQC)</strong> that can be used as surrogate models of complex and time consuming financial <strong>Cumulative Distribution Functions (CDF)</strong> using the <em>myQLM EVIDEN</em> software.</p>
+<p>The following modules are presented:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="qml4var.data_utils.html"><span class="doc">data_utils</span></a>: This module contains functions for generating suitable datasets for training <strong>PQC**s for **CDF</strong> evaluation.</p></li>
+<li><p><a class="reference internal" href="qml4var.architectures.html"><span class="doc">architectures</span></a>: This module implements a hardware efficient ansatz <strong>PQC</strong> and define the measurement observable.</p></li>
+<li><p><a class="reference internal" href="qml4var.plugins.html"><span class="doc">plugins</span></a>: This module contains home made <strong>myQLM Plugins</strong> used for evaluating <strong>PQC</strong> s for a set of trainable and feature parameters.</p></li>
+<li><p><a class="reference internal" href="qml4var.myqlm_workflows.html"><span class="doc">myqlm_workflows</span></a>: This module implements workflows for evaluating the <strong>PQC</strong> s.</p></li>
+<li><p><a class="reference internal" href="qml4var.losses.html"><span class="doc">losses</span></a>: This module implements several loss functions.</p></li>
+<li><p><a class="reference internal" href="qml4var.adam.html"><span class="doc">adam</span></a>: This module implements the ADAM optimizer.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="finance.ae_price_estimation_step_payoff.html" class="btn btn-neutral float-left" title="ae_price_estimation_step_payoff" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qml4var.data_utils.html" class="btn btn-neutral float-right" title="data_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
