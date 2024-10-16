@@ -140,16 +140,17 @@ integral computation.</p>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>if x_array has shape(n, 1): then numpy trapz is used for computing integral.
-if x_array has shape(n, 2): and dask_client is None numpy trapz</p>
-<blockquote>
-<div><p>is used for computing the double integral.</p>
-</div></blockquote>
-<dl class="simple">
-<dt>if x_array has shape(n, 2): and dask_client is provided then MonteCarlo</dt><dd><p>integration is used</p>
+<dl>
+<dt>Considerations:</dt><dd><ul class="simple">
+<li><p>if x_array has shape(n, 1): then numpy trapz is used for computing integral.</p></li>
+<li><p>if x_array has shape(n, 2): and dask_client is None numpy trapz</p></li>
+</ul>
+<p>is used for computing the double integral.
+* if x_array has shape(n, 2): and dask_client is provided then MonteCarlo
+integration is used.
+* if x_array has shape(n, &gt; 2): MonteCarlo integration is used</p>
 </dd>
 </dl>
-<p>if x_array has shape(n, &gt; 2): MonteCarlo integration is used</p>
 </div>
 </dd></dl>
 
