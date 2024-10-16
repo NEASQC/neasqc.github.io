@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="myqlm_workflows" href="qml4var.myqlm_workflows.html" />
-    <link rel="prev" title="data_utils" href="qml4var.data_utils.html" /> 
+    <link rel="prev" title="architectures" href="qml4var.architectures.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,7 +66,51 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="qml4var.html">QQuantLib.qml4var</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="qml4var.data_utils.html">data_utils</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qml4var.architectures.html">architectures</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.DataLoadingJunction"><code class="docutils literal notranslate"><span class="pre">DataLoadingJunction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.DataLoadingJunction.run"><code class="docutils literal notranslate"><span class="pre">DataLoadingJunction.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.GradientPlugin"><code class="docutils literal notranslate"><span class="pre">GradientPlugin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.GradientPlugin.compile"><code class="docutils literal notranslate"><span class="pre">GradientPlugin.compile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.MyQPU"><code class="docutils literal notranslate"><span class="pre">MyQPU</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.MyQPU.submit_job"><code class="docutils literal notranslate"><span class="pre">MyQPU.submit_job()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesOnInputJunction"><code class="docutils literal notranslate"><span class="pre">ProccesOnInputJunction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesOnInputJunction.run"><code class="docutils literal notranslate"><span class="pre">ProccesOnInputJunction.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesResultPluging"><code class="docutils literal notranslate"><span class="pre">ProccesResultPluging</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesResultPluging.compile"><code class="docutils literal notranslate"><span class="pre">ProccesResultPluging.compile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesResultPluging.post_process"><code class="docutils literal notranslate"><span class="pre">ProccesResultPluging.post_process()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetParametersPlugin"><code class="docutils literal notranslate"><span class="pre">SetParametersPlugin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetParametersPlugin.compile"><code class="docutils literal notranslate"><span class="pre">SetParametersPlugin.compile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetWeightsPlugin"><code class="docutils literal notranslate"><span class="pre">SetWeightsPlugin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetWeightsPlugin.compile"><code class="docutils literal notranslate"><span class="pre">SetWeightsPlugin.compile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ViewPlugin"><code class="docutils literal notranslate"><span class="pre">ViewPlugin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ViewPlugin.compile"><code class="docutils literal notranslate"><span class="pre">ViewPlugin.compile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.new_DataLoadingJunction"><code class="docutils literal notranslate"><span class="pre">new_DataLoadingJunction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.new_DataLoadingJunction.run"><code class="docutils literal notranslate"><span class="pre">new_DataLoadingJunction.run()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.pdfPluging"><code class="docutils literal notranslate"><span class="pre">pdfPluging</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.pdfPluging.compile"><code class="docutils literal notranslate"><span class="pre">pdfPluging.compile()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="qml4var.myqlm_workflows.html">myqlm_workflows</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qml4var.losses.html">losses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qml4var.adam.html">adam</a></li>
@@ -104,15 +148,230 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="plugins">
-<h1>plugins<a class="headerlink" href="#plugins" title="Link to this heading"></a></h1>
+  <section id="module-QQuantLib.qml4var.plugins">
+<span id="plugins"></span><h1>plugins<a class="headerlink" href="#module-QQuantLib.qml4var.plugins" title="Link to this heading"></a></h1>
+<p>Plugins for Quantum Machine Learning
+using myqlm</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.DataLoadingJunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">DataLoadingJunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.DataLoadingJunction" title="Link to this definition"></a></dt>
+<dd><p>Pluging for loading Data into the circuits of the batch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>numpy array</em>) – Numpy array with the Features</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.DataLoadingJunction.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.DataLoadingJunction.run" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite the
+different weights of the PQC</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.GradientPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">GradientPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.GradientPlugin" title="Link to this definition"></a></dt>
+<dd><p>Pluging for creating gradient Jobs.</p>
+<p>The input Batch for the compile method SHOULD HAVE only 1 job.
+The circuit of the job should be a parametric QLM circuit.
+The Batch MUST have a meta_data with at least the keys:
+fetures and weights</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.GradientPlugin.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.GradientPlugin.compile" title="Link to this definition"></a></dt>
+<dd><p>Compile method of the plugin.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> (<em>QLM Batch</em>) – QLM batch with the Jobs to execute</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>batch_</strong> – QLM Batch with the jobs for computing graidents</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QLM Batch</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.MyQPU">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">MyQPU</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.MyQPU" title="Link to this definition"></a></dt>
+<dd><p>New QPU. Update the result with the corresponding
+metadata of the input job</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input_qpu</strong> (<em>QLM qpu</em>) – A qpu that will be the base for the new QPU</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.MyQPU.submit_job">
+<span class="sig-name descname"><span class="pre">submit_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.MyQPU.submit_job" title="Link to this definition"></a></dt>
+<dd><p>Given a job submit to the input_qpu and update
+the meta_data of the QLM Result object with the
+meta_data of the job</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ProccesOnInputJunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">ProccesOnInputJunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ProccesOnInputJunction" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ProccesOnInputJunction.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ProccesOnInputJunction.run" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite the
+different weights of the PQC</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ProccesResultPluging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">ProccesResultPluging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ProccesResultPluging" title="Link to this definition"></a></dt>
+<dd><p>Procces the results of a input sample batch. The batch correspond
+to all the circuits mandatory for proccessing on sample
+of the dataset.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ProccesResultPluging.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ProccesResultPluging.compile" title="Link to this definition"></a></dt>
+<dd><p>The Batch pass throug the Pluging without modification</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ProccesResultPluging.post_process">
+<span class="sig-name descname"><span class="pre">post_process</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch_result</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ProccesResultPluging.post_process" title="Link to this definition"></a></dt>
+<dd><p>Given a QLM BatchResult object procces it
+:param batch_result: QLM BatchResult object with the results to procces
+:type batch_result: QLM BatchResult</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetParametersPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">SetParametersPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetParametersPlugin" title="Link to this definition"></a></dt>
+<dd><p>Pluging for setting the weights and features of the different PQCs.
+The Batch MUST have a meta_data with at least the keys:
+fetures and weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weights</strong> (<em>numpy array</em>) – Array with the weights of the model</p></li>
+<li><p><strong>features</strong> (<em>numpy array</em>) – Array with the features for the model.
+Expected shape: (1, number of features)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetParametersPlugin.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetParametersPlugin.compile" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite
+the different weights of the PQC</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> (<em>QLM Batch</em>) – QLM Batch object with the jobs to execute</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>batch_</strong> – QLM Batch with the jobs</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QLM Batch</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetWeightsPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">SetWeightsPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetWeightsPlugin" title="Link to this definition"></a></dt>
+<dd><p>Pluging for setting the weights of the different PQCs.
+The Batch MUST have a meta_data with at least the keys:
+fetures and weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>weights</strong> (<em>numpy array</em>) – Array with the weights of the model</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetWeightsPlugin.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetWeightsPlugin.compile" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite
+the different weights of the PQC</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> (<em>QLM Batch</em>) – QLM Batch object with the jobs to execute</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>batch_</strong> – QLM Batch with the jobs</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QLM Batch</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ViewPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">ViewPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ViewPlugin" title="Link to this definition"></a></dt>
+<dd><p>Pluging for depicting the circuits of an input batch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>plugin</strong> (<em>str</em>) – Name of the Before Plugin</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.ViewPlugin.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.ViewPlugin.compile" title="Link to this definition"></a></dt>
+<dd><p>compile method</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.new_DataLoadingJunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">new_DataLoadingJunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.new_DataLoadingJunction" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.new_DataLoadingJunction.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.new_DataLoadingJunction.run" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite the
+different weights of the PQC</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.pdfPluging">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">pdfPluging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.pdfPluging" title="Link to this definition"></a></dt>
+<dd><p>Given a batch with a PQC for computing a CDF this plugin computes
+the Batch for computing the corresponding PDF</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parameters</strong> (<em>list</em>) – Name of all the features of the PQC. Mandatory for computing
+the Batch that allows the PDF</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.pdfPluging.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.pdfPluging.compile" title="Link to this definition"></a></dt>
+<dd><p>compile method</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="qml4var.data_utils.html" class="btn btn-neutral float-left" title="data_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qml4var.architectures.html" class="btn btn-neutral float-left" title="architectures" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="qml4var.myqlm_workflows.html" class="btn btn-neutral float-right" title="myqlm_workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
