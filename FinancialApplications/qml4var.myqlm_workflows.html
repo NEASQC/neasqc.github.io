@@ -283,15 +283,20 @@ dataset. Dask cluster computation using map</p>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>y_data</strong> (<em>depends on dask_client. If dask_client is None then returns</em>)</p></li>
-<li><p><em>a list with results of the workflow for all input dataset. If a</em></p></li>
-<li><p><em>dask_client is passed then returns a list of futures and a gather</em></p></li>
-<li><p><em>operation should be executed for retrieving the data.</em></p></li>
-</ul>
-</p>
+<dd class="field-even"><p><strong>y_data</strong></p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The return of the function depends on dask_client.
+If dask_client is None then returns a list with results
+of the workflow for all input dataset. If a dask_client is passed
+then returns a list of futures and a gather operation should
+be executed for retrieving the data.</p>
+</div>
 </dd></dl>
 
 <dl class="py function">
