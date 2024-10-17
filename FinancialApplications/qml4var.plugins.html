@@ -89,6 +89,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.ProccesResultPluging.post_process"><code class="docutils literal notranslate"><span class="pre">ProccesResultPluging.post_process()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetFeaturesPlugin"><code class="docutils literal notranslate"><span class="pre">SetFeaturesPlugin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetFeaturesPlugin.compile"><code class="docutils literal notranslate"><span class="pre">SetFeaturesPlugin.compile()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetParametersPlugin"><code class="docutils literal notranslate"><span class="pre">SetParametersPlugin</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#QQuantLib.qml4var.plugins.SetParametersPlugin.compile"><code class="docutils literal notranslate"><span class="pre">SetParametersPlugin.compile()</span></code></a></li>
 </ul>
@@ -252,6 +256,38 @@ of the dataset.</p>
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetFeaturesPlugin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">SetFeaturesPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetFeaturesPlugin" title="Link to this definition"></a></dt>
+<dd><p>Pluging for setting the features of the different PQCs in an input batch.
+The Batch MUST have a meta_data with at least the keys:
+fetures</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>features</strong> (<em>numpy array</em>) – Array with the features of the model</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetFeaturesPlugin.compile">
+<span class="sig-name descname"><span class="pre">compile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">batch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware_specs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetFeaturesPlugin.compile" title="Link to this definition"></a></dt>
+<dd><p>Loop over all the jobs of the input Batch and overwrite
+the features parameter of the PQC for each element of
+the input features.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> (<em>QLM Batch</em>) – QLM Batch object with the jobs to execute</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>batch_</strong> – QLM Batch with the jobs</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QLM Batch</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="QQuantLib.qml4var.plugins.SetParametersPlugin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">SetParametersPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetParametersPlugin" title="Link to this definition"></a></dt>
 <dd><p>Pluging for setting the weights and features of the different PQCs.
@@ -291,7 +327,7 @@ the different weights of the PQC</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.qml4var.plugins.</span></span><span class="sig-name descname"><span class="pre">SetWeightsPlugin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.qml4var.plugins.SetWeightsPlugin" title="Link to this definition"></a></dt>
 <dd><p>Pluging for setting the weights of the different PQCs.
 The Batch MUST have a meta_data with at least the keys:
-fetures and weights</p>
+weights</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>weights</strong> (<em>numpy array</em>) – Array with the weights of the model</p>
@@ -378,7 +414,7 @@ the Batch that allows the PDF</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
   </div>
 
    
