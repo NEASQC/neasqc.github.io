@@ -1,25 +1,28 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTC_02_AE.QQuantLib &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>BTC_02_AE.QQuantLib &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/contentui.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,9 +42,6 @@
             NEASQC documentation
               <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                0.0.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -59,7 +59,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.ae_sine_integral">ae_sine_integral</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#ae-sine-integral">ae_sine_integral</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_02_AE.QQuantLib</a></li>
 </ul>
@@ -97,52 +97,226 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="btc-02-ae-qquantlib">
-<h1>BTC_02_AE.QQuantLib<a class="headerlink" href="#btc-02-ae-qquantlib" title="Permalink to this headline">¶</a></h1>
+  <section id="btc-02-ae-qquantlib">
+<h1>BTC_02_AE.QQuantLib<a class="headerlink" href="#btc-02-ae-qquantlib" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html">QQuantLib.AA</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">QQuantLib.AA.amplitude_amplification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">QQuantLib.AA.amplitude_amplification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u0_gate"><code class="docutils literal notranslate"><span class="pre">create_u0_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u_gate"><code class="docutils literal notranslate"><span class="pre">create_u_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover"><code class="docutils literal notranslate"><span class="pre">grover()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover_extended"><code class="docutils literal notranslate"><span class="pre">grover_extended()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_ph"><code class="docutils literal notranslate"><span class="pre">multiplexor_controlled_ph()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.multiplexor_controlled_z"><code class="docutils literal notranslate"><span class="pre">multiplexor_controlled_z()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.phase_multiplexor_base"><code class="docutils literal notranslate"><span class="pre">phase_multiplexor_base()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.recursive_multiplexor"><code class="docutils literal notranslate"><span class="pre">recursive_multiplexor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.reflection"><code class="docutils literal notranslate"><span class="pre">reflection()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html">QQuantLib.AE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_class">QQuantLib.AE.ae_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe">QQuantLib.AE.ae_classical_qpe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe">QQuantLib.AE.ae_iterative_quantum_pe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae">QQuantLib.AE.iterative_quantum_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae">QQuantLib.AE.maximum_likelihood_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae">QQuantLib.AE.montecarlo_ae</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae">QQuantLib.AE.real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_class">QQuantLib.AE.ae_class</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE"><code class="docutils literal notranslate"><span class="pre">AE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE.ae_type"><code class="docutils literal notranslate"><span class="pre">AE.ae_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE.create_ae_solver"><code class="docutils literal notranslate"><span class="pre">AE.create_ae_solver()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE.run"><code class="docutils literal notranslate"><span class="pre">AE.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe">QQuantLib.AE.ae_classical_qpe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE"><code class="docutils literal notranslate"><span class="pre">CQPEAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.index"><code class="docutils literal notranslate"><span class="pre">CQPEAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle"><code class="docutils literal notranslate"><span class="pre">CQPEAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.run"><code class="docutils literal notranslate"><span class="pre">CQPEAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.target"><code class="docutils literal notranslate"><span class="pre">CQPEAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe">QQuantLib.AE.ae_iterative_quantum_pe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE"><code class="docutils literal notranslate"><span class="pre">IQPEAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index"><code class="docutils literal notranslate"><span class="pre">IQPEAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.oracle"><code class="docutils literal notranslate"><span class="pre">IQPEAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.run"><code class="docutils literal notranslate"><span class="pre">IQPEAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.target"><code class="docutils literal notranslate"><span class="pre">IQPEAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae">QQuantLib.AE.iterative_quantum_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE"><code class="docutils literal notranslate"><span class="pre">IQAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound"><code class="docutils literal notranslate"><span class="pre">IQAE.chebysev_bound()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.compute_info"><code class="docutils literal notranslate"><span class="pre">IQAE.compute_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.display_information"><code class="docutils literal notranslate"><span class="pre">IQAE.display_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.find_next_k"><code class="docutils literal notranslate"><span class="pre">IQAE.find_next_k()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.index"><code class="docutils literal notranslate"><span class="pre">IQAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.invert_sector"><code class="docutils literal notranslate"><span class="pre">IQAE.invert_sector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.iqae"><code class="docutils literal notranslate"><span class="pre">IQAE.iqae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.oracle"><code class="docutils literal notranslate"><span class="pre">IQAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.quantum_step"><code class="docutils literal notranslate"><span class="pre">IQAE.quantum_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.run"><code class="docutils literal notranslate"><span class="pre">IQAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.target"><code class="docutils literal notranslate"><span class="pre">IQAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae">QQuantLib.AE.maximum_likelihood_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE"><code class="docutils literal notranslate"><span class="pre">MLAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function"><code class="docutils literal notranslate"><span class="pre">MLAE.cost_function()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.index"><code class="docutils literal notranslate"><span class="pre">MLAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.likelihood"><code class="docutils literal notranslate"><span class="pre">MLAE.likelihood()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.log_likelihood"><code class="docutils literal notranslate"><span class="pre">MLAE.log_likelihood()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.mlae"><code class="docutils literal notranslate"><span class="pre">MLAE.mlae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.oracle"><code class="docutils literal notranslate"><span class="pre">MLAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.run"><code class="docutils literal notranslate"><span class="pre">MLAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.run_schedule"><code class="docutils literal notranslate"><span class="pre">MLAE.run_schedule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.run_step"><code class="docutils literal notranslate"><span class="pre">MLAE.run_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.schedule"><code class="docutils literal notranslate"><span class="pre">MLAE.schedule</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.set_exponential_schedule"><code class="docutils literal notranslate"><span class="pre">MLAE.set_exponential_schedule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.set_linear_schedule"><code class="docutils literal notranslate"><span class="pre">MLAE.set_linear_schedule()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.target"><code class="docutils literal notranslate"><span class="pre">MLAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae">QQuantLib.AE.montecarlo_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE"><code class="docutils literal notranslate"><span class="pre">MCAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.index"><code class="docutils literal notranslate"><span class="pre">MCAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.oracle"><code class="docutils literal notranslate"><span class="pre">MCAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.run"><code class="docutils literal notranslate"><span class="pre">MCAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.target"><code class="docutils literal notranslate"><span class="pre">MCAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae">QQuantLib.AE.real_quantum_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE"><code class="docutils literal notranslate"><span class="pre">RQAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound"><code class="docutils literal notranslate"><span class="pre">RQAE.chebysev_bound()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.compute_info"><code class="docutils literal notranslate"><span class="pre">RQAE.compute_info()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.display_information"><code class="docutils literal notranslate"><span class="pre">RQAE.display_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.first_step"><code class="docutils literal notranslate"><span class="pre">RQAE.first_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.index"><code class="docutils literal notranslate"><span class="pre">RQAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.oracle"><code class="docutils literal notranslate"><span class="pre">RQAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.rqae"><code class="docutils literal notranslate"><span class="pre">RQAE.rqae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.run"><code class="docutils literal notranslate"><span class="pre">RQAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.run_step"><code class="docutils literal notranslate"><span class="pre">RQAE.run_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.shifted_oracle"><code class="docutils literal notranslate"><span class="pre">RQAE.shifted_oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.target"><code class="docutils literal notranslate"><span class="pre">RQAE.target</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html">QQuantLib.DL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.data_loading">QQuantLib.DL.data_loading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols">QQuantLib.DL.encoding_protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.data_loading">QQuantLib.DL.data_loading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angle"><code class="docutils literal notranslate"><span class="pre">load_angle()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angles"><code class="docutils literal notranslate"><span class="pre">load_angles()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angles_brute_force"><code class="docutils literal notranslate"><span class="pre">load_angles_brute_force()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_array"><code class="docutils literal notranslate"><span class="pre">load_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_pf"><code class="docutils literal notranslate"><span class="pre">load_pf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_probability"><code class="docutils literal notranslate"><span class="pre">load_probability()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.multiplexor_ry"><code class="docutils literal notranslate"><span class="pre">multiplexor_ry()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.step_array"><code class="docutils literal notranslate"><span class="pre">step_array()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.uniform_distribution"><code class="docutils literal notranslate"><span class="pre">uniform_distribution()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols">QQuantLib.DL.encoding_protocols</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding"><code class="docutils literal notranslate"><span class="pre">Encoding</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.encoding"><code class="docutils literal notranslate"><span class="pre">Encoding.encoding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_1"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_2"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.reset"><code class="docutils literal notranslate"><span class="pre">Encoding.reset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.run"><code class="docutils literal notranslate"><span class="pre">Encoding.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html">QQuantLib.PE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">QQuantLib.PE.classical_qpe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe">QQuantLib.PE.iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">QQuantLib.PE.classical_qpe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe.CQPE"><code class="docutils literal notranslate"><span class="pre">CQPE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe.CQPE.run"><code class="docutils literal notranslate"><span class="pre">CQPE.run()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe">QQuantLib.PE.iterative_quantum_pe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE"><code class="docutils literal notranslate"><span class="pre">IQPE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe"><code class="docutils literal notranslate"><span class="pre">IQPE.apply_iqpe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.cbits_number"><code class="docutils literal notranslate"><span class="pre">IQPE.cbits_number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.init_iqpe"><code class="docutils literal notranslate"><span class="pre">IQPE.init_iqpe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.iqpe"><code class="docutils literal notranslate"><span class="pre">IQPE.iqpe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.measure_classical_bits"><code class="docutils literal notranslate"><span class="pre">IQPE.measure_classical_bits()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.post_proccess"><code class="docutils literal notranslate"><span class="pre">IQPE.post_proccess()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.restart"><code class="docutils literal notranslate"><span class="pre">IQPE.restart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.run_qprogram"><code class="docutils literal notranslate"><span class="pre">IQPE.run_qprogram()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.step_iqpe"><code class="docutils literal notranslate"><span class="pre">IQPE.step_iqpe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.sumarize"><code class="docutils literal notranslate"><span class="pre">IQPE.sumarize()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html">QQuantLib.finance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.classical_finance">QQuantLib.finance.classical_finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.payoff_class">QQuantLib.finance.payoff_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.probability_class">QQuantLib.finance.probability_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">QQuantLib.finance.quantum_integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-classical-finance">QQuantLib.finance.classical_finance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-payoff-class">QQuantLib.finance.payoff_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-probability-class">QQuantLib.finance.probability_class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">QQuantLib.finance.quantum_integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration.q_solve_integral"><code class="docutils literal notranslate"><span class="pre">q_solve_integral()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html">QQuantLib.utils</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils">QQuantLib.utils.benchmark_utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.data_extracting">QQuantLib.utils.data_extracting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.qlm_solver">QQuantLib.utils.qlm_solver</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.utils">QQuantLib.utils.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils">QQuantLib.utils.benchmark_utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils.combination_for_dictionary"><code class="docutils literal notranslate"><span class="pre">combination_for_dictionary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils.combination_for_list"><code class="docutils literal notranslate"><span class="pre">combination_for_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils.create_ae_pe_solution"><code class="docutils literal notranslate"><span class="pre">create_ae_pe_solution()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils.create_pe_problem"><code class="docutils literal notranslate"><span class="pre">create_pe_problem()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.benchmark_utils.list_of_dicts_from_jsons"><code class="docutils literal notranslate"><span class="pre">list_of_dicts_from_jsons()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.data_extracting">QQuantLib.utils.data_extracting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.create_qcircuit"><code class="docutils literal notranslate"><span class="pre">create_qcircuit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.create_qjob"><code class="docutils literal notranslate"><span class="pre">create_qjob()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.create_qprogram"><code class="docutils literal notranslate"><span class="pre">create_qprogram()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.get_results"><code class="docutils literal notranslate"><span class="pre">get_results()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.proccess_qresults"><code class="docutils literal notranslate"><span class="pre">proccess_qresults()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#qquantlib-utils-qlm-solver">QQuantLib.utils.qlm_solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.utils">QQuantLib.utils.utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.bitfield"><code class="docutils literal notranslate"><span class="pre">bitfield()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.bitfield_to_int"><code class="docutils literal notranslate"><span class="pre">bitfield_to_int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.check_list_type"><code class="docutils literal notranslate"><span class="pre">check_list_type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.expmod"><code class="docutils literal notranslate"><span class="pre">expmod()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.fwht"><code class="docutils literal notranslate"><span class="pre">fwht()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.fwht_dyadic"><code class="docutils literal notranslate"><span class="pre">fwht_dyadic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.fwht_natural"><code class="docutils literal notranslate"><span class="pre">fwht_natural()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.fwht_sequency"><code class="docutils literal notranslate"><span class="pre">fwht_sequency()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.get_histogram"><code class="docutils literal notranslate"><span class="pre">get_histogram()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.left_conditional_probability"><code class="docutils literal notranslate"><span class="pre">left_conditional_probability()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.load_qn_gate"><code class="docutils literal notranslate"><span class="pre">load_qn_gate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.mask"><code class="docutils literal notranslate"><span class="pre">mask()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.measure_state_probability"><code class="docutils literal notranslate"><span class="pre">measure_state_probability()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.oracle_shots_calculation"><code class="docutils literal notranslate"><span class="pre">oracle_shots_calculation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.test_bins"><code class="docutils literal notranslate"><span class="pre">test_bins()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.text_is_none"><code class="docutils literal notranslate"><span class="pre">text_is_none()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
            </div>

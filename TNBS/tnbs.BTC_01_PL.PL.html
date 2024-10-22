@@ -1,25 +1,28 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTC_01_PL.PL &mdash; NEASQC documentation  documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-      <link rel="stylesheet" href="_static/contentui.css" type="text/css" />
+  <title>BTC_01_PL.PL &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
-        <script src="_static/contentui.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "tex2jax_ignore|mathjax_ignore|document", "processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,9 +42,6 @@
             NEASQC documentation
               <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                0.0.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -96,10 +96,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="btc-01-pl-pl">
-<h1>BTC_01_PL.PL<a class="headerlink" href="#btc-01-pl-pl" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-tnbs.BTC_01_PL.PL.data_loading">
-<span id="pl-data-loading"></span><h2>PL.data_loading<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_loading" title="Permalink to this headline">¶</a></h2>
+  <section id="btc-01-pl-pl">
+<h1>BTC_01_PL.PL<a class="headerlink" href="#btc-01-pl-pl" title="Link to this heading"></a></h1>
+<section id="module-tnbs.BTC_01_PL.PL.data_loading">
+<span id="pl-data-loading"></span><h2>PL.data_loading<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_loading" title="Link to this heading"></a></h2>
 <p>This module contains all the functions in order to load data into the
 quantum state.
 There are two implementations for the loading of a function:</p>
@@ -118,43 +118,58 @@ and Systems, 25(6):1000–1010, Jun 2006
 arXiv:quant-ph/0406176v5</p>
 </div></blockquote>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_qlm_probability</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">load_method</em>, <em class="sig-param">shots</em>, <em class="sig-param">qpu</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability" title="Permalink to this definition">¶</a></dt>
-<dd><p>executing quantum stuff</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.get_qpu">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_qpu</code><span class="sig-paren">(</span><em class="sig-param">qpu=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_qpu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function for selecting solver.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">get_qlm_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qpu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_qlm_probability" title="Link to this definition"></a></dt>
+<dd><p>Loads an input probability array in a Quantum Circuit, execute it a fixed number of shots
+and returns the obtained result</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>qpu</strong> (<em>str</em>) – <ul class="simple">
-<li><p>qlmass: for trying to use QLM as a Service connection to CESGA QLM</p></li>
-<li><p>python: for using PyLinalg simulator.</p></li>
-<li><p>c: for using CLinalg simulator</p></li>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>np array</em>) – Array with the discretized probability to load into a quantum state</p></li>
+<li><p><strong>load_method</strong> (<em>string</em>) – Load method used for creating the Quantum Circuit</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – Number of shots the created Quantum Circuit should be measured.</p></li>
+<li><p><strong>qpu</strong> (<em>QPU</em>) – QPU for simulating or executing the Quantum Circuit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>result</strong> (<em>pandas DataFrame</em>) – Pandas DataFrame with the results of the simulation or execution of the Quantum Circuit</p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>) – QLM Quantum Circuit generated</p></li>
+<li><p><strong>quantum_time</strong> (<em>float</em>) – Time used for simulating or executing the Quantum Circuit.</p></li>
 </ul>
 </p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>linal_qpu</strong></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>solver for quantum jobs</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">get_theoric_probability</code><span class="sig-paren">(</span><em class="sig-param">n_qbits: int) -&gt; (numpy.ndarray</em>, <em class="sig-param">numpy.ndarray</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'float'&gt;</em>, <em class="sig-param">&lt;class 'int'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the discretization of the PDF for N qubits</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">get_theoric_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_qbits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mean</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.get_theoric_probability" title="Link to this definition"></a></dt>
+<dd><p>Create discrete Gaussian probability distribution function (PDF)
+:param n_qbits: Number of qubits for interval discretization
+:type n_qbits: int
+:param mean: Mean of the desired Gaussian distribution
+:type mean: float
+:param sigma: Standard Deviation of the desired Gaussian distribution.
+:type sigma: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p><strong>x_</strong> (<em>numpy array</em>) – Discretized domain (in 2^n_qbits) for the Gaussian PDF</p></li>
+<li><p><strong>data</strong> (<em>numpy array</em>) – Discretized (in 2^n_qbits) Gaussian PDF</p></li>
+<li><p><strong>step</strong> (<em>float</em>) – discretizaction step of the domain</p></li>
+<li><p><strong>shots</strong> (<em>int</em>) – Number of shots the quantum circuit should be measured</p></li>
+<li><p><strong>norma</strong> (<em>scipy function</em>) – scipy.stats.norm function configured for the desired mean and sigma</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angle">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angle</code><span class="sig-paren">(</span><em class="sig-param">number_qubits: int</em>, <em class="sig-param">index: int</em>, <em class="sig-param">angle: float</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angle" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.load_angle">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angle" title="Link to this definition"></a></dt>
 <dd><p>Creates an QLM Abstract Gate that apply a rotation of a given angle
 into a auxiliary qubit controlled by a given state of the measurement basis.
 Direct QLM multi controlled rotations were used for the implementation.</p>
@@ -167,19 +182,26 @@ Direct QLM multi controlled rotations were used for the implementation.</p>
 \alpha_i|i\rangle\otimes\big(\cos(\theta)|0\rangle+\sin(\theta) \
 |1\rangle\big)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the control register. The arity of the gate is number_qubits+1.</p></li>
 <li><p><strong>index</strong> (<em>int</em>) – Index of the state that we control.</p></li>
-<li><p><strong>angle</strong> (<em>float</em>) – Angle that we load.</p></li>
+<li><p><strong>angle</strong> (<em>float</em>)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>routine</strong> – Routine with the quantum circuit that loads the input angle in a quantum state.
+Angle that we load.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>qlm QRoutine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angles">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angles</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.load_angles">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'multiplexor'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles" title="Link to this definition"></a></dt>
 <dd><p>This function serves as an interface for the two different implementations
 of multi controlled rotations: load_angles_brute_force and multiplexor_RY.</p>
 <p class="rubric">Notes</p>
@@ -190,19 +212,25 @@ of multi controlled rotations: load_angles_brute_force and multiplexor_RY.</p>
 =\sum_{j=0}^{2^n-1}\alpha_j|j\rangle\otimes \
 \big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
 int(np.log2(len(angle)))+1.</p></li>
 <li><p><strong>method</strong> (<em>string</em>) – Method used in the loading. Default method.</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>routine</strong> – Routine with the quantum circuit that loads the input angles in a quantum state.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>qlm QRoutine</p>
+</dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_angles_brute_force</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_angles_brute_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_angles_brute_force" title="Link to this definition"></a></dt>
 <dd><p>Given a list of angles this function creates a QLM routine that applies
 rotations of each angle of the list, over an auxiliary qubit, controlled
 by the different states of the measurement basis.
@@ -216,20 +244,26 @@ Direct QLM multi controlled rotations were used for the implementation.</p>
 \alpha_j|j\rangle\otimes\big(\cos(\theta_j)|0\rangle+ \
 \sin(\theta_j)|1\rangle\big)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – Angles to load in the circuit. The arity of the gate is:
 int(np.log2(len(angle)))+1.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>routine</strong> – Routine with the quantum circuit that loads the input angles in a quantum state.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>qlm QRoutine</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.load_probability">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">load_probability</code><span class="sig-paren">(</span><em class="sig-param">probability_array: numpy.array</em>, <em class="sig-param">method: str = 'multiplexor'</em>, <em class="sig-param">id_name: str = '1696594286916704504'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_probability" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.load_probability">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probability_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'multiplexor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1729583561580967888'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_probability" title="Link to this definition"></a></dt>
 <dd><p>Creates a QLM Abstract gate for loading a given discretized probability
 distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>probability_array</strong> (<em>numpy array</em>) – Numpy array with the discretized probability to load. The arity of
 of the gate is int(np.log2(len(probability_array))).</p></li>
@@ -242,41 +276,41 @@ brute_force : using multicontrolled rotations by state</p>
 <li><p><strong>id_name</strong> (<em>str</em>) – name for the Abstract Gate</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>P_Gate</strong> – Customized Abstract Gate for Loading Probability array using
 Quantum Multiplexors</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>AbstractGate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.mask">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">mask</code><span class="sig-paren">(</span><em class="sig-param">number_qubits</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.mask" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.mask">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.mask" title="Link to this definition"></a></dt>
 <dd><p>Transforms the state <span class="math notranslate nohighlight">\(|index\rangle\)</span> into the state
 <span class="math notranslate nohighlight">\(|11...1\rangle\)</span> of size number qubits.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>number_qubits</strong> (<em>int</em>) – </p></li>
-<li><p><strong>index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>number_qubits</strong> (<em>int</em>)</p></li>
+<li><p><strong>index</strong> (<em>int</em>)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>mask</strong> – the gate that we have to apply in order to transform
 state <span class="math notranslate nohighlight">\(|index\rangle\)</span>. Note that it affects all states.</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Qlm abstract gate</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_loading.</code><code class="sig-name descname">multiplexor_ry</code><span class="sig-paren">(</span><em class="sig-param">angles: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">multiplexor_ry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordering</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sequency'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.multiplexor_ry" title="Link to this definition"></a></dt>
 <dd><p>Given a list of angles this functions creates a QLM routine that applies
 rotations of each angle of the list, over an auxiliary qubit, controlled
 by the different states of the measurement basis.
@@ -289,149 +323,161 @@ The multi-controlled rotations were implemented using Quantum Multiplexors.</p>
 ([\theta_j]_{j=0,1,2...2^n-1})|\Psi\rangle = \sum_{j=0}^{2^n-1} \
 \alpha_j|j\rangle\otimes\big(\cos(\theta_j)|0\rangle+\sin(\theta_j)|1\rangle\big)\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>angles</strong> (<em>numpy array</em>) – <dl class="simple">
 <dt>Angles to load in the circuit. The arity of the gate is:</dt><dd><p>int(np.log2(len(angle)))+1.</p>
 </dd>
 </dl>
 </p>
 </dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>routine</strong> – Routine with the quantum circuit that loads the input angles in a quantum state.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>qlm QRoutine</p>
+</dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-tnbs.BTC_01_PL.PL.load_probabilities">
-<span id="pl-load-probabilities"></span><h2>PL.load_probabilities<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.load_probabilities" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-tnbs.BTC_01_PL.PL.load_probabilities">
+<span id="pl-load-probabilities"></span><h2>PL.load_probabilities<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.load_probabilities" title="Link to this heading"></a></h2>
 <p>Mandatory code for softaware implemetation of the Benchmark Test Case
 of PL kernel</p>
-<dl class="class">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity">
-<em class="property">class </em><code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.load_probabilities.</code><code class="sig-name descname">LoadProbabilityDensity</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.load_probabilities.</span></span><span class="sig-name descname"><span class="pre">LoadProbabilityDensity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Probability Loading</p>
-<dl class="method">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe">
-<code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe">
+<span class="sig-name descname"><span class="pre">exe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.exe" title="Link to this definition"></a></dt>
 <dd><p>Execution of workflow</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics">
-<code class="sig-name descname">get_metrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics">
+<span class="sig-name descname"><span class="pre">get_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_metrics" title="Link to this definition"></a></dt>
 <dd><p>Computing Metrics</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf">
-<code class="sig-name descname">get_quantum_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf">
+<span class="sig-name descname"><span class="pre">get_quantum_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_quantum_pdf" title="Link to this definition"></a></dt>
 <dd><p>Computing quantum probability density function</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf">
-<code class="sig-name descname">get_theoric_pdf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf">
+<span class="sig-name descname"><span class="pre">get_theoric_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.get_theoric_pdf" title="Link to this definition"></a></dt>
 <dd><p>Computing theoretical probability densitiy function</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary">
-<code class="sig-name descname">summary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary">
+<span class="sig-name descname"><span class="pre">summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.LoadProbabilityDensity.summary" title="Link to this definition"></a></dt>
 <dd><p>Pandas summary</p>
 </dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-tnbs.BTC_01_PL.PL.data_extracting">
-<span id="pl-data-extracting"></span><h2>PL.data_extracting<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_extracting" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.load_probabilities.save">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.load_probabilities.</span></span><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pl_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.load_probabilities.save" title="Link to this definition"></a></dt>
+<dd><p>Function for saving staff</p>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_01_PL.PL.data_extracting">
+<span id="pl-data-extracting"></span><h2>PL.data_extracting<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_extracting" title="Link to this heading"></a></h2>
 <p>This module contains auxiliary functions for executing QLM programs based
 on QLM Routines or QLM gates and for post processing results from QLM
 qpu executions</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.check_list_type">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">check_list_type</code><span class="sig-paren">(</span><em class="sig-param">x_input</em>, <em class="sig-param">tipo</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.check_list_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.check_list_type">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">check_list_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.check_list_type" title="Link to this definition"></a></dt>
 <dd><p>Check if a list x_input is of type tipo
 :param x_input:
 :type x_input: list
 :param tipo: it has to be understandable by numpy
 :type tipo: data type</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>y_output</strong> – numpy array of type tipo.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>np.array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.create_qcircuit">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">create_qcircuit</code><span class="sig-paren">(</span><em class="sig-param">prog_q</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qcircuit" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.create_qcircuit">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">create_qcircuit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prog_q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qcircuit" title="Link to this definition"></a></dt>
 <dd><p>Given a QLM program creates a QLM circuit</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>prog_q</strong> (<em>QLM QProgram</em>) – </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prog_q</strong> (<em>QLM QProgram</em>)</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>circuit</strong></p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM circuit</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.create_qjob">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">create_qjob</code><span class="sig-paren">(</span><em class="sig-param">circuit</em>, <em class="sig-param">shots=0</em>, <em class="sig-param">qubits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qjob" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.create_qjob">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">create_qjob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qjob" title="Link to this definition"></a></dt>
 <dd><p>Given a QLM circuit creates a QLM job</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>circuit</strong> (<em>QLM circuit</em>) – </p></li>
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
 <li><p><strong>shots</strong> (<em>int</em>) – number of measurmentes</p></li>
 <li><p><strong>qubits</strong> (<em>list</em>) – with the qubits to be measured</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>job</strong> – job for submit to QLM QPU</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM job</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.create_qprogram">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">create_qprogram</code><span class="sig-paren">(</span><em class="sig-param">quantum_gate</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qprogram" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.create_qprogram">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">create_qprogram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantum_gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.create_qprogram" title="Link to this definition"></a></dt>
 <dd><p>Creates a Quantum Program from an input qlm gate or routine</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>quantum_gate</strong> (<em>QLM gate</em><em> or </em><em>QLM routine</em>) – </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>quantum_gate</strong> (<em>QLM gate</em><em> or </em><em>QLM routine</em>)</p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>q_prog</strong> – Quantum Program from input QLM gate or routine</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>QLM Program.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.get_results">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">get_results</code><span class="sig-paren">(</span><em class="sig-param">quantum_object</em>, <em class="sig-param">linalg_qpu</em>, <em class="sig-param">shots: int = 0</em>, <em class="sig-param">qubits: list = None</em>, <em class="sig-param">complete: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.get_results" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.get_results">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">get_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quantum_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linalg_qpu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.get_results" title="Link to this definition"></a></dt>
 <dd><p>Function for testing an input gate. This function creates the
 quantum program for an input gate, the correspondent circuit
 and job. Execute the job and gets the results</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>quantum_object</strong> (<em>QLM Gate</em><em>, </em><em>Routine</em><em> or </em><em>Program</em>) – </p></li>
-<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>) – </p></li>
+<li><p><strong>quantum_object</strong> (<em>QLM Gate</em><em>, </em><em>Routine</em><em> or </em><em>Program</em>)</p></li>
+<li><p><strong>linalg_qpu</strong> (<em>QLM solver</em>)</p></li>
 <li><p><strong>shots</strong> (<em>int</em>) – number of shots for the generated job.
 if 0 True probabilities will be computed</p></li>
 <li><p><strong>qubits</strong> (<em>list</em>) – list with the qubits for doing the measurement when simulating
@@ -440,7 +486,7 @@ if None measurement over all allocated qubits will be provided</p></li>
 and all the posible basis states are necessary.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with the results of the simulation</p></li>
 <li><p><strong>circuit</strong> (<em>QLM circuit</em>)</p></li>
@@ -452,12 +498,12 @@ and all the posible basis states are necessary.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.data_extracting.proccess_qresults">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.data_extracting.</code><code class="sig-name descname">proccess_qresults</code><span class="sig-paren">(</span><em class="sig-param">result</em>, <em class="sig-param">qubits</em>, <em class="sig-param">complete=False</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.proccess_qresults" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_extracting.proccess_qresults">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_extracting.</span></span><span class="sig-name descname"><span class="pre">proccess_qresults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_extracting.proccess_qresults" title="Link to this definition"></a></dt>
 <dd><p>Post Process a QLM results for creating a pandas DataFrame</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>result</strong> (<em>QLM results from a QLM qpu.</em>) – returned object from a qpu submit</p></li>
 <li><p><strong>qubits</strong> (<em>int</em>) – number of qubits</p></li>
@@ -467,49 +513,49 @@ and all the posible basis states are necessary.</p></li>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-tnbs.BTC_01_PL.PL.utils">
-<span id="pl-utils"></span><h2>PL.utils<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.utils" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-tnbs.BTC_01_PL.PL.utils">
+<span id="pl-utils"></span><h2>PL.utils<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.utils" title="Link to this heading"></a></h2>
 <p>This module contains several auxiliary functions needed by other scripts
 of the library</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
 <p>Fast Walsh-Hadamard Transform is based on mex function written
 by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3 algorithm:</p>
 <p><a class="reference external" href="https://github.com/dingluo/fwht/blob/master/FWHT.py">https://github.com/dingluo/fwht/blob/master/FWHT.py</a></p>
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.bitfield">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">bitfield</code><span class="sig-paren">(</span><em class="sig-param">n_int: int</em>, <em class="sig-param">size: int</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.bitfield" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.bitfield">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">bitfield</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_int</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.bitfield" title="Link to this definition"></a></dt>
 <dd><p>Transforms an int n_int to the corresponding bitfield of size size</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n_int</strong> (<em>int</em>) – integer from which we want to obtain the bitfield</p></li>
 <li><p><strong>size</strong> (<em>int</em>) – size of the bitfield</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>full</strong> – bitfield representation of n_int with size size</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list of ints</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.expmod">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">expmod</code><span class="sig-paren">(</span><em class="sig-param">n_input: int</em>, <em class="sig-param">base: int</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.expmod" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.expmod">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">expmod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.expmod" title="Link to this definition"></a></dt>
 <dd><p>For a pair of integer numbers, performs the decomposition:</p>
 <div class="math notranslate nohighlight">
 \[n_input = base^power+remainder\]</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>n_input</strong> (<em>int</em>) – number to decompose</p></li>
 <li><p><strong>base</strong> (<em>int</em>) – basis</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>power</strong> (<em>int</em>) – power</p></li>
 <li><p><strong>remainder</strong> (<em>int</em>) – remainder</p></li>
@@ -519,32 +565,32 @@ by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.fwht">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">fwht</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em>, <em class="sig-param">ordering: str = 'sequency'</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.fwht">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">fwht</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordering</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'sequency'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh Hadamard transform of array x_input
 Works as a wrapper for the different orderings
 of the Walsh-Hadamard transforms.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>x_input</strong> (<em>numpy array</em>) – </p></li>
+<li><p><strong>x_input</strong> (<em>numpy array</em>)</p></li>
 <li><p><strong>ordering</strong> (<em>string</em>) – desired ordering of the transform</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>y_output</strong> – Fast Walsh Hadamard transform of array x_input
 in the corresponding ordering</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.fwht_dyadic">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">fwht_dyadic</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_dyadic" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.fwht_dyadic">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_dyadic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_dyadic" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x_input in dyadic ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
@@ -554,35 +600,35 @@ of Walsh and Related Functions.
 :param array:
 :type array: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.fwht_natural">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">fwht_natural</code><span class="sig-paren">(</span><em class="sig-param">array: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_natural" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.fwht_natural">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_natural</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_natural" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x in natural ordering
 The result is not normalised
 :param array:
 :type array: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>fast_wh_transform</strong> – Fast Walsh Hadamard transform of array x.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.fwht_sequency">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">fwht_sequency</code><span class="sig-paren">(</span><em class="sig-param">x_input: numpy.array</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_sequency" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.fwht_sequency">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">fwht_sequency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.fwht_sequency" title="Link to this definition"></a></dt>
 <dd><p>Fast Walsh-Hadamard Transform of array x_input in sequence ordering
 The result is not normalised
 Based on mex function written by Chengbo <a class="reference external" href="mailto:Li&#37;&#52;&#48;Rice">Li<span>&#64;</span>Rice</a> Uni for his TVAL3
@@ -592,18 +638,18 @@ of Walsh and Related Functions.
 :param x_input:
 :type x_input: numpy array</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>x_output</strong> – Fast Walsh Hadamard transform of array x_input.</p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="tnbs.BTC_01_PL.PL.utils.left_conditional_probability">
-<code class="sig-prename descclassname">tnbs.BTC_01_PL.PL.utils.</code><code class="sig-name descname">left_conditional_probability</code><span class="sig-paren">(</span><em class="sig-param">initial_bins</em>, <em class="sig-param">probability</em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.left_conditional_probability" title="Permalink to this definition">¶</a></dt>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.utils.left_conditional_probability">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.utils.</span></span><span class="sig-name descname"><span class="pre">left_conditional_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.utils.left_conditional_probability" title="Link to this definition"></a></dt>
 <dd><p>This function calculate f(i) according to the Lov Grover and Terry
 Rudolph 2008 papper:
 ‘Creating superposition that correspond to efficiently integrable
@@ -615,24 +661,24 @@ calculates the conditional probabilities for x is located in the
 left part of the new regions when x is located in the region that
 contains the corresponding left region</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>initial_bins</strong> (<em>int</em>) – Number of initial bins for splitting the input probabilities</p></li>
 <li><p><strong>probability</strong> (<em>np.darray.</em>) – Numpy array with the probabilities to be load.
 initial_bins &lt;= len(Probability)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>left_cond_prob</strong> – conditional probabilities of the new initial_bins+1 splits</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>np.darray</p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
