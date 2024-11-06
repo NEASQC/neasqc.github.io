@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PH.parent_hamiltonian &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PH.ph_step_exe" href="tnbs.BTC_04_PH.PH.ph_step_exe.html" />
+    <link rel="prev" title="PH.ansatzes" href="tnbs.BTC_04_PH.PH.ansatzes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_04_PH.html#subpackage-ph">Subpackage PH</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.ansatzes.html">PH.ansatzes</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PH.parent_hamiltonian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.ph_step_exe.html">PH.ph_step_exe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.workflow.html">PH.workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.mps.html">PH.mps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.PH.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">PH.parent_hamiltonian</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ph-parent-hamiltonian">
+<h1>PH.parent_hamiltonian<a class="headerlink" href="#ph-parent-hamiltonian" title="Link to this heading"></a></h1>
+<section id="module-tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian">
+<span id="parent-hamiltonian"></span><h2>parent_hamiltonian<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Complete implementation of the Parent Hamiltonian following:</dt><dd><p>Fumiyoshi Kobayashi and Kosuke Mitarai and Keisuke Fujii
+Parent Hamiltonian as a benchmark problem for variational quantum
+eigensolvers
+Physical Review A, 105, 5, 2002
+<a class="reference external" href="https://doi.org/10.1103%2Fphysreva.105.052415">https://doi.org/10.1103%2Fphysreva.105.052415</a></p>
+</dd>
+</dl>
+<p>Author: Gonzalo Ferro</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.</span></span><span class="sig-name descname"><span class="pre">PH</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitudes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_invariant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for doing Parent Hamiltonian Computations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amplitudes</strong> (<em>list</em>) – list with the complete amplitudes of the state of the ansatz</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <dl class="simple">
+<dt>dictionary that allows the configuration of the CQPEAE algorithm:</dt><dd><p>Implemented keys:</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.get_density_matrix">
+<span class="sig-name descname"><span class="pre">get_density_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.get_density_matrix" title="Link to this definition"></a></dt>
+<dd><p>Computes the density matrix asociated with the amplitudes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.get_pauli_pdf">
+<span class="sig-name descname"><span class="pre">get_pauli_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.get_pauli_pdf" title="Link to this definition"></a></dt>
+<dd><p>Create pauli dataframe with all the info.
+Additionally pauli coefficients lower than float precision will
+be pruned</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.local_ph">
+<span class="sig-name descname"><span class="pre">local_ph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.local_ph" title="Link to this definition"></a></dt>
+<dd><p>Computes the local parent hamiltonian</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.naive_ph">
+<span class="sig-name descname"><span class="pre">naive_ph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.naive_ph" title="Link to this definition"></a></dt>
+<dd><p>Computes the parent hamiltonian of agiven ansatz for a full qubit
+interaction</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.PH.save" title="Link to this definition"></a></dt>
+<dd><p>Saving Staff</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.get_local_reduced_matrix">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.</span></span><span class="sig-name descname"><span class="pre">get_local_reduced_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qb_pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.get_local_reduced_matrix" title="Link to this definition"></a></dt>
+<dd><p>Given a MPS representation of a input state and position qubit
+(qb_pos) computes the minimum local reduced density matrix from
+qb_pos qubit such that its null space can be computable:
+i.e. rank(local_rho) &lt; dim(local_rho)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy array</em>) – MPS representation of an state</p></li>
+<li><p><strong>qb_pos</strong> (<em>int</em>) – position of the qubit for computing the reduced density matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>local_qubits</strong> (<em>list</em>) – list with the qubits affected by the reduced density matrix</p></li>
+<li><p><strong>local_rho</strong> (<em>numpy array</em>) – array with the reduced density matrix for the input qbit
+position</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.get_null_projectors">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.</span></span><span class="sig-name descname"><span class="pre">get_null_projectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.get_null_projectors" title="Link to this definition"></a></dt>
+<dd><p>Given an input matrix this function computes the matrix of projectors
+over the null space of the input matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array</strong> (<em>numpy array</em>) – Input matrix for computing the projectors over the null space</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>h_null</strong> – Matrices with the projectors to the null space of the
+input array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.run_parent_hamiltonian">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.</span></span><span class="sig-name descname"><span class="pre">run_parent_hamiltonian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.parent_hamiltonian.run_parent_hamiltonian" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.parent_hamiltonian.launch_parent_hamiltonian">
+<span id="launch-parent-hamiltonian"></span><h2>launch_parent_hamiltonian<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.parent_hamiltonian.launch_parent_hamiltonian" title="Link to this heading"></a></h2>
+<p>For launching a VQE quantum step execution
+Author: Gonzalo Ferro</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.launch_parent_hamiltonian.run_id">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.launch_parent_hamiltonian.</span></span><span class="sig-name descname"><span class="pre">run_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.launch_parent_hamiltonian.run_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli">
+<span id="pauli"></span><h2>pauli<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli" title="Link to this heading"></a></h2>
+<p>This module contains all functions needed for creating the Pauli
+decomposition of a Hamiltonian</p>
+<p>Author: Gonzalo Ferro</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_decomposition">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.</span></span><span class="sig-name descname"><span class="pre">pauli_decomposition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_decomposition" title="Link to this definition"></a></dt>
+<dd><p>Creates the Pauli Decomposition of an input matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>numpy array</em>) – input array for doing the Pauli decomposition</p></li>
+<li><p><strong>dimension</strong> (<em>int</em>) – dimension for creating the corresponding basis of Kronecker
+products of Pauli basis</p></li>
+<li><p><strong>int</strong> (<em>jobs =</em>) – For speed up the coefficients computations. Number of parallel
+computations.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>coefs</strong> (<em>list</em>) – Coefficients of the different Pauli matrices decomposition</p></li>
+<li><p><strong>strings_pauli</strong> (<em>list</em>) – list with the complete Pauli string decomposition</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_inner_product">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.</span></span><span class="sig-name descname"><span class="pre">pauli_inner_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pauli_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dimension</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_inner_product" title="Link to this definition"></a></dt>
+<dd><p>Given an input matrix and a Kronecker Pauli matrix product computes
+its inner product. Under the hood it computes the Frobenius norm
+of the complex conjugate of the matrix by the given Kronecker Pauli
+matrix product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>numpy array</em>) – Input array for getting the inner product</p></li>
+<li><p><strong>pauli_list</strong> (<em>list</em>) – list with the indices to compute the Kronecker product of the
+corresponding Pauli matrices.Each element of the list must be
+a number between 0 and 3 corresponding to the Pauli matrix
+following convention from pauli_operators function</p></li>
+<li><p><strong>dimension</strong> (<em>int</em>) – For doing the normalisation corresponding to the dimension of
+the matrices</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>inner_product</strong> – Resulting inner product</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_operators">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.</span></span><span class="sig-name descname"><span class="pre">pauli_operators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pauli_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_operators" title="Link to this definition"></a></dt>
+<dd><p>Return the correspondent Pauli matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pauli_index</strong> (<em>int</em>) – Number for selecting the Pauli matrix:
+0 -&gt; identity, 1-&gt; X, 2-&gt; Y, 3 -&gt; Z</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>2x2 Pauli Matrix</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pauli = np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_strings">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.</span></span><span class="sig-name descname"><span class="pre">pauli_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pauli_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.pauli.pauli_strings" title="Link to this definition"></a></dt>
+<dd><p>Provides the Pauli strings of the input list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pauli_list</strong> (<em>list</em>) – list with the ints of the Pauli matrices. See pauli_operators for
+the mapping</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>string_pauli</strong> – correspondent Pauli strings of the input</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions">
+<span id="contractions"></span><h2>contractions<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions" title="Link to this heading"></a></h2>
+<p>Implementation of reduced density matrix computations and
+tensor contractions</p>
+<p>Author: Gonzalo Ferro</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.</span></span><span class="sig-name descname"><span class="pre">contract_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices" title="Link to this definition"></a></dt>
+<dd><p>Compute the contraction of 2 input tensors for the input contraction
+indices.The computation is done by, transposing indices, reshapin
+and doing matrix multiplication. Tensor legs can be of different
+dimension.
+BE AWARE: Order in contraction indices it is very important:
+contraction1 = [1, 2, 5] contraction2 = [2, 0, 6] -&gt; Contractions
+will be: [1-2, 2-0, 5-6]
+But if contraction2 = [0, 2, 6] then contraction
+will be: [1-0, 2-2,5-6]
+If both contraction indices are empty then the tensors will be glued</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor1</strong> (<em>numpy array</em>) – first tensor</p></li>
+<li><p><strong>tensor2</strong> (<em>numpy array</em>) – second tensor</p></li>
+<li><p><strong>contraction1</strong> (<em>list</em>) – contraction indices for first tensor</p></li>
+<li><p><strong>contraction2</strong> (<em>list</em>) – contraction indices for second tensor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rho</strong> – Desired reduced density operator in matrix form</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices_old">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.</span></span><span class="sig-name descname"><span class="pre">contract_indices_old</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices_old" title="Link to this definition"></a></dt>
+<dd><p>Compute the contraction of 2 input tensors for the input contraction
+indices.The computation is done by, transposing indices, reshaping
+and doing matrix multiplication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor1</strong> (<em>numpy array</em>) – first tensor</p></li>
+<li><p><strong>tensor2</strong> (<em>numpy array</em>) – second tensor</p></li>
+<li><p><strong>contraction1</strong> (<em>list</em>) – contraction indices for first tensor</p></li>
+<li><p><strong>contraction2</strong> (<em>list</em>) – contraction indices for second tensor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rho</strong> – Desired reduced density operator in matrix form</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices_string">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.</span></span><span class="sig-name descname"><span class="pre">contract_indices_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.contract_indices_string" title="Link to this definition"></a></dt>
+<dd><p>Compute the contraction of 2 input tensors for the input contraction
+indices.The computation is done by, transposing indices, reshaping
+and doing matrix multiplication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor1</strong> (<em>numpy array</em>) – array in MPS format of the state for computing reduced density
+matrix</p></li>
+<li><p><strong>tensor2</strong> (<em>numpy array</em>) – array in MPS format of the state for computing reduced density
+matrix</p></li>
+<li><p><strong>contraction_indices</strong> (<em>list</em>) – Indices of the MPS state that will be contracted to compute
+the correspondent reduced density matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rho</strong> – Desired reduced density operator in matrix form</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.reduced_matrix">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.</span></span><span class="sig-name descname"><span class="pre">reduced_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">free_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.reduced_matrix" title="Link to this definition"></a></dt>
+<dd><p>Compute the reduced density matrix for the input contraction indices
+The computation is done by, transposing indices, reshaping and doing
+matrix multiplication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy array</em>) – array in MPS format of the state for computing reduced density
+matrix</p></li>
+<li><p><strong>free_indices</strong> (<em>list</em>) – Free indices of the MPS state (this is the qubit that will NOT
+be traced out)</p></li>
+<li><p><strong>contraction_indices</strong> (<em>list</em>) – Indices of the MPS state that will be contracted to compute
+the correspondent reduced density matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>rho</strong> – Desired reduced density operator in matrix form</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.reduced_matrix_string">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.</span></span><span class="sig-name descname"><span class="pre">reduced_matrix_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">free_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.parent_hamiltonian.contractions.reduced_matrix_string" title="Link to this definition"></a></dt>
+<dd><p>Compute the reduced density matrix for the input contraction indices
+The computation is done by using np.einsum. Limited to 52 indices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy array</em>) – array in MPS format of the state for computing reduced density
+matrix</p></li>
+<li><p><strong>free_indices</strong> (<em>list</em>) – Free indices of the MPS state (this is the qubit that will NOT
+be traced out)</p></li>
+<li><p><strong>contraction_indices</strong> (<em>list</em>) – Indices of the MPS state that will be contracted to compute
+the correspondent reduced density matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>matriz_rho</strong> – Desired reduced density operator in matrix form</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_04_PH.PH.ansatzes.html" class="btn btn-neutral float-left" title="PH.ansatzes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_04_PH.PH.ph_step_exe.html" class="btn btn-neutral float-right" title="PH.ph_step_exe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTC_01_PL.PL &mdash; NEASQC documentation  documentation</title>
+  <title>PL.data_loading &mdash; NEASQC documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
@@ -59,7 +59,10 @@
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.my_environment_info">my_environment_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_01_PL.html#module-tnbs.BTC_01_PL.neasqc_benchmark">neasqc_benchmark</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_01_PL.html#subpackage-pl">Subpackage PL</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_01_PL.PL</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PL.data_loading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tnbs.BTC_01_PL.PL.load_probabilities">PL.load_probabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tnbs.BTC_01_PL.PL.data_extracting">PL.data_extracting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-tnbs.BTC_01_PL.PL.utils">PL.utils</a></li>
 </ul>
 </li>
 </ul>
@@ -87,7 +90,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
           <li class="breadcrumb-item"><a href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
-      <li class="breadcrumb-item active">BTC_01_PL.PL</li>
+      <li class="breadcrumb-item active">PL.data_loading</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -96,10 +99,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="btc-01-pl-pl">
-<h1>BTC_01_PL.PL<a class="headerlink" href="#btc-01-pl-pl" title="Link to this heading"></a></h1>
-<section id="module-tnbs.BTC_01_PL.PL.data_loading">
-<span id="pl-data-loading"></span><h2>PL.data_loading<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_loading" title="Link to this heading"></a></h2>
+  <section id="module-tnbs.BTC_01_PL.PL.data_loading">
+<span id="pl-data-loading"></span><h1>PL.data_loading<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_loading" title="Link to this heading"></a></h1>
 <p>This module contains all the functions in order to load data into the
 quantum state.
 There are two implementations for the loading of a function:</p>
@@ -259,7 +260,7 @@ int(np.log2(len(angle)))+1.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="tnbs.BTC_01_PL.PL.data_loading.load_probability">
-<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probability_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'multiplexor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1729583561580967888'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_probability" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_01_PL.PL.data_loading.</span></span><span class="sig-name descname"><span class="pre">load_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">probability_array</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'multiplexor'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'1730855086710018752'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_01_PL.PL.data_loading.load_probability" title="Link to this definition"></a></dt>
 <dd><p>Creates a QLM Abstract gate for loading a given discretized probability
 distribution using Quantum Multiplexors.</p>
 <dl class="field-list simple">
@@ -341,7 +342,7 @@ The multi-controlled rotations were implemented using Quantum Multiplexors.</p>
 
 </section>
 <section id="module-tnbs.BTC_01_PL.PL.load_probabilities">
-<span id="pl-load-probabilities"></span><h2>PL.load_probabilities<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.load_probabilities" title="Link to this heading"></a></h2>
+<span id="pl-load-probabilities"></span><h1>PL.load_probabilities<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.load_probabilities" title="Link to this heading"></a></h1>
 <p>Mandatory code for softaware implemetation of the Benchmark Test Case
 of PL kernel</p>
 <dl class="py class">
@@ -389,7 +390,7 @@ of PL kernel</p>
 
 </section>
 <section id="module-tnbs.BTC_01_PL.PL.data_extracting">
-<span id="pl-data-extracting"></span><h2>PL.data_extracting<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_extracting" title="Link to this heading"></a></h2>
+<span id="pl-data-extracting"></span><h1>PL.data_extracting<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.data_extracting" title="Link to this heading"></a></h1>
 <p>This module contains auxiliary functions for executing QLM programs based
 on QLM Routines or QLM gates and for post processing results from QLM
 qpu executions</p>
@@ -515,7 +516,7 @@ and all the posible basis states are necessary.</p></li>
 
 </section>
 <section id="module-tnbs.BTC_01_PL.PL.utils">
-<span id="pl-utils"></span><h2>PL.utils<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.utils" title="Link to this heading"></a></h2>
+<span id="pl-utils"></span><h1>PL.utils<a class="headerlink" href="#module-tnbs.BTC_01_PL.PL.utils" title="Link to this heading"></a></h1>
 <p>This module contains several auxiliary functions needed by other scripts
 of the library</p>
 <p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
@@ -678,7 +679,6 @@ initial_bins &lt;= len(Probability)</p></li>
 </dd></dl>
 
 </section>
-</section>
 
 
            </div>
@@ -691,7 +691,7 @@ initial_bins &lt;= len(Probability)</p></li>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
   </div>
 
    

@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PH.ansatzes &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PH.parent_hamiltonian" href="tnbs.BTC_04_PH.PH.parent_hamiltonian.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="tnbs.BTC_04_PH.PH.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_04_PH.html#subpackage-ph">Subpackage PH</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PH.ansatzes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.parent_hamiltonian.html">PH.parent_hamiltonian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.ph_step_exe.html">PH.ph_step_exe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.workflow.html">PH.workflow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.mps.html">PH.mps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.PH.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">PH.ansatzes</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ph-ansatzes">
+<h1>PH.ansatzes<a class="headerlink" href="#ph-ansatzes" title="Link to this heading"></a></h1>
+<section id="module-tnbs.BTC_04_PH.PH.ansatzes.ansatzes">
+<span id="ansatzes"></span><h2>ansatzes<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.ansatzes.ansatzes" title="Link to this heading"></a></h2>
+<p>This module contains all functions needed for creating QLM
+implementation for the ansatz of the Parent Hamiltonian paper:</p>
+<blockquote>
+<div><p>Fumiyoshi Kobayashi and Kosuke Mitarai and Keisuke Fujii
+Parent Hamiltonian as a benchmark problem for variational quantum
+eigensolvers
+Physical Review A, 105, 5, 2002
+<a class="reference external" href="https://doi.org/10.1103%2Fphysreva.105.052415">https://doi.org/10.1103%2Fphysreva.105.052415</a></p>
+</div></blockquote>
+<p>Authors: Gonzalo Ferro</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">SolveCircuit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlm_circuit</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.get_job_results">
+<span class="sig-name descname"><span class="pre">get_job_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jobid</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.get_job_results" title="Link to this definition"></a></dt>
+<dd><p>Given a Jobid retrieve the result and procces output</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.run" title="Link to this definition"></a></dt>
+<dd><p>Solve Circuit</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_parameters">
+<span class="sig-name descname"><span class="pre">save_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_parameters" title="Link to this definition"></a></dt>
+<dd><p>Saving Parameters</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_state">
+<span class="sig-name descname"><span class="pre">save_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_state" title="Link to this definition"></a></dt>
+<dd><p>Saving State</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_time">
+<span class="sig-name descname"><span class="pre">save_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.save_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.submit">
+<span class="sig-name descname"><span class="pre">submit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.SolveCircuit.submit" title="Link to this definition"></a></dt>
+<dd><p>Submit circuit</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.angles_ansatz01">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">angles_ansatz01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdf_parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.angles_ansatz01" title="Link to this definition"></a></dt>
+<dd><p>Create the angles for ansatz01</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>) – QLM circuit with the parametrized ansatzes</p></li>
+<li><p><strong>parameters</strong> (<em>pandas DataFrame</em>) – For providing the parameters to the circuit. If None is provide
+the parameters are set using som formula</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>circuit</strong> (<em>QLM circuit</em>) – QLM circuit with the parameters fixed</p></li>
+<li><p><strong>pdf_parameters</strong> (<em>pandas DataFrame</em>) – DataFrame with the values of the parameters</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_qlm_01">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">ansatz_qlm_01</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nqubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_qlm_01" title="Link to this definition"></a></dt>
+<dd><p>Implements QLM version of the Parent Hamiltonian Ansatz using
+parametric Circuit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nqubits</strong> (<em>int</em>) – number of qubits for the ansatz</p></li>
+<li><p><strong>depth</strong> (<em>int</em>) – number of layers for the parametric circuit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>qprog</strong> (<em>QLM Program</em>) – QLM program with the ansatz implementation in parametric format</p></li>
+<li><p><strong>theta</strong> (<em>list</em>) – list with the name of the variables of the QLM Program</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_qlm_02">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">ansatz_qlm_02</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_qlm_02" title="Link to this definition"></a></dt>
+<dd><p>Implements QLM version of the Parent Hamiltonian Ansatz using
+parametric Circuit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nqubits</strong> (<em>int</em>) – number of qubits for the ansatz</p></li>
+<li><p><strong>depth</strong> (<em>int</em>) – number of layers for the parametric circuit</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>qprog</strong> (<em>QLM Program</em>) – QLM program with the ansatz implementation in parametric format</p></li>
+<li><p><strong>theta</strong> (<em>list</em>) – list with the name of the variables of the QLM Program</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_selector">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">ansatz_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ansatz</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.ansatz_selector" title="Link to this definition"></a></dt>
+<dd><p>Function for selecting an ansatz</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ansatz</strong> (<em>text</em>) – The desired ansatz</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – Different keyword arguments for configurin the ansazt, like
+nqubits or depth</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>circuit</strong> – The atos myqlm circuit implementation of the input ansatz</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Atos myqlm circuit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.getting_job">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">getting_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.getting_job" title="Link to this definition"></a></dt>
+<dd><p>For getting a job from QLM. Configuration need to have following
+keys: nqubits, job_id, save, filename</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.proccess_qresults">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">proccess_qresults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">complete</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.proccess_qresults" title="Link to this definition"></a></dt>
+<dd><p>Post Process a QLM results for creating a pandas DataFrame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>QLM results from a QLM qpu.</em>) – returned object from a qpu submit</p></li>
+<li><p><strong>qubits</strong> (<em>int</em>) – number of qubits</p></li>
+<li><p><strong>complete</strong> (<em>bool</em>) – for return the complete basis state.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.run_ansatz">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">run_ansatz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.run_ansatz" title="Link to this definition"></a></dt>
+<dd><p>For creating an ansatz and solving it</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.solving_circuit">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">solving_circuit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlm_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nqubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.solving_circuit" title="Link to this definition"></a></dt>
+<dd><p>Solving a complete qlm circuit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qlm_circuit</strong> (<em>QLM circuit</em>) – qlm circuit to solve</p></li>
+<li><p><strong>nqubit</strong> (<em>int</em>) – number of qubits of the input circuit</p></li>
+<li><p><strong>qlm_qpu</strong> (<em>QLM qpu</em>) – QLM qpu for solving the circuit</p></li>
+<li><p><strong>reverse</strong> (<em>True</em>) – This is for ordering the state from left to right
+If False the order will be form right to left</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>state</strong> – DataFrame with the complete simulation of the circuit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.ansatzes.submit_circuit">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.ansatzes.</span></span><span class="sig-name descname"><span class="pre">submit_circuit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qlm_circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qlm_qpu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.ansatzes.submit_circuit" title="Link to this definition"></a></dt>
+<dd><p>Solving a complete qlm circuit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qlm_circuit</strong> (<em>QLM circuit</em>) – qlm circuit to solve</p></li>
+<li><p><strong>qlm_qpu</strong> (<em>QLM qpu</em>) – QLM qpu for solving the circuit</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.ansatzes.launch_ansatzes">
+<span id="launch-ansatzes"></span><h2>launch_ansatzes<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.ansatzes.launch_ansatzes" title="Link to this heading"></a></h2>
+<p>For launching a VQE quantum step execution
+Author: Gonzalo Ferro</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.launch_ansatzes.run_id">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.launch_ansatzes.</span></span><span class="sig-name descname"><span class="pre">run_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.launch_ansatzes.run_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.ansatzes.launch_get_jobs">
+<span id="launch-get-jobs"></span><h2>launch_get_jobs<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.ansatzes.launch_get_jobs" title="Link to this heading"></a></h2>
+<p>For launching a VQE quantum step execution
+Author: Gonzalo Ferro</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.ansatzes.launch_get_jobs.run_id">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.ansatzes.launch_get_jobs.</span></span><span class="sig-name descname"><span class="pre">run_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.ansatzes.launch_get_jobs.run_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_04_PH.PH.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tnbs.BTC_04_PH.PH.parent_hamiltonian.html" class="btn btn-neutral float-right" title="PH.parent_hamiltonian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

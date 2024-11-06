@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTC_02_AE.QQuantLib &mdash; NEASQC documentation  documentation</title>
+  <title>ae_sine_integral &mdash; NEASQC documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
@@ -59,9 +59,9 @@
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_benchmark_summary">my_benchmark_summary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.my_environment_info">my_environment_info</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#module-tnbs.BTC_02_AE.neasqc_benchmark">neasqc_benchmark</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.html#ae-sine-integral">ae_sine_integral</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_02_AE.html#subpackage-qquantlib">Subpackage QQuantLib</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BTC_02_AE.QQuantLib</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ae_sine_integral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sub-packages">Sub-packages</a></li>
 </ul>
 </li>
 </ul>
@@ -88,7 +88,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
           <li class="breadcrumb-item"><a href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
-      <li class="breadcrumb-item active">BTC_02_AE.QQuantLib</li>
+      <li class="breadcrumb-item active">ae_sine_integral</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -97,13 +97,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="btc-02-ae-qquantlib">
-<h1>BTC_02_AE.QQuantLib<a class="headerlink" href="#btc-02-ae-qquantlib" title="Link to this heading"></a></h1>
+  <section id="module-tnbs.BTC_02_AE.QQuantLib.ae_sine_integral">
+<span id="ae-sine-integral"></span><h1>ae_sine_integral<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.ae_sine_integral" title="Link to this heading"></a></h1>
+<p>Mandatory code for softaware implemetation of the Benchmark Test Case
+of AE kernel</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.run_id">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.</span></span><span class="sig-name descname"><span class="pre">run_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_qbits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repetitions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ae_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qpu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.run_id" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.save">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.</span></span><span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.save" title="Link to this definition"></a></dt>
+<dd><p>For saving panda DataFrames to csvs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>save</strong> (<em>bool</em>) – For saving or not</p></li>
+<li><p><strong>save_nam</strong> (<em>str</em>) – name for file</p></li>
+<li><p><strong>input_pdf</strong> (<em>pandas DataFrame</em>)</p></li>
+<li><p><strong>save_mode</strong> (<em>str</em>) – saving mode: overwrite (w) or append (a)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.sine_integral">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.</span></span><span class="sig-name descname"><span class="pre">sine_integral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_qbits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ae_dictionary</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.ae_sine_integral.sine_integral" title="Link to this definition"></a></dt>
+<dd><p>Function for solving the sine integral between two input values:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_qbits</strong> (<em>int</em>) – for discretization of the input domain in 2ⁿ intervals</p></li>
+<li><p><strong>interval</strong> (<em>int</em>) – <dl class="simple">
+<dt>Interval for integration: Only can be:</dt><dd><p>0 : [0,3π/8]
+1 : [π, 5π/4]</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>ae_dictionary</strong> (<em>dict</em>) – dictionary with the complete amplitude estimation
+algorithm configuration</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pdf</strong> – DataFrame with the complete information of the benchmark</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="sub-packages">
+<h1>Sub-packages<a class="headerlink" href="#sub-packages" title="Link to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html">QQuantLib.AA</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">QQuantLib.AA.amplitude_amplification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#module-tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification">amplitude_amplification</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u0_gate"><code class="docutils literal notranslate"><span class="pre">create_u0_gate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.create_u_gate"><code class="docutils literal notranslate"><span class="pre">create_u_gate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AA.html#tnbs.BTC_02_AE.QQuantLib.AA.amplitude_amplification.grover"><code class="docutils literal notranslate"><span class="pre">grover()</span></code></a></li>
@@ -118,7 +170,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html">QQuantLib.AE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_class">QQuantLib.AE.ae_class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_class">ae_class</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE"><code class="docutils literal notranslate"><span class="pre">AE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE.ae_type"><code class="docutils literal notranslate"><span class="pre">AE.ae_type</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_class.AE.create_ae_solver"><code class="docutils literal notranslate"><span class="pre">AE.create_ae_solver()</span></code></a></li>
@@ -127,7 +179,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe">QQuantLib.AE.ae_classical_qpe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe">ae_classical_qpe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE"><code class="docutils literal notranslate"><span class="pre">CQPEAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.index"><code class="docutils literal notranslate"><span class="pre">CQPEAE.index</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_classical_qpe.CQPEAE.oracle"><code class="docutils literal notranslate"><span class="pre">CQPEAE.oracle</span></code></a></li>
@@ -137,7 +189,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe">QQuantLib.AE.ae_iterative_quantum_pe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe">ae_iterative_quantum_pe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE"><code class="docutils literal notranslate"><span class="pre">IQPEAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.index"><code class="docutils literal notranslate"><span class="pre">IQPEAE.index</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.ae_iterative_quantum_pe.IQPEAE.oracle"><code class="docutils literal notranslate"><span class="pre">IQPEAE.oracle</span></code></a></li>
@@ -147,7 +199,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae">QQuantLib.AE.iterative_quantum_ae</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae">iterative_quantum_ae</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE"><code class="docutils literal notranslate"><span class="pre">IQAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.chebysev_bound"><code class="docutils literal notranslate"><span class="pre">IQAE.chebysev_bound()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.iterative_quantum_ae.IQAE.compute_info"><code class="docutils literal notranslate"><span class="pre">IQAE.compute_info()</span></code></a></li>
@@ -164,7 +216,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae">QQuantLib.AE.maximum_likelihood_ae</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae">maximum_likelihood_ae</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE"><code class="docutils literal notranslate"><span class="pre">MLAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.cost_function"><code class="docutils literal notranslate"><span class="pre">MLAE.cost_function()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.maximum_likelihood_ae.MLAE.index"><code class="docutils literal notranslate"><span class="pre">MLAE.index</span></code></a></li>
@@ -183,7 +235,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae">QQuantLib.AE.montecarlo_ae</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae">montecarlo_ae</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE"><code class="docutils literal notranslate"><span class="pre">MCAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.index"><code class="docutils literal notranslate"><span class="pre">MCAE.index</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.montecarlo_ae.MCAE.oracle"><code class="docutils literal notranslate"><span class="pre">MCAE.oracle</span></code></a></li>
@@ -193,7 +245,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae">QQuantLib.AE.real_quantum_ae</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#module-tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae">real_quantum_ae</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE"><code class="docutils literal notranslate"><span class="pre">RQAE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.chebysev_bound"><code class="docutils literal notranslate"><span class="pre">RQAE.chebysev_bound()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.AE.html#tnbs.BTC_02_AE.QQuantLib.AE.real_quantum_ae.RQAE.compute_info"><code class="docutils literal notranslate"><span class="pre">RQAE.compute_info()</span></code></a></li>
@@ -213,7 +265,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html">QQuantLib.DL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.data_loading">QQuantLib.DL.data_loading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.data_loading">data_loading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angle"><code class="docutils literal notranslate"><span class="pre">load_angle()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angles"><code class="docutils literal notranslate"><span class="pre">load_angles()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.load_angles_brute_force"><code class="docutils literal notranslate"><span class="pre">load_angles_brute_force()</span></code></a></li>
@@ -225,7 +277,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.data_loading.uniform_distribution"><code class="docutils literal notranslate"><span class="pre">uniform_distribution()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols">QQuantLib.DL.encoding_protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#module-tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols">encoding_protocols</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding"><code class="docutils literal notranslate"><span class="pre">Encoding</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.encoding"><code class="docutils literal notranslate"><span class="pre">Encoding.encoding</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.DL.html#tnbs.BTC_02_AE.QQuantLib.DL.encoding_protocols.Encoding.oracle_encoding_0"><code class="docutils literal notranslate"><span class="pre">Encoding.oracle_encoding_0()</span></code></a></li>
@@ -240,14 +292,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html">QQuantLib.PE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">QQuantLib.PE.classical_qpe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">classical_qpe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe.CQPE"><code class="docutils literal notranslate"><span class="pre">CQPE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe.CQPE.run"><code class="docutils literal notranslate"><span class="pre">CQPE.run()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe">QQuantLib.PE.iterative_quantum_pe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#module-tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe">iterative_quantum_pe</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE"><code class="docutils literal notranslate"><span class="pre">IQPE</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.apply_iqpe"><code class="docutils literal notranslate"><span class="pre">IQPE.apply_iqpe()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.PE.html#tnbs.BTC_02_AE.QQuantLib.PE.iterative_quantum_pe.IQPE.cbits_number"><code class="docutils literal notranslate"><span class="pre">IQPE.cbits_number</span></code></a></li>
@@ -266,10 +318,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html">QQuantLib.finance</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-classical-finance">QQuantLib.finance.classical_finance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-payoff-class">QQuantLib.finance.payoff_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#qquantlib-finance-probability-class">QQuantLib.finance.probability_class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">QQuantLib.finance.quantum_integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#module-tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration">quantum_integration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.finance.html#tnbs.BTC_02_AE.QQuantLib.finance.quantum_integration.q_solve_integral"><code class="docutils literal notranslate"><span class="pre">q_solve_integral()</span></code></a></li>
 </ul>
 </li>
@@ -292,7 +341,6 @@
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.data_extracting.proccess_qresults"><code class="docutils literal notranslate"><span class="pre">proccess_qresults()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#qquantlib-utils-qlm-solver">QQuantLib.utils.qlm_solver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#module-tnbs.BTC_02_AE.QQuantLib.utils.utils">QQuantLib.utils.utils</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.bitfield"><code class="docutils literal notranslate"><span class="pre">bitfield()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_02_AE.QQuantLib.utils.html#tnbs.BTC_02_AE.QQuantLib.utils.utils.bitfield_to_int"><code class="docutils literal notranslate"><span class="pre">bitfield_to_int()</span></code></a></li>
@@ -329,7 +377,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright UDC &amp; CESGA 2021-2022.</p>
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
   </div>
 
    

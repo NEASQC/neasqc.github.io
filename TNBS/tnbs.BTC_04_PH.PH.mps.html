@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PH.mps &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="PH.workflow" href="tnbs.BTC_04_PH.PH.workflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="tnbs.html">Benchmark Test Cases</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_01_PL.html">BTC_01_PL: Probability Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_02_AE.html">BTC_02_AE Amplitude Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tnbs.BTC_03_QPE.html">BTC_03_QPE: Quantum Phase Estimation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_execution">my_benchmark_execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_info">my_benchmark_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_benchmark_summary">my_benchmark_summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.my_environment_info">my_environment_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tnbs.BTC_04_PH.html#module-tnbs.BTC_04_PH.neasqc_benchmark">neasqc_benchmark</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="tnbs.BTC_04_PH.html#subpackage-ph">Subpackage PH</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.ansatzes.html">PH.ansatzes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.parent_hamiltonian.html">PH.parent_hamiltonian</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.ph_step_exe.html">PH.ph_step_exe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tnbs.BTC_04_PH.PH.workflow.html">PH.workflow</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">PH.mps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="tnbs.html">Benchmark Test Cases</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.html">BTC_04_PH: Parent Hamiltonian</a></li>
+          <li class="breadcrumb-item"><a href="tnbs.BTC_04_PH.PH.html">&lt;no title&gt;</a></li>
+      <li class="breadcrumb-item active">PH.mps</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ph-mps">
+<h1>PH.mps<a class="headerlink" href="#ph-mps" title="Link to this heading"></a></h1>
+<section id="module-tnbs.BTC_04_PH.PH.mps.ansatz_mps">
+<span id="ansatz-mps"></span><h2>ansatz_mps<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.mps.ansatz_mps" title="Link to this heading"></a></h2>
+<p>Parent Hamiltonian ansatz using MPS</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.ansatz_mps.ansatz_mps">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.ansatz_mps.</span></span><span class="sig-name descname"><span class="pre">ansatz_mps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nqubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.ansatz_mps.ansatz_mps" title="Link to this definition"></a></dt>
+<dd><p>Creates the MPS solution of the ansatz for TNBS BTC_04_PH benchmark</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nqubits</strong> (<em>int</em>) – Number of qubits for the ansatz</p></li>
+<li><p><strong>depth</strong> (<em>int</em>) – Depth for the ansatz</p></li>
+<li><p><strong>truncate</strong> (<em>bool</em>) – Boolean variable for truncate SVD of the 2 qubits ansatz. If
+truncate is True and t_v is None precision of the float will be
+used as truncation value</p></li>
+<li><p><strong>t_v</strong> (<em>float</em>) – Float for tuncating the SVD of the 2 qubits gates. Only valid if
+truncate is True,</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>mps_</strong> – list with the angles for the circuit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.ansatz_mps.get_angles">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.ansatz_mps.</span></span><span class="sig-name descname"><span class="pre">get_angles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.ansatz_mps.get_angles" title="Link to this definition"></a></dt>
+<dd><p>Setting the angles of the ansatz following TNBS procedure</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>depth</strong> (<em>int</em>) – Integer with the depth of the ansatz</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>mps_</strong> – list with the angles for the circuit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.ansatz_mps.state_computation">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.ansatz_mps.</span></span><span class="sig-name descname"><span class="pre">state_computation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.ansatz_mps.state_computation" title="Link to this definition"></a></dt>
+<dd><p>Computes State of the TNBS BTC_04_PH ansatz using MPS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arguments</strong> (<em>configuration MUST have following keyword</em>)</p></li>
+<li><p><strong>nqubits</strong> (<em>int</em>) – Number of qubits for the ansatz</p></li>
+<li><p><strong>depth</strong> (<em>int</em>) – Depth for the ansatz</p></li>
+<li><p><strong>truncate</strong> (<em>bool</em>) – Boolean variable for truncate SVD of the 2 qubits ansatz. If
+truncate is True and t_v is None precision of the float will be
+used as truncation value</p></li>
+<li><p><strong>t_v</strong> (<em>float</em>) – Float for tuncating the SVD of the 2 qubits gates. Only valid if
+truncate is True,</p></li>
+<li><p><strong>save</strong> (<em>bool</em>) – For saving the resulting state</p></li>
+<li><p><strong>folder</strong> (<em>string</em>) – Folder for saving the results</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>pdf</strong> – DataFrame with the result of the state of the circuit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.mps.gates_mps">
+<span id="gates-mps"></span><h2>gates_mps<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.mps.gates_mps" title="Link to this heading"></a></h2>
+<p>Numpy Implementation of Several Quantum Gates</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.gates_mps.controlz">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.gates_mps.</span></span><span class="sig-name descname"><span class="pre">controlz</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.gates_mps.controlz" title="Link to this definition"></a></dt>
+<dd><p>Implement a Controlled-Z Gate as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cz</strong> – Array with the implementation of a c-Z gate</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.gates_mps.h_gate">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.gates_mps.</span></span><span class="sig-name descname"><span class="pre">h_gate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.gates_mps.h_gate" title="Link to this definition"></a></dt>
+<dd><p>Implement a Haddamard Gate as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>haddamard</strong> – Array with the implementation of a Haddamard gate</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.gates_mps.phasechange_gate">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.gates_mps.</span></span><span class="sig-name descname"><span class="pre">phasechange_gate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.gates_mps.phasechange_gate" title="Link to this definition"></a></dt>
+<dd><p>Implement a Phase Change Gate as a numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>phase</strong> – Array with the implementation of a Phase change gate</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.gates_mps.x_rotation">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.gates_mps.</span></span><span class="sig-name descname"><span class="pre">x_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.gates_mps.x_rotation" title="Link to this definition"></a></dt>
+<dd><p>Implement a X rotation numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – desired angle for the Z rotation</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>xr</strong> – Array with the implementation of a X rotation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.gates_mps.z_rotation">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.gates_mps.</span></span><span class="sig-name descname"><span class="pre">z_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.gates_mps.z_rotation" title="Link to this definition"></a></dt>
+<dd><p>Implement a Z rotation numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>angle</strong> (<em>float</em>) – desired angle for the Z rotation</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>zr</strong> – Array with the implementation of a Z rotation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.mps.mps">
+<span id="mps"></span><h2>mps<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.mps.mps" title="Link to this heading"></a></h2>
+<p>Functions for working with MPS</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.apply_2qubit_gate">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">apply_2qubit_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.apply_2qubit_gate" title="Link to this definition"></a></dt>
+<dd><p>Executes a 2-qubit gate between 2 rank-3 tensors</p>
+<p class="rubric">Notes</p>
+<p>The rank-3 tensors MUST HAVE following indexing:</p>
+<blockquote>
+<div><dl>
+<dt>0-o-2</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>1</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Where 1 is the physical leg.
+Following Computation is done:</p>
+<blockquote>
+<div><dl>
+<dt>-o-o-</dt><dd><div class="line-block">
+<div class="line">|  -&gt; -o- -&gt; SVD -&gt; -o- -o-</div>
+</div>
+<p>-o-                    |   |</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.apply_2qubit_gates">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">apply_2qubit_gates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gates</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-08</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.apply_2qubit_gates" title="Link to this definition"></a></dt>
+<dd><p>Apply a circular ladder of Non-Local gates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubits</strong> (<em>list</em>) – MPS representation of a circuit. List where each element is a
+numpy array</p></li>
+<li><p><strong>gates</strong> (<em>list</em>) – list where each element is a matrix representation of non-local
+gate</p></li>
+<li><p><strong>truncate</strong> (<em>bool</em>) – Boolean variable for truncate SVD of the 2 qubits ansatz. If
+truncate is True and t_v is None precision of the float will be
+used as truncation value</p></li>
+<li><p><strong>t_v</strong> (<em>float</em>) – Float for tuncating the SVD of the 2 qubits gates. Only valid if
+truncate is True,</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_qubits</strong> – MPS representation of the resulting circuit of applied the
+circular ladder of non local gates over the input MPS. Each
+element of the list is a numpy array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.apply_local_gate">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">apply_local_gate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gates</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.apply_local_gate" title="Link to this definition"></a></dt>
+<dd><p>Apply  local gates on several rank 3-tensors. For not apply a
+gate over a tensor a None should be provided.</p>
+<p class="rubric">Notes</p>
+<p>The rank-3 tensor MUST HAVE following indexing:</p>
+<blockquote>
+<div><dl>
+<dt>0-o-2</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>1</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Where 1 is the physical leg.</p>
+<p>The computation done is:</p>
+<blockquote>
+<div><dl>
+<dt>-o- -o- … -o-</dt><dd><div class="line-block">
+<div class="line">|       |</div>
+</div>
+<p>o   o       o
+|   |       |</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mps</strong> (<em>list</em>) – Each element is a rank-3 tensor from a MPS</p></li>
+<li><p><strong>gates</strong> (<em>list</em>) – Each element is a local gate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>o_qubits</strong> – Each element is the resulting rank-3 tensor</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.compose_mps">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">compose_mps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.compose_mps" title="Link to this definition"></a></dt>
+<dd><p>Given an input MPS it computes the final Tensor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mps</strong> (<em>list</em>) – list where each element is a rank-3 tensor that conforms de MPS</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tensor</strong> – numpy array with the correspondient tensor</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.contract_indices_one_tensor">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">contract_indices_one_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contractions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.contract_indices_one_tensor" title="Link to this definition"></a></dt>
+<dd><p>For an input tensor executes indices contractions by pair.
+The computation is done by contracting each para of indices
+with its corresponding identity matrix.
+EXAMPLE:
+contractions = [(1, 5), (3, 4)] Index 1 will be contracted with
+indice 5 and index 3 with index 4</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor</strong> (<em>numpy array</em>) – input tensor</p></li>
+<li><p><strong>contractions</strong> (<em>list</em>) – each element is a tuple of the indices to be contracted</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tensor</strong> – Desired tensor with the corresponding contractions done</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.contraction_physical_legs">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">contraction_physical_legs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.contraction_physical_legs" title="Link to this definition"></a></dt>
+<dd><p>Executes the contraction of the physical legs of the input rank-3
+tensor with its complex conjugate. Physical Legs MUST BE 1</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tensor</strong> (<em>np array</em>) – Numpy array with a rank-3 tensor. Physical Legs MUST BE 1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.mpo_contraction">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">mpo_contraction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tensor_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.mpo_contraction" title="Link to this definition"></a></dt>
+<dd><p>Contraction of 2 input tensors (npo tensors) with corresponding
+adjust of dimension for computing density matrices.
+The input tensors MUST be rank 4 or 2 tensors.</p>
+<p class="rubric">Notes</p>
+<dl>
+<dt>Rank-4 tensor:    |  Rank-2 tensor:</dt><dd><blockquote>
+<div><div class="line-block">
+<div class="line"><a href="#id1"><span class="problematic" id="id2">|</span></a></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>o -          |     - o -
+|            |</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tensor_1</strong> (<em>np array</em>) – First input 4 or 2 rank tensor</p></li>
+<li><p><strong>tensor_2</strong> (<em>np array</em>) – Second input 4 or 2 rank tensor</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>step</strong> – output rank 4 or 2 tensor</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.mps.my_svd">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.mps.</span></span><span class="sig-name descname"><span class="pre">my_svd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.mps.my_svd" title="Link to this definition"></a></dt>
+<dd><p>Execute SVD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array</strong> (<em>np.array</em>) – Arry with matrix for SVD</p></li>
+<li><p><strong>truncate</strong> (<em>Bool</em>) – For truncating SVD. If t_v is None then the truncation will be
+using float prcision of the system</p></li>
+<li><p><strong>t_v</strong> (<em>float</em>) – In truncate is True then the t_v float will use as truncation
+threshold</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>u_, s, vh</strong> – numpy arrays with the SVD of the input array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.arrays</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps">
+<span id="parent-hamiltonian-mps"></span><h2>parent_hamiltonian_mps<a class="headerlink" href="#module-tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Complete implementation of the Parent Hamiltonian following:</dt><dd><p>Fumiyoshi Kobayashi and Kosuke Mitarai and Keisuke Fujii
+Parent Hamiltonian as a benchmark problem for variational quantum
+eigensolvers
+Physical Review A, 105, 5, 2002
+<a class="reference external" href="https://doi.org/10.1103%2Fphysreva.105.052415">https://doi.org/10.1103%2Fphysreva.105.052415</a></p>
+</dd>
+</dl>
+<p>Author: Gonzalo Ferro</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.</span></span><span class="sig-name descname"><span class="pre">PH_MPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_invariant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for doing Parent Hamiltonian Computations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amplitudes</strong> (<em>list</em>) – list with the complete amplitudes of the state of the ansatz</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <dl class="simple">
+<dt>dictionary that allows the configuration of the CQPEAE algorithm:</dt><dd><p>Implemented keys:</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.get_pauli_pdf">
+<span class="sig-name descname"><span class="pre">get_pauli_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.get_pauli_pdf" title="Link to this definition"></a></dt>
+<dd><p>Create pauli dataframe with all the info.
+Additionally pauli coefficients lower than float precision will
+be pruned</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.local_ph">
+<span class="sig-name descname"><span class="pre">local_ph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.local_ph" title="Link to this definition"></a></dt>
+<dd><p>Computes the local parent hamiltonian</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.PH_MPS.save" title="Link to this definition"></a></dt>
+<dd><p>Saving Staff</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.get_local_reduced_matrix">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.</span></span><span class="sig-name descname"><span class="pre">get_local_reduced_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qb_pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.get_local_reduced_matrix" title="Link to this definition"></a></dt>
+<dd><p>Given a MPS representation of a input state and position qubit
+(qb_pos) computes the minimum local reduced density matrix from
+qb_pos qubit such that its null space can be computable:
+i.e. rank(local_rho) &lt; dim(local_rho)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy array</em>) – MPS representation of an state</p></li>
+<li><p><strong>qb_pos</strong> (<em>int</em>) – position of the qubit for computing the reduced density matrix</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>local_qubits</strong> (<em>list</em>) – list with the qubits affected by the reduced density matrix</p></li>
+<li><p><strong>local_rho</strong> (<em>numpy array</em>) – array with the reduced density matrix for the input qbit
+position</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.get_null_projectors">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.</span></span><span class="sig-name descname"><span class="pre">get_null_projectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.get_null_projectors" title="Link to this definition"></a></dt>
+<dd><p>Given an input matrix this function computes the matrix of projectors
+over the null space of the input matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>array</strong> (<em>numpy array</em>) – Input matrix for computing the projectors over the null space</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>h_null</strong> – Matrices with the projectors to the null space of the
+input array</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.reduced_rho_mps">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.</span></span><span class="sig-name descname"><span class="pre">reduced_rho_mps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">free_indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contraction_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.reduced_rho_mps" title="Link to this definition"></a></dt>
+<dd><p>Computes reduced density matrix by contracting first the MPS
+with NON contracted legs. Then compute the contraction of the
+MPS with contracted legs. Finally Contract the result of the
+Non Contracted operations with the Contracted Ones for getting
+the desired reduced density matrix. Try to alternate MPS contraction
+of states (free legs) with MPO contractions (contracted legs)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mps</strong> (<em>list</em>) – MPS representation of the state whose reduced density matrix
+want to be computed. Each element is a rank-3 tensor represented
+by a numpy array</p></li>
+<li><p><strong>free_indices</strong> (<em>list</em>) – List of the free index for computing the reduced density matrix</p></li>
+<li><p><strong>contraction_indices</strong> (<em>list</em>) – List with the contraction indices for computing the reduced
+density matrix. This qubits will be traced out.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>tensor_out</strong> – Array with the desired reduced density matrix</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.run_parent_hamiltonian">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.</span></span><span class="sig-name descname"><span class="pre">run_parent_hamiltonian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">configuration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_04_PH.PH.mps.parent_hamiltonian_mps.run_parent_hamiltonian" title="Link to this definition"></a></dt>
+<dd><p>Computes Parent Hamiltonian for an ansatz</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>used</strong> (<em>configuration is a kwargs. Following keys are the</em>)</p></li>
+<li><p><strong>nqubits</strong> (<em>*</em>) – number of the qubits for the BTC ansatz</p></li>
+<li><p><strong>depth</strong> (<em>*</em>) – depth for the BTC ansatz</p></li>
+<li><p><strong>truncate</strong> (<em>*</em>) – for truncating the SVD. Float precision will be used as cuttoff</p></li>
+<li><p><strong>save</strong> (<em>*</em>) – for saving the results</p></li>
+<li><p><strong>folder</strong> (<em>*</em>) – Folder for storing the results.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>pauli_pdf</strong> (<em>pandas DataFrame</em>) – DataFrame with the Pauli decomposition of hte PH</p></li>
+<li><p><strong>pdf_angles</strong> (<em>pandas DataFrame</em>) – DataFrame with the angles for the BTC ansatz.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tnbs.BTC_04_PH.PH.workflow.html" class="btn btn-neutral float-left" title="PH.workflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
