@@ -100,16 +100,16 @@
 <h1>QQuantLib.PE<a class="headerlink" href="#qquantlib-pe" title="Link to this heading"></a></h1>
 <section id="module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe">
 <span id="classical-qpe"></span><h2>classical_qpe<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.PE.classical_qpe" title="Link to this heading"></a></h2>
-<p>This module contains necessary functions and classes to implement
-the classical Quantum Phase Estimation with inverse of the
-Quantum Fourier Transform. Following references were used:</p>
+<p>This module contains the necessary functions and classes to implement
+the classical Quantum Phase Estimation with the inverse of the
+Quantum Fourier Transform. The following references were used:</p>
 <blockquote>
-<div><p>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
+<div><p><em>Brassard, G., Hoyer, P., Mosca, M., &amp; Tapp, A. (2000).
 Quantum amplitude amplification and estimation.
 AMS Contemporary Mathematics Series, 305.
-<a class="reference external" href="https://arxiv.org/abs/quant-ph/0005055v1">https://arxiv.org/abs/quant-ph/0005055v1</a></p>
-<p>NEASQC deliverable: D5.1: Review of state-of-the-art for Pricing
-and Computation of VaR</p>
+https://arxiv.org/abs/quant-ph/0005055v1</em></p>
+<p><em>NEASQC deliverable: D5.1: Review of state-of-the-art for Pricing
+and Computation of VaR</em></p>
 </div></blockquote>
 <p>Author: Gonzalo Ferro Costas &amp; Alberto Manzano Herrero</p>
 <dl class="py class">
@@ -347,6 +347,117 @@ the end of the step.</p></li>
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+</section>
+<section id="module-tnbs.BTC_02_AE.QQuantLib.PE.windows_pe">
+<span id="windows-pe"></span><h2>windows_pe<a class="headerlink" href="#module-tnbs.BTC_02_AE.QQuantLib.PE.windows_pe" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>This module contains different window functions. Based on:</dt><dd><p>Effects of cosine tapering window on quantum phase estimation.
+Rendon, Gumaro and Izubuchi, Taku and Kikuchi, Yuta
+Phys. Rev. D, 106. 2022</p>
+</dd>
+</dl>
+<p>Author: Gonzalo Ferro Costas</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.cosine_window">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.</span></span><span class="sig-name descname"><span class="pre">cosine_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.cosine_window" title="Link to this definition"></a></dt>
+<dd><p>Creates a QLM AbstractGate for loading a Cosine Window Function
+into a quantum state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the quantum AbstractGate</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>window_state</strong> – AbstractGate for loading a cosine</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.kaiser_array">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.</span></span><span class="sig-name descname"><span class="pre">kaiser_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.kaiser_array" title="Link to this definition"></a></dt>
+<dd><p>Creates the probability discretization of a Kaiser window function
+for a given input of number of qubits and a alpha
+:param number_qubits: Number of qubits for building the Kaiser window function
+:type number_qubits: int
+:param alpha: Parameter for modified Bessel function or order 0.
+:type alpha: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pdf</strong> – pandas DF with the probability discretization of the Kaiser
+window function</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.kaiser_window">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.</span></span><span class="sig-name descname"><span class="pre">kaiser_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.kaiser_window" title="Link to this definition"></a></dt>
+<dd><p>Creates a QLM AbstractGate for loading a Kaiser Window Function
+into a quantum state. Uses load_probability function for loading
+the discretization of the probability of the Kaiser window function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the quantum AbstractGate</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Parameter for modified Bessel function or order 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>kaiser_state</strong> – AbstractGate for loading a Kaiser Window</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.sine_window">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.</span></span><span class="sig-name descname"><span class="pre">sine_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.sine_window" title="Link to this definition"></a></dt>
+<dd><p>Creates a QLM AbstractGate for loading a Sine Window Function
+into a quantum state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) – Number of qubits for the quantum AbstractGate</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>window_state</strong> – AbstractGate for loading a sine</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AbstractGate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.window_selector">
+<span class="sig-prename descclassname"><span class="pre">tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.</span></span><span class="sig-name descname"><span class="pre">window_selector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window_type</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tnbs.BTC_02_AE.QQuantLib.PE.windows_pe.window_selector" title="Link to this definition"></a></dt>
+<dd><p>Selector funcion for window functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>window_type</strong> (<em>str</em>) – String with the desired Window function</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – Keyword arguments for configuring window functions. Mandatory:
+auxiliar_qbits_number. For Kaiser window it is mandatory to
+provide kaiser_alpha</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>window gate</strong> (<em>AbstractGate</em>) – AbstractGate with the desired window function</p></li>
+<li><p><strong>last_control_change</strong> (<em>Bool</em>) – last_control_change value</p></li>
+</ul>
+</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
