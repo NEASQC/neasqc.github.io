@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QQuantLib.finance &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -70,6 +70,8 @@
 <li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation.html">ae_price_estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation.html">cliquet_return_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html">cliquet_return_estimation_step_payoff</a></li>
 </ul>
 </li>
 </ul>
@@ -115,8 +117,14 @@
 <li><p><a class="reference internal" href="finance.payoff_class.html"><span class="doc">payoff_class</span></a>: This module implements the Python class PayOff that allows to the user configure payoffs for several financial derivatives (like options or futures) by providing different financial parameters.</p></li>
 <li><p><a class="reference internal" href="finance.quantum_integration.html"><span class="doc">quantum_integration</span></a>: This module implements the function <em>q_solve_integral</em> that allows to the user codify into a quantum circuit a desired integral (using the different encoding procedures from <strong>QQuantLib.DL.encoding_protocols</strong> module) and solving it using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package.</p></li>
 <li><p><a class="reference internal" href="finance.ae_price_estimation.html"><span class="doc">ae_price_estimation</span></a>: This module implements the ae_price_estimation function that allows to the user configure a financial derivative price problem using typical financial parameters, codify the expected value integral in a quantum circuit, and solve it by using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package. This module uses the <em>finance.quantum_integration</em> module.</p></li>
-<li><p><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html"><span class="doc">ae_price_estimation_step_payoff</span></a>: This module implements the ae_price_estimation function that allows to the user configure a financial derivative price problem using typical financial parameters, codify the expected value integral in a quantum circuit, and solve it by using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package. This module uses the <em>finance.quantum_integration</em> module.  In this module, the positive part and the negative parts of the payoff will be loaded separately and the quantum estimations of the two parts are post-processed to get the desired price.</p></li>
+<li><p><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html"><span class="doc">ae_price_estimation_step_payoff</span></a>: This module implements the ae_price_estimation_step_po function that allows to the user configure a financial derivative price problem using typical financial parameters, codify the expected value integral in a quantum circuit, and solve it by using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package. This module uses the <em>finance.quantum_integration</em> module.  In this module, the positive part and the negative parts of the payoff will be loaded separately and the quantum estimations of the two parts are post-processed to get the desired price.</p></li>
+<li><p><a class="reference internal" href="finance.cliquet_return_estimation.html"><span class="doc">cliquet_return_estimation</span></a>: This module implements the ae_cliquet_estimation function that allows to the user configure a price problem for cliquet options products using using their typical financial parameters. It codifies the desired expected value in a quantum circuit, and solve it by using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package. This module uses the <em>finance.quantum_integration</em> module. Cliquet options can have positive or negatives values for the expected payoff.</p></li>
+<li><p><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html"><span class="doc">cliquet_return_estimation_step_payoff</span></a>: This module implements the ae_cliquet_estimation function that allows to the user configure a price problem for cliquet options products using using their typical financial parameters. It codifies the desired expected value in a quantum circuit, and solve it by using the different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package. This module uses the <em>finance.quantum_integration</em> module. Cliquet options can have positive or negatives values for the expected payoff. In this module, the positive part and the negative parts of the payoff will be loaded separately and the quantum estimations of the two parts are post-processed to get the desired price.</p></li>
 </ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">

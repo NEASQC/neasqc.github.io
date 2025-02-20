@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>quantum_integration &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -71,6 +71,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation.html">ae_price_estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation.html">cliquet_return_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html">cliquet_return_estimation_step_payoff</a></li>
 </ul>
 </li>
 </ul>
@@ -124,18 +126,12 @@ for transforming the estimated amplitude into the desired integral.</p>
 <dd><p>Function for solving an integral using quantum amplitude estimation techniques.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the integration to compute and the AE technique used for getting the solution.</p>
-<dl class="simple">
-<dt>array_function<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired function for encoding into the Quantum Circuit.</p>
-</dd>
-<dt>encoding<span class="classifier">int</span></dt><dd><p>Selecting the encode protocol</p>
-</dd>
-<dt>array_probability<span class="classifier">numpy array</span></dt><dd><p>numpy array with the desired probability for encoding into the Quantum Circuit. It can be None (uniform distribution will be used)</p>
-</dd>
-<dt>ae_type<span class="classifier">string</span></dt><dd><p>string with the desired AE algorithm: MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p>
-</dd>
-</dl>
-</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>array_function</strong> (<em>kwargs</em><em>, </em><em>numpy array</em>) – numpy array with the desired function for encoding into the Quantum Circuit.</p></li>
+<li><p><strong>encoding</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Selecting the encode protocol</p></li>
+<li><p><strong>array_probability</strong> (<em>kwargs</em><em>, </em><em>numpy array</em>) – numpy array with the desired probability for encoding into the Quantum Circuit. It can be None (uniform distribution will be used)</p></li>
+<li><p><strong>ae_type</strong> (<em>kwargs</em><em>, </em><em>string</em>) – string with the desired AE algorithm: MLAE, CQPEAE, IQPEAE, IQAE, RQAE</p></li>
+</ul>
 </dd>
 </dl>
 <div class="admonition note">

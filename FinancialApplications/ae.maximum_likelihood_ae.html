@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>maximum_likelihood_ae &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -157,23 +157,14 @@ init_q_prog and q_gate will be interpreted as None</p></li>
 <li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – python list with the target for the amplitude estimation</p></li>
 <li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – qubits which mark the register to do the amplitude
 estimation</p></li>
-<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the MLAE algorithm: Implemented keys:</p>
-<dl class="simple">
-<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
-</dd>
-<dt>schedule<span class="classifier">list of two lists</span></dt><dd><p>the schedule for the algorithm</p>
-</dd>
-<dt>optimizer :</dt><dd><p>an optimizer with just one possible entry</p>
-</dd>
-<dt>delta<span class="classifier">float</span></dt><dd><p>tolerance to avoid division by zero warnings</p>
-</dd>
-<dt>ns<span class="classifier">int</span></dt><dd><p>number of grid points for brute scipy optimizer</p>
-</dd>
-<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
-gate</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the MLAE algorithm</p></li>
+<li><p><strong>qpu</strong> (<em>kwargs</em><em>, </em><em>QLM solver</em>) – solver for simulating the resulting circuits</p></li>
+<li><p><strong>schedule</strong> (<em>kwargs</em><em>, </em><em>list</em><em> of </em><em>two lists</em>) – the schedule for the algorithm</p></li>
+<li><p><strong>optimizer</strong> (<em>kwargs</em><em>,</em>) – an optimizer with just one possible entry</p></li>
+<li><p><strong>delta</strong> (<em>kwargs</em><em>, </em><em>float</em>) – tolerance to avoid division by zero warnings</p></li>
+<li><p><strong>ns</strong> (<em>kwargs</em><em>, </em><em>int</em>) – number of grid points for brute scipy optimizer</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>kwargs</em><em>, </em><em>bool</em>) – for using or not QLM implementation of the multi controlled Z
+gate</p></li>
 </ul>
 </dd>
 </dl>

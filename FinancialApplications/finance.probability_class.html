@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>probability_class &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -75,6 +75,8 @@
 <li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation.html">ae_price_estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation.html">cliquet_return_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html">cliquet_return_estimation_step_payoff</a></li>
 </ul>
 </li>
 </ul>
@@ -128,18 +130,11 @@ algorithm</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
-<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>Dictionary for configuring the asset and the probability used for simulating its behaviour.Implemented keys:</p>
-<dl class="simple">
-<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
-</dd>
-<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
-</dd>
-<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated.</p>
-</dd>
-<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset.</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – Dictionary for configuring the asset and the probability used for simulating its behaviour.Implemented keys:</p></li>
+<li><p><strong>s_0</strong> (<em>kwargs</em><em>, </em><em>float</em>) – initial value of the asset</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>kwargs</em><em>, </em><em>float</em>) – risk free ratio</p></li>
+<li><p><strong>maturity</strong> (<em>kwargs</em><em>, </em><em>float</em>) – time where the probability wants to be calculated.</p></li>
+<li><p><strong>volatiliy</strong> (<em>kwargs</em><em>, </em><em>float</em>) – volatility of the asset.</p></li>
 </ul>
 </dd>
 </dl>
@@ -151,18 +146,11 @@ algorithm</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
-<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density</p>
-<dl class="simple">
-<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
-</dd>
-<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
-</dd>
-<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
-</dd>
-<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – with necessary information for configuring the probability density</p></li>
+<li><p><strong>s_0</strong> (<em>kwargs</em><em>, </em><em>float</em>) – initial value of the asset</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>kwargs</em><em>, </em><em>float</em>) – risk free ratio</p></li>
+<li><p><strong>maturity</strong> (<em>kwargs</em><em>, </em><em>float</em>) – time where the probability wants to be calculated</p></li>
+<li><p><strong>volatiliy</strong> (<em>kwargs</em><em>, </em><em>float</em>) – volatility of the asset</p></li>
 </ul>
 </dd>
 </dl>
@@ -176,18 +164,11 @@ algorithm</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>probability_type</strong> (<em>string</em>) – type of probability density function to load</p></li>
-<li><p><strong>kwargs</strong> (<em>dictionary</em>) – <p>with necessary information for configuring the probability density.</p>
-<dl class="simple">
-<dt>s_0<span class="classifier">float</span></dt><dd><p>initial value of the asset</p>
-</dd>
-<dt>risk_free_rate<span class="classifier">float</span></dt><dd><p>risk free ratio</p>
-</dd>
-<dt>maturity<span class="classifier">float</span></dt><dd><p>time where the probability wants to be calculated</p>
-</dd>
-<dt>volatiliy<span class="classifier">float</span></dt><dd><p>volatility of the asset</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – with necessary information for configuring the probability density.</p></li>
+<li><p><strong>s_0</strong> (<em>kwargs</em><em>, </em><em>float</em>) – initial value of the asset</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>kwargs</em><em>, </em><em>float</em>) – risk free ratio</p></li>
+<li><p><strong>maturity</strong> (<em>kwargs</em><em>, </em><em>float</em>) – time where the probability wants to be calculated</p></li>
+<li><p><strong>volatiliy</strong> (<em>kwargs</em><em>, </em><em>float</em>) – volatility of the asset</p></li>
 </ul>
 </dd>
 </dl>

@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>architectures &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -166,25 +166,17 @@ for computing the pdf</p>
 <dd><p>Create a hardware efficient ansatz.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<em>kwargs</em>) – Input dictionary for configuring the ansatz. Mandatory keys:</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<dl class="simple">
-<dt>Valid keywords:</dt><dd><ul class="simple">
-<li><p>features_number : number of features</p></li>
-<li><p>n_qubits_by_feature : number of qubits used for each feature</p></li>
-<li><p>n_layers : number of layers of the PQC</p></li>
-<li><p>base_frecuency : slope for feature normalization</p></li>
-<li><p>shift_feature : shift for feature normalization</p></li>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwargs</strong> (<em>kwargs</em>) – Input dictionary for configuring the ansatz. Mandatory keys:</p></li>
+<li><p><strong>features_number</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of features</p></li>
+<li><p><strong>n_qubits_by_feature</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of qubits used for each feature</p></li>
+<li><p><strong>n_layers</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of layers of the PQC</p></li>
+<li><p><strong>base_frecuency</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Slope for feature normalization</p></li>
+<li><p><strong>shift_feature</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Shift for feature normalization</p></li>
 </ul>
 </dd>
-</dl>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><ul class="simple">
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
 <li><p><strong>pqc</strong> (<em>QLM Program</em>) – QLM Program with the ansatz</p></li>
 <li><p><strong>weights_names</strong> (<em>list</em>) – list with the parameters corrresponding to the weights</p></li>
 <li><p><strong>features_names</strong> (<em>list</em>) – list with the parameters corrresponding to the features</p></li>
@@ -229,7 +221,11 @@ for computing the pdf</p>
 <dd><p>Create an Observable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwargs</strong> (<em>kwargs</em>) – Input dictionary for configuring the ansatz</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwargs</strong> (<em>kwargs</em>) – Input dictionary for configuring the ansatz</p></li>
+<li><p><strong>features_number</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of input features</p></li>
+<li><p><strong>n_qubits_by_feature</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of qubits for encoding each feature</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>observable</strong> – QLM Observable</p>

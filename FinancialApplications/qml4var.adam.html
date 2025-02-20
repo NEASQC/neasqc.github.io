@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>adam &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -127,16 +127,16 @@ Adam</p>
 <li><p><strong>gradient_function</strong> (<em>function</em>) – function for computing the gradient of the loss function</p></li>
 <li><p><strong>batch_generator</strong> (<em>function</em>) – function for generating batches of the trainin data.</p></li>
 <li><p><strong>initial_time</strong> (<em>int</em>) – Initial time step</p></li>
-<li><p><strong>**kwargs</strong> (<em>keyword arguments</em>) – arguments for configuring optimizer. For ADAM:
-store_folder : folder for saving results. If None not saving
-epochs : maximum number of iterations
-tolerance : tolerance to achieve
-n_counts_tolerance : number of times the tolerance should be
-achieved in consecutive iterations
-print_step : print_step for printing evolution of training
-learning_rate : learning_rate for ADAM
-beta1 : beta1 for ADAM
-beta2 : beta2 for ADAM</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – arguments for configuring optimizer. For ADAM:</p></li>
+<li><p><strong>store_folder</strong> (<em>kwargs</em><em>, </em><em>str</em>) – Folder for saving results. If None not saving</p></li>
+<li><p><strong>epochs</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Maximum number of iterations</p></li>
+<li><p><strong>tolerance</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Tolerance to achieve</p></li>
+<li><p><strong>n_counts_tolerance</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of times the tolerance should be achieved in consecutive
+iterations</p></li>
+<li><p><strong>print_step</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Print_step for printing evolution of training</p></li>
+<li><p><strong>learning_rate</strong> (<em>kwargs</em><em>,</em><em>float</em>) – Learning_rate for ADAM</p></li>
+<li><p><strong>beta1</strong> (<em>kwargs</em><em>, </em><em>float</em>) – beta1 for ADAM</p></li>
+<li><p><strong>beta2</strong> (<em>kwargs</em><em>, </em><em>float</em>) – beta2 for ADAM</p></li>
 </ul>
 </dd>
 </dl>

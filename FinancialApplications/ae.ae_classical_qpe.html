@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ae_classical_qpe &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -151,17 +151,11 @@ Grover operator</p></li>
 <li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – python list with the target for the amplitude estimation</p></li>
 <li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – qubits which mark the register to do the amplitude
 estimation</p></li>
-<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the CQPEAE algorithm: Implemented keys:</p>
-<dl class="simple">
-<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
-</dd>
-<dt>shots<span class="classifier">int</span></dt><dd><p>number of measurements</p>
-</dd>
-<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
-gate</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the CQPEAE algorithm: Implemented keys:</p></li>
+<li><p><strong>qpu</strong> (<em>kwargs</em><em>, </em><em>QLM solver</em>) – solver for simulating the resulting circuits</p></li>
+<li><p><strong>shots</strong> (<em>kwargs</em><em>, </em><em>int</em>) – number of measurements</p></li>
+<li><p><strong>mcz_qlm</strong> (<em>kwargs</em><em>, </em><em>bool</em>) – for using or not QLM implementation of the multi controlled Z
+gate</p></li>
 </ul>
 </dd>
 </dl>

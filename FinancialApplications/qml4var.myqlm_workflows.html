@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>myqlm_workflows &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -135,8 +135,8 @@ given weights and x_sample.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>weights</strong> (<em>np array</em>) – array with the weights of the PQC</p></li>
 <li><p><strong>x_sample</strong> (<em>np array</em>) – input sample to provide to the PQC</p></li>
-<li><p><strong>**kwargs</strong> (<em>keyword arguments.In addition to kwargs provided to the</em>)</p></li>
-<li><p><strong>too</strong> (<em>stack_execution function the following one should be provided</em>) – qpu_info : Python dictionary with the infor for configuring a QPU</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – same kwargs like the provided to the stack_execution function</p></li>
+<li><p><strong>qpu_info</strong> (<em>kwargs</em><em>, </em><em>dictionary</em>) – Python dictionary with the infor for configuring a QPU</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -180,7 +180,7 @@ given weights and x_sample.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>weights</strong> (<em>np array</em>) – array with the weights of the PQC</p></li>
 <li><p><strong>x_sample</strong> (<em>np array</em>) – input sample to provide to the PQC</p></li>
-<li><p><strong>kwargs</strong> (<em>keyword arguments. See cdf_workflow documentation</em>)</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments.</em>) – See cdf_workflow documentation</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -238,24 +238,14 @@ builds the corresponding QLM Batch of jobs and execute it.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>weights</strong> (<em>np array</em>) – array with the weights of the PQC</p></li>
 <li><p><strong>x_sample</strong> (<em>np array</em>) – input sample to provide to the PQC</p></li>
-<li><p><strong>kwargs</strong> (<em>keyword arguments</em>) – <p>The following keys are mandatory
-pqc : QLM Program</p>
-<blockquote>
-<div><p>qlm program with the implementation of the PQC</p>
-</div></blockquote>
-<dl class="simple">
-<dt>observable<span class="classifier">QLM Observable</span></dt><dd><p>qlm observable with the Observable definition of the PQC</p>
-</dd>
-<dt>weights_names<span class="classifier">list</span></dt><dd><p>list with the names of the parameters of the PQC corresponding
-to the weights</p>
-</dd>
-<dt>features_names<span class="classifier">list</span></dt><dd><p>list with the names of the parameters of the PQC corresponding
-to the input features</p>
-</dd>
-<dt>nbshots<span class="classifier">int</span></dt><dd><p>number of shots</p>
-</dd>
-</dl>
-</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments</em>)</p></li>
+<li><p><strong>pqc</strong> (<em>kwargs</em><em>, </em><em>QLM Program</em>) – qlm program with the implementation of the PQC</p></li>
+<li><p><strong>observable</strong> (<em>kwargs</em><em>, </em><em>QLM Observable</em>) – qlm observable with the Observable definition of the PQC</p></li>
+<li><p><strong>weights_names</strong> (<em>kwargs</em><em>, </em><em>list</em>) – list with the names of the parameters of the PQC corresponding
+to the weights</p></li>
+<li><p><strong>features_names</strong> (<em>kwargs</em><em>, </em><em>list</em>) – list with the names of the parameters of the PQC corresponding
+to the input features</p></li>
+<li><p><strong>nbshots</strong> (<em>kwargs</em><em>, </em><em>int</em>) – number of shots</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -336,7 +326,7 @@ dataset</p>
 <li><p><strong>weights</strong> (<em>numpy array</em>) – Array with weights for PQC</p></li>
 <li><p><strong>data_x</strong> (<em>numpy array</em>) – Array with dataset of the features</p></li>
 <li><p><strong>dask_client</strong> (<em>Dask client</em>) – Dask client for speed up training. Not mandatory</p></li>
-<li><p><strong>kwargs</strong> (<em>keyword arguments. See cdf_workflow function documentation.</em>)</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments.</em>) – See cdf_workflow function documentation.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -360,7 +350,7 @@ y_predict_cdf : CDF prediction for data_x</p>
 <li><p><strong>weights</strong> (<em>numpy array</em>) – Array with weights for PQC</p></li>
 <li><p><strong>data_x</strong> (<em>numpy array</em>) – Array with dataset of the features</p></li>
 <li><p><strong>dask_client</strong> (<em>Dask client</em>) – Dask client for speed up training. Not mandatory</p></li>
-<li><p><strong>kwargs</strong> (<em>keyword arguments. See pdf_workflow function documentation.</em>)</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments.</em>) – See pdf_workflow function documentation.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -385,10 +375,10 @@ for computing the desired loss.</p>
 <li><p><strong>data_x</strong> (<em>numpy array</em>) – Array with dataset of the features. Shape: (-1, number of features)</p></li>
 <li><p><strong>data_y</strong> (<em>numpy array</em>) – Array with targets (labes) dataset. Shape: (-1, 1)</p></li>
 <li><p><strong>dask_client</strong> (<em>Dask client</em>) – Dask client for speed up training. Not mandatory</p></li>
-<li><p><strong>**kwargs</strong> (<em>keyword arguments.In addition to kwargs provided to the</em>)</p></li>
-<li><p><strong>too</strong> (<em>cdf_workflow function the following ones should be provided</em>) – minval : list with the minimum values for the domain of all the features.
-maxval : list with the maximum values for the domain of all the features.
-points : number of points for a feature domain discretization</p></li>
+<li><p><strong>kwargs</strong> (<em>keyword arguments.</em>) – See the cdf_workflow function. The following ones can be provided</p></li>
+<li><p><strong>minval</strong> (<em>kwargs</em><em>, </em><em>list</em>) – Minimum values for the domain of all the features.</p></li>
+<li><p><strong>maxval</strong> (<em>kwargs</em><em>, </em><em>list</em>) – Maximum values for the domain of all the features.</p></li>
+<li><p><strong>points</strong> (<em>kwargs</em><em>,</em><em>int</em>) – Number of points for a feature domain discretization</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

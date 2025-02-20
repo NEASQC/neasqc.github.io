@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>payoff_class &mdash; NEASQC documentation  documentation</title>
+  <title>cliquet_return_estimation_step_payoff &mdash; NEASQC documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
@@ -24,8 +24,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="quantum_integration" href="finance.quantum_integration.html" />
-    <link rel="prev" title="probability_class" href="finance.probability_class.html" /> 
+    <link rel="next" title="QQuantLib.qml4var" href="qml4var.html" />
+    <link rel="prev" title="cliquet_return_estimation" href="finance.cliquet_return_estimation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,18 +64,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="finance.html">QQuantLib.finance</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="finance.classical_finance.html">classical_finance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.probability_class.html">probability_class</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">payoff_class</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.payoff_class.PayOff"><code class="docutils literal notranslate"><span class="pre">PayOff</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.finance.payoff_class.PayOff.get_pay_off"><code class="docutils literal notranslate"><span class="pre">PayOff.get_pay_off()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="finance.payoff_class.html">payoff_class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation.html">ae_price_estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation.html">cliquet_return_estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html">cliquet_return_estimation_step_payoff</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cliquet_return_estimation_step_payoff</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.cliquet_return_estimation_step_payoff.ae_cliquet_estimation_step_po"><code class="docutils literal notranslate"><span class="pre">ae_cliquet_estimation_step_po()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -104,7 +101,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="finance.html">QQuantLib.finance</a></li>
-      <li class="breadcrumb-item active">payoff_class</li>
+      <li class="breadcrumb-item active">cliquet_return_estimation_step_payoff</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -113,33 +110,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-QQuantLib.finance.payoff_class">
-<span id="payoff-class"></span><h1>payoff_class<a class="headerlink" href="#module-QQuantLib.finance.payoff_class" title="Link to this heading"></a></h1>
-<p>In this module, the Python PayOff class is defined. This class allows
-to the user configure payoffs for different financial derivatives
-(like options or futures) by providing typical financial parameters
-The PayOff class uses functions from finance.classical_finance module.</p>
-<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="QQuantLib.finance.payoff_class.PayOff">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.payoff_class.</span></span><span class="sig-name descname"><span class="pre">PayOff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.payoff_class.PayOff" title="Link to this definition"></a></dt>
-<dd><p>Class for selecting derivative options and configuring them.</p>
+  <section id="module-QQuantLib.finance.cliquet_return_estimation_step_payoff">
+<span id="cliquet-return-estimation-step-payoff"></span><h1>cliquet_return_estimation_step_payoff<a class="headerlink" href="#module-QQuantLib.finance.cliquet_return_estimation_step_payoff" title="Link to this heading"></a></h1>
+<p>This module implements the <em>ae_clique_return_estimation</em> function
+that allows to the user configure a cliquet option, encode the expected
+value integral to compute in a quantum state and estimate it using the
+different <strong>AE</strong> algorithms implemented in the <strong>QQuantLib.AE</strong> package.</p>
+<p>The function deals with all the mandatory normalisations for returning
+the desired price estimation.</p>
+<p>Authors: Alberto Pedro Manzano Herrero &amp; Gonzalo Ferro Costas</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.finance.cliquet_return_estimation_step_payoff.ae_cliquet_estimation_step_po">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.cliquet_return_estimation_step_payoff.</span></span><span class="sig-name descname"><span class="pre">ae_cliquet_estimation_step_po</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.cliquet_return_estimation_step_payoff.ae_cliquet_estimation_step_po" title="Link to this definition"></a></dt>
+<dd><p>Configures a cliquet option return estimation problem and solving it
+using AE integration techniques</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>kwargs</strong> (<em>dictionary</em>) – Dictionary for selecting and configuring the derivative option.</p></li>
-<li><p><strong>strike</strong> (<em>kwargs</em><em>, </em><em>float</em>) – strike of the option.</p></li>
-<li><p><strong>coupon</strong> (<em>kwargs</em><em>, </em><em>float</em>) – only valid for Digital Options</p></li>
-<li><p><strong>pay_off</strong> (<em>kwargs</em><em>, </em><em>string</em>) – type of pay_off function to load</p></li>
+<li><p><strong>kwargs</strong> (<em>dictionary</em>) – Dictionary for configuring the price estimation problem, the
+encoding of the price estimation data into the quantum circuit
+and the AE integration technique for solving it.</p></li>
+<li><p><strong>n_qbits</strong> (<em>kwargs</em><em>, </em><em>int</em>) – Number of qubits for domain discretization</p></li>
+<li><p><strong>s_0</strong> (<em>kwargs float</em>) – Value of the asset at initial time step</p></li>
+<li><p><strong>risk_free_rate</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Risk free rate for discounting the expected value of the payoff</p></li>
+<li><p><strong>volatility</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Volatility of the asset</p></li>
+<li><p><strong>reset_dates</strong> (<em>kwargs</em><em>, </em><em>list</em>) – List with the reset dates to asset evaluation</p></li>
+<li><p><strong>bounds</strong> (<em>kwargs</em><em>, </em><em>float</em>) – Bound for truncating the probability density</p></li>
+<li><p><strong>local_cap</strong> (<em>kwargs</em><em>, </em><em>float</em>) – For upper truncation of the return at each reset date</p></li>
+<li><p><strong>local_floor</strong> (<em>kwargs</em><em>, </em><em>float</em>) – For lower truncation of the return at each reset date</p></li>
+<li><p><strong>global_cap</strong> (<em>kwargs</em><em>, </em><em>float</em>) – For upper truncation of the final return</p></li>
+<li><p><strong>global_floor</strong> (<em>kwargs</em><em>, </em><em>float</em>) – For lower truncation of the final return</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="QQuantLib.finance.payoff_class.PayOff.get_pay_off">
-<span class="sig-name descname"><span class="pre">get_pay_off</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.payoff_class.PayOff.get_pay_off" title="Link to this definition"></a></dt>
-<dd><p>Select of a PayOff</p>
-</dd></dl>
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Other kwargs input dictionary keys will be related with the encoding of the integral into the quantum circuit (see QQuantLib.DL.encoding_protocols) and for the configuration of the AE algorithm used (see QQuantLib.AE.ae_class)</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pdf</strong> – DataFrame with the configuration of the AE problem and the solution</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pandas DataFrame</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -148,8 +163,8 @@ The PayOff class uses functions from finance.classical_finance module.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="finance.probability_class.html" class="btn btn-neutral float-left" title="probability_class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="finance.quantum_integration.html" class="btn btn-neutral float-right" title="quantum_integration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="finance.cliquet_return_estimation.html" class="btn btn-neutral float-left" title="cliquet_return_estimation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qml4var.html" class="btn btn-neutral float-right" title="QQuantLib.qml4var" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

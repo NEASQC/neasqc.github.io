@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>iterative_quantum_pe &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -136,28 +136,21 @@ Physical Review A 3(76), 2007.
 <dd><p>Class for using Iterative Quantum Phase Estimation (IQPE) algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the ML-QPE algorithm. Implemented keys:</p>
-<dl class="simple">
-<dt>initial_state<span class="classifier">QLM Program</span></dt><dd><p>QLM Program withe the initial Psi state over the
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – dictionary that allows the configuration of the ML-QPE algorithm. Implemented keys:</p></li>
+<li><p><strong>initial_state</strong> (<em>kwargs</em><em>, </em><em>QLM Program</em>) – QLM Program withe the initial Psi state over the
 Grover-like operator will be applied
-Only used if oracle is None</p>
-</dd>
-<dt>unitary_operator<span class="classifier">QLM gate or routine</span></dt><dd><p>Grover-like operator whose autovalues want to be calculated
-Only used if oracle is None</p>
-</dd>
-<dt>cbits_number<span class="classifier">int</span></dt><dd><p>number of classical bits for phase estimation</p>
-</dd>
-<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
-</dd>
-<dt>shots<span class="classifier">int</span></dt><dd><p>number of shots for quantum job. If 0 exact probabilities
-will be computed.</p>
-</dd>
-<dt>easy<span class="classifier">bool</span></dt><dd><p>If True step_iqpe_easy will be used for each step of the
+Only used if oracle is None</p></li>
+<li><p><strong>unitary_operator</strong> (<em>kwargs</em><em>, </em><em>QLM gate</em><em> or </em><em>routine</em>) – Grover-like operator whose autovalues want to be calculated
+Only used if oracle is None</p></li>
+<li><p><strong>cbits_number</strong> (<em>kwargs</em><em>, </em><em>int</em>) – number of classical bits for phase estimation</p></li>
+<li><p><strong>qpu</strong> (<em>kwargs</em><em>, </em><em>QLM solver</em>) – solver for simulating the resulting circuits</p></li>
+<li><p><strong>shots</strong> (<em>kwargs</em><em>, </em><em>int</em>) – number of shots for quantum job. If 0 exact probabilities
+will be computed.</p></li>
+<li><p><strong>easy</strong> (<em>kwargs</em><em>, </em><em>bool</em>) – If True step_iqpe_easy will be used for each step of the
 algorithm
-If False step_iqpe will be used for each step.</p>
-</dd>
-</dl>
-</p>
+If False step_iqpe will be used for each step.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="py method">

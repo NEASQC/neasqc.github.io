@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>classical_finance &mdash; NEASQC documentation  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
       <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
@@ -77,11 +77,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.bs_sde_solution"><code class="docutils literal notranslate"><span class="pre">bs_sde_solution()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.bs_tree"><code class="docutils literal notranslate"><span class="pre">bs_tree()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.call_payoff"><code class="docutils literal notranslate"><span class="pre">call_payoff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.cliquet_cashflows"><code class="docutils literal notranslate"><span class="pre">cliquet_cashflows()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.digital_call_payoff"><code class="docutils literal notranslate"><span class="pre">digital_call_payoff()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.digital_put_payoff"><code class="docutils literal notranslate"><span class="pre">digital_put_payoff()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.futures_payoff"><code class="docutils literal notranslate"><span class="pre">futures_payoff()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.geometric_sum"><code class="docutils literal notranslate"><span class="pre">geometric_sum()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.put_payoff"><code class="docutils literal notranslate"><span class="pre">put_payoff()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.finance.classical_finance.tree_to_paths"><code class="docutils literal notranslate"><span class="pre">tree_to_paths()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="finance.probability_class.html">probability_class</a></li>
@@ -89,6 +91,8 @@
 <li class="toctree-l2"><a class="reference internal" href="finance.quantum_integration.html">quantum_integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation.html">ae_price_estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="finance.ae_price_estimation_step_payoff.html">ae_price_estimation_step_payoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation.html">cliquet_return_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="finance.cliquet_return_estimation_step_payoff.html">cliquet_return_estimation_step_payoff</a></li>
 </ul>
 </li>
 </ul>
@@ -415,10 +419,10 @@ p(S_T(x)) = N(x;mean = 0, variance = T)\]</div>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="QQuantLib.finance.classical_finance.bs_tree">
-<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.classical_finance.</span></span><span class="sig-name descname"><span class="pre">bs_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volatility</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maturity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_tree" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.classical_finance.</span></span><span class="sig-name descname"><span class="pre">bs_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">risk_free_rate</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">volatility</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discretization</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.bs_tree" title="Link to this definition"></a></dt>
 <dd><p>Computes the probabilities of all possible pahts from the
-approximated solution of the Black-Scholes SDE using the
-Euler-Maruyama discretization for a given discretization of the
+approximated solution of the Black-Scholes SDE using
+exact simulation for a given discretization of the
 Brownian motion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -426,20 +430,19 @@ Brownian motion.</p>
 <li><p><strong>s_0</strong> (<em>float</em>) – current price of the underlying</p></li>
 <li><p><strong>risk_free_rate</strong> (<em>float</em>) – risk free rate</p></li>
 <li><p><strong>volatility</strong> (<em>float</em>) – the volatility</p></li>
-<li><p><strong>maturity</strong> (<em>float</em>) – the maturity</p></li>
-<li><p><strong>strike</strong> (<em>float</em>) – the strike</p></li>
-<li><p><strong>number_samples</strong> (<em>int</em>) – number of samples</p></li>
-<li><p><strong>steps</strong> (<em>time</em>) – number of time steps</p></li>
+<li><p><strong>times</strong> (<em>np.ndarray</em>) – the times of the tree</p></li>
 <li><p><strong>discretization</strong> (<em>float</em>) – number of points to build the discrete version
 of the gaussian density</p></li>
 <li><p><strong>bounds</strong> (<em>float</em>) – bounds of the Gaussian density</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>s_t</strong> – array of samples from the SDE.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>numpy array of floats</p>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>s_t</strong> (<em>list of numpy arrays</em>) – Each element of the list is an array with all the posible asset
+values discretization</p></li>
+<li><p><strong>p_t</strong> (<em>numpy array of floats</em>) – array with the probabilities for all the paths</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -463,6 +466,29 @@ of the gaussian density</p></li>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.finance.classical_finance.cliquet_cashflows">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.classical_finance.</span></span><span class="sig-name descname"><span class="pre">cliquet_cashflows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_cap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_floor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_cap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_floor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.cliquet_cashflows" title="Link to this definition"></a></dt>
+<dd><p>Calculate the cashflows for the Cliquet option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>local_cap</strong> (<em>float</em>) – local cap for cliquet options</p></li>
+<li><p><strong>local_floor</strong> (<em>float</em>) – local floor for cliqet options</p></li>
+<li><p><strong>global_cap</strong> (<em>float</em>) – global cap for cliquet options</p></li>
+<li><p><strong>global_floor</strong> (<em>float</em>) – global floor for cliqet options</p></li>
+<li><p><strong>paths</strong> (<em>list</em>) – input paths for the cliquet option</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>final_return</strong> – The cashflows of the option for the input paths</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
 </dd></dl>
@@ -589,6 +615,23 @@ a\big(\frac{1-base^{exponent+1}}{1-base}\big)\end{split}\]</div>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.finance.classical_finance.tree_to_paths">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.finance.classical_finance.</span></span><span class="sig-name descname"><span class="pre">tree_to_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.finance.classical_finance.tree_to_paths" title="Link to this definition"></a></dt>
+<dd><p>Convert a tree structure from bs_tree to a path format (table form)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>tree</strong> (<em>list</em>) – list of lists with the tree structure from bs_tree</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>paths</strong> – table conversions of the tree structure input</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list of lists</p>
 </dd>
 </dl>
 </dd></dl>
