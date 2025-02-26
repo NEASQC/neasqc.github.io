@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bayesian_ae &mdash; NEASQC documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="_static/contentui.css" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/contentui.js"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="real_quantum_ae" href="ae.real_quantum_ae.html" />
+    <link rel="prev" title="modified_iterative_quantum_ae" href="ae.miterative_quantum_ae.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            NEASQC documentation
+              <img src="_static/logo-neasqc.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="dl.html">QQuantLib.DL</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aa.html">QQuantLib.AA</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="ae.html">QQuantLib.AE</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ae.montecarlo_ae.html">montecarlo_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_classical_qpe.html">ae_classical_qpe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_iterative_quantum_pe.html">ae_iterative_quantum_pe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.maximum_likelihood_ae.html">maximum_likelihood_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mlae_utils.html">mlae_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.iterative_quantum_ae.html">iterative_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.miterative_quantum_ae.html">modified_iterative_quantum_ae</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">bayesian_ae</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE"><code class="docutils literal notranslate"><span class="pre">BAYESQAE</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.bayesqae"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.bayesqae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.fake_quantum_measure_step"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.fake_quantum_measure_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.index"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.index</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.optimize_control"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.optimize_control()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.oracle"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.oracle</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.quantum_measure_step"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.quantum_measure_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.run"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.run()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.target"><code class="docutils literal notranslate"><span class="pre">BAYESQAE.target</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.LW_kernel"><code class="docutils literal notranslate"><span class="pre">LW_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.Metropolis_kernel"><code class="docutils literal notranslate"><span class="pre">Metropolis_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.average_expectation"><code class="docutils literal notranslate"><span class="pre">average_expectation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.bayesian_update"><code class="docutils literal notranslate"><span class="pre">bayesian_update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.confidence_intervals"><code class="docutils literal notranslate"><span class="pre">confidence_intervals()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.ess"><code class="docutils literal notranslate"><span class="pre">ess()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.posterior_weights"><code class="docutils literal notranslate"><span class="pre">posterior_weights()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.variance_function"><code class="docutils literal notranslate"><span class="pre">variance_function()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#QQuantLib.AE.bayesian_ae.weighted_expectaction"><code class="docutils literal notranslate"><span class="pre">weighted_expectaction()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ae.real_quantum_ae.html">real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.mreal_quantum_ae.html">modified_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.sreal_quantum_ae.html">shots_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ereal_quantum_ae.html">extended_real_quantum_ae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ae.ae_class.html">ae_class</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pe.html">QQuantLib.PE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="finance.html">QQuantLib.finance</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qml4var.html">QQuantLib.qml4var</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="qpu.html">QQuantLib.qpu</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="utils.html">QQuantLib.utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">NEASQC documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="ae.html">QQuantLib.AE</a></li>
+      <li class="breadcrumb-item active">bayesian_ae</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-QQuantLib.AE.bayesian_ae">
+<span id="bayesian-ae"></span><h1>bayesian_ae<a class="headerlink" href="#module-QQuantLib.AE.bayesian_ae" title="Link to this heading"></a></h1>
+<p>This module contains the BAYESQAE class. Given a quantum oracle operator,
+this class estimates the <strong>probability</strong> of a given target state using
+the Bayesian Quantum Amplitude Estimation algorithm based on the paper:</p>
+<blockquote>
+<div><p>Alexandra Ramôa and Luis Paulo Santos
+Bayesian Quantum Amplitude Estimation
+<a class="reference external" href="https://arxiv.org/abs/2412.04394">https://arxiv.org/abs/2412.04394</a> (2024)</p>
+</div></blockquote>
+<p>Author: Gonzalo Ferro Costas &amp; Alexandra Ramôa</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">BAYESQAE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oracle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qat.lang.AQASM.QRoutine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE" title="Link to this definition"></a></dt>
+<dd><p>Class for Bayesian Quantum Amplitude Estimation algorithm (BAYESQAE)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oracle</strong> (<em>QLM gate</em>) – QLM gate with the Oracle for implementing the
+Grover operator</p></li>
+<li><p><strong>target</strong> (<em>list</em><em> of </em><em>ints</em>) – python list with the target for the amplitude estimation</p></li>
+<li><p><strong>index</strong> (<em>list</em><em> of </em><em>ints</em>) – qubits which mark the register to do the amplitude
+estimation</p></li>
+<li><p><strong>kwars</strong> (<em>dictionary</em>) – <p>dictionary that allows the configuration of the BAYESQAE algorithm: Implemented keys:</p>
+<dl class="simple">
+<dt>qpu<span class="classifier">QLM solver</span></dt><dd><p>solver for simulating the resulting circuits</p>
+</dd>
+<dt>shots<span class="classifier">int</span></dt><dd><p>number of measurements on each iteration</p>
+</dd>
+<dt>mcz_qlm<span class="classifier">bool</span></dt><dd><p>for using or not QLM implementation of the multi controlled Z
+gate</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.bayesqae">
+<span class="sig-name descname"><span class="pre">bayesqae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.bayesqae" title="Link to this definition"></a></dt>
+<dd><p>This function implements BAE algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kwargs</strong> (<em>dictionary</em>) – Configuration of the BAYESQAE algorithm</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>a_m</strong> (<em>float</em>) – mean for the probability to be estimated</p></li>
+<li><p><strong>a_l</strong> (<em>float</em>) – lower bound for the probability to be estimated</p></li>
+<li><p><strong>a_u</strong> (<em>float</em>) – upper bound for the probability to be estimated</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.fake_quantum_measure_step">
+<span class="sig-name descname"><span class="pre">fake_quantum_measure_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_good</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.fake_quantum_measure_step" title="Link to this definition"></a></dt>
+<dd><p>Simulates a Fake Quantum Amplitude Estimation experiment</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_k</strong> (<em>int</em>) – number of Grover operator applications</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of shots</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>p_k</strong> – probability of getting the Good state</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.index" title="Link to this definition"></a></dt>
+<dd><p>creating index property</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.optimize_control">
+<span class="sig-name descname"><span class="pre">optimize_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_bayes_shots</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.optimize_control" title="Link to this definition"></a></dt>
+<dd><p>Get the optimal control that minimizes an input utility function
+given an SMC prior probability</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>control_shots</strong> (<em>int</em>) – Shots for simulating virtual QAE experiments mandatory for
+computing the expected values of the utility function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>m_opt</strong> – Optimal control based on the minimization of an utility
+function and a domain interval control</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.oracle">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">oracle</span></span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.oracle" title="Link to this definition"></a></dt>
+<dd><p>creating oracle property</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.quantum_measure_step">
+<span class="sig-name descname"><span class="pre">quantum_measure_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.quantum_measure_step" title="Link to this definition"></a></dt>
+<dd><p>Create the quantum routine and execute the measurement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>m_k</strong> (<em>int</em>) – number of Grover operator applications</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – number of shots</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>p_k</strong> (<em>float</em>) – probability of getting the Good state</p></li>
+<li><p><strong>routine</strong> (<em>QLM Routine object</em>) – qlm routine for the QAE step</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.run" title="Link to this definition"></a></dt>
+<dd><p>run method for the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>amplitude estimation parameter</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>self.ae</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.BAYESQAE.target">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.BAYESQAE.target" title="Link to this definition"></a></dt>
+<dd><p>creating target property</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.LW_kernel">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">LW_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.LW_kernel" title="Link to this definition"></a></dt>
+<dd><p>Liu-West kernel. Perturbation kernel used for enhancing resampling</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>numpy array</em>) – Input parameters from a SMC probability distribution.</p></li>
+<li><p><strong>kwargs</strong> (<em>alpha_lw : float</em>) – coeficient for creating new thetas</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_theta</strong> – Perturbed parameters for SMC probability distribution using
+Liu-West kernel</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.Metropolis_kernel">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">Metropolis_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_k</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.Metropolis_kernel" title="Link to this definition"></a></dt>
+<dd><p>Metropolis kernel. Perturbation kernel used for enhancing resampling</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>numpy array</em>) – Input parameters from a SMC probability distribution.</p></li>
+<li><p><strong>m_k</strong> (<em>list</em>) – Exponent of the Grover operator of the QAE experiment</p></li>
+<li><p><strong>n_k</strong> (<em>list</em>) – Number of shots of the QAE experiment</p></li>
+<li><p><strong>o_k</strong> (<em>list</em>) – Outcome of the QAE experiment</p></li>
+<li><p><strong>kwargs</strong> (<em>c : float</em>) – coeficient for standard deviation multiplication</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>new_theta</strong> – Perturbed parameters for SMC probability distribution using
+Metropoli kernel</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.average_expectation">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">average_expectation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.average_expectation" title="Link to this definition"></a></dt>
+<dd><p>Computes the average expected value of a function for all posible
+outcomes froma QAE experiment with control m_k and number of shots
+n_k given a SMC prior probability function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – Exponent of the Grover operator of the QAE experiment</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – Number of shots of the QAE experiment</p></li>
+<li><p><strong>kwargs</strong> (<em>utility_function : function</em>) – Function for computing its average expectation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>value_</strong> – Desired average expectation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.bayesian_update">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">bayesian_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.bayesian_update" title="Link to this definition"></a></dt>
+<dd><p>Given a SMC prior probabilty distribution and a outcome of QAE experiment
+returns the SMC posterior probabilty distribution. It can performs resampling</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>m_k</strong> (<em>list</em>) – Exponent of the Grover operator of the QAE experiment</p></li>
+<li><p><strong>n_k</strong> (<em>list</em>) – Number of shots of the QAE experiment</p></li>
+<li><p><strong>o_k</strong> (<em>list</em>) – Outcome of the QAE experiment</p></li>
+<li><p><strong>kwargs</strong> (<em>threshold : float</em>) – Threshold for resampling the SMC probability distribution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>new_thetas</strong> (<em>numpy array</em>) – SMC Posterior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>posterior_weights_</strong> (<em>numpy array</em>) – SMC Posterior distribution of the desired parameter. Weights.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.confidence_intervals">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">confidence_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.confidence_intervals" title="Link to this definition"></a></dt>
+<dd><p>Computes the confidence intervals for a confidence level delta of a
+given SMC probability distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – Desired confidence level</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>theta_lower</strong> (<em>float</em>) – Lower value for confidence interval</p></li>
+<li><p><strong>theta_upper</strong> (<em>float</em>) – Upper value for confidence interval</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.ess">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">ess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.ess" title="Link to this definition"></a></dt>
+<dd><p>Compute the Effective Sample Size for an input weights</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>weights</strong> (<em>numpy array</em>) – array with the weights</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ess_</strong> – efective sample size</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.posterior_weights">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">posterior_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.posterior_weights" title="Link to this definition"></a></dt>
+<dd><p>Compute posterior probability weights given an input QAE experiment
+and a SMC prior probability distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>numpy array</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – Exponent of the Grover operator of the QAE experiment</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – Number of shots of the QAE experiment</p></li>
+<li><p><strong>o_k</strong> (<em>int</em>) – Outcome of the QAE experiment</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>posterior_weights_</strong> – Posterior distribution given the outcome of the QAE experiment</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.variance_function">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">variance_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.variance_function" title="Link to this definition"></a></dt>
+<dd><p>Computes the exprected value of the variance for a SMC probability
+distribution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>variance</strong> – Expected value of the variance under the input SMC probability
+distribution</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="QQuantLib.AE.bayesian_ae.weighted_expectaction">
+<span class="sig-prename descclassname"><span class="pre">QQuantLib.AE.bayesian_ae.</span></span><span class="sig-name descname"><span class="pre">weighted_expectaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thetas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">o_k</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#QQuantLib.AE.bayesian_ae.weighted_expectaction" title="Link to this definition"></a></dt>
+<dd><p>Computes the expected value of an input utility function for a given outcome
+of a QAE experiment (m_k, n_k, h_k) and a SMC prior probability
+weighted by the total probability getting the o_k outcome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>thetas</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Parameter Values</p></li>
+<li><p><strong>weights</strong> (<em>list</em>) – SMC Prior distribution of the desired parameter. Weights.</p></li>
+<li><p><strong>m_k</strong> (<em>int</em>) – Exponent of the Grover operator of the QAE experiment</p></li>
+<li><p><strong>n_k</strong> (<em>int</em>) – Number of shots of the QAE experiment</p></li>
+<li><p><strong>o_k</strong> (<em>int</em>) – Outcome of the QAE experiment</p></li>
+<li><p><strong>kwargs</strong> (<em>utility_function : function</em>) – Desired utility function for computing the expected value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>weighted_expectation_</strong> – product of the expected value function for a given QAE experiment
+result and the probability of the given result</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ae.miterative_quantum_ae.html" class="btn btn-neutral float-left" title="modified_iterative_quantum_ae" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ae.real_quantum_ae.html" class="btn btn-neutral float-right" title="real_quantum_ae" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright UDC &amp; CESGA 2021-2024.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
